@@ -1,14 +1,13 @@
 {
-  "name": "melvor-typing-project",
-  "version": "1.10.2",
-  "description": "Official Type Definitions for Melvor Idle",
+  "name": "melvor-types",
+  "version": "1.0.0",
+  "description": "Forked version of Official Type Definitions for Melvor Idle",
   "license": "GPL-3.0",
   "author": {
-    "name": "Coolrox95"
+    "name": "ChanceToZoinks"
   },
   "files": [
-    "**/src/gameTypes",
-    "**/src/libraryTypes"
+    "./types"
   ],
   "private": true,
   "devDependencies": {
