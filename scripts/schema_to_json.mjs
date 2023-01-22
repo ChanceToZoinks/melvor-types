@@ -19,7 +19,7 @@ const ensure_dir_exists = (filepath) => {
 const download = (url, filename, cb) => {
   if (fs.existsSync(filename)) {
     console.log(`File ${filename} already exists. Skipping download.`);
-    return;
+    return cb();
   }
   ensure_dir_exists(filename);
   const file = fs.createWriteStream(filename).on("error", (err) => {

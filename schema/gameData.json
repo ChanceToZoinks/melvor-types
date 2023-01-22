@@ -399,10 +399,7 @@
             "minimum": 0
           }
         },
-        "required": [
-          "skillID",
-          "value"
-        ]
+        "required": ["skillID", "value"]
       }
     },
     "CombatModifierBase": {
@@ -5165,44 +5162,24 @@
           "pattern": "^\\w+$"
         }
       },
-      "required": [
-        "id"
-      ]
+      "required": ["id"]
     },
     "CombatTriangleType": {
       "type": "string",
-      "enum": [
-        "Standard",
-        "Hardcore",
-        "InvertedHardcore"
-      ]
+      "enum": ["Standard", "Hardcore", "InvertedHardcore"]
     },
     "AttackType": {
       "type": "string",
-      "enum": [
-        "melee",
-        "ranged",
-        "magic"
-      ]
+      "enum": ["melee", "ranged", "magic"]
     },
     "RunecraftingSubCategory": {
       "type": "string",
-      "enum": [
-        "ElementalRunes",
-        "Staff",
-        "None"
-      ]
+      "enum": ["ElementalRunes", "Staff", "None"]
     },
     "AmmoType": {
       "description": "Type of ammo",
       "type": "string",
-      "enum": [
-        "Arrows",
-        "Bolts",
-        "Javelins",
-        "ThrowingKnives",
-        "None"
-      ]
+      "enum": ["Arrows", "Bolts", "Javelins", "ThrowingKnives", "None"]
     },
     "SlayerTier": {
       "description": "The tier of a slayer task",
@@ -5235,10 +5212,6 @@
           "pattern": "^(?!melvor)[\\w]+$"
         }
       ]
-    },
-    "ValidID": {
-      "type": "string",
-      "pattern": "^\\w+:\\w+$"
     },
     "AnyItemID": {
       "anyOf": [
@@ -5273,9 +5246,6 @@
     },
     "ItemID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -6582,9 +6552,6 @@
     "WeaponItemID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Bronze_Dagger",
@@ -6800,9 +6767,6 @@
     "FoodItemID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Empty_Food",
@@ -6940,9 +6904,6 @@
     "BoneItemID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Bones",
@@ -6962,9 +6923,6 @@
     },
     "PotionItemID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -7160,9 +7118,6 @@
     "ReadableItemID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Message_In_A_Bottle",
@@ -7178,9 +7133,6 @@
     },
     "OpenableItemID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -7238,9 +7190,6 @@
     "TokenItemID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Mastery_Token_Cooking",
@@ -7266,22 +7215,13 @@
     "CompostItemID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
-          "enum": [
-            "melvorD:Compost",
-            "melvorD:Weird_Gloop"
-          ]
+          "enum": ["melvorD:Compost", "melvorD:Weird_Gloop"]
         }
       ]
     },
     "PageID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -7319,9 +7259,6 @@
     "SkillID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Attack",
@@ -7355,9 +7292,6 @@
     "StackingEffectID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:MarkOfDeath",
@@ -7375,9 +7309,6 @@
     },
     "CurseID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -7405,9 +7336,6 @@
     "ShopCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:General",
@@ -7425,9 +7353,6 @@
     },
     "ShopPurchaseID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -7695,9 +7620,6 @@
     "MonsterID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:BlackKnight",
@@ -7930,9 +7852,6 @@
     "AltMagicSpellID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:JustLearning",
@@ -7965,9 +7884,6 @@
     "AstrologyActionID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:Deedree",
@@ -7992,9 +7908,6 @@
     "SummoningCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Marks",
@@ -8006,9 +7919,6 @@
     },
     "SummoningActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8046,9 +7956,6 @@
     },
     "AgilityObstacleID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8135,22 +8042,13 @@
     "HerbloreCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
-          "enum": [
-            "melvorF:CombatPotions",
-            "melvorF:SkillPotions"
-          ]
+          "enum": ["melvorF:CombatPotions", "melvorF:SkillPotions"]
         }
       ]
     },
     "HerbloreActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8207,9 +8105,6 @@
     "RunecraftingCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:StandardRunes",
@@ -8228,9 +8123,6 @@
     },
     "RunecraftingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8376,9 +8268,6 @@
     "CraftingCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:LeatherArmour",
@@ -8394,9 +8283,6 @@
     },
     "CraftingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8506,9 +8392,6 @@
     "FletchingCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:Arrows",
@@ -8523,9 +8406,6 @@
     },
     "FletchingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8621,23 +8501,13 @@
     "FarmingCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
-          "enum": [
-            "melvorD:Allotment",
-            "melvorD:Herb",
-            "melvorD:Tree"
-          ]
+          "enum": ["melvorD:Allotment", "melvorD:Herb", "melvorD:Tree"]
         }
       ]
     },
     "FarmingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8684,9 +8554,6 @@
     "ThievingAreaID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:LOW_TOWN",
@@ -8711,9 +8578,6 @@
     },
     "ThievingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8758,9 +8622,6 @@
     "SmithingCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Bars",
@@ -8781,9 +8642,6 @@
     },
     "SmithingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -8966,9 +8824,6 @@
     "MiningActionID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Rune_Essence",
@@ -8999,23 +8854,13 @@
     "CookingCategoryID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
-          "enum": [
-            "melvorD:Fire",
-            "melvorD:Furnace",
-            "melvorD:Pot"
-          ]
+          "enum": ["melvorD:Fire", "melvorD:Furnace", "melvorD:Pot"]
         }
       ]
     },
     "CookingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9076,9 +8921,6 @@
     "FiremakingActionID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Normal_Logs",
@@ -9106,9 +8948,6 @@
     "FishingAreaID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:ShallowShores",
@@ -9131,9 +8970,6 @@
     },
     "FishingActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9181,9 +9017,6 @@
     "WoodcuttingActionID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Normal",
@@ -9211,9 +9044,6 @@
     "ItemEffectID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:Absorbing_Shield",
@@ -9225,9 +9055,6 @@
     },
     "SpecialAttackID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9543,9 +9370,6 @@
     "DungeonID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:Chicken_Coop",
@@ -9578,9 +9402,6 @@
     },
     "TownshipBuildingID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9660,9 +9481,6 @@
     },
     "PetID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9745,9 +9563,6 @@
     "StandardSpellID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorD:WindStrike",
@@ -9778,9 +9593,6 @@
     },
     "CombatPassiveID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9898,21 +9710,13 @@
     "CombatEventID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
-          "enum": [
-            "melvorF:ImpendingDarkness"
-          ]
+          "enum": ["melvorF:ImpendingDarkness"]
         }
       ]
     },
     "GamemodeID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9930,9 +9734,6 @@
     },
     "ActionID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -9961,9 +9762,6 @@
     "TownshipResourceID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:GP",
@@ -9986,9 +9784,6 @@
     "TownshipBiomeID": {
       "anyOf": [
         {
-          "$ref": "#/$defs/ValidID"
-        },
-        {
           "type": "string",
           "enum": [
             "melvorF:Grasslands",
@@ -10007,9 +9802,6 @@
     },
     "TownshipJobID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": [
@@ -10032,9 +9824,6 @@
     },
     "NewID": {
       "anyOf": [
-        {
-          "$ref": "#/$defs/ValidID"
-        },
         {
           "type": "string",
           "enum": []
@@ -10162,12 +9951,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "itemID",
-        "minQuantity",
-        "maxQuantity",
-        "weight"
-      ]
+      "required": ["itemID", "minQuantity", "maxQuantity", "weight"]
     },
     "AnyItemQuantity": {
       "type": "object",
@@ -10186,10 +9970,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "id",
-        "quantity"
-      ]
+      "required": ["id", "quantity"]
     },
     "SkillActionEventMatcherOptions": {
       "type": "object",
@@ -10240,9 +10021,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "FishingActionEventMatcherOptions": {
       "description": "Matches when a Fishing action occurs",
@@ -10284,9 +10063,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "FiremakingActionEventMatcherOptions": {
       "description": "Matches when a Firemaking action occurs",
@@ -10311,9 +10088,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "BonfireLitEventMatcherOptions": {
       "description": "Matches when a Firemaking bonfire is lit",
@@ -10333,9 +10108,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "CookingActionEventMatcherOptions": {
       "description": "Matches when a Cooking action occurs",
@@ -10373,9 +10146,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "MiningActionEventMatcherOptions": {
       "description": "Matches when a Mining action occurs",
@@ -10425,9 +10196,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "SmithingActionEventMatcherOptions": {
       "description": "Matches when a Smithing action occurs",
@@ -10470,9 +10239,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "ThievingActionEventMatcherOptions": {
       "description": "Matches when a Thieving action occurs",
@@ -10510,9 +10277,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "FarmingPlantActionEventMatcherOptions": {
       "description": "Matches when a Farming Plant action occurs",
@@ -10541,9 +10306,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "FarmingHarvestActionEventMatcherOptions": {
       "description": "Matches when a Farming Harvest action occurs",
@@ -10577,9 +10340,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "FletchingActionEventMatcherOptions": {
       "description": "Matches when a Fletching action occurs",
@@ -10621,9 +10382,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "CraftingActionEventMatcherOptions": {
       "description": "Matches when a Crafting action occurs",
@@ -10657,9 +10416,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "RunecraftingActionEventMatcherOptions": {
       "description": "Matches when a Runecrafting action occurs",
@@ -10711,9 +10468,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "HerbloreActionEventMatcherOptions": {
       "description": "Matches when a Herblore action occurs",
@@ -10747,9 +10502,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "AgilityActionEventMatcherOptions": {
       "description": "Matches when a SkillName action occurs",
@@ -10785,9 +10538,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "SummoningActionEventMatcherOptions": {
       "description": "Matches when a Summoning action occurs",
@@ -10821,9 +10572,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "AstrologyActionEventMatcherOptions": {
       "description": "Matches when an Astrology action occurs",
@@ -10848,9 +10597,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "AltMagicActionEventMatcherOptions": {
       "description": "Matches when an Alt. Magic action occurs",
@@ -10875,9 +10622,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "MonsterDropEventMatcherOptions": {
       "description": "Matches when a Monster drops an item in combat",
@@ -10892,9 +10637,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "PlayerAttackEventMatcherOptions": {
       "description": "Matches when a Player Attack occurs",
@@ -10914,9 +10657,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "EnemyAttackEventMatcherOptions": {
       "description": "Matches when a Enemy Attack occurs",
@@ -10936,9 +10677,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "FoodEatenEventMatcherOptions": {
       "description": "Matches when the player eats a food item",
@@ -10949,9 +10688,7 @@
           "const": "FoodEaten"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "PrayerPointConsumptionEventMatcherOptions": {
       "description": "Matches when the player uses prayer points",
@@ -10962,9 +10699,7 @@
           "const": "PrayerPointConsumption"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "PlayerHitpointsRegenerationEventMatcherOptions": {
       "description": "Matches when the player regenerated hitpoints",
@@ -10975,9 +10710,7 @@
           "const": "PlayerHitpointRegeneration"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "PlayerSummonAttackEventMatcherOptions": {
       "description": "Matches when the player's summons make an attack",
@@ -10988,9 +10721,7 @@
           "const": "PlayerSummonAttack"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "RuneConsumptionEventMatcherOptions": {
       "description": "Matches when the player uses runes to cast a spell",
@@ -11001,9 +10732,7 @@
           "const": "RuneConsumption"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "PotionUsedEventMatcherOptions": {
       "description": "Matches when the player uses a potion item",
@@ -11014,9 +10743,7 @@
           "const": "PotionUsed"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "PotionChargeUsedEventMatcherOptions": {
       "description": "Matches when the player uses a potion charge",
@@ -11027,9 +10754,7 @@
           "const": "PotionChargeUsed"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "MonsterKilledEventMatcherOptions": {
       "description": "Matches when the player kills a monster",
@@ -11057,9 +10782,7 @@
           ]
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "ItemEquippedEventMatcherOptions": {
       "description": "Matches when the player equips an item",
@@ -11079,9 +10802,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "FoodEquippedEventMatcherOptions": {
       "description": "Matches when the player equips a food item",
@@ -11101,9 +10822,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "ShopPurchaseMadeEventMatcherOptions": {
       "description": "Matches when the player purchases an item from the shop",
@@ -11123,9 +10842,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "SummonTabletUsedEventMatcherOptions": {
       "description": "Matches when the player uses a Summoning tablet",
@@ -11145,9 +10862,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "GameEventMatcherData": {
       "oneOf": [
@@ -11310,11 +11025,7 @@
           "minimum": 0
         }
       },
-      "required": [
-        "character",
-        "maxRoll",
-        "maxPercent"
-      ]
+      "required": ["character", "maxRoll", "maxPercent"]
     },
     "RolledDamage": {
       "type": "object",
@@ -11343,11 +11054,7 @@
           "minimum": 0
         }
       },
-      "required": [
-        "roll",
-        "minRoll",
-        "minPercent"
-      ]
+      "required": ["roll", "minRoll", "minPercent"]
     },
     "FixedDamage": {
       "type": "object",
@@ -11363,9 +11070,7 @@
           "const": false
         }
       },
-      "required": [
-        "roll"
-      ]
+      "required": ["roll"]
     },
     "Damage": {
       "oneOf": [
@@ -11396,10 +11101,7 @@
           "minimum": 0
         }
       },
-      "required": [
-        "damageType",
-        "amplitude"
-      ]
+      "required": ["damageType", "amplitude"]
     },
     "CustomDamageData": {
       "description": "Defines customized damage for a special attack",
@@ -11415,9 +11117,7 @@
           "const": "Custom"
         }
       },
-      "required": [
-        "damageType"
-      ]
+      "required": ["damageType"]
     },
     "DamageData": {
       "oneOf": [
@@ -11431,10 +11131,7 @@
     },
     "CharacterType": {
       "type": "string",
-      "enum": [
-        "Target",
-        "Attacker"
-      ]
+      "enum": ["Target", "Attacker"]
     },
     "ModifierEffectData": {
       "description": "Defines a custom modifier effect.",
@@ -11531,18 +11228,11 @@
           "maximum": 100
         }
       },
-      "required": [
-        "type",
-        "turns",
-        "chance"
-      ]
+      "required": ["type", "turns", "chance"]
     },
     "StunFlavour": {
       "type": "string",
-      "enum": [
-        "Stun",
-        "Freeze"
-      ]
+      "enum": ["Stun", "Freeze"]
     },
     "StunEffect": {
       "description": "Defines a custom stun effect.",
@@ -11569,22 +11259,11 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "turns",
-        "chance",
-        "flavour"
-      ]
+      "required": ["type", "turns", "chance", "flavour"]
     },
     "DOTType": {
       "type": "string",
-      "enum": [
-        "Burn",
-        "Bleed",
-        "Poison",
-        "Regen",
-        "DeadlyPoison"
-      ]
+      "enum": ["Burn", "Bleed", "Poison", "Regen", "DeadlyPoison"]
     },
     "DOTEffect": {
       "description": "Defines a custom DOT effect. DOT effects apply damage over time, or healing over time.",
@@ -11625,14 +11304,7 @@
           "$ref": "#/$defs/EffectChance"
         }
       },
-      "required": [
-        "type",
-        "subtype",
-        "procs",
-        "damage",
-        "interval",
-        "chance"
-      ]
+      "required": ["type", "subtype", "procs", "damage", "interval", "chance"]
     },
     "ReflexiveEffectData": {
       "description": "Defines a custom reflexive effect. Reflexive effects increase in stack each time the target character is hit.",
@@ -11678,14 +11350,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "type",
-        "modifiers",
-        "maxStacks",
-        "media",
-        "turns",
-        "name"
-      ]
+      "required": ["type", "modifiers", "maxStacks", "media", "turns", "name"]
     },
     "CompoundEffect": {
       "description": "Defines a custom compound effect. A meta-effect, randomly applys one of the subsequent effects in the effect array.",
@@ -11704,11 +11369,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "chance",
-        "numEffects"
-      ]
+      "required": ["type", "chance", "numEffects"]
     },
     "ComboEffect": {
       "description": "Defines a custom combo effect. Combo effects gain stacks each time the attacker succesfully hits thier target. All stacks are removed on a missed attack.",
@@ -11737,12 +11398,7 @@
           "format": "uri-reference"
         }
       },
-      "required": [
-        "type",
-        "maxStacks",
-        "modifiers",
-        "media"
-      ]
+      "required": ["type", "maxStacks", "modifiers", "media"]
     },
     "AnyEffectData": {
       "oneOf": [
@@ -11794,11 +11450,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "effectType",
-        "magnitude",
-        "turns"
-      ]
+      "required": ["effectType", "magnitude", "turns"]
     },
     "BurnEffectData": {
       "description": "Defines a Burn DOT Effect, with the standard damage and duration",
@@ -11812,10 +11464,7 @@
           "$ref": "#/$defs/EffectChance"
         }
       },
-      "required": [
-        "effectType",
-        "chance"
-      ]
+      "required": ["effectType", "chance"]
     },
     "PoisonEffectData": {
       "description": "Defines a Poison DOT Effect, with the standard damage and duration",
@@ -11829,10 +11478,7 @@
           "$ref": "#/$defs/EffectChance"
         }
       },
-      "required": [
-        "effectType",
-        "chance"
-      ]
+      "required": ["effectType", "chance"]
     },
     "FrostBurnEffectData": {
       "description": "Defines the standard Frostburn effect. Impacted by modifiers and conditions that specify Frostburn",
@@ -11843,9 +11489,7 @@
           "const": "Frostburn"
         }
       },
-      "required": [
-        "effectType"
-      ]
+      "required": ["effectType"]
     },
     "AttackStackingEffectData": {
       "type": "object",
@@ -11863,10 +11507,7 @@
           ]
         }
       },
-      "required": [
-        "effectType",
-        "id"
-      ]
+      "required": ["effectType", "id"]
     },
     "AfflictionEffectData": {
       "description": "Defines the standard Affliction effect. Impacted by modifiers and conditions that specify Affliction",
@@ -11877,9 +11518,7 @@
           "const": "Affliction"
         }
       },
-      "required": [
-        "effectType"
-      ]
+      "required": ["effectType"]
     },
     "CustomEffectData": {
       "description": "Defines a custom effect that is not specified by a standard type",
@@ -11895,9 +11534,7 @@
           "const": "Custom"
         }
       },
-      "required": [
-        "effectType"
-      ]
+      "required": ["effectType"]
     },
     "CurseEffectData": {
       "type": "object",
@@ -11924,10 +11561,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "effectType",
-        "curse"
-      ]
+      "required": ["effectType", "curse"]
     },
     "DeadlyPoisonEffectData": {
       "description": "Defines a Deadly Poison DOT Effect, with the standard damage and duration",
@@ -11941,10 +11575,7 @@
           "$ref": "#/$defs/EffectChance"
         }
       },
-      "required": [
-        "effectType",
-        "chance"
-      ]
+      "required": ["effectType", "chance"]
     },
     "EffectData": {
       "oneOf": [
@@ -11998,11 +11629,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "skillID",
-        "level"
-      ]
+      "required": ["type", "skillID", "level"]
     },
     "AllSkillLevelRequirementData": {
       "type": "object",
@@ -12026,10 +11653,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "type",
-        "level"
-      ]
+      "required": ["type", "level"]
     },
     "DungeonRequirementData": {
       "type": "object",
@@ -12052,11 +11676,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "dungeonID",
-        "count"
-      ]
+      "required": ["type", "dungeonID", "count"]
     },
     "CompletionRequirementData": {
       "type": "object",
@@ -12080,11 +11700,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "percent",
-        "namespace"
-      ]
+      "required": ["type", "percent", "namespace"]
     },
     "ShopPurchaseRequirementData": {
       "type": "object",
@@ -12107,11 +11723,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "purchaseID",
-        "count"
-      ]
+      "required": ["type", "purchaseID", "count"]
     },
     "SlayerItemRequirementData": {
       "type": "object",
@@ -12129,10 +11741,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "itemID"
-      ]
+      "required": ["type", "itemID"]
     },
     "SlayerTaskRequirement": {
       "type": "object",
@@ -12155,11 +11764,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "tier",
-        "count"
-      ]
+      "required": ["type", "tier", "count"]
     },
     "ItemFoundRequirementData": {
       "type": "object",
@@ -12177,10 +11782,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "itemID"
-      ]
+      "required": ["type", "itemID"]
     },
     "MonsterKilledRequirementData": {
       "type": "object",
@@ -12203,11 +11805,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "monsterID",
-        "count"
-      ]
+      "required": ["type", "monsterID", "count"]
     },
     "TownshipTaskCompletionRequirement": {
       "type": "object",
@@ -12222,10 +11820,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "count"
-      ]
+      "required": ["type", "count"]
     },
     "TownshipTutorialTaskCompletionRequirement": {
       "type": "object",
@@ -12240,10 +11835,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "count"
-      ]
+      "required": ["type", "count"]
     },
     "TownshipBuildingRequirementData": {
       "type": "object",
@@ -12266,11 +11858,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "buildingID",
-        "count"
-      ]
+      "required": ["type", "buildingID", "count"]
     },
     "AnyRequirementData": {
       "oneOf": [
@@ -12311,14 +11899,7 @@
     },
     "Comparison": {
       "type": "string",
-      "enum": [
-        "==",
-        "!=",
-        ">",
-        "<",
-        "<=",
-        ">="
-      ]
+      "enum": ["==", "!=", ">", "<", "<=", ">="]
     },
     "ValueCondition": {
       "type": "object",
@@ -12336,10 +11917,7 @@
           ]
         }
       },
-      "required": [
-        "value",
-        "operator"
-      ]
+      "required": ["value", "operator"]
     },
     "BooleanCondition": {
       "type": "object",
@@ -12349,9 +11927,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "inverted"
-      ]
+      "required": ["inverted"]
     },
     "HitpointsCondition": {
       "description": "Compares the hitpoints percent of the specified character with value",
@@ -12367,9 +11943,7 @@
           "const": "Hitpoints"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "DOTCondition": {
       "description": "Requires that character has a DOT of the specified type",
@@ -12393,10 +11967,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "dotType"
-      ]
+      "required": ["type", "dotType"]
     },
     "ModifierEffectCondition": {
       "description": "Requires that character has a Modifier Effect of the specified type",
@@ -12414,16 +11985,10 @@
         "effectType": {
           "description": "Specifies the modifier effect that must be on the character.",
           "type": "string",
-          "enum": [
-            "Slow",
-            "Frostburn"
-          ]
+          "enum": ["Slow", "Frostburn"]
         }
       },
-      "required": [
-        "type",
-        "effectType"
-      ]
+      "required": ["type", "effectType"]
     },
     "AttackTypeCondition": {
       "description": "Requires that the character and their target have the specified Combat Styles",
@@ -12463,11 +12028,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "thisAttackType",
-        "targetAttackType"
-      ]
+      "required": ["type", "thisAttackType", "targetAttackType"]
     },
     "IsFightingCondition": {
       "description": "Requires that the player is fighting something",
@@ -12483,9 +12044,7 @@
           "const": "IsFighting"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "StunnedCondition": {
       "description": "Requires that the specified character is stunned/frozen",
@@ -12509,9 +12068,7 @@
           ]
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "SleepingCondition": {
       "description": "Requires that the specified character is sleeping",
@@ -12527,9 +12084,7 @@
           "const": "IsSleeping"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "CombatCondition": {
       "oneOf": [
@@ -12578,10 +12133,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "itemID"
-      ]
+      "required": ["type", "itemID"]
     },
     "ItemChargeConditionData": {
       "description": "Compares the quantity of item charges of the equipment item with value",
@@ -12605,10 +12157,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "itemID"
-      ]
+      "required": ["type", "itemID"]
     },
     "EveryConditionData": {
       "description": "Requires that all of the conditions be met",
@@ -12627,10 +12176,7 @@
           "minItems": 1
         }
       },
-      "required": [
-        "type",
-        "conditions"
-      ]
+      "required": ["type", "conditions"]
     },
     "SomeConditionData": {
       "description": "Requires that any of the conditions are met",
@@ -12649,10 +12195,7 @@
           "minItems": 1
         }
       },
-      "required": [
-        "type",
-        "conditions"
-      ]
+      "required": ["type", "conditions"]
     },
     "FightingBossCondition": {
       "description": "Requires that the Player is fighting a Boss monster",
@@ -12668,9 +12211,7 @@
           "const": "FightingBoss"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "EquipStatCompareCondition": {
       "description": "Compares the Player's base equipment stat with the Enemies",
@@ -12697,11 +12238,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "statKey",
-        "operator"
-      ]
+      "required": ["type", "statKey", "operator"]
     },
     "AnyConditionData": {
       "oneOf": [
@@ -12716,15 +12253,10 @@
             "character": {
               "description": "The character that must have the condition",
               "type": "string",
-              "enum": [
-                "Player",
-                "Enemy"
-              ]
+              "enum": ["Player", "Enemy"]
             }
           },
-          "required": [
-            "character"
-          ]
+          "required": ["character"]
         },
         {
           "$ref": "#/$defs/ItemInBankConditionData"
@@ -12774,9 +12306,7 @@
           ]
         }
       },
-      "required": [
-        "condition"
-      ]
+      "required": ["condition"]
     },
     "PetChanceData": {
       "type": "object",
@@ -12817,11 +12347,7 @@
           "exclusiveMinimum": 0
         }
       },
-      "required": [
-        "target",
-        "modifier",
-        "magnitude"
-      ]
+      "required": ["target", "modifier", "magnitude"]
     },
     "EnemyAreaEffect": {
       "type": "object",
@@ -12844,11 +12370,7 @@
           "exclusiveMinimum": 0
         }
       },
-      "required": [
-        "target",
-        "modifier",
-        "magnitude"
-      ]
+      "required": ["target", "modifier", "magnitude"]
     },
     "AreaEffect": {
       "oneOf": [
@@ -12874,10 +12396,7 @@
           "minimum": 0
         }
       },
-      "required": [
-        "type",
-        "cost"
-      ]
+      "required": ["type", "cost"]
     },
     "LinearCost": {
       "description": "A linearly scaling cost per purchase in the shop",
@@ -12898,11 +12417,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "initial",
-        "scaling"
-      ]
+      "required": ["type", "initial", "scaling"]
     },
     "BankSlotCost": {
       "description": "A cost that scales according the bank slot cost formula per purchase in the shop",
@@ -12913,9 +12428,7 @@
           "const": "BankSlot"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "GloveCost": {
       "description": "A fixed cost that can be reduced if the player has read the merchant's permit",
@@ -12931,10 +12444,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "type",
-        "cost"
-      ]
+      "required": ["type", "cost"]
     },
     "ShopCostAmount": {
       "oneOf": [
@@ -13033,9 +12543,7 @@
           "const": "Item"
         }
       },
-      "required": [
-        "itemType"
-      ]
+      "required": ["itemType"]
     },
     "SlotTypes": {
       "type": "string",
@@ -13092,10 +12600,7 @@
           "type": "number"
         }
       },
-      "required": [
-        "key",
-        "value"
-      ]
+      "required": ["key", "value"]
     },
     "BaseEquipmentItemData": {
       "type": "object",
@@ -13108,11 +12613,7 @@
         "tier": {
           "description": "Classification for the tier of item. Currently only effects which items can be converted to Clothing in township",
           "type": "string",
-          "examples": [
-            "Leather",
-            "none",
-            "dragon"
-          ]
+          "examples": ["Leather", "none", "dragon"]
         },
         "validSlots": {
           "description": "The valid equipment slots that this item can be equipped to.",
@@ -13257,11 +12758,7 @@
               "minItems": 1
             }
           },
-          "required": [
-            "itemID",
-            "chance",
-            "matchers"
-          ]
+          "required": ["itemID", "chance", "matchers"]
         }
       },
       "required": [
@@ -13272,9 +12769,7 @@
         "equipmentStats"
       ],
       "dependentRequired": {
-        "overrideSpecialChances": [
-          "specialAttacks"
-        ]
+        "overrideSpecialChances": ["specialAttacks"]
       }
     },
     "EquipmentItemData": {
@@ -13290,9 +12785,7 @@
           "const": "Equipment"
         }
       },
-      "required": [
-        "itemType"
-      ]
+      "required": ["itemType"]
     },
     "WeaponItemData": {
       "type": "object",
@@ -13323,10 +12816,7 @@
           ]
         }
       },
-      "required": [
-        "itemType",
-        "attackType"
-      ]
+      "required": ["itemType", "attackType"]
     },
     "FoodItemData": {
       "type": "object",
@@ -13346,10 +12836,7 @@
           "exclusiveMinimum": 0
         }
       },
-      "required": [
-        "itemType",
-        "healsFor"
-      ]
+      "required": ["itemType", "healsFor"]
     },
     "BoneItemData": {
       "type": "object",
@@ -13369,10 +12856,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "itemType",
-        "prayerPoints"
-      ]
+      "required": ["itemType", "prayerPoints"]
     },
     "PotionItemData": {
       "type": "object",
@@ -13464,15 +12948,10 @@
               "type": "string"
             }
           },
-          "required": [
-            "title",
-            "htmlTemplateID"
-          ]
+          "required": ["title", "htmlTemplateID"]
         }
       },
-      "required": [
-        "itemType"
-      ]
+      "required": ["itemType"]
     },
     "OpenableItemData": {
       "type": "object",
@@ -13503,10 +12982,7 @@
           ]
         }
       },
-      "required": [
-        "itemType",
-        "dropTable"
-      ]
+      "required": ["itemType", "dropTable"]
     },
     "TokenItemData": {
       "type": "object",
@@ -13529,10 +13005,7 @@
           ]
         }
       },
-      "required": [
-        "itemType",
-        "modifiers"
-      ]
+      "required": ["itemType", "modifiers"]
     },
     "CompostItemData": {
       "type": "object",
@@ -13743,9 +13216,7 @@
           ]
         }
       },
-      "required": [
-        "effectData"
-      ]
+      "required": ["effectData"]
     },
     "AnyItemData": {
       "oneOf": [
@@ -13818,10 +13289,7 @@
                 "exclusiveMinimum": 0
               }
             },
-            "required": [
-              "skillID",
-              "ratio"
-            ]
+            "required": ["skillID", "ratio"]
           }
         },
         "attackType": {
@@ -13837,12 +13305,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "modifiers",
-        "experienceGain",
-        "attackType",
-        "name"
-      ]
+      "required": ["modifiers", "experienceGain", "attackType", "name"]
     },
     "StackingEffectData": {
       "description": "Data for constructing a StackingEffect object",
@@ -13889,13 +13352,7 @@
           ]
         }
       },
-      "required": [
-        "stacksToAdd",
-        "modifiers",
-        "maxStacks",
-        "name",
-        "media"
-      ]
+      "required": ["stacksToAdd", "modifiers", "maxStacks", "name", "media"]
     },
     "AttackData": {
       "description": "Data for constructing a SpecialAttack object",
@@ -14054,10 +13511,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "name",
-        "modifiers"
-      ]
+      "required": ["name", "modifiers"]
     },
     "MonsterData": {
       "description": "Data for constructing a Monster object",
@@ -14202,10 +13656,7 @@
               "minimum": 1
             }
           },
-          "required": [
-            "min",
-            "max"
-          ]
+          "required": ["min", "max"]
         },
         "bones": {
           "description": "Optional. If present, the monster will always drop the specified item, outside of dungeons",
@@ -14260,10 +13711,7 @@
               "minimum": 1
             }
           },
-          "required": [
-            "id",
-            "quantity"
-          ]
+          "required": ["id", "quantity"]
         }
       },
       "required": [
@@ -14458,7 +13906,7 @@
       "description": "The IDs of the objects to insert",
       "type": "array",
       "items": {
-        "$ref": "#/$defs/ValidID"
+        "type": "string"
       },
       "minItems": 1
     },
@@ -14474,10 +13922,7 @@
           "$ref": "#/$defs/ObjectsToInsert"
         }
       },
-      "required": [
-        "insertAt",
-        "ids"
-      ]
+      "required": ["insertAt", "ids"]
     },
     "InsertEnd": {
       "description": "Inserts objects at the end of the order",
@@ -14491,10 +13936,7 @@
           "$ref": "#/$defs/ObjectsToInsert"
         }
       },
-      "required": [
-        "insertAt",
-        "ids"
-      ]
+      "required": ["insertAt", "ids"]
     },
     "InsertBefore": {
       "description": "Inserts objects before the specified object",
@@ -14508,7 +13950,7 @@
           "description": "The ID of the object to insert items before",
           "allOf": [
             {
-              "$ref": "#/$defs/ValidID"
+              "type": "string"
             }
           ]
         },
@@ -14516,11 +13958,7 @@
           "$ref": "#/$defs/ObjectsToInsert"
         }
       },
-      "required": [
-        "insertAt",
-        "beforeID",
-        "ids"
-      ]
+      "required": ["insertAt", "beforeID", "ids"]
     },
     "InsertAfter": {
       "description": "Inserts objects after the specified object",
@@ -14534,7 +13972,7 @@
           "description": "The ID of the object to insert items after",
           "allOf": [
             {
-              "$ref": "#/$defs/ValidID"
+              "type": "string"
             }
           ]
         },
@@ -14542,11 +13980,7 @@
           "$ref": "#/$defs/ObjectsToInsert"
         }
       },
-      "required": [
-        "insertAt",
-        "afterID",
-        "ids"
-      ]
+      "required": ["insertAt", "afterID", "ids"]
     },
     "InsertOrder": {
       "oneOf": [
@@ -14667,12 +14101,7 @@
           }
         }
       },
-      "required": [
-        "name",
-        "media",
-        "level",
-        "runesRequired"
-      ]
+      "required": ["name", "media", "level", "runesRequired"]
     },
     "CombatSpellData": {
       "description": "Data for constructing a CombatSpell object",
@@ -14717,25 +14146,12 @@
         "spellType": {
           "description": "The type of the spell being cast. Used by the modifier system to grant specific bonuses to spells.",
           "type": "string",
-          "enum": [
-            "Air",
-            "Water",
-            "Earth",
-            "Fire",
-            "Nature"
-          ]
+          "enum": ["Air", "Water", "Earth", "Fire", "Nature"]
         },
         "spellTier": {
           "description": "The tier of the spell being cast. Used by the modifier system to grant specific bonuses to spells.",
           "type": "string",
-          "enum": [
-            "Strike",
-            "Bolt",
-            "Blast",
-            "Wave",
-            "Surge",
-            "Other"
-          ]
+          "enum": ["Strike", "Bolt", "Blast", "Wave", "Surge", "Other"]
         },
         "specialAttackID": {
           "description": "Optional. If present, the player's attack selection will be replaced with only this attack while using the spell.",
@@ -14746,11 +14162,7 @@
           ]
         }
       },
-      "required": [
-        "maxHit",
-        "spellType",
-        "spellTier"
-      ]
+      "required": ["maxHit", "spellType", "spellTier"]
     },
     "CurseSpellData": {
       "description": "Data for constructing a CurseSpell object",
@@ -14770,9 +14182,7 @@
           ]
         }
       },
-      "required": [
-        "targetModifiers"
-      ]
+      "required": ["targetModifiers"]
     },
     "AuroraSpellData": {
       "description": "Data for constructing a AuroraSpell object",
@@ -14792,9 +14202,7 @@
           ]
         }
       },
-      "required": [
-        "modifiers"
-      ]
+      "required": ["modifiers"]
     },
     "AncientSpellData": {
       "description": "Data for constructing a AncientSpell object",
@@ -14814,9 +14222,7 @@
           ]
         }
       },
-      "required": [
-        "specialAttackID"
-      ]
+      "required": ["specialAttackID"]
     },
     "ArchaicSpellData": {
       "description": "Data for constructing a ArchaicSpell object",
@@ -14830,12 +14236,7 @@
         "spellType": {
           "description": "The type of the spell being cast. Used by the modifier system to grant specific spell bonuses.",
           "type": "string",
-          "enum": [
-            "Poison",
-            "Infernal",
-            "Lightning",
-            "Other"
-          ]
+          "enum": ["Poison", "Infernal", "Lightning", "Other"]
         },
         "maxHit": {
           "description": "The base maximium hit used to calculate the player's max hit. 1/10th of the desired damage in Standard mode.",
@@ -14851,11 +14252,7 @@
           ]
         }
       },
-      "required": [
-        "spellType",
-        "maxHit",
-        "specialAttack"
-      ]
+      "required": ["spellType", "maxHit", "specialAttack"]
     },
     "AltMagicSpellData": {
       "description": "Data for constructing a AltMagicSpell object",
@@ -14906,10 +14303,7 @@
               "minimum": 1
             }
           },
-          "required": [
-            "type",
-            "quantity"
-          ]
+          "required": ["type", "quantity"]
         },
         "produces": {
           "description": "Defines what the spell produces. Can either be a special production, or a set itemID.",
@@ -15060,10 +14454,7 @@
           "default": false
         }
       },
-      "required": [
-        "name",
-        "media"
-      ]
+      "required": ["name", "media"]
     },
     "ShopPurchaseData": {
       "description": "Data for constructing a ShopPurchase object",
@@ -15124,10 +14515,7 @@
                   "minimum": 1
                 }
               },
-              "required": [
-                "id",
-                "quantity"
-              ]
+              "required": ["id", "quantity"]
             },
             "modifiers": {
               "description": "Optional. Specifies modifiers that should be given per quantity of the item purchased.",
@@ -15150,9 +14538,7 @@
               "type": "boolean"
             }
           },
-          "required": [
-            "items"
-          ]
+          "required": ["items"]
         },
         "cost": {
           "description": "Determines the cost of purchasing this",
@@ -15190,12 +14576,7 @@
               ]
             }
           },
-          "required": [
-            "gp",
-            "slayerCoins",
-            "items",
-            "raidCoins"
-          ]
+          "required": ["gp", "slayerCoins", "items", "raidCoins"]
         },
         "allowQuantityPurchase": {
           "description": "If the player is allowed to purchase multiple of this purchase at once",
@@ -15240,10 +14621,7 @@
                 "minimum": 0
               }
             },
-            "required": [
-              "gamemodeID",
-              "maximum"
-            ]
+            "required": ["gamemodeID", "maximum"]
           }
         },
         "showBuyLimit": {
@@ -15403,10 +14781,7 @@
               },
               {
                 "type": "string",
-                "enum": [
-                  "ThrowingWeapon",
-                  "Melee2HWeapon"
-                ]
+                "enum": ["ThrowingWeapon", "Melee2HWeapon"]
               }
             ]
           },
@@ -15446,9 +14821,7 @@
           "minItems": 1
         }
       },
-      "required": [
-        "itemIDs"
-      ],
+      "required": ["itemIDs"],
       "minProperties": 2
     },
     "GolbinRaidData": {
@@ -15486,19 +14859,10 @@
               "weight": {
                 "description": "The weight of the item in golbin crates. Higher value indicates more common items",
                 "type": "integer",
-                "enum": [
-                  35,
-                  20,
-                  10,
-                  4,
-                  1
-                ]
+                "enum": [35, 20, 10, 4, 1]
               }
             },
-            "required": [
-              "itemID",
-              "weight"
-            ]
+            "required": ["itemID", "weight"]
           }
         },
         "golbinPassives": {
@@ -15541,10 +14905,7 @@
               "minimum": 1
             }
           },
-          "required": [
-            "id",
-            "quantity"
-          ]
+          "required": ["id", "quantity"]
         },
         "startingRunes": {
           "description": "Optional. Sets the starting runes of the player",
@@ -15586,10 +14947,7 @@
           ]
         }
       },
-      "required": [
-        "id",
-        "requirements"
-      ]
+      "required": ["id", "requirements"]
     },
     "TutorialTaskData": {
       "description": "Data for constructing a TutorialTask object",
@@ -15692,11 +15050,7 @@
               }
             }
           },
-          "required": [
-            "gp",
-            "slayerCoins",
-            "items"
-          ]
+          "required": ["gp", "slayerCoins", "items"]
         },
         "allowedShopPurchases": {
           "description": "ShopPurchases that the player is allowed to make during the stage",
@@ -15776,9 +15130,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "categoryID"
-      ]
+      "required": ["categoryID"]
     },
     "PageSideBarSubItemOptions": {
       "type": "object",
@@ -15816,10 +15168,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "categoryID",
-        "itemID"
-      ]
+      "required": ["categoryID", "itemID"]
     },
     "PageData": {
       "description": "Data for constructing a Page object",
@@ -15926,11 +15275,7 @@
           }
         }
       },
-      "required": [
-        "title",
-        "media",
-        "unlockRequirements"
-      ]
+      "required": ["title", "media", "unlockRequirements"]
     },
     "SkillCategoryData": {
       "description": "Data for constructing a SkillCategory object",
@@ -15951,10 +15296,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "media",
-        "name"
-      ]
+      "required": ["media", "name"]
     },
     "BasicSkillRecipeData": {
       "description": "Data for constructing a BasicSkillRecipe object",
@@ -15976,10 +15318,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "baseExperience",
-        "level"
-      ]
+      "required": ["baseExperience", "level"]
     },
     "SingleProductRecipeData": {
       "description": "Data for constructing a SingleProductRecipe object",
@@ -15999,9 +15338,7 @@
           ]
         }
       },
-      "required": [
-        "productId"
-      ]
+      "required": ["productId"]
     },
     "ArtisanSkillRecipeData": {
       "description": "Data for constructing a ArtisanSkillRecipeData object",
@@ -16030,11 +15367,7 @@
           "minimum": 0
         }
       },
-      "required": [
-        "itemCosts",
-        "gpCost",
-        "scCost"
-      ]
+      "required": ["itemCosts", "gpCost", "scCost"]
     },
     "CategorizedArtisanRecipeData": {
       "description": "Data for constructing a CategorizedArtisanRecipeData object",
@@ -16049,14 +15382,12 @@
           "description": "ID of the category this recipe belongs to",
           "allOf": [
             {
-              "$ref": "#/$defs/ValidID"
+              "type": "string"
             }
           ]
         }
       },
-      "required": [
-        "categoryID"
-      ]
+      "required": ["categoryID"]
     },
     "SingleProductArtisanSkillRecipeData": {
       "description": "Data for constructing a SingleProductArtisanSkillRecipe object",
@@ -16081,10 +15412,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "productID",
-        "baseQuantity"
-      ]
+      "required": ["productID", "baseQuantity"]
     },
     "WoodcuttingTreeData": {
       "description": "Data For constructing a WoodcuttingTree object",
@@ -16123,11 +15451,7 @@
           ]
         }
       },
-      "required": [
-        "name",
-        "media",
-        "baseInterval"
-      ]
+      "required": ["name", "media", "baseInterval"]
     },
     "FishingAreaData": {
       "description": "Data for constructing a FishingArea object",
@@ -16219,11 +15543,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "strengthXP",
-        "baseMinInterval",
-        "baseMaxInterval"
-      ]
+      "required": ["strengthXP", "baseMinInterval", "baseMaxInterval"]
     },
     "FiremakingLogData": {
       "description": "Data For constructing a FiremakingLog object",
@@ -16286,10 +15606,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "shopUpgradeIDs",
-        "upgradeRequired"
-      ]
+      "required": ["shopUpgradeIDs", "upgradeRequired"]
     },
     "CookingRecipeData": {
       "description": "Data for constructing a CookingRecipe object",
@@ -16327,18 +15644,11 @@
           "minItems": 1
         }
       },
-      "required": [
-        "perfectCookID",
-        "baseInterval"
-      ]
+      "required": ["perfectCookID", "baseInterval"]
     },
     "MiningRockType": {
       "type": "string",
-      "enum": [
-        "Ore",
-        "Essence",
-        "Gem"
-      ]
+      "enum": ["Ore", "Essence", "Gem"]
     },
     "MiningRockData": {
       "description": "Data For constructing a MiningRock object",
@@ -16513,11 +15823,7 @@
           }
         }
       },
-      "required": [
-        "name",
-        "npcIDs",
-        "uniqueDrops"
-      ]
+      "required": ["name", "npcIDs", "uniqueDrops"]
     },
     "GeneralThievingRareData": {
       "description": "Data for constructing a GeneralThievingRare object",
@@ -16547,10 +15853,7 @@
           "uniqueItems": true
         }
       },
-      "required": [
-        "itemID",
-        "chance"
-      ]
+      "required": ["itemID", "chance"]
     },
     "FarmingCategoryData": {
       "description": "Data for constructing a FarmingCategory object",
@@ -16630,11 +15933,7 @@
           "minimum": 0
         }
       },
-      "required": [
-        "categoryID",
-        "level",
-        "gpCost"
-      ]
+      "required": ["categoryID", "level", "gpCost"]
     },
     "FarmingRecipeData": {
       "description": "Data for constructing a FarmingRecipe object",
@@ -16684,11 +15983,7 @@
           ]
         }
       },
-      "required": [
-        "baseInterval",
-        "categoryID",
-        "seedCost"
-      ]
+      "required": ["baseInterval", "categoryID", "seedCost"]
     },
     "FletchingRecipeData": {
       "description": "Data for constructing a FletchingRecipe object",
@@ -16719,10 +16014,7 @@
                 "minimum": 1
               }
             },
-            "required": [
-              "itemCosts",
-              "quantityMultiplier"
-            ]
+            "required": ["itemCosts", "quantityMultiplier"]
           },
           "minItems": 2
         }
@@ -16751,10 +16043,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "potionIDs",
-        "name"
-      ]
+      "required": ["potionIDs", "name"]
     },
     "BaseAgilityObjectData": {
       "description": "Data for constructing a BaseAgilityObject object",
@@ -16795,13 +16084,7 @@
           ]
         }
       },
-      "required": [
-        "name",
-        "itemCosts",
-        "gpCost",
-        "scCost",
-        "modifiers"
-      ]
+      "required": ["name", "itemCosts", "gpCost", "scCost", "modifiers"]
     },
     "AgilityObstacleData": {
       "description": "Data for constructing a AgilityObstacle object",
@@ -16904,12 +16187,7 @@
           }
         }
       },
-      "required": [
-        "markMedia",
-        "nonShardItemCosts",
-        "tier",
-        "skillIDs"
-      ]
+      "required": ["markMedia", "nonShardItemCosts", "tier", "skillIDs"]
     },
     "SummoningSynergyData": {
       "description": "The data required to construct a SummoningSynergy object",
@@ -16961,11 +16239,7 @@
           "minItems": 1
         }
       },
-      "required": [
-        "summonIDs",
-        "modifiers",
-        "consumesOn"
-      ]
+      "required": ["summonIDs", "modifiers", "consumesOn"]
     },
     "AstrologyModifierData": {
       "description": "Data for constructing a AstrologyModifier object",
@@ -16988,9 +16262,7 @@
                     ]
                   }
                 },
-                "required": [
-                  "key"
-                ]
+                "required": ["key"]
               },
               {
                 "type": "object",
@@ -17012,10 +16284,7 @@
                     ]
                   }
                 },
-                "required": [
-                  "key",
-                  "skill"
-                ]
+                "required": ["key", "skill"]
               }
             ]
           },
@@ -17041,12 +16310,7 @@
           "minItems": 1
         }
       },
-      "required": [
-        "modifiers",
-        "maxCount",
-        "incrementValue",
-        "costs"
-      ]
+      "required": ["modifiers", "maxCount", "incrementValue", "costs"]
     },
     "AstrologyRecipeData": {
       "description": "Data for constructing a AstrologyRecipe object",
@@ -17134,11 +16398,7 @@
         "penalty": {
           "description": "The township stat that should be penalized",
           "type": "string",
-          "enum": [
-            "deathRate",
-            "flatHappiness",
-            "happinessModifier"
-          ]
+          "enum": ["deathRate", "flatHappiness", "happinessModifier"]
         },
         "value": {
           "description": "The value of the penalty. Percentage for deathRate and happinessModifier. Flat value for flatHappiness.",
@@ -17161,10 +16421,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "penalty",
-        "value"
-      ]
+      "required": ["penalty", "value"]
     },
     "TownshipBuildingPenaltyData": {
       "type": "object",
@@ -17172,12 +16429,7 @@
         "provides": {
           "description": "The building attribute to penalize",
           "type": "string",
-          "enum": [
-            "happiness",
-            "education",
-            "resources",
-            "worship"
-          ]
+          "enum": ["happiness", "education", "resources", "worship"]
         },
         "value": {
           "description": "The percent value that the attribute should be reduced by",
@@ -17192,11 +16444,7 @@
           ]
         }
       },
-      "required": [
-        "provides",
-        "value",
-        "biome"
-      ]
+      "required": ["provides", "value", "biome"]
     },
     "TownshipResourceQuantity": {
       "type": "object",
@@ -17214,10 +16462,7 @@
           "type": "number"
         }
       },
-      "required": [
-        "id",
-        "quantity"
-      ]
+      "required": ["id", "quantity"]
     },
     "TownshipHealthBonus": {
       "type": "object",
@@ -17275,11 +16520,7 @@
         "type": {
           "description": "The type of the resource. Currency for GP. Raw for resources that don't require other resources to make. Product otherwise.",
           "type": "string",
-          "enum": [
-            "Currency",
-            "Raw",
-            "Product"
-          ]
+          "enum": ["Currency", "Raw", "Product"]
         },
         "description": {
           "description": "Currently unused description of the resource",
@@ -17342,10 +16583,7 @@
               "minimum": 1
             }
           },
-          "required": [
-            "resources",
-            "maxAge"
-          ]
+          "required": ["resources", "maxAge"]
         }
       },
       "required": [
@@ -17381,9 +16619,7 @@
           ]
         }
       },
-      "required": [
-        "name"
-      ]
+      "required": ["name"]
     },
     "TownshipBiomeData": {
       "description": "Data for constructing a TownshipBiome object",
@@ -17441,10 +16677,7 @@
           ]
         }
       },
-      "required": [
-        "name",
-        "description"
-      ]
+      "required": ["name", "description"]
     },
     "TownshipBuildingProvidesData": {
       "type": "object",
@@ -17488,10 +16721,7 @@
                 "minimum": 1
               }
             },
-            "required": [
-              "id",
-              "quantity"
-            ]
+            "required": ["id", "quantity"]
           }
         },
         "resources": {
@@ -17738,18 +16968,12 @@
                 "minimum": 0
               }
             },
-            "required": [
-              "biomeID",
-              "count"
-            ]
+            "required": ["biomeID", "count"]
           },
           "minItems": 1
         }
       },
-      "required": [
-        "name",
-        "biomes"
-      ]
+      "required": ["name", "biomes"]
     },
     "TownshipTaskGoalsData": {
       "description": "The requirements for completing the task",
@@ -17782,10 +17006,7 @@
                 "minimum": 1
               }
             },
-            "required": [
-              "id",
-              "quantity"
-            ]
+            "required": ["id", "quantity"]
           }
         },
         "skillXP": {
@@ -17808,10 +17029,7 @@
                 "minimum": 1
               }
             },
-            "required": [
-              "id",
-              "quantity"
-            ]
+            "required": ["id", "quantity"]
           }
         },
         "buildings": {
@@ -17834,19 +17052,11 @@
                 "minimum": 1
               }
             },
-            "required": [
-              "id",
-              "quantity"
-            ]
+            "required": ["id", "quantity"]
           }
         }
       },
-      "required": [
-        "items",
-        "monsters",
-        "skillXP",
-        "buildings"
-      ]
+      "required": ["items", "monsters", "skillXP", "buildings"]
     },
     "TownshipTaskRewardsData": {
       "description": "The rewards given for completing the taks",
@@ -17889,10 +17099,7 @@
                 "minimum": 1
               }
             },
-            "required": [
-              "id",
-              "quantity"
-            ]
+            "required": ["id", "quantity"]
           }
         },
         "townshipResources": {
@@ -17903,13 +17110,7 @@
           }
         }
       },
-      "required": [
-        "gp",
-        "slayerCoins",
-        "items",
-        "skillXP",
-        "townshipResources"
-      ]
+      "required": ["gp", "slayerCoins", "items", "skillXP", "townshipResources"]
     },
     "TownshipTaskData": {
       "description": "Data for constructing a TownshipTask object",
@@ -17958,13 +17159,7 @@
           }
         }
       },
-      "required": [
-        "name",
-        "category",
-        "goals",
-        "rewards",
-        "requirements"
-      ]
+      "required": ["name", "category", "goals", "rewards", "requirements"]
     },
     "FixedSkillDropChance": {
       "description": "A Fixed chance that the item should drop",
@@ -17981,10 +17176,7 @@
           "maximum": 100
         }
       },
-      "required": [
-        "type",
-        "chance"
-      ]
+      "required": ["type", "chance"]
     },
     "ScalingChance": {
       "type": "object",
@@ -18007,11 +17199,7 @@
           "maximum": 100
         }
       },
-      "required": [
-        "baseChance",
-        "scalingFactor",
-        "maxChance"
-      ]
+      "required": ["baseChance", "scalingFactor", "maxChance"]
     },
     "LevelScalingSkillDropChance": {
       "description": "A linearly scaling chance that an item should drop that scales with skill level",
@@ -18027,9 +17215,7 @@
           "const": "LevelScaling"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "TotalMasteryScalingSkillDropChance": {
       "description": "A linearly scaling chance that an item should drop that scales with total mastery level",
@@ -18045,9 +17231,7 @@
           "const": "TotalMasteryScaling"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "RareSkillDropChance": {
       "oneOf": [
@@ -18102,12 +17286,7 @@
           }
         }
       },
-      "required": [
-        "itemID",
-        "quantity",
-        "chance",
-        "requirements"
-      ]
+      "required": ["itemID", "quantity", "chance", "requirements"]
     },
     "MinibarData": {
       "properties": {
@@ -18133,11 +17312,7 @@
           }
         }
       },
-      "required": [
-        "defaultItems",
-        "upgrades",
-        "pets"
-      ]
+      "required": ["defaultItems", "upgrades", "pets"]
     },
     "MilestoneLike": {
       "type": "object",
@@ -18157,11 +17332,7 @@
           "format": "uri-reference"
         }
       },
-      "required": [
-        "level",
-        "name",
-        "media"
-      ]
+      "required": ["level", "name", "media"]
     },
     "CustomSkillMilestoneData": {
       "description": "Defines a fully custom milestone for a skill",
@@ -18181,9 +17352,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "type"
-      ]
+      "required": ["type"]
     },
     "EquipItemMilestoneData": {
       "description": "Defines a milestone for being able to equip an item",
@@ -18202,10 +17371,7 @@
           ]
         }
       },
-      "required": [
-        "type",
-        "itemID"
-      ]
+      "required": ["type", "itemID"]
     },
     "MilestoneData": {
       "oneOf": [
@@ -18273,10 +17439,7 @@
           "minimum": 1
         }
       },
-      "required": [
-        "description",
-        "level"
-      ]
+      "required": ["description", "level"]
     },
     "MasterySkillData": {
       "description": "Basic data shared between all Mastery skills",
@@ -18445,11 +17608,7 @@
               "$ref": "#/$defs/AnyItemID"
             }
           },
-          "required": [
-            "originalID",
-            "equippedID",
-            "rewardID"
-          ]
+          "required": ["originalID", "equippedID", "rewardID"]
         },
         "lostChestItem": {
           "description": "Sets the item that should drop as Lost Chest",
@@ -18679,11 +17838,7 @@
               "$ref": "#/$defs/AnyItemID"
             }
           },
-          "required": [
-            "equippedID",
-            "positionedID",
-            "rewardID"
-          ]
+          "required": ["equippedID", "positionedID", "rewardID"]
         }
       }
     },
@@ -19064,10 +18219,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19081,10 +18233,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19098,10 +18247,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19115,10 +18261,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19132,10 +18275,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19149,10 +18289,7 @@
               "$ref": "#/$defs/MagicSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19166,10 +18303,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19183,10 +18317,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19200,10 +18331,7 @@
               "$ref": "#/$defs/WoodcuttingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19217,10 +18345,7 @@
               "$ref": "#/$defs/FishingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19234,10 +18359,7 @@
               "$ref": "#/$defs/FiremakingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19251,10 +18373,7 @@
               "$ref": "#/$defs/CookingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19268,10 +18387,7 @@
               "$ref": "#/$defs/MiningSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19285,10 +18401,7 @@
               "$ref": "#/$defs/SmithingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19302,10 +18415,7 @@
               "$ref": "#/$defs/ThievingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19319,10 +18429,7 @@
               "$ref": "#/$defs/FarmingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19336,10 +18443,7 @@
               "$ref": "#/$defs/FletchingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19353,10 +18457,7 @@
               "$ref": "#/$defs/CraftingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19370,10 +18471,7 @@
               "$ref": "#/$defs/RunecraftingSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19387,10 +18485,7 @@
               "$ref": "#/$defs/HerbloreSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19404,10 +18499,7 @@
               "$ref": "#/$defs/AgilitySkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19421,10 +18513,7 @@
               "$ref": "#/$defs/SummoningSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19438,10 +18527,7 @@
               "$ref": "#/$defs/AstrologySkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19455,10 +18541,7 @@
               "$ref": "#/$defs/TownshipSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         },
         {
           "type": "object",
@@ -19468,7 +18551,7 @@
               "type": "string",
               "allOf": [
                 {
-                  "$ref": "#/$defs/ValidID"
+                  "type": "string"
                 }
               ],
               "not": {
@@ -19505,10 +18588,7 @@
               "$ref": "#/$defs/BaseSkillData"
             }
           },
-          "required": [
-            "skillID",
-            "data"
-          ]
+          "required": ["skillID", "data"]
         }
       ]
     }

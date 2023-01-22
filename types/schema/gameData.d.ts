@@ -8,7 +8,7 @@
 /**
  * Data for constructing a Gamemode object
  */
-export type GamemodeData = GamemodeData1 & {
+declare type GamemodeData = GamemodeData1 & {
   /**
    * Display name of the Gamemode
    */
@@ -99,41 +99,37 @@ export type GamemodeData = GamemodeData1 & {
   hasTutorial: boolean;
   [k: string]: unknown;
 };
-export type GamemodeData1 = IDData;
-export type CombatTriangleType = "Standard" | "Hardcore" | "InvertedHardcore";
-export type PageID =
-  | ValidID
-  | (
-      | "melvorD:ActiveSkill"
-      | "melvorD:TutorialIsland"
-      | "melvorD:Shop"
-      | "melvorD:Bank"
-      | "melvorD:Combat"
-      | "melvorD:Woodcutting"
-      | "melvorD:Fishing"
-      | "melvorD:Firemaking"
-      | "melvorD:Cooking"
-      | "melvorD:Mining"
-      | "melvorD:Smithing"
-      | "melvorD:Thieving"
-      | "melvorD:Farming"
-      | "melvorD:Fletching"
-      | "melvorD:Crafting"
-      | "melvorD:Runecrafting"
-      | "melvorD:Herblore"
-      | "melvorD:Agility"
-      | "melvorD:Summoning"
-      | "melvorD:Astrology"
-      | "melvorD:Township"
-      | "melvorD:AltMagic"
-      | "melvorD:GolbinRaid"
-      | "melvorD:CompletionLog"
-      | "melvorD:Lore"
-      | "melvorD:Statistics"
-      | "melvorD:Settings"
-    );
-export type ValidID = string;
-export type AnyItemID =
+declare type GamemodeData1 = IDData;
+declare type CombatTriangleType = "Standard" | "Hardcore" | "InvertedHardcore";
+declare type PageID =
+  | "melvorD:ActiveSkill"
+  | "melvorD:TutorialIsland"
+  | "melvorD:Shop"
+  | "melvorD:Bank"
+  | "melvorD:Combat"
+  | "melvorD:Woodcutting"
+  | "melvorD:Fishing"
+  | "melvorD:Firemaking"
+  | "melvorD:Cooking"
+  | "melvorD:Mining"
+  | "melvorD:Smithing"
+  | "melvorD:Thieving"
+  | "melvorD:Farming"
+  | "melvorD:Fletching"
+  | "melvorD:Crafting"
+  | "melvorD:Runecrafting"
+  | "melvorD:Herblore"
+  | "melvorD:Agility"
+  | "melvorD:Summoning"
+  | "melvorD:Astrology"
+  | "melvorD:Township"
+  | "melvorD:AltMagic"
+  | "melvorD:GolbinRaid"
+  | "melvorD:CompletionLog"
+  | "melvorD:Lore"
+  | "melvorD:Statistics"
+  | "melvorD:Settings";
+declare type AnyItemID =
   | ItemID
   | EquipmentItemID
   | FoodItemID
@@ -143,412 +139,409 @@ export type AnyItemID =
   | OpenableItemID
   | TokenItemID
   | CompostItemID;
-export type ItemID =
-  | ValidID
-  | (
-      | "melvorD:Normal_Logs"
-      | "melvorD:Oak_Logs"
-      | "melvorD:Willow_Logs"
-      | "melvorD:Teak_Logs"
-      | "melvorD:Maple_Logs"
-      | "melvorD:Mahogany_Logs"
-      | "melvorD:Yew_Logs"
-      | "melvorD:Magic_Logs"
-      | "melvorD:Redwood_Logs"
-      | "melvorD:Raw_Shrimp"
-      | "melvorD:Raw_Sardine"
-      | "melvorD:Raw_Herring"
-      | "melvorD:Raw_Trout"
-      | "melvorD:Raw_Salmon"
-      | "melvorD:Raw_Lobster"
-      | "melvorD:Raw_Swordfish"
-      | "melvorD:Raw_Crab"
-      | "melvorD:Raw_Shark"
-      | "melvorD:Raw_Cave_Fish"
-      | "melvorD:Raw_Manta_Ray"
-      | "melvorD:Raw_Whale"
-      | "melvorD:Burnt_Shrimp"
-      | "melvorD:Burnt_Sardine"
-      | "melvorD:Burnt_Herring"
-      | "melvorD:Burnt_Trout"
-      | "melvorD:Burnt_Salmon"
-      | "melvorD:Burnt_Lobster"
-      | "melvorD:Burnt_Swordfish"
-      | "melvorD:Burnt_Crab"
-      | "melvorD:Burnt_Shark"
-      | "melvorD:Burnt_Cave_Fish"
-      | "melvorD:Burnt_Manta_Ray"
-      | "melvorD:Burnt_Whale"
-      | "melvorD:Copper_Ore"
-      | "melvorD:Tin_Ore"
-      | "melvorD:Iron_Ore"
-      | "melvorD:Coal_Ore"
-      | "melvorD:Silver_Ore"
-      | "melvorD:Gold_Ore"
-      | "melvorD:Mithril_Ore"
-      | "melvorD:Adamantite_Ore"
-      | "melvorD:Runite_Ore"
-      | "melvorD:Dragonite_Ore"
-      | "melvorD:Bronze_Bar"
-      | "melvorD:Iron_Bar"
-      | "melvorD:Steel_Bar"
-      | "melvorD:Gold_Bar"
-      | "melvorD:Mithril_Bar"
-      | "melvorD:Adamantite_Bar"
-      | "melvorD:Runite_Bar"
-      | "melvorD:Dragonite_Bar"
-      | "melvorD:Topaz"
-      | "melvorD:Sapphire"
-      | "melvorD:Ruby"
-      | "melvorD:Emerald"
-      | "melvorD:Diamond"
-      | "melvorD:Silver_Bar"
-      | "melvorD:Potato_Seed"
-      | "melvorD:Onion_Seed"
-      | "melvorD:Cabbage_Seed"
-      | "melvorD:Tomato_Seed"
-      | "melvorD:Sweetcorn_Seed"
-      | "melvorD:Strawberry_Seed"
-      | "melvorD:Watermelon_Seed"
-      | "melvorD:Snape_Grass_Seed"
-      | "melvorD:Oak_Tree_Seed"
-      | "melvorD:Willow_Tree_Seed"
-      | "melvorD:Maple_Tree_Seed"
-      | "melvorD:Yew_Tree_Seed"
-      | "melvorD:Magic_Tree_Seed"
-      | "melvorD:Bronze_Arrowtips"
-      | "melvorD:Iron_Arrowtips"
-      | "melvorD:Steel_Arrowtips"
-      | "melvorD:Mithril_Arrowtips"
-      | "melvorD:Adamant_Arrowtips"
-      | "melvorD:Rune_Arrowtips"
-      | "melvorD:Dragon_Arrowtips"
-      | "melvorD:Headless_Arrows"
-      | "melvorD:Feathers"
-      | "melvorD:Bowstring"
-      | "melvorD:Leather"
-      | "melvorD:Green_Dragonhide"
-      | "melvorD:Blue_Dragonhide"
-      | "melvorD:Red_Dragonhide"
-      | "melvorD:Black_Dragonhide"
-      | "melvorD:Rune_Essence"
-      | "melvorD:Air_Rune"
-      | "melvorD:Mind_Rune"
-      | "melvorD:Water_Rune"
-      | "melvorD:Earth_Rune"
-      | "melvorD:Fire_Rune"
-      | "melvorD:Body_Rune"
-      | "melvorD:Chaos_Rune"
-      | "melvorD:Death_Rune"
-      | "melvorD:Blood_Rune"
-      | "melvorD:Ancient_Rune"
-      | "melvorD:Carrot_Seeds"
-      | "melvorD:Garum_Herb"
-      | "melvorD:Sourweed_Herb"
-      | "melvorD:Mantalyme_Herb"
-      | "melvorD:Lemontyle_Herb"
-      | "melvorD:Oxilyme_Herb"
-      | "melvorD:Garum_Seed"
-      | "melvorD:Sourweed_Seed"
-      | "melvorD:Mantalyme_Seed"
-      | "melvorD:Lemontyle_Seed"
-      | "melvorD:Oxilyme_Seed"
-      | "melvorD:Signet_Ring_Half_A"
-      | "melvorD:Signet_Ring_Half_B"
-      | "melvorD:Old_Boot"
-      | "melvorD:Old_Hat"
-      | "melvorD:Seaweed"
-      | "melvorD:Rusty_Key"
-      | "melvorD:Shell"
-      | "melvorD:Rope"
-      | "melvorD:Glass_Bottle"
-      | "melvorD:Rubber_Ducky"
-      | "melvorD:Raw_Blowfish"
-      | "melvorD:Raw_Poison_Fish"
-      | "melvorD:Leaping_Trout"
-      | "melvorD:Leaping_Salmon"
-      | "melvorD:Leaping_Broad_Fish"
-      | "melvorD:Raw_Anglerfish"
-      | "melvorD:Raw_Fanfish"
-      | "melvorD:Raw_Seahorse"
-      | "melvorD:Raw_Carp"
-      | "melvorD:Burnt_Anglerfish"
-      | "melvorD:Burnt_Fanfish"
-      | "melvorD:Burnt_Seahorse"
-      | "melvorD:Burnt_Carp"
-      | "melvorD:Lemon"
-      | "melvorD:Lemons"
-      | "melvorD:Headless_Bolts"
-      | "melvorD:Bronze_Crossbow_Head"
-      | "melvorD:Iron_Crossbow_Head"
-      | "melvorD:Steel_Crossbow_Head"
-      | "melvorD:Mithril_Crossbow_Head"
-      | "melvorD:Adamant_Crossbow_Head"
-      | "melvorD:Rune_Crossbow_Head"
-      | "melvorD:Dragon_Crossbow_Head"
-      | "melvorD:Bronze_Javelin_Heads"
-      | "melvorD:Iron_Javelin_Heads"
-      | "melvorD:Steel_Javelin_Heads"
-      | "melvorD:Mithril_Javelin_Heads"
-      | "melvorD:Adamant_Javelin_Heads"
-      | "melvorD:Rune_Javelin_Heads"
-      | "melvorD:Dragon_Javelin_Heads"
-      | "melvorD:Eight"
-      | "melvorD:Light_Rune"
-      | "melvorD:Mist_Rune"
-      | "melvorD:Dust_Rune"
-      | "melvorD:Smoke_Rune"
-      | "melvorD:Circlet_of_Rhaelyx"
-      | "melvorD:Jewel_of_Rhaelyx"
-      | "melvorD:Charge_Stone_of_Rhaelyx"
-      | "melvorD:Mysterious_Stone"
-      | "melvorD:Event_Clue_1"
-      | "melvorD:Event_Clue_2"
-      | "melvorD:Event_Clue_3"
-      | "melvorD:Event_Clue_4"
-      | "melvorD:Cake_Base"
-      | "melvorD:Candle"
-      | "melvorD:Magical_Icing"
-      | "melvorD:Magical_Flavouring"
-      | "melvorD:Birthday_Token"
-      | "melvorD:Christmas_Cracker"
-      | "melvorD:Easter_Egg"
-      | "melvorD:Red_Herring"
-      | "melvorD:Bag_of_Flour"
-      | "melvorD:Raw_Beef"
-      | "melvorD:Raw_Chicken"
-      | "melvorD:Cherry_Seeds"
-      | "melvorD:Cheese"
-      | "melvorD:Cream"
-      | "melvorD:Natures_Call_Staff_Top"
-      | "melvorD:Event_Token"
-      | "melvorD:Christmas_Scarf"
-      | "melvorD:Locked_Chest_Key"
-      | "melvorD:Event_Token_Christmas2021"
-      | "melvorF:Arrow_Shafts"
-      | "melvorF:Normal_Shortbow_U"
-      | "melvorF:Oak_Shortbow_U"
-      | "melvorF:Willow_Shortbow_U"
-      | "melvorF:Maple_Shortbow_U"
-      | "melvorF:Yew_Shortbow_U"
-      | "melvorF:Magic_Shortbow_U"
-      | "melvorF:Normal_Longbow_U"
-      | "melvorF:Oak_Longbow_U"
-      | "melvorF:Willow_Longbow_U"
-      | "melvorF:Maple_Longbow_U"
-      | "melvorF:Yew_Longbow_U"
-      | "melvorF:Magic_Longbow_U"
-      | "melvorF:Redwood_Shortbow_U"
-      | "melvorF:Redwood_Longbow_U"
-      | "melvorF:Bobbys_Pocket"
-      | "melvorF:Eyeball"
-      | "melvorF:Dragon_Claw_Fragment"
-      | "melvorF:Ancient_Claw_Fragment"
-      | "melvorF:Poraxx_Herb"
-      | "melvorF:Pigtayle_Herb"
-      | "melvorF:Barrentoe_Herb"
-      | "melvorF:Poraxx_Seed"
-      | "melvorF:Pigtayle_Seed"
-      | "melvorF:Barrentoe_Seed"
-      | "melvorF:Large_Horn"
-      | "melvorF:Elder_Dragonhide"
-      | "melvorF:Air_Shard"
-      | "melvorF:Water_Shard"
-      | "melvorF:Earth_Shard"
-      | "melvorF:Fire_Shard"
-      | "melvorF:Slayer_Crossbow_Head"
-      | "melvorF:Nature_Rune"
-      | "melvorF:Havoc_Rune"
-      | "melvorF:Spirit_Rune"
-      | "melvorF:Mud_Rune"
-      | "melvorF:Steam_Rune"
-      | "melvorF:Lava_Rune"
-      | "melvorF:Tidal_Edge_Fragment"
-      | "melvorF:Ocean_Song_Fragment"
-      | "melvorF:Shockwave_Fragment"
-      | "melvorF:Infernal_Core"
-      | "melvorF:Slayer_Upgrade_Kit_Strong"
-      | "melvorF:Slayer_Upgrade_Kit_Elite"
-      | "melvorF:Slayer_Upgrade_Kit_Master"
-      | "melvorF:Summoning_Shard_Red"
-      | "melvorF:Summoning_Shard_Green"
-      | "melvorF:Summoning_Shard_Blue"
-      | "melvorF:Summoning_Shard_Silver"
-      | "melvorF:Summoning_Shard_Gold"
-      | "melvorF:Summoning_Shard_Black"
-      | "melvorF:Abnormal_Log"
-      | "melvorF:Marksmans_Sigil"
-      | "melvorF:Basic_Bag"
-      | "melvorF:Shipwheel"
-      | "melvorF:Giant_Club"
-      | "melvorF:Knights_Sigil"
-      | "melvorF:Wizards_Sigil"
-      | "melvorF:Antique_Vase"
-      | "melvorF:Jadestone"
-      | "melvorF:Apple_Tree_Seeds"
-      | "melvorF:Goo"
-      | "melvorF:Wildflower"
-      | "melvorF:Natures_Call_Staff_Bottom"
-      | "melvorF:Fine_Poison_Powder"
-      | "melvorF:Poison_Scales"
-      | "melvorF:Miolite_Spore"
-      | "melvorF:Poison_Essence"
-      | "melvorF:Worm_Spike"
-      | "melvorF:Burning_Essence"
-      | "melvorF:Cursed_Hands"
-      | "melvorF:Stinging_Essence"
-      | "melvorF:Tough_Shell"
-      | "melvorF:Undead_Essence"
-      | "melvorF:Desecrated_Bones"
-      | "melvorF:Stardust"
-      | "melvorF:Golden_Stardust"
-      | "melvorF:Small_Urn"
-      | "melvorF:Medium_Urn"
-      | "melvorTotH:Spruce_Logs"
-      | "melvorTotH:Hornbeam_Logs"
-      | "melvorTotH:Grove_Logs"
-      | "melvorTotH:Linden_Logs"
-      | "melvorTotH:Elderwood_Logs"
-      | "melvorTotH:Red_Oak_Logs"
-      | "melvorTotH:Revenant_Logs"
-      | "melvorTotH:Mystic_Logs"
-      | "melvorTotH:Carrion_Logs"
-      | "melvorTotH:Corundumite_Ore"
-      | "melvorTotH:Pure_Essence"
-      | "melvorTotH:Iridium_Ore"
-      | "melvorTotH:Palladium_Ore"
-      | "melvorTotH:Augite_Ore"
-      | "melvorTotH:Onyx"
-      | "melvorTotH:Meteorite_Ore"
-      | "melvorTotH:Divinite_Ore"
-      | "melvorTotH:Oricha"
-      | "melvorTotH:Cerulean"
-      | "melvorTotH:Zephyte"
-      | "melvorTotH:Corundumite_Bar"
-      | "melvorTotH:Iridium_Bar"
-      | "melvorTotH:Palladium_Bar"
-      | "melvorTotH:Augite_Bar"
-      | "melvorTotH:Meteorite_Bar"
-      | "melvorTotH:Divinite_Bar"
-      | "melvorTotH:Corundum_Arrowtips"
-      | "melvorTotH:Corundum_Javelin_Heads"
-      | "melvorTotH:Corundum_Crossbow_Head"
-      | "melvorTotH:Augite_Arrowtips"
-      | "melvorTotH:Augite_Javelin_Heads"
-      | "melvorTotH:Augite_Crossbow_Head"
-      | "melvorTotH:Meteorite_Javelin_Heads"
-      | "melvorTotH:Meteorite_Crossbow_Head"
-      | "melvorTotH:Divine_Arrowtips"
-      | "melvorTotH:Divine_Javelin_Heads"
-      | "melvorTotH:Divine_Crossbow_Head"
-      | "melvorTotH:Woodcutting_Ring_Fragment"
-      | "melvorTotH:Woodcutting_Amulet_Fragment"
-      | "melvorTotH:Raw_Lava_Fish"
-      | "melvorTotH:Raw_Spike_Fish"
-      | "melvorTotH:Raw_Rockfish"
-      | "melvorTotH:Raw_Blue_Crab"
-      | "melvorTotH:Raw_Magma_Fish"
-      | "melvorTotH:Raw_Large_Blowfish"
-      | "melvorTotH:Raw_Static_Jellyfish"
-      | "melvorTotH:Raw_Frost_Crab"
-      | "melvorTotH:Raw_Magma_Eel"
-      | "melvorTotH:Raw_Frozen_Manta_Ray"
-      | "melvorTotH:Raw_Ghost_Fish"
-      | "melvorTotH:Raw_Mystic_Seahorse"
-      | "melvorTotH:Raw_Terrorfish"
-      | "melvorTotH:Raw_Mystic_Shark"
-      | "melvorTotH:Pumpkin_Seeds"
-      | "melvorTotH:Chilli_Seeds"
-      | "melvorTotH:Mushroom_Spores"
-      | "melvorTotH:Starfruit_Seeds"
-      | "melvorTotH:Snowcress_Seeds"
-      | "melvorTotH:Snowcress_Herb"
-      | "melvorTotH:Bitterlyme_Seeds"
-      | "melvorTotH:Bitterlyme_Herb"
-      | "melvorTotH:Moonwort_Seeds"
-      | "melvorTotH:Moonwort_Herb"
-      | "melvorTotH:Wurmtayle_Seeds"
-      | "melvorTotH:Wurmtayle_Herb"
-      | "melvorTotH:Banana_Tree_Seeds"
-      | "melvorTotH:Grove_Tree_Seeds"
-      | "melvorTotH:Elderwood_Tree_Seeds"
-      | "melvorTotH:Carrion_Tree_Seeds"
-      | "melvorTotH:Elderwood_Shortbow_U"
-      | "melvorTotH:Elderwood_Longbow_U"
-      | "melvorTotH:Revenant_Shortbow_U"
-      | "melvorTotH:Revenant_Longbow_U"
-      | "melvorTotH:Carrion_Shortbow_U"
-      | "melvorTotH:Carrion_Longbow_U"
-      | "melvorTotH:Large_Urn"
-      | "melvorTotH:Carrion_Bark"
-      | "melvorTotH:Poison_Rune"
-      | "melvorTotH:Decay_Rune"
-      | "melvorTotH:Infernal_Rune"
-      | "melvorTotH:Despair_Rune"
-      | "melvorTotH:Soul_Rune"
-      | "melvorTotH:Lightning_Rune"
-      | "melvorTotH:Archaic_Rune"
-      | "melvorTotH:Calamity_Rune"
-      | "melvorTotH:Runestone"
-      | "melvorTotH:Perfect_Sight_Legs_Material"
-      | "melvorTotH:Bundled_Protection_Body_Material"
-      | "melvorTotH:Jungle_Spores"
-      | "melvorTotH:Weakness_Exploiter_Cape_Material"
-      | "melvorTotH:Thorned_Power_Core"
-      | "melvorTotH:Burning_Protection_Material"
-      | "melvorTotH:Ward_of_Flame_Material"
-      | "melvorTotH:Frost_Walker_Boots_Material"
-      | "melvorTotH:Freezing_Touch_Material"
-      | "melvorTotH:Spectral_Ice_Sword_Shard"
-      | "melvorTotH:Leviathan_Shield_Material"
-      | "melvorTotH:Torrential_Blast_Crossbow_Shard"
-      | "melvorTotH:Spider_Queen_Eggs"
-      | "melvorTotH:Ectoplasm"
-      | "melvorTotH:Feather_Storm_Crossbow_Shard"
-      | "melvorTotH:Agile_Wings_Rapier_Shard"
-      | "melvorTotH:Slicing_Maelstrom_Wand_Shard"
-      | "melvorTotH:Slayer_Upgrade_Kit_Legendary"
-      | "melvorTotH:Slayer_Upgrade_Kit_Mythical"
-      | "melvorTotH:Labyrinth_Clue_1"
-      | "melvorTotH:Labyrinth_Clue_2"
-      | "melvorTotH:Labyrinth_Clue_3"
-      | "melvorTotH:Labyrinth_Clue_4"
-      | "melvorTotH:Labyrinth_Clue_5"
-      | "melvorTotH:Charcoal"
-      | "melvorTotH:Decaying_Stem"
-      | "melvorTotH:Meteorite_Dust"
-      | "melvorTotH:Lemonade_Empty"
-      | "melvorTotH:Lemonade_Very_empty"
-      | "melvorTotH:Lemonade_Still_very_empty"
-      | "melvorTotH:Lemonade_Not_as_empty_as_before"
-      | "melvorTotH:Lemonade_Not_much"
-      | "melvorTotH:Lemonade_Has_a_bit_now"
-      | "melvorTotH:Lemonade_A_little_bit_more_now"
-      | "melvorTotH:Lemonade_Half_full"
-      | "melvorTotH:Lemonade_Just_over_half_full"
-      | "melvorTotH:Lemonade_Maybe_this_is_half_full"
-      | "melvorTotH:Lemonade_Nope_this_is_half_full_now"
-      | "melvorTotH:Lemonade_Wow_this_is_slow"
-      | "melvorTotH:Lemonade_Just_fill_it_up_already"
-      | "melvorTotH:Lemonade_Still_not_full"
-      | "melvorTotH:Lemonade_Again_still_not_full"
-      | "melvorTotH:Lemonade_Less_than_before_because_you_drank_some"
-      | "melvorTotH:Lemonade_Back_to_where_we_were_before"
-      | "melvorTotH:Lemonade_Almost_full"
-      | "melvorTotH:Lemonade_Still_almost_full"
-      | "melvorTotH:Lemonade_How_full_is_it_supposed_to_be"
-      | "melvorTotH:Lemonade_Wait_this_might_be_half_full_now"
-      | "melvorTotH:Lemonade_Haha_just_joking_hurry_up"
-      | "melvorTotH:Lemonade_Okay_this_looks_pretty_full_now"
-      | "melvorTotH:Lemonade_Now"
-      | "melvorTotH:Lemonade_What_about_now"
-      | "melvorTotH:Lemonade_YAY_ITS_FINALLY_FULL"
-      | "melvorTotH:Lemonade_Oh_still_not_full"
-      | "melvorTotH:Lemonade_Wait_for_it"
-      | "melvorTotH:Lemonade_Wait_for_it2"
-      | "melvorTotH:Golden_Key"
-    );
-export type EquipmentItemID =
+declare type ItemID =
+  | "melvorD:Normal_Logs"
+  | "melvorD:Oak_Logs"
+  | "melvorD:Willow_Logs"
+  | "melvorD:Teak_Logs"
+  | "melvorD:Maple_Logs"
+  | "melvorD:Mahogany_Logs"
+  | "melvorD:Yew_Logs"
+  | "melvorD:Magic_Logs"
+  | "melvorD:Redwood_Logs"
+  | "melvorD:Raw_Shrimp"
+  | "melvorD:Raw_Sardine"
+  | "melvorD:Raw_Herring"
+  | "melvorD:Raw_Trout"
+  | "melvorD:Raw_Salmon"
+  | "melvorD:Raw_Lobster"
+  | "melvorD:Raw_Swordfish"
+  | "melvorD:Raw_Crab"
+  | "melvorD:Raw_Shark"
+  | "melvorD:Raw_Cave_Fish"
+  | "melvorD:Raw_Manta_Ray"
+  | "melvorD:Raw_Whale"
+  | "melvorD:Burnt_Shrimp"
+  | "melvorD:Burnt_Sardine"
+  | "melvorD:Burnt_Herring"
+  | "melvorD:Burnt_Trout"
+  | "melvorD:Burnt_Salmon"
+  | "melvorD:Burnt_Lobster"
+  | "melvorD:Burnt_Swordfish"
+  | "melvorD:Burnt_Crab"
+  | "melvorD:Burnt_Shark"
+  | "melvorD:Burnt_Cave_Fish"
+  | "melvorD:Burnt_Manta_Ray"
+  | "melvorD:Burnt_Whale"
+  | "melvorD:Copper_Ore"
+  | "melvorD:Tin_Ore"
+  | "melvorD:Iron_Ore"
+  | "melvorD:Coal_Ore"
+  | "melvorD:Silver_Ore"
+  | "melvorD:Gold_Ore"
+  | "melvorD:Mithril_Ore"
+  | "melvorD:Adamantite_Ore"
+  | "melvorD:Runite_Ore"
+  | "melvorD:Dragonite_Ore"
+  | "melvorD:Bronze_Bar"
+  | "melvorD:Iron_Bar"
+  | "melvorD:Steel_Bar"
+  | "melvorD:Gold_Bar"
+  | "melvorD:Mithril_Bar"
+  | "melvorD:Adamantite_Bar"
+  | "melvorD:Runite_Bar"
+  | "melvorD:Dragonite_Bar"
+  | "melvorD:Topaz"
+  | "melvorD:Sapphire"
+  | "melvorD:Ruby"
+  | "melvorD:Emerald"
+  | "melvorD:Diamond"
+  | "melvorD:Silver_Bar"
+  | "melvorD:Potato_Seed"
+  | "melvorD:Onion_Seed"
+  | "melvorD:Cabbage_Seed"
+  | "melvorD:Tomato_Seed"
+  | "melvorD:Sweetcorn_Seed"
+  | "melvorD:Strawberry_Seed"
+  | "melvorD:Watermelon_Seed"
+  | "melvorD:Snape_Grass_Seed"
+  | "melvorD:Oak_Tree_Seed"
+  | "melvorD:Willow_Tree_Seed"
+  | "melvorD:Maple_Tree_Seed"
+  | "melvorD:Yew_Tree_Seed"
+  | "melvorD:Magic_Tree_Seed"
+  | "melvorD:Bronze_Arrowtips"
+  | "melvorD:Iron_Arrowtips"
+  | "melvorD:Steel_Arrowtips"
+  | "melvorD:Mithril_Arrowtips"
+  | "melvorD:Adamant_Arrowtips"
+  | "melvorD:Rune_Arrowtips"
+  | "melvorD:Dragon_Arrowtips"
+  | "melvorD:Headless_Arrows"
+  | "melvorD:Feathers"
+  | "melvorD:Bowstring"
+  | "melvorD:Leather"
+  | "melvorD:Green_Dragonhide"
+  | "melvorD:Blue_Dragonhide"
+  | "melvorD:Red_Dragonhide"
+  | "melvorD:Black_Dragonhide"
+  | "melvorD:Rune_Essence"
+  | "melvorD:Air_Rune"
+  | "melvorD:Mind_Rune"
+  | "melvorD:Water_Rune"
+  | "melvorD:Earth_Rune"
+  | "melvorD:Fire_Rune"
+  | "melvorD:Body_Rune"
+  | "melvorD:Chaos_Rune"
+  | "melvorD:Death_Rune"
+  | "melvorD:Blood_Rune"
+  | "melvorD:Ancient_Rune"
+  | "melvorD:Carrot_Seeds"
+  | "melvorD:Garum_Herb"
+  | "melvorD:Sourweed_Herb"
+  | "melvorD:Mantalyme_Herb"
+  | "melvorD:Lemontyle_Herb"
+  | "melvorD:Oxilyme_Herb"
+  | "melvorD:Garum_Seed"
+  | "melvorD:Sourweed_Seed"
+  | "melvorD:Mantalyme_Seed"
+  | "melvorD:Lemontyle_Seed"
+  | "melvorD:Oxilyme_Seed"
+  | "melvorD:Signet_Ring_Half_A"
+  | "melvorD:Signet_Ring_Half_B"
+  | "melvorD:Old_Boot"
+  | "melvorD:Old_Hat"
+  | "melvorD:Seaweed"
+  | "melvorD:Rusty_Key"
+  | "melvorD:Shell"
+  | "melvorD:Rope"
+  | "melvorD:Glass_Bottle"
+  | "melvorD:Rubber_Ducky"
+  | "melvorD:Raw_Blowfish"
+  | "melvorD:Raw_Poison_Fish"
+  | "melvorD:Leaping_Trout"
+  | "melvorD:Leaping_Salmon"
+  | "melvorD:Leaping_Broad_Fish"
+  | "melvorD:Raw_Anglerfish"
+  | "melvorD:Raw_Fanfish"
+  | "melvorD:Raw_Seahorse"
+  | "melvorD:Raw_Carp"
+  | "melvorD:Burnt_Anglerfish"
+  | "melvorD:Burnt_Fanfish"
+  | "melvorD:Burnt_Seahorse"
+  | "melvorD:Burnt_Carp"
+  | "melvorD:Lemon"
+  | "melvorD:Lemons"
+  | "melvorD:Headless_Bolts"
+  | "melvorD:Bronze_Crossbow_Head"
+  | "melvorD:Iron_Crossbow_Head"
+  | "melvorD:Steel_Crossbow_Head"
+  | "melvorD:Mithril_Crossbow_Head"
+  | "melvorD:Adamant_Crossbow_Head"
+  | "melvorD:Rune_Crossbow_Head"
+  | "melvorD:Dragon_Crossbow_Head"
+  | "melvorD:Bronze_Javelin_Heads"
+  | "melvorD:Iron_Javelin_Heads"
+  | "melvorD:Steel_Javelin_Heads"
+  | "melvorD:Mithril_Javelin_Heads"
+  | "melvorD:Adamant_Javelin_Heads"
+  | "melvorD:Rune_Javelin_Heads"
+  | "melvorD:Dragon_Javelin_Heads"
+  | "melvorD:Eight"
+  | "melvorD:Light_Rune"
+  | "melvorD:Mist_Rune"
+  | "melvorD:Dust_Rune"
+  | "melvorD:Smoke_Rune"
+  | "melvorD:Circlet_of_Rhaelyx"
+  | "melvorD:Jewel_of_Rhaelyx"
+  | "melvorD:Charge_Stone_of_Rhaelyx"
+  | "melvorD:Mysterious_Stone"
+  | "melvorD:Event_Clue_1"
+  | "melvorD:Event_Clue_2"
+  | "melvorD:Event_Clue_3"
+  | "melvorD:Event_Clue_4"
+  | "melvorD:Cake_Base"
+  | "melvorD:Candle"
+  | "melvorD:Magical_Icing"
+  | "melvorD:Magical_Flavouring"
+  | "melvorD:Birthday_Token"
+  | "melvorD:Christmas_Cracker"
+  | "melvorD:Easter_Egg"
+  | "melvorD:Red_Herring"
+  | "melvorD:Bag_of_Flour"
+  | "melvorD:Raw_Beef"
+  | "melvorD:Raw_Chicken"
+  | "melvorD:Cherry_Seeds"
+  | "melvorD:Cheese"
+  | "melvorD:Cream"
+  | "melvorD:Natures_Call_Staff_Top"
+  | "melvorD:Event_Token"
+  | "melvorD:Christmas_Scarf"
+  | "melvorD:Locked_Chest_Key"
+  | "melvorD:Event_Token_Christmas2021"
+  | "melvorF:Arrow_Shafts"
+  | "melvorF:Normal_Shortbow_U"
+  | "melvorF:Oak_Shortbow_U"
+  | "melvorF:Willow_Shortbow_U"
+  | "melvorF:Maple_Shortbow_U"
+  | "melvorF:Yew_Shortbow_U"
+  | "melvorF:Magic_Shortbow_U"
+  | "melvorF:Normal_Longbow_U"
+  | "melvorF:Oak_Longbow_U"
+  | "melvorF:Willow_Longbow_U"
+  | "melvorF:Maple_Longbow_U"
+  | "melvorF:Yew_Longbow_U"
+  | "melvorF:Magic_Longbow_U"
+  | "melvorF:Redwood_Shortbow_U"
+  | "melvorF:Redwood_Longbow_U"
+  | "melvorF:Bobbys_Pocket"
+  | "melvorF:Eyeball"
+  | "melvorF:Dragon_Claw_Fragment"
+  | "melvorF:Ancient_Claw_Fragment"
+  | "melvorF:Poraxx_Herb"
+  | "melvorF:Pigtayle_Herb"
+  | "melvorF:Barrentoe_Herb"
+  | "melvorF:Poraxx_Seed"
+  | "melvorF:Pigtayle_Seed"
+  | "melvorF:Barrentoe_Seed"
+  | "melvorF:Large_Horn"
+  | "melvorF:Elder_Dragonhide"
+  | "melvorF:Air_Shard"
+  | "melvorF:Water_Shard"
+  | "melvorF:Earth_Shard"
+  | "melvorF:Fire_Shard"
+  | "melvorF:Slayer_Crossbow_Head"
+  | "melvorF:Nature_Rune"
+  | "melvorF:Havoc_Rune"
+  | "melvorF:Spirit_Rune"
+  | "melvorF:Mud_Rune"
+  | "melvorF:Steam_Rune"
+  | "melvorF:Lava_Rune"
+  | "melvorF:Tidal_Edge_Fragment"
+  | "melvorF:Ocean_Song_Fragment"
+  | "melvorF:Shockwave_Fragment"
+  | "melvorF:Infernal_Core"
+  | "melvorF:Slayer_Upgrade_Kit_Strong"
+  | "melvorF:Slayer_Upgrade_Kit_Elite"
+  | "melvorF:Slayer_Upgrade_Kit_Master"
+  | "melvorF:Summoning_Shard_Red"
+  | "melvorF:Summoning_Shard_Green"
+  | "melvorF:Summoning_Shard_Blue"
+  | "melvorF:Summoning_Shard_Silver"
+  | "melvorF:Summoning_Shard_Gold"
+  | "melvorF:Summoning_Shard_Black"
+  | "melvorF:Abnormal_Log"
+  | "melvorF:Marksmans_Sigil"
+  | "melvorF:Basic_Bag"
+  | "melvorF:Shipwheel"
+  | "melvorF:Giant_Club"
+  | "melvorF:Knights_Sigil"
+  | "melvorF:Wizards_Sigil"
+  | "melvorF:Antique_Vase"
+  | "melvorF:Jadestone"
+  | "melvorF:Apple_Tree_Seeds"
+  | "melvorF:Goo"
+  | "melvorF:Wildflower"
+  | "melvorF:Natures_Call_Staff_Bottom"
+  | "melvorF:Fine_Poison_Powder"
+  | "melvorF:Poison_Scales"
+  | "melvorF:Miolite_Spore"
+  | "melvorF:Poison_Essence"
+  | "melvorF:Worm_Spike"
+  | "melvorF:Burning_Essence"
+  | "melvorF:Cursed_Hands"
+  | "melvorF:Stinging_Essence"
+  | "melvorF:Tough_Shell"
+  | "melvorF:Undead_Essence"
+  | "melvorF:Desecrated_Bones"
+  | "melvorF:Stardust"
+  | "melvorF:Golden_Stardust"
+  | "melvorF:Small_Urn"
+  | "melvorF:Medium_Urn"
+  | "melvorTotH:Spruce_Logs"
+  | "melvorTotH:Hornbeam_Logs"
+  | "melvorTotH:Grove_Logs"
+  | "melvorTotH:Linden_Logs"
+  | "melvorTotH:Elderwood_Logs"
+  | "melvorTotH:Red_Oak_Logs"
+  | "melvorTotH:Revenant_Logs"
+  | "melvorTotH:Mystic_Logs"
+  | "melvorTotH:Carrion_Logs"
+  | "melvorTotH:Corundumite_Ore"
+  | "melvorTotH:Pure_Essence"
+  | "melvorTotH:Iridium_Ore"
+  | "melvorTotH:Palladium_Ore"
+  | "melvorTotH:Augite_Ore"
+  | "melvorTotH:Onyx"
+  | "melvorTotH:Meteorite_Ore"
+  | "melvorTotH:Divinite_Ore"
+  | "melvorTotH:Oricha"
+  | "melvorTotH:Cerulean"
+  | "melvorTotH:Zephyte"
+  | "melvorTotH:Corundumite_Bar"
+  | "melvorTotH:Iridium_Bar"
+  | "melvorTotH:Palladium_Bar"
+  | "melvorTotH:Augite_Bar"
+  | "melvorTotH:Meteorite_Bar"
+  | "melvorTotH:Divinite_Bar"
+  | "melvorTotH:Corundum_Arrowtips"
+  | "melvorTotH:Corundum_Javelin_Heads"
+  | "melvorTotH:Corundum_Crossbow_Head"
+  | "melvorTotH:Augite_Arrowtips"
+  | "melvorTotH:Augite_Javelin_Heads"
+  | "melvorTotH:Augite_Crossbow_Head"
+  | "melvorTotH:Meteorite_Javelin_Heads"
+  | "melvorTotH:Meteorite_Crossbow_Head"
+  | "melvorTotH:Divine_Arrowtips"
+  | "melvorTotH:Divine_Javelin_Heads"
+  | "melvorTotH:Divine_Crossbow_Head"
+  | "melvorTotH:Woodcutting_Ring_Fragment"
+  | "melvorTotH:Woodcutting_Amulet_Fragment"
+  | "melvorTotH:Raw_Lava_Fish"
+  | "melvorTotH:Raw_Spike_Fish"
+  | "melvorTotH:Raw_Rockfish"
+  | "melvorTotH:Raw_Blue_Crab"
+  | "melvorTotH:Raw_Magma_Fish"
+  | "melvorTotH:Raw_Large_Blowfish"
+  | "melvorTotH:Raw_Static_Jellyfish"
+  | "melvorTotH:Raw_Frost_Crab"
+  | "melvorTotH:Raw_Magma_Eel"
+  | "melvorTotH:Raw_Frozen_Manta_Ray"
+  | "melvorTotH:Raw_Ghost_Fish"
+  | "melvorTotH:Raw_Mystic_Seahorse"
+  | "melvorTotH:Raw_Terrorfish"
+  | "melvorTotH:Raw_Mystic_Shark"
+  | "melvorTotH:Pumpkin_Seeds"
+  | "melvorTotH:Chilli_Seeds"
+  | "melvorTotH:Mushroom_Spores"
+  | "melvorTotH:Starfruit_Seeds"
+  | "melvorTotH:Snowcress_Seeds"
+  | "melvorTotH:Snowcress_Herb"
+  | "melvorTotH:Bitterlyme_Seeds"
+  | "melvorTotH:Bitterlyme_Herb"
+  | "melvorTotH:Moonwort_Seeds"
+  | "melvorTotH:Moonwort_Herb"
+  | "melvorTotH:Wurmtayle_Seeds"
+  | "melvorTotH:Wurmtayle_Herb"
+  | "melvorTotH:Banana_Tree_Seeds"
+  | "melvorTotH:Grove_Tree_Seeds"
+  | "melvorTotH:Elderwood_Tree_Seeds"
+  | "melvorTotH:Carrion_Tree_Seeds"
+  | "melvorTotH:Elderwood_Shortbow_U"
+  | "melvorTotH:Elderwood_Longbow_U"
+  | "melvorTotH:Revenant_Shortbow_U"
+  | "melvorTotH:Revenant_Longbow_U"
+  | "melvorTotH:Carrion_Shortbow_U"
+  | "melvorTotH:Carrion_Longbow_U"
+  | "melvorTotH:Large_Urn"
+  | "melvorTotH:Carrion_Bark"
+  | "melvorTotH:Poison_Rune"
+  | "melvorTotH:Decay_Rune"
+  | "melvorTotH:Infernal_Rune"
+  | "melvorTotH:Despair_Rune"
+  | "melvorTotH:Soul_Rune"
+  | "melvorTotH:Lightning_Rune"
+  | "melvorTotH:Archaic_Rune"
+  | "melvorTotH:Calamity_Rune"
+  | "melvorTotH:Runestone"
+  | "melvorTotH:Perfect_Sight_Legs_Material"
+  | "melvorTotH:Bundled_Protection_Body_Material"
+  | "melvorTotH:Jungle_Spores"
+  | "melvorTotH:Weakness_Exploiter_Cape_Material"
+  | "melvorTotH:Thorned_Power_Core"
+  | "melvorTotH:Burning_Protection_Material"
+  | "melvorTotH:Ward_of_Flame_Material"
+  | "melvorTotH:Frost_Walker_Boots_Material"
+  | "melvorTotH:Freezing_Touch_Material"
+  | "melvorTotH:Spectral_Ice_Sword_Shard"
+  | "melvorTotH:Leviathan_Shield_Material"
+  | "melvorTotH:Torrential_Blast_Crossbow_Shard"
+  | "melvorTotH:Spider_Queen_Eggs"
+  | "melvorTotH:Ectoplasm"
+  | "melvorTotH:Feather_Storm_Crossbow_Shard"
+  | "melvorTotH:Agile_Wings_Rapier_Shard"
+  | "melvorTotH:Slicing_Maelstrom_Wand_Shard"
+  | "melvorTotH:Slayer_Upgrade_Kit_Legendary"
+  | "melvorTotH:Slayer_Upgrade_Kit_Mythical"
+  | "melvorTotH:Labyrinth_Clue_1"
+  | "melvorTotH:Labyrinth_Clue_2"
+  | "melvorTotH:Labyrinth_Clue_3"
+  | "melvorTotH:Labyrinth_Clue_4"
+  | "melvorTotH:Labyrinth_Clue_5"
+  | "melvorTotH:Charcoal"
+  | "melvorTotH:Decaying_Stem"
+  | "melvorTotH:Meteorite_Dust"
+  | "melvorTotH:Lemonade_Empty"
+  | "melvorTotH:Lemonade_Very_empty"
+  | "melvorTotH:Lemonade_Still_very_empty"
+  | "melvorTotH:Lemonade_Not_as_empty_as_before"
+  | "melvorTotH:Lemonade_Not_much"
+  | "melvorTotH:Lemonade_Has_a_bit_now"
+  | "melvorTotH:Lemonade_A_little_bit_more_now"
+  | "melvorTotH:Lemonade_Half_full"
+  | "melvorTotH:Lemonade_Just_over_half_full"
+  | "melvorTotH:Lemonade_Maybe_this_is_half_full"
+  | "melvorTotH:Lemonade_Nope_this_is_half_full_now"
+  | "melvorTotH:Lemonade_Wow_this_is_slow"
+  | "melvorTotH:Lemonade_Just_fill_it_up_already"
+  | "melvorTotH:Lemonade_Still_not_full"
+  | "melvorTotH:Lemonade_Again_still_not_full"
+  | "melvorTotH:Lemonade_Less_than_before_because_you_drank_some"
+  | "melvorTotH:Lemonade_Back_to_where_we_were_before"
+  | "melvorTotH:Lemonade_Almost_full"
+  | "melvorTotH:Lemonade_Still_almost_full"
+  | "melvorTotH:Lemonade_How_full_is_it_supposed_to_be"
+  | "melvorTotH:Lemonade_Wait_this_might_be_half_full_now"
+  | "melvorTotH:Lemonade_Haha_just_joking_hurry_up"
+  | "melvorTotH:Lemonade_Okay_this_looks_pretty_full_now"
+  | "melvorTotH:Lemonade_Now"
+  | "melvorTotH:Lemonade_What_about_now"
+  | "melvorTotH:Lemonade_YAY_ITS_FINALLY_FULL"
+  | "melvorTotH:Lemonade_Oh_still_not_full"
+  | "melvorTotH:Lemonade_Wait_for_it"
+  | "melvorTotH:Lemonade_Wait_for_it2"
+  | "melvorTotH:Golden_Key";
+declare type EquipmentItemID =
   | WeaponItemID
   | (
       | "melvorD:Empty_Equipment"
@@ -1435,664 +1428,640 @@ export type EquipmentItemID =
       | "melvorTotH:Thieving_Shorts"
       | "melvorTotH:Meteorite_Spellcaster_Ring"
     );
-export type WeaponItemID =
-  | ValidID
-  | (
-      | "melvorD:Bronze_Dagger"
-      | "melvorD:Bronze_Sword"
-      | "melvorD:Bronze_Battleaxe"
-      | "melvorD:Bronze_2H_Sword"
-      | "melvorD:Iron_Dagger"
-      | "melvorD:Iron_Sword"
-      | "melvorD:Iron_Battleaxe"
-      | "melvorD:Iron_2H_Sword"
-      | "melvorD:Steel_Dagger"
-      | "melvorD:Steel_Sword"
-      | "melvorD:Steel_Battleaxe"
-      | "melvorD:Steel_2H_Sword"
-      | "melvorD:Mithril_Dagger"
-      | "melvorD:Mithril_Sword"
-      | "melvorD:Mithril_Battleaxe"
-      | "melvorD:Mithril_2H_Sword"
-      | "melvorD:Adamant_Dagger"
-      | "melvorD:Adamant_Sword"
-      | "melvorD:Adamant_Battleaxe"
-      | "melvorD:Adamant_2H_Sword"
-      | "melvorD:Rune_Dagger"
-      | "melvorD:Rune_Sword"
-      | "melvorD:Rune_Battleaxe"
-      | "melvorD:Rune_2H_Sword"
-      | "melvorD:Dragon_Dagger"
-      | "melvorD:Dragon_Sword"
-      | "melvorD:Dragon_Battleaxe"
-      | "melvorD:Dragon_2H_Sword"
-      | "melvorD:Black_Dagger"
-      | "melvorD:Black_Sword"
-      | "melvorD:Black_Battleaxe"
-      | "melvorD:Black_2H_Sword"
-      | "melvorD:Normal_Shortbow"
-      | "melvorD:Oak_Shortbow"
-      | "melvorD:Maple_Shortbow"
-      | "melvorD:Yew_Shortbow"
-      | "melvorD:Magic_Shortbow"
-      | "melvorD:Maple_Longbow"
-      | "melvorD:Magic_Longbow"
-      | "melvorD:Ancient_Sword"
-      | "melvorD:Ice_Dagger"
-      | "melvorD:Ice_Sword"
-      | "melvorD:Ice_Battleaxe"
-      | "melvorD:Ice_2h_Sword"
-      | "melvorD:Ice_Shortbow"
-      | "melvorD:Ice_Longbow"
-      | "melvorD:Redwood_Longbow"
-      | "melvorD:Air_Battlestaff"
-      | "melvorD:Water_Battlestaff"
-      | "melvorD:Earth_Battlestaff"
-      | "melvorD:Fire_Battlestaff"
-      | "melvorD:Mystic_Air_Staff"
-      | "melvorD:Bronze_Scimitar"
-      | "melvorD:Iron_Scimitar"
-      | "melvorD:Steel_Scimitar"
-      | "melvorD:Black_Scimitar"
-      | "melvorD:Mithril_Scimitar"
-      | "melvorD:Adamant_Scimitar"
-      | "melvorD:Rune_Scimitar"
-      | "melvorD:Dragon_Scimitar"
-      | "melvorD:Ancient_Longbow"
-      | "melvorD:Magic_Wand_Basic"
-      | "melvorD:Magic_Wand_Powerful"
-      | "melvorD:Magic_Wand_Elite"
-      | "melvorD:Sunset_Rapier"
-      | "melvorD:Bronze_Throwing_Knife"
-      | "melvorD:Iron_Throwing_Knife"
-      | "melvorD:Steel_Throwing_Knife"
-      | "melvorD:Mithril_Throwing_Knife"
-      | "melvorD:Adamant_Throwing_Knife"
-      | "melvorD:Rune_Throwing_Knife"
-      | "melvorD:Dragon_Throwing_Knife"
-      | "melvorD:Bobs_Rake"
-      | "melvorD:Candy_Cane"
-      | "melvorD:Slingshot"
-      | "melvorD:Elerine_Longbow"
-      | "melvorD:Elerine_Spear"
-      | "melvorD:Mystery_Wand"
-      | "melvorD:Burning_Wand"
-      | "melvorD:Frostburn_Wand"
-      | "melvorD:Sword_Of_Some_Reliability"
-      | "melvorD:Tilted_Crossbow"
-      | "melvorD:Impossible_Longbow"
-      | "melvorD:Throwing_Dragon_Sword"
-      | "melvorF:Willow_Shortbow"
-      | "melvorF:Normal_Longbow"
-      | "melvorF:Oak_Longbow"
-      | "melvorF:Willow_Longbow"
-      | "melvorF:Yew_Longbow"
-      | "melvorF:Redwood_Shortbow"
-      | "melvorF:Staff_of_Air"
-      | "melvorF:Staff_of_Water"
-      | "melvorF:Staff_of_Earth"
-      | "melvorF:Staff_of_Fire"
-      | "melvorF:Mystic_Water_Staff"
-      | "melvorF:Mystic_Earth_Staff"
-      | "melvorF:Mystic_Fire_Staff"
-      | "melvorF:Dragon_Claw"
-      | "melvorF:Ancient_Claw"
-      | "melvorF:Ancient_2H_Sword"
-      | "melvorF:Bronze_Crossbow"
-      | "melvorF:Iron_Crossbow"
-      | "melvorF:Steel_Crossbow"
-      | "melvorF:Mithril_Crossbow"
-      | "melvorF:Adamant_Crossbow"
-      | "melvorF:Rune_Crossbow"
-      | "melvorF:Dragon_Crossbow"
-      | "melvorF:Ancient_Crossbow"
-      | "melvorF:Bronze_Javelin"
-      | "melvorF:Iron_Javelin"
-      | "melvorF:Steel_Javelin"
-      | "melvorF:Mithril_Javelin"
-      | "melvorF:Adamant_Javelin"
-      | "melvorF:Rune_Javelin"
-      | "melvorF:Dragon_Javelin"
-      | "melvorF:Ancient_Javelin"
-      | "melvorF:Ancient_Throwing_Knife"
-      | "melvorF:Aeris_Godsword"
-      | "melvorF:Glacia_Godsword"
-      | "melvorF:Terran_Godsword"
-      | "melvorF:Ragnar_Godsword"
-      | "melvorF:Stormsnap"
-      | "melvorF:Big_Ron"
-      | "melvorF:Confetti_Crossbow"
-      | "melvorF:Slayer_Crossbow"
-      | "melvorF:Twin_Exiles"
-      | "melvorF:Cloudburst_Staff"
-      | "melvorF:Air_Imbued_Wand"
-      | "melvorF:Water_Imbued_Wand"
-      | "melvorF:Earth_Imbued_Wand"
-      | "melvorF:Fire_Imbued_Wand"
-      | "melvorF:Miolite_Sceptre"
-      | "melvorF:Desert_Sabre"
-      | "melvorF:Desert_Shortbow"
-      | "melvorF:Darksteel_Dagger"
-      | "melvorF:Sanguine_Blade"
-      | "melvorF:Infernal_Claw"
-      | "melvorF:Tidal_Edge"
-      | "melvorF:Ocean_Song"
-      | "melvorF:Shockwave"
-      | "melvorF:Almighty_Lute"
-      | "melvorF:Chefs_Spoon"
-      | "melvorF:War_Axe"
-      | "melvorF:Warberd"
-      | "melvorF:Natures_Call_Staff"
-      | "melvorF:Natures_Wrath_Staff"
-      | "melvorF:Poisoned_Shortbow"
-      | "melvorF:Poisoned_Dagger"
-      | "melvorF:Ultima_Godsword"
-      | "melvorTotH:Corundum_Dagger"
-      | "melvorTotH:Corundum_Sword"
-      | "melvorTotH:Corundum_Battleaxe"
-      | "melvorTotH:Corundum_2H_Sword"
-      | "melvorTotH:Corundum_Scimitar"
-      | "melvorTotH:Corundum_Throwing_Knife"
-      | "melvorTotH:Augite_Dagger"
-      | "melvorTotH:Augite_Sword"
-      | "melvorTotH:Augite_Battleaxe"
-      | "melvorTotH:Augite_2H_Sword"
-      | "melvorTotH:Augite_Scimitar"
-      | "melvorTotH:Augite_Throwing_Knife"
-      | "melvorTotH:Meteorite_2H_Sword"
-      | "melvorTotH:Divine_Dagger"
-      | "melvorTotH:Divine_Sword"
-      | "melvorTotH:Divine_Battleaxe"
-      | "melvorTotH:Divine_2H_Sword"
-      | "melvorTotH:Divine_Scimitar"
-      | "melvorTotH:Divine_Throwing_Knife"
-      | "melvorTotH:Potion_Stirrer"
-      | "melvorTotH:Elderwood_Shortbow"
-      | "melvorTotH:Elderwood_Longbow"
-      | "melvorTotH:Revenant_Shortbow"
-      | "melvorTotH:Revenant_Longbow"
-      | "melvorTotH:Carrion_Shortbow"
-      | "melvorTotH:Carrion_Longbow"
-      | "melvorTotH:Corundum_Crossbow"
-      | "melvorTotH:Augite_Crossbow"
-      | "melvorTotH:Divine_Crossbow"
-      | "melvorTotH:Meteorite_Crossbow"
-      | "melvorTotH:Corundum_Javelin"
-      | "melvorTotH:Augite_Javelin"
-      | "melvorTotH:Divine_Javelin"
-      | "melvorTotH:Meteorite_Javelin"
-      | "melvorTotH:Poison_Staff"
-      | "melvorTotH:Infernal_Staff"
-      | "melvorTotH:Lightning_Staff"
-      | "melvorTotH:Meteorite_Staff"
-      | "melvorTotH:Despair_Wand"
-      | "melvorTotH:Archaic_Wand"
-      | "melvorTotH:Calamity_Wand"
-      | "melvorTotH:Thorned_Power_Bow"
-      | "melvorTotH:Heated_Fury_2H_Hammer"
-      | "melvorTotH:Spectral_Ice_Sword"
-      | "melvorTotH:Lightning_Strike_1H_Sword"
-      | "melvorTotH:FrostSpark_1H_Sword"
-      | "melvorTotH:Lightning_Coil_2H_Staff"
-      | "melvorTotH:Torrential_Blast_Crossbow"
-      | "melvorTotH:Royal_Toxins_Spear"
-      | "melvorTotH:Ethereal_Longbow"
-      | "melvorTotH:Ethereal_Staff"
-      | "melvorTotH:Ethereal_Greataxe"
-      | "melvorTotH:Feather_Storm_Crossbow"
-      | "melvorTotH:Agile_Wings_Rapier"
-      | "melvorTotH:Slicing_Maelstrom_Wand"
-      | "melvorTotH:Dark_Blade_Defender"
-      | "melvorTotH:Grappling_Hook"
-    );
-export type FoodItemID =
-  | ValidID
-  | (
-      | "melvorD:Empty_Food"
-      | "melvorD:Shrimp"
-      | "melvorD:Sardine"
-      | "melvorD:Herring"
-      | "melvorD:Trout"
-      | "melvorD:Salmon"
-      | "melvorD:Lobster"
-      | "melvorD:Swordfish"
-      | "melvorD:Crab"
-      | "melvorD:Shark"
-      | "melvorD:Cave_Fish"
-      | "melvorD:Manta_Ray"
-      | "melvorD:Whale"
-      | "melvorD:Potatoes"
-      | "melvorD:Onions"
-      | "melvorD:Cabbage"
-      | "melvorD:Tomatoes"
-      | "melvorD:Sweetcorn"
-      | "melvorD:Strawberries"
-      | "melvorD:Watermelon"
-      | "melvorD:Snape_Grass"
-      | "melvorD:Carrot"
-      | "melvorD:Raw_Magic_Fish"
-      | "melvorD:Anglerfish"
-      | "melvorD:Fanfish"
-      | "melvorD:Seahorse"
-      | "melvorD:Carp"
-      | "melvorD:Lemonade"
-      | "melvorD:Birthday_Cake"
-      | "melvorD:Bread"
-      | "melvorD:Beef"
-      | "melvorD:Chicken"
-      | "melvorD:Plain_Pizza_Slice"
-      | "melvorD:Beef_Pie"
-      | "melvorD:Meat_Pizza_Slice"
-      | "melvorD:Basic_Soup"
-      | "melvorD:Strawberry_Cupcake"
-      | "melvorD:Hearty_Soup"
-      | "melvorD:Cherry_Cupcake"
-      | "melvorD:Cream_Corn_Soup"
-      | "melvorD:Chicken_Soup"
-      | "melvorD:Strawberry_Cake"
-      | "melvorD:Carrot_Cake"
-      | "melvorD:Shrimp_Perfect"
-      | "melvorD:Sardine_Perfect"
-      | "melvorD:Herring_Perfect"
-      | "melvorD:Seahorse_Perfect"
-      | "melvorD:Trout_Perfect"
-      | "melvorD:Salmon_Perfect"
-      | "melvorD:Lobster_Perfect"
-      | "melvorD:Swordfish_Perfect"
-      | "melvorD:Anglerfish_Perfect"
-      | "melvorD:Fanfish_Perfect"
-      | "melvorD:Crab_Perfect"
-      | "melvorD:Carp_Perfect"
-      | "melvorD:Shark_Perfect"
-      | "melvorD:Cave_Fish_Perfect"
-      | "melvorD:Manta_Ray_Perfect"
-      | "melvorD:Whale_Perfect"
-      | "melvorD:Bread_Perfect"
-      | "melvorD:Beef_Perfect"
-      | "melvorD:Chicken_Perfect"
-      | "melvorD:Plain_Pizza_Slice_Perfect"
-      | "melvorD:Beef_Pie_Perfect"
-      | "melvorD:Meat_Pizza_Slice_Perfect"
-      | "melvorD:Basic_Soup_Perfect"
-      | "melvorD:Strawberry_Cupcake_Perfect"
-      | "melvorD:Hearty_Soup_Perfect"
-      | "melvorD:Cherry_Cupcake_Perfect"
-      | "melvorD:Cream_Corn_Soup_Perfect"
-      | "melvorD:Chicken_Soup_Perfect"
-      | "melvorD:Strawberry_Cake_Perfect"
-      | "melvorD:Carrot_Cake_Perfect"
-      | "melvorD:Cherry"
-      | "melvorD:Gingerbread_House"
-      | "melvorD:Gingerbread_Man"
-      | "melvorD:Edible_Candy_Cane"
-      | "melvorF:Apple"
-      | "melvorF:Apple_Pie"
-      | "melvorF:Lemon_Cake"
-      | "melvorF:Apple_Pie_Perfect"
-      | "melvorF:Lemon_Cake_Perfect"
-      | "melvorTotH:Lava_Fish"
-      | "melvorTotH:Lava_Fish_Perfect"
-      | "melvorTotH:Blue_Crab"
-      | "melvorTotH:Blue_Crab_Perfect"
-      | "melvorTotH:Magma_Fish"
-      | "melvorTotH:Magma_Fish_Perfect"
-      | "melvorTotH:Static_Jellyfish"
-      | "melvorTotH:Static_Jellyfish_Perfect"
-      | "melvorTotH:Magma_Eel"
-      | "melvorTotH:Magma_Eel_Perfect"
-      | "melvorTotH:Frost_Crab"
-      | "melvorTotH:Frost_Crab_Perfect"
-      | "melvorTotH:Frozen_Manta_Ray"
-      | "melvorTotH:Frozen_Manta_Ray_Perfect"
-      | "melvorTotH:Terrorfish"
-      | "melvorTotH:Terrorfish_Perfect"
-      | "melvorTotH:Mystic_Shark"
-      | "melvorTotH:Mystic_Shark_Perfect"
-      | "melvorTotH:Banana_Bread"
-      | "melvorTotH:Banana_Bread_Perfect"
-      | "melvorTotH:Mushroom_Soup"
-      | "melvorTotH:Mushroom_Soup_Perfect"
-      | "melvorTotH:Spicy_Chicken_Pizza"
-      | "melvorTotH:Spicy_Chicken_Pizza_Perfect"
-      | "melvorTotH:Beef_Mushroom_Stew"
-      | "melvorTotH:Beef_Mushroom_Stew_Perfect"
-      | "melvorTotH:Sandwich"
-      | "melvorTotH:Sandwich_Perfect"
-      | "melvorTotH:Pumpkin_Soup"
-      | "melvorTotH:Pumpkin_Soup_Perfect"
-      | "melvorTotH:Spicy_Shrimp_Soup"
-      | "melvorTotH:Spicy_Shrimp_Soup_Perfect"
-      | "melvorTotH:Fancy_Meat_Pizza"
-      | "melvorTotH:Fancy_Meat_Pizza_Perfect"
-      | "melvorTotH:Chicken_Cream_Mushroom_Soup"
-      | "melvorTotH:Chicken_Cream_Mushroom_Soup_Perfect"
-      | "melvorTotH:Chilli_Frost_Crab"
-      | "melvorTotH:Chilli_Frost_Crab_Perfect"
-      | "melvorTotH:Starfruit_Cake"
-      | "melvorTotH:Starfruit_Cake_Perfect"
-      | "melvorTotH:Pumpkin"
-      | "melvorTotH:Chilli"
-      | "melvorTotH:Mushrooms"
-      | "melvorTotH:Starfruit"
-      | "melvorTotH:Bananas"
-      | "melvorTotH:Lemonade_Full"
-    );
-export type BoneItemID =
-  | ValidID
-  | (
-      | "melvorD:Bones"
-      | "melvorD:Dragon_Bones"
-      | "melvorD:Magic_Bones"
-      | "melvorD:Big_Bones"
-      | "melvorD:Raw_Skeleton_Fish"
-      | "melvorF:Holy_Dust"
-      | "melvorF:Ash"
-      | "melvorF:Small_Urn_Enchanted"
-      | "melvorF:Medium_Urn_Enchanted"
-      | "melvorTotH:Large_Urn_Enchanted"
-      | "melvorTotH:Infernal_Bones"
-    );
-export type PotionItemID =
-  | ValidID
-  | (
-      | "melvorF:Melee_Accuracy_Potion_I"
-      | "melvorF:Melee_Accuracy_Potion_II"
-      | "melvorF:Melee_Accuracy_Potion_III"
-      | "melvorF:Melee_Accuracy_Potion_IV"
-      | "melvorF:Melee_Strength_Potion_I"
-      | "melvorF:Melee_Strength_Potion_II"
-      | "melvorF:Melee_Strength_Potion_III"
-      | "melvorF:Melee_Strength_Potion_IV"
-      | "melvorF:Melee_Evasion_Potion_I"
-      | "melvorF:Melee_Evasion_Potion_II"
-      | "melvorF:Melee_Evasion_Potion_III"
-      | "melvorF:Melee_Evasion_Potion_IV"
-      | "melvorF:Ranged_Assistance_Potion_I"
-      | "melvorF:Ranged_Assistance_Potion_II"
-      | "melvorF:Ranged_Assistance_Potion_III"
-      | "melvorF:Ranged_Assistance_Potion_IV"
-      | "melvorF:Magic_Assistance_Potion_I"
-      | "melvorF:Magic_Assistance_Potion_II"
-      | "melvorF:Magic_Assistance_Potion_III"
-      | "melvorF:Magic_Assistance_Potion_IV"
-      | "melvorF:Regeneration_Potion_I"
-      | "melvorF:Regeneration_Potion_II"
-      | "melvorF:Regeneration_Potion_III"
-      | "melvorF:Regeneration_Potion_IV"
-      | "melvorF:Damage_Reduction_Potion_I"
-      | "melvorF:Damage_Reduction_Potion_II"
-      | "melvorF:Damage_Reduction_Potion_III"
-      | "melvorF:Damage_Reduction_Potion_IV"
-      | "melvorF:Bird_Nest_Potion_I"
-      | "melvorF:Bird_Nest_Potion_II"
-      | "melvorF:Bird_Nest_Potion_III"
-      | "melvorF:Bird_Nest_Potion_IV"
-      | "melvorF:Fishermans_Potion_I"
-      | "melvorF:Fishermans_Potion_II"
-      | "melvorF:Fishermans_Potion_III"
-      | "melvorF:Fishermans_Potion_IV"
-      | "melvorF:Controlled_Heat_Potion_I"
-      | "melvorF:Controlled_Heat_Potion_II"
-      | "melvorF:Controlled_Heat_Potion_III"
-      | "melvorF:Controlled_Heat_Potion_IV"
-      | "melvorF:Generous_Cook_Potion_I"
-      | "melvorF:Generous_Cook_Potion_II"
-      | "melvorF:Generous_Cook_Potion_III"
-      | "melvorF:Generous_Cook_Potion_IV"
-      | "melvorF:Perfect_Swing_Potion_I"
-      | "melvorF:Perfect_Swing_Potion_II"
-      | "melvorF:Perfect_Swing_Potion_III"
-      | "melvorF:Perfect_Swing_Potion_IV"
-      | "melvorF:Seeing_Gold_Potion_I"
-      | "melvorF:Seeing_Gold_Potion_II"
-      | "melvorF:Seeing_Gold_Potion_III"
-      | "melvorF:Seeing_Gold_Potion_IV"
-      | "melvorF:Gentle_Hands_Potion_I"
-      | "melvorF:Gentle_Hands_Potion_II"
-      | "melvorF:Gentle_Hands_Potion_III"
-      | "melvorF:Gentle_Hands_Potion_IV"
-      | "melvorF:Farming_Potion_I"
-      | "melvorF:Farming_Potion_II"
-      | "melvorF:Farming_Potion_III"
-      | "melvorF:Farming_Potion_IV"
-      | "melvorF:Fletching_Potion_I"
-      | "melvorF:Fletching_Potion_II"
-      | "melvorF:Fletching_Potion_III"
-      | "melvorF:Fletching_Potion_IV"
-      | "melvorF:Crafting_Potion_I"
-      | "melvorF:Crafting_Potion_II"
-      | "melvorF:Crafting_Potion_III"
-      | "melvorF:Crafting_Potion_IV"
-      | "melvorF:Elemental_Potion_I"
-      | "melvorF:Elemental_Potion_II"
-      | "melvorF:Elemental_Potion_III"
-      | "melvorF:Elemental_Potion_IV"
-      | "melvorF:Herblore_Potion_I"
-      | "melvorF:Herblore_Potion_II"
-      | "melvorF:Herblore_Potion_III"
-      | "melvorF:Herblore_Potion_IV"
-      | "melvorF:Ranged_Strength_Potion_I"
-      | "melvorF:Ranged_Strength_Potion_II"
-      | "melvorF:Ranged_Strength_Potion_III"
-      | "melvorF:Ranged_Strength_Potion_IV"
-      | "melvorF:Magic_Damage_Potion_I"
-      | "melvorF:Magic_Damage_Potion_II"
-      | "melvorF:Magic_Damage_Potion_III"
-      | "melvorF:Magic_Damage_Potion_IV"
-      | "melvorF:Diamond_Luck_Potion_I"
-      | "melvorF:Diamond_Luck_Potion_II"
-      | "melvorF:Diamond_Luck_Potion_III"
-      | "melvorF:Diamond_Luck_Potion_IV"
-      | "melvorF:Divine_Potion_I"
-      | "melvorF:Divine_Potion_II"
-      | "melvorF:Divine_Potion_III"
-      | "melvorF:Divine_Potion_IV"
-      | "melvorF:Lucky_Herb_Potion_I"
-      | "melvorF:Lucky_Herb_Potion_II"
-      | "melvorF:Lucky_Herb_Potion_III"
-      | "melvorF:Lucky_Herb_Potion_IV"
-      | "melvorF:Performance_Enhancing_Potion_I"
-      | "melvorF:Performance_Enhancing_Potion_II"
-      | "melvorF:Performance_Enhancing_Potion_III"
-      | "melvorF:Performance_Enhancing_Potion_IV"
-      | "melvorF:Necromancer_Potion_I"
-      | "melvorF:Necromancer_Potion_II"
-      | "melvorF:Necromancer_Potion_III"
-      | "melvorF:Necromancer_Potion_IV"
-      | "melvorF:Hinder_Potion_I"
-      | "melvorF:Hinder_Potion_II"
-      | "melvorF:Hinder_Potion_III"
-      | "melvorF:Hinder_Potion_IV"
-      | "melvorF:Famished_Potion_I"
-      | "melvorF:Famished_Potion_II"
-      | "melvorF:Famished_Potion_III"
-      | "melvorF:Famished_Potion_IV"
-      | "melvorF:Lethal_Toxins_Potion_I"
-      | "melvorF:Lethal_Toxins_Potion_II"
-      | "melvorF:Lethal_Toxins_Potion_III"
-      | "melvorF:Lethal_Toxins_Potion_IV"
-      | "melvorF:Secret_Stardust_Potion_I"
-      | "melvorF:Secret_Stardust_Potion_II"
-      | "melvorF:Secret_Stardust_Potion_III"
-      | "melvorF:Secret_Stardust_Potion_IV"
-      | "melvorTotH:Area_Control_Potion_I"
-      | "melvorTotH:Area_Control_Potion_II"
-      | "melvorTotH:Area_Control_Potion_III"
-      | "melvorTotH:Area_Control_Potion_IV"
-      | "melvorTotH:Adaptive_Defence_Potion_I"
-      | "melvorTotH:Adaptive_Defence_Potion_II"
-      | "melvorTotH:Adaptive_Defence_Potion_III"
-      | "melvorTotH:Adaptive_Defence_Potion_IV"
-      | "melvorTotH:Slayer_Bounty_Potion_I"
-      | "melvorTotH:Slayer_Bounty_Potion_II"
-      | "melvorTotH:Slayer_Bounty_Potion_III"
-      | "melvorTotH:Slayer_Bounty_Potion_IV"
-      | "melvorTotH:Holy_Bulwark_Potion_I"
-      | "melvorTotH:Holy_Bulwark_Potion_II"
-      | "melvorTotH:Holy_Bulwark_Potion_III"
-      | "melvorTotH:Holy_Bulwark_Potion_IV"
-      | "melvorTotH:Adaptive_Accuracy_Potion_I"
-      | "melvorTotH:Adaptive_Accuracy_Potion_II"
-      | "melvorTotH:Adaptive_Accuracy_Potion_III"
-      | "melvorTotH:Adaptive_Accuracy_Potion_IV"
-      | "melvorTotH:Reaper_Potion_I"
-      | "melvorTotH:Reaper_Potion_II"
-      | "melvorTotH:Reaper_Potion_III"
-      | "melvorTotH:Reaper_Potion_IV"
-      | "melvorTotH:Penetration_Potion_I"
-      | "melvorTotH:Penetration_Potion_II"
-      | "melvorTotH:Penetration_Potion_III"
-      | "melvorTotH:Penetration_Potion_IV"
-      | "melvorTotH:Critical_Strike_Potion_I"
-      | "melvorTotH:Critical_Strike_Potion_II"
-      | "melvorTotH:Critical_Strike_Potion_III"
-      | "melvorTotH:Critical_Strike_Potion_IV"
-      | "melvorTotH:Alchemic_Practice_Potion_I"
-      | "melvorTotH:Alchemic_Practice_Potion_II"
-      | "melvorTotH:Alchemic_Practice_Potion_III"
-      | "melvorTotH:Alchemic_Practice_Potion_IV"
-      | "melvorTotH:Gem_Detector_Potion_I"
-      | "melvorTotH:Gem_Detector_Potion_II"
-      | "melvorTotH:Gem_Detector_Potion_III"
-      | "melvorTotH:Gem_Detector_Potion_IV"
-      | "melvorTotH:Star_Seeker_Potion_I"
-      | "melvorTotH:Star_Seeker_Potion_II"
-      | "melvorTotH:Star_Seeker_Potion_III"
-      | "melvorTotH:Star_Seeker_Potion_IV"
-      | "melvorTotH:Traps_Potion_I"
-      | "melvorTotH:Traps_Potion_II"
-      | "melvorTotH:Traps_Potion_III"
-      | "melvorTotH:Traps_Potion_IV"
-      | "melvorTotH:Blacksmith_Potion_I"
-      | "melvorTotH:Blacksmith_Potion_II"
-      | "melvorTotH:Blacksmith_Potion_III"
-      | "melvorTotH:Blacksmith_Potion_IV"
-      | "melvorTotH:Enkindled_Yields_Potion_I"
-      | "melvorTotH:Enkindled_Yields_Potion_II"
-      | "melvorTotH:Enkindled_Yields_Potion_III"
-      | "melvorTotH:Enkindled_Yields_Potion_IV"
-      | "melvorTotH:Alt_Magic_Potion_I"
-      | "melvorTotH:Alt_Magic_Potion_II"
-      | "melvorTotH:Alt_Magic_Potion_III"
-      | "melvorTotH:Alt_Magic_Potion_IV"
-      | "melvorTotH:Multicooker_Potion_I"
-      | "melvorTotH:Multicooker_Potion_II"
-      | "melvorTotH:Multicooker_Potion_III"
-      | "melvorTotH:Multicooker_Potion_IV"
-      | "melvorTotH:Deadly_Toxins_Potion"
-    );
-export type ReadableItemID =
-  | ValidID
-  | (
-      | "melvorD:Message_In_A_Bottle"
-      | "melvorD:Futures_Prophecy"
-      | "melvorF:Unknown_Evil"
-      | "melvorF:New_Dawn"
-      | "melvorF:Merchants_Permit"
-      | "melvorF:Beginning_Of_The_End"
-      | "melvorF:Impending_Darkness"
-    );
-export type OpenableItemID =
-  | ValidID
-  | (
-      | "melvorD:Frozen_Chest"
-      | "melvorD:Chest_of_Witwix"
-      | "melvorD:Bird_Nest"
-      | "melvorD:Treasure_Chest"
-      | "melvorD:Egg_Chest"
-      | "melvorD:Pirate_Booty"
-      | "melvorD:Elite_Chest"
-      | "melvorD:Spider_Chest"
-      | "melvorD:Standard_Chest"
-      | "melvorD:Bandit_Chest"
-      | "melvorD:Christmas_Present_Yellow"
-      | "melvorD:Christmas_Present_Blue"
-      | "melvorD:Christmas_Present_Green"
-      | "melvorD:Christmas_Present_White"
-      | "melvorD:Christmas_Present_Purple"
-      | "melvorD:Christmas_Present_General"
-      | "melvorD:Locked_Chest"
-      | "melvorD:Magic_Chest"
-      | "melvorF:Herb_Sack"
-      | "melvorF:Elder_Chest"
-      | "melvorF:Crate_Of_Basic_Supplies"
-      | "melvorF:Crate_Of_Food"
-      | "melvorF:Stack_Of_Bones"
-      | "melvorF:Pile_Of_Logs"
-      | "melvorF:Pile_Of_Ores"
-      | "melvorF:Chest_Of_Gems"
-      | "melvorF:Air_Chest"
-      | "melvorF:Water_Chest"
-      | "melvorF:Earth_Chest"
-      | "melvorF:Fire_Chest"
-      | "melvorF:Scroll_of_Aeris"
-      | "melvorF:Scroll_of_Glacia"
-      | "melvorF:Scroll_of_Terran"
-      | "melvorF:Scroll_of_Ragnar"
-      | "melvorF:Miolite_Chest"
-      | "melvorTotH:Raven_Nest"
-      | "melvorTotH:Generous_Fire_Spirit"
-      | "melvorTotH:Golden_Chest"
-      | "melvorTotH:Crate_of_Lost_Supplies"
-      | "melvorTotH:Ancient_Chest"
-      | "melvorTotH:Burning_Chest"
-      | "melvorTotH:Static_Chest"
-      | "melvorTotH:Webbed_Chest"
-      | "melvorTotH:Cursed_Chest"
-      | "melvorTotH:Bone_Chest"
-      | "melvorTotH:Exotic_Herb_Sack"
-      | "melvorTotH:Lost_Chest"
-    );
-export type TokenItemID =
-  | ValidID
-  | (
-      | "melvorD:Mastery_Token_Cooking"
-      | "melvorD:Mastery_Token_Farming"
-      | "melvorD:Mastery_Token_Firemaking"
-      | "melvorD:Mastery_Token_Fishing"
-      | "melvorD:Mastery_Token_Mining"
-      | "melvorD:Mastery_Token_Smithing"
-      | "melvorD:Mastery_Token_Woodcutting"
-      | "melvorF:Mastery_Token_Crafting"
-      | "melvorF:Mastery_Token_Fletching"
-      | "melvorF:Mastery_Token_Runecrafting"
-      | "melvorF:Mastery_Token_Thieving"
-      | "melvorF:Mastery_Token_Herblore"
-      | "melvorF:Bank_Slot_Token"
-      | "melvorF:Mastery_Token_Agility"
-      | "melvorF:Mastery_Token_Summoning"
-      | "melvorF:Mastery_Token_Astrology"
-    );
-export type CompostItemID = ValidID | ("melvorD:Compost" | "melvorD:Weird_Gloop");
-export type SkillID =
-  | ValidID
-  | (
-      | "melvorD:Attack"
-      | "melvorD:Strength"
-      | "melvorD:Defence"
-      | "melvorD:Hitpoints"
-      | "melvorD:Ranged"
-      | "melvorD:Magic"
-      | "melvorD:Prayer"
-      | "melvorD:Slayer"
-      | "melvorD:Woodcutting"
-      | "melvorD:Fishing"
-      | "melvorD:Firemaking"
-      | "melvorD:Cooking"
-      | "melvorD:Mining"
-      | "melvorD:Smithing"
-      | "melvorD:Thieving"
-      | "melvorD:Farming"
-      | "melvorD:Fletching"
-      | "melvorD:Crafting"
-      | "melvorD:Runecrafting"
-      | "melvorD:Herblore"
-      | "melvorD:Agility"
-      | "melvorD:Summoning"
-      | "melvorD:Astrology"
-      | "melvorD:Township"
-    );
-export type PlayerModifierData = PlayerModifierData1 & {
+declare type WeaponItemID =
+  | "melvorD:Bronze_Dagger"
+  | "melvorD:Bronze_Sword"
+  | "melvorD:Bronze_Battleaxe"
+  | "melvorD:Bronze_2H_Sword"
+  | "melvorD:Iron_Dagger"
+  | "melvorD:Iron_Sword"
+  | "melvorD:Iron_Battleaxe"
+  | "melvorD:Iron_2H_Sword"
+  | "melvorD:Steel_Dagger"
+  | "melvorD:Steel_Sword"
+  | "melvorD:Steel_Battleaxe"
+  | "melvorD:Steel_2H_Sword"
+  | "melvorD:Mithril_Dagger"
+  | "melvorD:Mithril_Sword"
+  | "melvorD:Mithril_Battleaxe"
+  | "melvorD:Mithril_2H_Sword"
+  | "melvorD:Adamant_Dagger"
+  | "melvorD:Adamant_Sword"
+  | "melvorD:Adamant_Battleaxe"
+  | "melvorD:Adamant_2H_Sword"
+  | "melvorD:Rune_Dagger"
+  | "melvorD:Rune_Sword"
+  | "melvorD:Rune_Battleaxe"
+  | "melvorD:Rune_2H_Sword"
+  | "melvorD:Dragon_Dagger"
+  | "melvorD:Dragon_Sword"
+  | "melvorD:Dragon_Battleaxe"
+  | "melvorD:Dragon_2H_Sword"
+  | "melvorD:Black_Dagger"
+  | "melvorD:Black_Sword"
+  | "melvorD:Black_Battleaxe"
+  | "melvorD:Black_2H_Sword"
+  | "melvorD:Normal_Shortbow"
+  | "melvorD:Oak_Shortbow"
+  | "melvorD:Maple_Shortbow"
+  | "melvorD:Yew_Shortbow"
+  | "melvorD:Magic_Shortbow"
+  | "melvorD:Maple_Longbow"
+  | "melvorD:Magic_Longbow"
+  | "melvorD:Ancient_Sword"
+  | "melvorD:Ice_Dagger"
+  | "melvorD:Ice_Sword"
+  | "melvorD:Ice_Battleaxe"
+  | "melvorD:Ice_2h_Sword"
+  | "melvorD:Ice_Shortbow"
+  | "melvorD:Ice_Longbow"
+  | "melvorD:Redwood_Longbow"
+  | "melvorD:Air_Battlestaff"
+  | "melvorD:Water_Battlestaff"
+  | "melvorD:Earth_Battlestaff"
+  | "melvorD:Fire_Battlestaff"
+  | "melvorD:Mystic_Air_Staff"
+  | "melvorD:Bronze_Scimitar"
+  | "melvorD:Iron_Scimitar"
+  | "melvorD:Steel_Scimitar"
+  | "melvorD:Black_Scimitar"
+  | "melvorD:Mithril_Scimitar"
+  | "melvorD:Adamant_Scimitar"
+  | "melvorD:Rune_Scimitar"
+  | "melvorD:Dragon_Scimitar"
+  | "melvorD:Ancient_Longbow"
+  | "melvorD:Magic_Wand_Basic"
+  | "melvorD:Magic_Wand_Powerful"
+  | "melvorD:Magic_Wand_Elite"
+  | "melvorD:Sunset_Rapier"
+  | "melvorD:Bronze_Throwing_Knife"
+  | "melvorD:Iron_Throwing_Knife"
+  | "melvorD:Steel_Throwing_Knife"
+  | "melvorD:Mithril_Throwing_Knife"
+  | "melvorD:Adamant_Throwing_Knife"
+  | "melvorD:Rune_Throwing_Knife"
+  | "melvorD:Dragon_Throwing_Knife"
+  | "melvorD:Bobs_Rake"
+  | "melvorD:Candy_Cane"
+  | "melvorD:Slingshot"
+  | "melvorD:Elerine_Longbow"
+  | "melvorD:Elerine_Spear"
+  | "melvorD:Mystery_Wand"
+  | "melvorD:Burning_Wand"
+  | "melvorD:Frostburn_Wand"
+  | "melvorD:Sword_Of_Some_Reliability"
+  | "melvorD:Tilted_Crossbow"
+  | "melvorD:Impossible_Longbow"
+  | "melvorD:Throwing_Dragon_Sword"
+  | "melvorF:Willow_Shortbow"
+  | "melvorF:Normal_Longbow"
+  | "melvorF:Oak_Longbow"
+  | "melvorF:Willow_Longbow"
+  | "melvorF:Yew_Longbow"
+  | "melvorF:Redwood_Shortbow"
+  | "melvorF:Staff_of_Air"
+  | "melvorF:Staff_of_Water"
+  | "melvorF:Staff_of_Earth"
+  | "melvorF:Staff_of_Fire"
+  | "melvorF:Mystic_Water_Staff"
+  | "melvorF:Mystic_Earth_Staff"
+  | "melvorF:Mystic_Fire_Staff"
+  | "melvorF:Dragon_Claw"
+  | "melvorF:Ancient_Claw"
+  | "melvorF:Ancient_2H_Sword"
+  | "melvorF:Bronze_Crossbow"
+  | "melvorF:Iron_Crossbow"
+  | "melvorF:Steel_Crossbow"
+  | "melvorF:Mithril_Crossbow"
+  | "melvorF:Adamant_Crossbow"
+  | "melvorF:Rune_Crossbow"
+  | "melvorF:Dragon_Crossbow"
+  | "melvorF:Ancient_Crossbow"
+  | "melvorF:Bronze_Javelin"
+  | "melvorF:Iron_Javelin"
+  | "melvorF:Steel_Javelin"
+  | "melvorF:Mithril_Javelin"
+  | "melvorF:Adamant_Javelin"
+  | "melvorF:Rune_Javelin"
+  | "melvorF:Dragon_Javelin"
+  | "melvorF:Ancient_Javelin"
+  | "melvorF:Ancient_Throwing_Knife"
+  | "melvorF:Aeris_Godsword"
+  | "melvorF:Glacia_Godsword"
+  | "melvorF:Terran_Godsword"
+  | "melvorF:Ragnar_Godsword"
+  | "melvorF:Stormsnap"
+  | "melvorF:Big_Ron"
+  | "melvorF:Confetti_Crossbow"
+  | "melvorF:Slayer_Crossbow"
+  | "melvorF:Twin_Exiles"
+  | "melvorF:Cloudburst_Staff"
+  | "melvorF:Air_Imbued_Wand"
+  | "melvorF:Water_Imbued_Wand"
+  | "melvorF:Earth_Imbued_Wand"
+  | "melvorF:Fire_Imbued_Wand"
+  | "melvorF:Miolite_Sceptre"
+  | "melvorF:Desert_Sabre"
+  | "melvorF:Desert_Shortbow"
+  | "melvorF:Darksteel_Dagger"
+  | "melvorF:Sanguine_Blade"
+  | "melvorF:Infernal_Claw"
+  | "melvorF:Tidal_Edge"
+  | "melvorF:Ocean_Song"
+  | "melvorF:Shockwave"
+  | "melvorF:Almighty_Lute"
+  | "melvorF:Chefs_Spoon"
+  | "melvorF:War_Axe"
+  | "melvorF:Warberd"
+  | "melvorF:Natures_Call_Staff"
+  | "melvorF:Natures_Wrath_Staff"
+  | "melvorF:Poisoned_Shortbow"
+  | "melvorF:Poisoned_Dagger"
+  | "melvorF:Ultima_Godsword"
+  | "melvorTotH:Corundum_Dagger"
+  | "melvorTotH:Corundum_Sword"
+  | "melvorTotH:Corundum_Battleaxe"
+  | "melvorTotH:Corundum_2H_Sword"
+  | "melvorTotH:Corundum_Scimitar"
+  | "melvorTotH:Corundum_Throwing_Knife"
+  | "melvorTotH:Augite_Dagger"
+  | "melvorTotH:Augite_Sword"
+  | "melvorTotH:Augite_Battleaxe"
+  | "melvorTotH:Augite_2H_Sword"
+  | "melvorTotH:Augite_Scimitar"
+  | "melvorTotH:Augite_Throwing_Knife"
+  | "melvorTotH:Meteorite_2H_Sword"
+  | "melvorTotH:Divine_Dagger"
+  | "melvorTotH:Divine_Sword"
+  | "melvorTotH:Divine_Battleaxe"
+  | "melvorTotH:Divine_2H_Sword"
+  | "melvorTotH:Divine_Scimitar"
+  | "melvorTotH:Divine_Throwing_Knife"
+  | "melvorTotH:Potion_Stirrer"
+  | "melvorTotH:Elderwood_Shortbow"
+  | "melvorTotH:Elderwood_Longbow"
+  | "melvorTotH:Revenant_Shortbow"
+  | "melvorTotH:Revenant_Longbow"
+  | "melvorTotH:Carrion_Shortbow"
+  | "melvorTotH:Carrion_Longbow"
+  | "melvorTotH:Corundum_Crossbow"
+  | "melvorTotH:Augite_Crossbow"
+  | "melvorTotH:Divine_Crossbow"
+  | "melvorTotH:Meteorite_Crossbow"
+  | "melvorTotH:Corundum_Javelin"
+  | "melvorTotH:Augite_Javelin"
+  | "melvorTotH:Divine_Javelin"
+  | "melvorTotH:Meteorite_Javelin"
+  | "melvorTotH:Poison_Staff"
+  | "melvorTotH:Infernal_Staff"
+  | "melvorTotH:Lightning_Staff"
+  | "melvorTotH:Meteorite_Staff"
+  | "melvorTotH:Despair_Wand"
+  | "melvorTotH:Archaic_Wand"
+  | "melvorTotH:Calamity_Wand"
+  | "melvorTotH:Thorned_Power_Bow"
+  | "melvorTotH:Heated_Fury_2H_Hammer"
+  | "melvorTotH:Spectral_Ice_Sword"
+  | "melvorTotH:Lightning_Strike_1H_Sword"
+  | "melvorTotH:FrostSpark_1H_Sword"
+  | "melvorTotH:Lightning_Coil_2H_Staff"
+  | "melvorTotH:Torrential_Blast_Crossbow"
+  | "melvorTotH:Royal_Toxins_Spear"
+  | "melvorTotH:Ethereal_Longbow"
+  | "melvorTotH:Ethereal_Staff"
+  | "melvorTotH:Ethereal_Greataxe"
+  | "melvorTotH:Feather_Storm_Crossbow"
+  | "melvorTotH:Agile_Wings_Rapier"
+  | "melvorTotH:Slicing_Maelstrom_Wand"
+  | "melvorTotH:Dark_Blade_Defender"
+  | "melvorTotH:Grappling_Hook";
+declare type FoodItemID =
+  | "melvorD:Empty_Food"
+  | "melvorD:Shrimp"
+  | "melvorD:Sardine"
+  | "melvorD:Herring"
+  | "melvorD:Trout"
+  | "melvorD:Salmon"
+  | "melvorD:Lobster"
+  | "melvorD:Swordfish"
+  | "melvorD:Crab"
+  | "melvorD:Shark"
+  | "melvorD:Cave_Fish"
+  | "melvorD:Manta_Ray"
+  | "melvorD:Whale"
+  | "melvorD:Potatoes"
+  | "melvorD:Onions"
+  | "melvorD:Cabbage"
+  | "melvorD:Tomatoes"
+  | "melvorD:Sweetcorn"
+  | "melvorD:Strawberries"
+  | "melvorD:Watermelon"
+  | "melvorD:Snape_Grass"
+  | "melvorD:Carrot"
+  | "melvorD:Raw_Magic_Fish"
+  | "melvorD:Anglerfish"
+  | "melvorD:Fanfish"
+  | "melvorD:Seahorse"
+  | "melvorD:Carp"
+  | "melvorD:Lemonade"
+  | "melvorD:Birthday_Cake"
+  | "melvorD:Bread"
+  | "melvorD:Beef"
+  | "melvorD:Chicken"
+  | "melvorD:Plain_Pizza_Slice"
+  | "melvorD:Beef_Pie"
+  | "melvorD:Meat_Pizza_Slice"
+  | "melvorD:Basic_Soup"
+  | "melvorD:Strawberry_Cupcake"
+  | "melvorD:Hearty_Soup"
+  | "melvorD:Cherry_Cupcake"
+  | "melvorD:Cream_Corn_Soup"
+  | "melvorD:Chicken_Soup"
+  | "melvorD:Strawberry_Cake"
+  | "melvorD:Carrot_Cake"
+  | "melvorD:Shrimp_Perfect"
+  | "melvorD:Sardine_Perfect"
+  | "melvorD:Herring_Perfect"
+  | "melvorD:Seahorse_Perfect"
+  | "melvorD:Trout_Perfect"
+  | "melvorD:Salmon_Perfect"
+  | "melvorD:Lobster_Perfect"
+  | "melvorD:Swordfish_Perfect"
+  | "melvorD:Anglerfish_Perfect"
+  | "melvorD:Fanfish_Perfect"
+  | "melvorD:Crab_Perfect"
+  | "melvorD:Carp_Perfect"
+  | "melvorD:Shark_Perfect"
+  | "melvorD:Cave_Fish_Perfect"
+  | "melvorD:Manta_Ray_Perfect"
+  | "melvorD:Whale_Perfect"
+  | "melvorD:Bread_Perfect"
+  | "melvorD:Beef_Perfect"
+  | "melvorD:Chicken_Perfect"
+  | "melvorD:Plain_Pizza_Slice_Perfect"
+  | "melvorD:Beef_Pie_Perfect"
+  | "melvorD:Meat_Pizza_Slice_Perfect"
+  | "melvorD:Basic_Soup_Perfect"
+  | "melvorD:Strawberry_Cupcake_Perfect"
+  | "melvorD:Hearty_Soup_Perfect"
+  | "melvorD:Cherry_Cupcake_Perfect"
+  | "melvorD:Cream_Corn_Soup_Perfect"
+  | "melvorD:Chicken_Soup_Perfect"
+  | "melvorD:Strawberry_Cake_Perfect"
+  | "melvorD:Carrot_Cake_Perfect"
+  | "melvorD:Cherry"
+  | "melvorD:Gingerbread_House"
+  | "melvorD:Gingerbread_Man"
+  | "melvorD:Edible_Candy_Cane"
+  | "melvorF:Apple"
+  | "melvorF:Apple_Pie"
+  | "melvorF:Lemon_Cake"
+  | "melvorF:Apple_Pie_Perfect"
+  | "melvorF:Lemon_Cake_Perfect"
+  | "melvorTotH:Lava_Fish"
+  | "melvorTotH:Lava_Fish_Perfect"
+  | "melvorTotH:Blue_Crab"
+  | "melvorTotH:Blue_Crab_Perfect"
+  | "melvorTotH:Magma_Fish"
+  | "melvorTotH:Magma_Fish_Perfect"
+  | "melvorTotH:Static_Jellyfish"
+  | "melvorTotH:Static_Jellyfish_Perfect"
+  | "melvorTotH:Magma_Eel"
+  | "melvorTotH:Magma_Eel_Perfect"
+  | "melvorTotH:Frost_Crab"
+  | "melvorTotH:Frost_Crab_Perfect"
+  | "melvorTotH:Frozen_Manta_Ray"
+  | "melvorTotH:Frozen_Manta_Ray_Perfect"
+  | "melvorTotH:Terrorfish"
+  | "melvorTotH:Terrorfish_Perfect"
+  | "melvorTotH:Mystic_Shark"
+  | "melvorTotH:Mystic_Shark_Perfect"
+  | "melvorTotH:Banana_Bread"
+  | "melvorTotH:Banana_Bread_Perfect"
+  | "melvorTotH:Mushroom_Soup"
+  | "melvorTotH:Mushroom_Soup_Perfect"
+  | "melvorTotH:Spicy_Chicken_Pizza"
+  | "melvorTotH:Spicy_Chicken_Pizza_Perfect"
+  | "melvorTotH:Beef_Mushroom_Stew"
+  | "melvorTotH:Beef_Mushroom_Stew_Perfect"
+  | "melvorTotH:Sandwich"
+  | "melvorTotH:Sandwich_Perfect"
+  | "melvorTotH:Pumpkin_Soup"
+  | "melvorTotH:Pumpkin_Soup_Perfect"
+  | "melvorTotH:Spicy_Shrimp_Soup"
+  | "melvorTotH:Spicy_Shrimp_Soup_Perfect"
+  | "melvorTotH:Fancy_Meat_Pizza"
+  | "melvorTotH:Fancy_Meat_Pizza_Perfect"
+  | "melvorTotH:Chicken_Cream_Mushroom_Soup"
+  | "melvorTotH:Chicken_Cream_Mushroom_Soup_Perfect"
+  | "melvorTotH:Chilli_Frost_Crab"
+  | "melvorTotH:Chilli_Frost_Crab_Perfect"
+  | "melvorTotH:Starfruit_Cake"
+  | "melvorTotH:Starfruit_Cake_Perfect"
+  | "melvorTotH:Pumpkin"
+  | "melvorTotH:Chilli"
+  | "melvorTotH:Mushrooms"
+  | "melvorTotH:Starfruit"
+  | "melvorTotH:Bananas"
+  | "melvorTotH:Lemonade_Full";
+declare type BoneItemID =
+  | "melvorD:Bones"
+  | "melvorD:Dragon_Bones"
+  | "melvorD:Magic_Bones"
+  | "melvorD:Big_Bones"
+  | "melvorD:Raw_Skeleton_Fish"
+  | "melvorF:Holy_Dust"
+  | "melvorF:Ash"
+  | "melvorF:Small_Urn_Enchanted"
+  | "melvorF:Medium_Urn_Enchanted"
+  | "melvorTotH:Large_Urn_Enchanted"
+  | "melvorTotH:Infernal_Bones";
+declare type PotionItemID =
+  | "melvorF:Melee_Accuracy_Potion_I"
+  | "melvorF:Melee_Accuracy_Potion_II"
+  | "melvorF:Melee_Accuracy_Potion_III"
+  | "melvorF:Melee_Accuracy_Potion_IV"
+  | "melvorF:Melee_Strength_Potion_I"
+  | "melvorF:Melee_Strength_Potion_II"
+  | "melvorF:Melee_Strength_Potion_III"
+  | "melvorF:Melee_Strength_Potion_IV"
+  | "melvorF:Melee_Evasion_Potion_I"
+  | "melvorF:Melee_Evasion_Potion_II"
+  | "melvorF:Melee_Evasion_Potion_III"
+  | "melvorF:Melee_Evasion_Potion_IV"
+  | "melvorF:Ranged_Assistance_Potion_I"
+  | "melvorF:Ranged_Assistance_Potion_II"
+  | "melvorF:Ranged_Assistance_Potion_III"
+  | "melvorF:Ranged_Assistance_Potion_IV"
+  | "melvorF:Magic_Assistance_Potion_I"
+  | "melvorF:Magic_Assistance_Potion_II"
+  | "melvorF:Magic_Assistance_Potion_III"
+  | "melvorF:Magic_Assistance_Potion_IV"
+  | "melvorF:Regeneration_Potion_I"
+  | "melvorF:Regeneration_Potion_II"
+  | "melvorF:Regeneration_Potion_III"
+  | "melvorF:Regeneration_Potion_IV"
+  | "melvorF:Damage_Reduction_Potion_I"
+  | "melvorF:Damage_Reduction_Potion_II"
+  | "melvorF:Damage_Reduction_Potion_III"
+  | "melvorF:Damage_Reduction_Potion_IV"
+  | "melvorF:Bird_Nest_Potion_I"
+  | "melvorF:Bird_Nest_Potion_II"
+  | "melvorF:Bird_Nest_Potion_III"
+  | "melvorF:Bird_Nest_Potion_IV"
+  | "melvorF:Fishermans_Potion_I"
+  | "melvorF:Fishermans_Potion_II"
+  | "melvorF:Fishermans_Potion_III"
+  | "melvorF:Fishermans_Potion_IV"
+  | "melvorF:Controlled_Heat_Potion_I"
+  | "melvorF:Controlled_Heat_Potion_II"
+  | "melvorF:Controlled_Heat_Potion_III"
+  | "melvorF:Controlled_Heat_Potion_IV"
+  | "melvorF:Generous_Cook_Potion_I"
+  | "melvorF:Generous_Cook_Potion_II"
+  | "melvorF:Generous_Cook_Potion_III"
+  | "melvorF:Generous_Cook_Potion_IV"
+  | "melvorF:Perfect_Swing_Potion_I"
+  | "melvorF:Perfect_Swing_Potion_II"
+  | "melvorF:Perfect_Swing_Potion_III"
+  | "melvorF:Perfect_Swing_Potion_IV"
+  | "melvorF:Seeing_Gold_Potion_I"
+  | "melvorF:Seeing_Gold_Potion_II"
+  | "melvorF:Seeing_Gold_Potion_III"
+  | "melvorF:Seeing_Gold_Potion_IV"
+  | "melvorF:Gentle_Hands_Potion_I"
+  | "melvorF:Gentle_Hands_Potion_II"
+  | "melvorF:Gentle_Hands_Potion_III"
+  | "melvorF:Gentle_Hands_Potion_IV"
+  | "melvorF:Farming_Potion_I"
+  | "melvorF:Farming_Potion_II"
+  | "melvorF:Farming_Potion_III"
+  | "melvorF:Farming_Potion_IV"
+  | "melvorF:Fletching_Potion_I"
+  | "melvorF:Fletching_Potion_II"
+  | "melvorF:Fletching_Potion_III"
+  | "melvorF:Fletching_Potion_IV"
+  | "melvorF:Crafting_Potion_I"
+  | "melvorF:Crafting_Potion_II"
+  | "melvorF:Crafting_Potion_III"
+  | "melvorF:Crafting_Potion_IV"
+  | "melvorF:Elemental_Potion_I"
+  | "melvorF:Elemental_Potion_II"
+  | "melvorF:Elemental_Potion_III"
+  | "melvorF:Elemental_Potion_IV"
+  | "melvorF:Herblore_Potion_I"
+  | "melvorF:Herblore_Potion_II"
+  | "melvorF:Herblore_Potion_III"
+  | "melvorF:Herblore_Potion_IV"
+  | "melvorF:Ranged_Strength_Potion_I"
+  | "melvorF:Ranged_Strength_Potion_II"
+  | "melvorF:Ranged_Strength_Potion_III"
+  | "melvorF:Ranged_Strength_Potion_IV"
+  | "melvorF:Magic_Damage_Potion_I"
+  | "melvorF:Magic_Damage_Potion_II"
+  | "melvorF:Magic_Damage_Potion_III"
+  | "melvorF:Magic_Damage_Potion_IV"
+  | "melvorF:Diamond_Luck_Potion_I"
+  | "melvorF:Diamond_Luck_Potion_II"
+  | "melvorF:Diamond_Luck_Potion_III"
+  | "melvorF:Diamond_Luck_Potion_IV"
+  | "melvorF:Divine_Potion_I"
+  | "melvorF:Divine_Potion_II"
+  | "melvorF:Divine_Potion_III"
+  | "melvorF:Divine_Potion_IV"
+  | "melvorF:Lucky_Herb_Potion_I"
+  | "melvorF:Lucky_Herb_Potion_II"
+  | "melvorF:Lucky_Herb_Potion_III"
+  | "melvorF:Lucky_Herb_Potion_IV"
+  | "melvorF:Performance_Enhancing_Potion_I"
+  | "melvorF:Performance_Enhancing_Potion_II"
+  | "melvorF:Performance_Enhancing_Potion_III"
+  | "melvorF:Performance_Enhancing_Potion_IV"
+  | "melvorF:Necromancer_Potion_I"
+  | "melvorF:Necromancer_Potion_II"
+  | "melvorF:Necromancer_Potion_III"
+  | "melvorF:Necromancer_Potion_IV"
+  | "melvorF:Hinder_Potion_I"
+  | "melvorF:Hinder_Potion_II"
+  | "melvorF:Hinder_Potion_III"
+  | "melvorF:Hinder_Potion_IV"
+  | "melvorF:Famished_Potion_I"
+  | "melvorF:Famished_Potion_II"
+  | "melvorF:Famished_Potion_III"
+  | "melvorF:Famished_Potion_IV"
+  | "melvorF:Lethal_Toxins_Potion_I"
+  | "melvorF:Lethal_Toxins_Potion_II"
+  | "melvorF:Lethal_Toxins_Potion_III"
+  | "melvorF:Lethal_Toxins_Potion_IV"
+  | "melvorF:Secret_Stardust_Potion_I"
+  | "melvorF:Secret_Stardust_Potion_II"
+  | "melvorF:Secret_Stardust_Potion_III"
+  | "melvorF:Secret_Stardust_Potion_IV"
+  | "melvorTotH:Area_Control_Potion_I"
+  | "melvorTotH:Area_Control_Potion_II"
+  | "melvorTotH:Area_Control_Potion_III"
+  | "melvorTotH:Area_Control_Potion_IV"
+  | "melvorTotH:Adaptive_Defence_Potion_I"
+  | "melvorTotH:Adaptive_Defence_Potion_II"
+  | "melvorTotH:Adaptive_Defence_Potion_III"
+  | "melvorTotH:Adaptive_Defence_Potion_IV"
+  | "melvorTotH:Slayer_Bounty_Potion_I"
+  | "melvorTotH:Slayer_Bounty_Potion_II"
+  | "melvorTotH:Slayer_Bounty_Potion_III"
+  | "melvorTotH:Slayer_Bounty_Potion_IV"
+  | "melvorTotH:Holy_Bulwark_Potion_I"
+  | "melvorTotH:Holy_Bulwark_Potion_II"
+  | "melvorTotH:Holy_Bulwark_Potion_III"
+  | "melvorTotH:Holy_Bulwark_Potion_IV"
+  | "melvorTotH:Adaptive_Accuracy_Potion_I"
+  | "melvorTotH:Adaptive_Accuracy_Potion_II"
+  | "melvorTotH:Adaptive_Accuracy_Potion_III"
+  | "melvorTotH:Adaptive_Accuracy_Potion_IV"
+  | "melvorTotH:Reaper_Potion_I"
+  | "melvorTotH:Reaper_Potion_II"
+  | "melvorTotH:Reaper_Potion_III"
+  | "melvorTotH:Reaper_Potion_IV"
+  | "melvorTotH:Penetration_Potion_I"
+  | "melvorTotH:Penetration_Potion_II"
+  | "melvorTotH:Penetration_Potion_III"
+  | "melvorTotH:Penetration_Potion_IV"
+  | "melvorTotH:Critical_Strike_Potion_I"
+  | "melvorTotH:Critical_Strike_Potion_II"
+  | "melvorTotH:Critical_Strike_Potion_III"
+  | "melvorTotH:Critical_Strike_Potion_IV"
+  | "melvorTotH:Alchemic_Practice_Potion_I"
+  | "melvorTotH:Alchemic_Practice_Potion_II"
+  | "melvorTotH:Alchemic_Practice_Potion_III"
+  | "melvorTotH:Alchemic_Practice_Potion_IV"
+  | "melvorTotH:Gem_Detector_Potion_I"
+  | "melvorTotH:Gem_Detector_Potion_II"
+  | "melvorTotH:Gem_Detector_Potion_III"
+  | "melvorTotH:Gem_Detector_Potion_IV"
+  | "melvorTotH:Star_Seeker_Potion_I"
+  | "melvorTotH:Star_Seeker_Potion_II"
+  | "melvorTotH:Star_Seeker_Potion_III"
+  | "melvorTotH:Star_Seeker_Potion_IV"
+  | "melvorTotH:Traps_Potion_I"
+  | "melvorTotH:Traps_Potion_II"
+  | "melvorTotH:Traps_Potion_III"
+  | "melvorTotH:Traps_Potion_IV"
+  | "melvorTotH:Blacksmith_Potion_I"
+  | "melvorTotH:Blacksmith_Potion_II"
+  | "melvorTotH:Blacksmith_Potion_III"
+  | "melvorTotH:Blacksmith_Potion_IV"
+  | "melvorTotH:Enkindled_Yields_Potion_I"
+  | "melvorTotH:Enkindled_Yields_Potion_II"
+  | "melvorTotH:Enkindled_Yields_Potion_III"
+  | "melvorTotH:Enkindled_Yields_Potion_IV"
+  | "melvorTotH:Alt_Magic_Potion_I"
+  | "melvorTotH:Alt_Magic_Potion_II"
+  | "melvorTotH:Alt_Magic_Potion_III"
+  | "melvorTotH:Alt_Magic_Potion_IV"
+  | "melvorTotH:Multicooker_Potion_I"
+  | "melvorTotH:Multicooker_Potion_II"
+  | "melvorTotH:Multicooker_Potion_III"
+  | "melvorTotH:Multicooker_Potion_IV"
+  | "melvorTotH:Deadly_Toxins_Potion";
+declare type ReadableItemID =
+  | "melvorD:Message_In_A_Bottle"
+  | "melvorD:Futures_Prophecy"
+  | "melvorF:Unknown_Evil"
+  | "melvorF:New_Dawn"
+  | "melvorF:Merchants_Permit"
+  | "melvorF:Beginning_Of_The_End"
+  | "melvorF:Impending_Darkness";
+declare type OpenableItemID =
+  | "melvorD:Frozen_Chest"
+  | "melvorD:Chest_of_Witwix"
+  | "melvorD:Bird_Nest"
+  | "melvorD:Treasure_Chest"
+  | "melvorD:Egg_Chest"
+  | "melvorD:Pirate_Booty"
+  | "melvorD:Elite_Chest"
+  | "melvorD:Spider_Chest"
+  | "melvorD:Standard_Chest"
+  | "melvorD:Bandit_Chest"
+  | "melvorD:Christmas_Present_Yellow"
+  | "melvorD:Christmas_Present_Blue"
+  | "melvorD:Christmas_Present_Green"
+  | "melvorD:Christmas_Present_White"
+  | "melvorD:Christmas_Present_Purple"
+  | "melvorD:Christmas_Present_General"
+  | "melvorD:Locked_Chest"
+  | "melvorD:Magic_Chest"
+  | "melvorF:Herb_Sack"
+  | "melvorF:Elder_Chest"
+  | "melvorF:Crate_Of_Basic_Supplies"
+  | "melvorF:Crate_Of_Food"
+  | "melvorF:Stack_Of_Bones"
+  | "melvorF:Pile_Of_Logs"
+  | "melvorF:Pile_Of_Ores"
+  | "melvorF:Chest_Of_Gems"
+  | "melvorF:Air_Chest"
+  | "melvorF:Water_Chest"
+  | "melvorF:Earth_Chest"
+  | "melvorF:Fire_Chest"
+  | "melvorF:Scroll_of_Aeris"
+  | "melvorF:Scroll_of_Glacia"
+  | "melvorF:Scroll_of_Terran"
+  | "melvorF:Scroll_of_Ragnar"
+  | "melvorF:Miolite_Chest"
+  | "melvorTotH:Raven_Nest"
+  | "melvorTotH:Generous_Fire_Spirit"
+  | "melvorTotH:Golden_Chest"
+  | "melvorTotH:Crate_of_Lost_Supplies"
+  | "melvorTotH:Ancient_Chest"
+  | "melvorTotH:Burning_Chest"
+  | "melvorTotH:Static_Chest"
+  | "melvorTotH:Webbed_Chest"
+  | "melvorTotH:Cursed_Chest"
+  | "melvorTotH:Bone_Chest"
+  | "melvorTotH:Exotic_Herb_Sack"
+  | "melvorTotH:Lost_Chest";
+declare type TokenItemID =
+  | "melvorD:Mastery_Token_Cooking"
+  | "melvorD:Mastery_Token_Farming"
+  | "melvorD:Mastery_Token_Firemaking"
+  | "melvorD:Mastery_Token_Fishing"
+  | "melvorD:Mastery_Token_Mining"
+  | "melvorD:Mastery_Token_Smithing"
+  | "melvorD:Mastery_Token_Woodcutting"
+  | "melvorF:Mastery_Token_Crafting"
+  | "melvorF:Mastery_Token_Fletching"
+  | "melvorF:Mastery_Token_Runecrafting"
+  | "melvorF:Mastery_Token_Thieving"
+  | "melvorF:Mastery_Token_Herblore"
+  | "melvorF:Bank_Slot_Token"
+  | "melvorF:Mastery_Token_Agility"
+  | "melvorF:Mastery_Token_Summoning"
+  | "melvorF:Mastery_Token_Astrology";
+declare type CompostItemID = "melvorD:Compost" | "melvorD:Weird_Gloop";
+declare type SkillID =
+  | "melvorD:Attack"
+  | "melvorD:Strength"
+  | "melvorD:Defence"
+  | "melvorD:Hitpoints"
+  | "melvorD:Ranged"
+  | "melvorD:Magic"
+  | "melvorD:Prayer"
+  | "melvorD:Slayer"
+  | "melvorD:Woodcutting"
+  | "melvorD:Fishing"
+  | "melvorD:Firemaking"
+  | "melvorD:Cooking"
+  | "melvorD:Mining"
+  | "melvorD:Smithing"
+  | "melvorD:Thieving"
+  | "melvorD:Farming"
+  | "melvorD:Fletching"
+  | "melvorD:Crafting"
+  | "melvorD:Runecrafting"
+  | "melvorD:Herblore"
+  | "melvorD:Agility"
+  | "melvorD:Summoning"
+  | "melvorD:Astrology"
+  | "melvorD:Township";
+declare type PlayerModifierData = PlayerModifierData1 & {
   /**
    * +${value}% Chance To Double Loot in Combat
    */
@@ -4079,8 +4048,8 @@ export type PlayerModifierData = PlayerModifierData1 & {
   increasedTownshipTraderStock?: number;
   [k: string]: unknown;
 };
-export type PlayerModifierData1 = CombatModifierBase;
-export type SkillModDataArray = {
+declare type PlayerModifierData1 = CombatModifierBase;
+declare type SkillModDataArray = {
   /**
    * The ID of the Skill the modifier should apply to
    */
@@ -4091,19 +4060,19 @@ export type SkillModDataArray = {
   value: number;
   [k: string]: unknown;
 }[];
-export type CombatModifierData = CombatModifierBase;
+declare type CombatModifierData = CombatModifierBase;
 /**
  * Data for constructing an ItemEffect object
  */
-export type ItemEffectData = ItemEffectData1 & {
+declare type ItemEffectData = ItemEffectData1 & {
   /**
    * Data for the effect associated
    */
   effectData: EffectData;
   [k: string]: unknown;
 };
-export type ItemEffectData1 = IDData;
-export type EffectData =
+declare type ItemEffectData1 = IDData;
+declare type EffectData =
   | SlowEffectData
   | BurnEffectData
   | PoisonEffectData
@@ -4116,29 +4085,26 @@ export type EffectData =
 /**
  * The Percentage chance that the effect should proc
  */
-export type EffectChance = number;
-export type StackingEffectID =
-  | ValidID
-  | (
-      | "melvorF:MarkOfDeath"
-      | "melvorTotH:GhostlyTerror"
-      | "melvorTotH:DecayingShots"
-      | "melvorTotH:ReduceDR"
-      | "melvorTotH:DarkBlade"
-      | "melvorTotH:EvasionDown"
-      | "melvorTotH:EtheralEffect"
-      | "melvorTotH:RevenantWeakness"
-      | "melvorTotH:Carrion"
-    );
+declare type EffectChance = number;
+declare type StackingEffectID =
+  | "melvorF:MarkOfDeath"
+  | "melvorTotH:GhostlyTerror"
+  | "melvorTotH:DecayingShots"
+  | "melvorTotH:ReduceDR"
+  | "melvorTotH:DarkBlade"
+  | "melvorTotH:EvasionDown"
+  | "melvorTotH:EtheralEffect"
+  | "melvorTotH:RevenantWeakness"
+  | "melvorTotH:Carrion";
 /**
  * Defines a custom effect that is not specified by a standard type
  */
-export type CustomEffectData = CustomEffectData1 & {
+declare type CustomEffectData = CustomEffectData1 & {
   effectType: "Custom";
   [k: string]: unknown;
 };
-export type CustomEffectData1 = AnyEffectData;
-export type AnyEffectData =
+declare type CustomEffectData1 = AnyEffectData;
+declare type AnyEffectData =
   | ModifierEffectData
   | SleepEffect
   | StunEffect
@@ -4146,11 +4112,11 @@ export type AnyEffectData =
   | ReflexiveEffectData
   | CompoundEffect
   | ComboEffect;
-export type CharacterType = "Target" | "Attacker";
-export type StunFlavour = "Stun" | "Freeze";
-export type DOTType = "Burn" | "Bleed" | "Poison" | "Regen" | "DeadlyPoison";
-export type Damage = RolledDamage | FixedDamage;
-export type RolledDamage = RolledDamage1 & {
+declare type CharacterType = "Target" | "Attacker";
+declare type StunFlavour = "Stun" | "Freeze";
+declare type DOTType = "Burn" | "Bleed" | "Poison" | "Regen" | "DeadlyPoison";
+declare type Damage = RolledDamage | FixedDamage;
+declare type RolledDamage = RolledDamage1 & {
   /**
    * Determines if the damage should roll between a minimum and maximum value
    */
@@ -4165,8 +4131,8 @@ export type RolledDamage = RolledDamage1 & {
   minPercent: number;
   [k: string]: unknown;
 };
-export type RolledDamage1 = BaseDamage;
-export type RollType =
+declare type RolledDamage1 = BaseDamage;
+declare type RollType =
   | "MaxHit"
   | "MinHit"
   | "CurrentHP"
@@ -4190,36 +4156,33 @@ export type RollType =
   | "FixedPlusMaxHit50"
   | "HPUnder90"
   | "PoisonedMaxHit";
-export type FixedDamage = FixedDamage1 & {
+declare type FixedDamage = FixedDamage1 & {
   /**
    * Determines if the damage should roll between a minimum and maximum value
    */
   roll: false;
   [k: string]: unknown;
 };
-export type FixedDamage1 = BaseDamage;
-export type CurseID =
-  | ValidID
-  | (
-      | "melvorF:BlindingI"
-      | "melvorF:SoulSplitI"
-      | "melvorF:WeakeningI"
-      | "melvorF:AnguishI"
-      | "melvorF:BlindingII"
-      | "melvorF:SoulSplitII"
-      | "melvorF:WeakeningII"
-      | "melvorF:Confusion"
-      | "melvorF:AnguishII"
-      | "melvorF:BlindingIII"
-      | "melvorF:SoulSplitIII"
-      | "melvorF:WeakeningIII"
-      | "melvorF:AnguishIII"
-      | "melvorF:Decay"
-      | "melvorTotH:Madness"
-      | "melvorTotH:Torment"
-      | "melvorTotH:Despair"
-    );
-export type AnyItemData =
+declare type FixedDamage1 = BaseDamage;
+declare type CurseID =
+  | "melvorF:BlindingI"
+  | "melvorF:SoulSplitI"
+  | "melvorF:WeakeningI"
+  | "melvorF:AnguishI"
+  | "melvorF:BlindingII"
+  | "melvorF:SoulSplitII"
+  | "melvorF:WeakeningII"
+  | "melvorF:Confusion"
+  | "melvorF:AnguishII"
+  | "melvorF:BlindingIII"
+  | "melvorF:SoulSplitIII"
+  | "melvorF:WeakeningIII"
+  | "melvorF:AnguishIII"
+  | "melvorF:Decay"
+  | "melvorTotH:Madness"
+  | "melvorTotH:Torment"
+  | "melvorTotH:Despair";
+declare type AnyItemData =
   | ItemData
   | EquipmentItemData
   | WeaponItemData
@@ -4230,12 +4193,12 @@ export type AnyItemData =
   | OpenableItemData
   | TokenItemData
   | CompostItemData;
-export type ItemData = ItemData1 & {
+declare type ItemData = ItemData1 & {
   itemType: "Item";
   [k: string]: unknown;
 };
-export type ItemData1 = BaseItemData;
-export type BaseItemData = BaseItemData1 & {
+declare type ItemData1 = BaseItemData;
+declare type BaseItemData = BaseItemData1 & {
   /**
    * The display name for the item
    */
@@ -4282,13 +4245,13 @@ export type BaseItemData = BaseItemData1 & {
   sellsFor: number;
   [k: string]: unknown;
 };
-export type BaseItemData1 = IDData;
-export type EquipmentItemData = EquipmentItemData1 & {
+declare type BaseItemData1 = IDData;
+declare type EquipmentItemData = EquipmentItemData1 & {
   itemType: "Equipment";
   [k: string]: unknown;
 };
-export type EquipmentItemData1 = BaseEquipmentItemData;
-export type BaseEquipmentItemData = BaseEquipmentItemData1 & {
+declare type EquipmentItemData1 = BaseEquipmentItemData;
+declare type BaseEquipmentItemData = BaseEquipmentItemData1 & {
   /**
    * Classification for the tier of item. Currently only effects which items can be converted to Clothing in township
    */
@@ -4387,8 +4350,8 @@ export type BaseEquipmentItemData = BaseEquipmentItemData1 & {
   };
   [k: string]: unknown;
 };
-export type BaseEquipmentItemData1 = BaseItemData1;
-export type SlotTypes =
+declare type BaseEquipmentItemData1 = BaseItemData1;
+declare type SlotTypes =
   | "Helmet"
   | "Platebody"
   | "Platelegs"
@@ -4404,7 +4367,7 @@ export type SlotTypes =
   | "Summon1"
   | "Summon2"
   | "Consumable";
-export type AnyRequirementData =
+declare type AnyRequirementData =
   | SkillLevelRequirementData
   | AllSkillLevelRequirementData
   | DungeonRequirementData
@@ -4416,605 +4379,593 @@ export type AnyRequirementData =
   | MonsterKilledRequirementData
   | TownshipTaskCompletionRequirement
   | TownshipBuildingRequirementData;
-export type DungeonID =
-  | ValidID
-  | (
-      | "melvorD:Chicken_Coop"
-      | "melvorD:Undead_Graveyard"
-      | "melvorD:Spider_Forest"
-      | "melvorD:Frozen_Cove"
-      | "melvorD:Deep_Sea_Ship"
-      | "melvorD:Volcanic_Cave"
-      | "melvorD:Bandit_Base"
-      | "melvorD:Hall_of_Wizards"
-      | "melvorF:Air_God_Dungeon"
-      | "melvorF:Water_God_Dungeon"
-      | "melvorF:Earth_God_Dungeon"
-      | "melvorF:Fire_God_Dungeon"
-      | "melvorF:Dragons_Den"
-      | "melvorF:Miolite_Caves"
-      | "melvorF:Infernal_Stronghold"
-      | "melvorF:Into_the_Mist"
-      | "melvorF:Impending_Darkness"
-      | "melvorTotH:Ancient_Sanctuary"
-      | "melvorTotH:Underground_Lava_Lake"
-      | "melvorTotH:Lightning_Region"
-      | "melvorTotH:Lair_of_the_Spider_Queen"
-      | "melvorTotH:Cursed_Forest"
-      | "melvorTotH:Necromancers_Palace"
-      | "melvorTotH:Throne_of_the_Herald"
-    );
+declare type DungeonID =
+  | "melvorD:Chicken_Coop"
+  | "melvorD:Undead_Graveyard"
+  | "melvorD:Spider_Forest"
+  | "melvorD:Frozen_Cove"
+  | "melvorD:Deep_Sea_Ship"
+  | "melvorD:Volcanic_Cave"
+  | "melvorD:Bandit_Base"
+  | "melvorD:Hall_of_Wizards"
+  | "melvorF:Air_God_Dungeon"
+  | "melvorF:Water_God_Dungeon"
+  | "melvorF:Earth_God_Dungeon"
+  | "melvorF:Fire_God_Dungeon"
+  | "melvorF:Dragons_Den"
+  | "melvorF:Miolite_Caves"
+  | "melvorF:Infernal_Stronghold"
+  | "melvorF:Into_the_Mist"
+  | "melvorF:Impending_Darkness"
+  | "melvorTotH:Ancient_Sanctuary"
+  | "melvorTotH:Underground_Lava_Lake"
+  | "melvorTotH:Lightning_Region"
+  | "melvorTotH:Lair_of_the_Spider_Queen"
+  | "melvorTotH:Cursed_Forest"
+  | "melvorTotH:Necromancers_Palace"
+  | "melvorTotH:Throne_of_the_Herald";
 /**
  * Valid Namespace name
  */
-export type Namespace = ("melvorBaseGame" | "melvorTrue" | "melvorD" | "melvorF" | "melvorTotH") | string;
-export type ShopPurchaseID =
-  | ValidID
-  | (
-      | "melvorD:Extra_Bank_Slot"
-      | "melvorD:Auto_Eat_Tier_I"
-      | "melvorD:Auto_Eat_Tier_II"
-      | "melvorD:Auto_Eat_Tier_III"
-      | "melvorD:Extra_Equipment_Set_I"
-      | "melvorD:Dungeon_Equipment_Swapping"
-      | "melvorD:Multi_Tree"
-      | "melvorD:AutoEquipFood"
-      | "melvorD:AutoSwapFood"
-      | "melvorD:Iron_Axe"
-      | "melvorD:Steel_Axe"
-      | "melvorD:Black_Axe"
-      | "melvorD:Mithril_Axe"
-      | "melvorD:Adamant_Axe"
-      | "melvorD:Rune_Axe"
-      | "melvorD:Dragon_Axe"
-      | "melvorD:Iron_Fishing_Rod"
-      | "melvorD:Steel_Fishing_Rod"
-      | "melvorD:Black_Fishing_Rod"
-      | "melvorD:Mithril_Fishing_Rod"
-      | "melvorD:Adamant_Fishing_Rod"
-      | "melvorD:Rune_Fishing_Rod"
-      | "melvorD:Dragon_Fishing_Rod"
-      | "melvorD:Iron_Pickaxe"
-      | "melvorD:Steel_Pickaxe"
-      | "melvorD:Black_Pickaxe"
-      | "melvorD:Mithril_Pickaxe"
-      | "melvorD:Adamant_Pickaxe"
-      | "melvorD:Rune_Pickaxe"
-      | "melvorD:Dragon_Pickaxe"
-      | "melvorD:Normal_Cooking_Fire"
-      | "melvorD:Oak_Cooking_Fire"
-      | "melvorD:Willow_Cooking_Fire"
-      | "melvorD:Teak_Cooking_Fire"
-      | "melvorD:Maple_Cooking_Fire"
-      | "melvorD:Mahogany_Cooking_Fire"
-      | "melvorD:Yew_Cooking_Fire"
-      | "melvorD:Magic_Cooking_Fire"
-      | "melvorD:Redwood_Cooking_Fire"
-      | "melvorD:Basic_Furnace"
-      | "melvorD:Strong_Furnace"
-      | "melvorD:Magic_Furnace"
-      | "melvorD:Basic_Pot"
-      | "melvorD:Strong_Pot"
-      | "melvorD:Magic_Pot"
-      | "melvorD:Cooking"
-      | "melvorD:Mining"
-      | "melvorD:Smithing"
-      | "melvorD:Gem"
-      | "melvorD:Attack_Skillcape"
-      | "melvorD:Cooking_Skillcape"
-      | "melvorD:Defence_Skillcape"
-      | "melvorD:Farming_Skillcape"
-      | "melvorD:Firemaking_Skillcape"
-      | "melvorD:Fishing_Skillcape"
-      | "melvorD:Hitpoints_Skillcape"
-      | "melvorD:Mining_Skillcape"
-      | "melvorD:Smithing_Skillcape"
-      | "melvorD:Strength_Skillcape"
-      | "melvorD:Woodcutting_Skillcape"
-      | "melvorD:Bag_of_Flour"
-      | "melvorD:Cheese"
-      | "melvorD:Cream"
-      | "melvorD:Feathers"
-      | "melvorD:Compost"
-      | "melvorD:Weird_Gloop"
-      | "melvorD:Bowstring"
-      | "melvorD:Red_Party_Hat"
-      | "melvorD:SkipCostReduction"
-      | "melvorD:FoodBonus"
-      | "melvorD:AmmoBonus"
-      | "melvorD:RuneBonus"
-      | "melvorD:PrayerUnlock"
-      | "melvorD:PrayerLevel"
-      | "melvorD:WaveCompletionPrayerPoints"
-      | "melvorD:StartingPrayerPoints"
-      | "melvorD:PassiveUnlock"
-      | "melvorD:YellowPartyHat"
-      | "melvorD:Preston"
-      | "melvorD:Jerry"
-      | "melvorD:FasterSpawns"
-      | "melvorD:GolbinCrate"
-      | "melvorF:Extra_Equipment_Set_II"
-      | "melvorF:Extra_Equipment_Set_III"
-      | "melvorF:LootContainerStacking"
-      | "melvorF:Perpetual_Haste"
-      | "melvorF:Expanded_Knowledge"
-      | "melvorF:Master_of_Nature"
-      | "melvorF:Art_of_Control"
-      | "melvorF:Auto_Slayer"
-      | "melvorF:Map_To_The_Unhallowed_Wasteland"
-      | "melvorF:Basic_Resupply"
-      | "melvorF:Standard_Resupply"
-      | "melvorF:Generous_Resupply"
-      | "melvorF:Mirror_Shield"
-      | "melvorF:Magical_Ring"
-      | "melvorF:Blazing_Lantern"
-      | "melvorF:Desert_Hat"
-      | "melvorF:Climbing_Boots"
-      | "melvorF:Confetti_Crossbow"
-      | "melvorF:Skull_Cape"
-      | "melvorF:Green_Party_Hat"
-      | "melvorF:Necromancer_Hat"
-      | "melvorF:Necromancer_Boots"
-      | "melvorF:Necromancer_Bottoms"
-      | "melvorF:Necromancer_Robes"
-      | "melvorF:Slayer_Helmet_Basic"
-      | "melvorF:Slayer_Platebody_Basic"
-      | "melvorF:Slayer_Cowl_Basic"
-      | "melvorF:Slayer_Leather_Body_Basic"
-      | "melvorF:Slayer_Wizard_Hat_Basic"
-      | "melvorF:Slayer_Wizard_Robes_Basic"
-      | "melvorF:Slayer_Upgrade_Kit_Strong"
-      | "melvorF:Slayer_Upgrade_Kit_Elite"
-      | "melvorF:Slayer_Upgrade_Kit_Master"
-      | "melvorF:Thieving"
-      | "melvorF:Max_Skillcape"
-      | "melvorF:Agility_Skillcape"
-      | "melvorF:Astrology_Skillcape"
-      | "melvorF:Crafting_Skillcape"
-      | "melvorF:Fletching_Skillcape"
-      | "melvorF:Herblore_Skillcape"
-      | "melvorF:Magic_Skillcape"
-      | "melvorF:Prayer_Skillcape"
-      | "melvorF:Ranged_Skillcape"
-      | "melvorF:Runecrafting_Skillcape"
-      | "melvorF:Slayer_Skillcape"
-      | "melvorF:Summoning_Skillcape"
-      | "melvorF:Thieving_Skillcape"
-      | "melvorF:Township_Skillcape"
-      | "melvorF:Cape_of_Completion"
-      | "melvorF:Leather"
-      | "melvorF:Green_Dragonhide"
-      | "melvorF:Blue_Dragonhide"
-      | "melvorF:Red_Dragonhide"
-      | "melvorF:Summoning_Shard_Red"
-      | "melvorF:Summoning_Shard_Green"
-      | "melvorF:Summoning_Shard_Blue"
-      | "melvorF:Summoning_Shard_Silver"
-      | "melvorF:Summoning_Shard_Gold"
-      | "melvorF:Summoning_Shard_Black"
-      | "melvorF:Woodcutters_Hat"
-      | "melvorF:Woodcutters_Body"
-      | "melvorF:Woodcutters_Leggings"
-      | "melvorF:Woodcutters_Boots"
-      | "melvorF:Burning_Mans_Hat"
-      | "melvorF:Burning_Mans_Body"
-      | "melvorF:Burning_Mans_Leggings"
-      | "melvorF:Burning_Mans_Boots"
-      | "melvorF:Fishermans_Hat"
-      | "melvorF:Fishermans_Body"
-      | "melvorF:Fishermans_Leggings"
-      | "melvorF:Fishermans_Boots"
-      | "melvorF:Miners_Hat"
-      | "melvorF:Miners_Body"
-      | "melvorF:Miners_Leggings"
-      | "melvorF:Miners_Boots"
-      | "melvorF:Blacksmiths_Hat"
-      | "melvorF:Blacksmiths_Body"
-      | "melvorF:Blacksmiths_Leggings"
-      | "melvorF:Blacksmiths_Boots"
-      | "melvorF:Fletchers_Hat"
-      | "melvorF:Fletchers_Body"
-      | "melvorF:Fletchers_Leggings"
-      | "melvorF:Fletchers_Boots"
-      | "melvorF:Crafters_Hat"
-      | "melvorF:Crafters_Body"
-      | "melvorF:Crafters_Leggings"
-      | "melvorF:Crafters_Boots"
-      | "melvorF:Runecrafters_Hat"
-      | "melvorF:Runecrafters_Body"
-      | "melvorF:Runecrafters_Leggings"
-      | "melvorF:Runecrafters_Boots"
-      | "melvorF:Potion_Makers_Hat"
-      | "melvorF:Potion_Makers_Body"
-      | "melvorF:Potion_Makers_Leggings"
-      | "melvorF:Potion_Makers_Boots"
-      | "melvorF:Performance_Enhancing_Hat"
-      | "melvorF:Performance_Enhancing_Body"
-      | "melvorF:Performance_Enhancing_Leggings"
-      | "melvorF:Performance_Enhancing_Boots"
-      | "melvorF:Star_Gazing_Hat"
-      | "melvorF:Star_Gazing_Body"
-      | "melvorF:Star_Gazing_Leggings"
-      | "melvorF:Star_Gazing_Boots"
-      | "melvorF:Marcy"
-      | "melvorF:Roger"
-      | "melvorF:Ace"
-      | "melvorF:Layla"
-      | "melvorF:MisterFuzzbutt"
-      | "melvorF:OctaviusLepidus"
-      | "melvorF:Warm_Beanie"
-      | "melvorF:Pirate_Captain_Hat"
-      | "melvorF:Prats_Hat"
-      | "melvorF:Top_Hat"
-      | "melvorF:Hunters_Hat"
-      | "melvorF:Clown_Hat"
-      | "melvorTotH:Corundum_Axe"
-      | "melvorTotH:Augite_Axe"
-      | "melvorTotH:Meteorite_Axe"
-      | "melvorTotH:Divine_Axe"
-      | "melvorTotH:Corundum_Pickaxe"
-      | "melvorTotH:Augite_Pickaxe"
-      | "melvorTotH:Meteorite_Pickaxe"
-      | "melvorTotH:Divine_Pickaxe"
-      | "melvorTotH:Corundum_Fishing_Rod"
-      | "melvorTotH:Augite_Fishing_Rod"
-      | "melvorTotH:Meteorite_Fishing_Rod"
-      | "melvorTotH:Divine_Fishing_Rod"
-      | "melvorTotH:SpruceCookingFire"
-      | "melvorTotH:ElderWoodCookingFire"
-      | "melvorTotH:CarrionCookingFire"
-      | "melvorTotH:IridiumPot"
-      | "melvorTotH:PalladiumPot"
-      | "melvorTotH:DivinePot"
-      | "melvorTotH:CorundumFurnace"
-      | "melvorTotH:AugiteFurnace"
-      | "melvorTotH:DivineFurnace"
-      | "melvorTotH:Labyrinth_Solution"
-      | "melvorTotH:Linden_Boat"
-      | "melvorTotH:Golden_Compass"
-      | "melvorTotH:Golden_Key"
-      | "melvorTotH:Slayer_Torch"
-      | "melvorTotH:Mystic_Lantern"
-      | "melvorTotH:Slayer_Upgrade_Kit_Legendary"
-      | "melvorTotH:Slayer_Upgrade_Kit_Mythical"
-      | "melvorTotH:Superior_Max_Skillcape"
-      | "melvorTotH:Superior_Agility_Skillcape"
-      | "melvorTotH:Superior_Attack_Skillcape"
-      | "melvorTotH:Superior_Astrology_Skillcape"
-      | "melvorTotH:Superior_Cooking_Skillcape"
-      | "melvorTotH:Superior_Crafting_Skillcape"
-      | "melvorTotH:Superior_Defence_Skillcape"
-      | "melvorTotH:Superior_Farming_Skillcape"
-      | "melvorTotH:Superior_Firemaking_Skillcape"
-      | "melvorTotH:Superior_Fishing_Skillcape"
-      | "melvorTotH:Superior_Fletching_Skillcape"
-      | "melvorTotH:Superior_Herblore_Skillcape"
-      | "melvorTotH:Superior_Hitpoints_Skillcape"
-      | "melvorTotH:Superior_Magic_Skillcape"
-      | "melvorTotH:Superior_Mining_Skillcape"
-      | "melvorTotH:Superior_Prayer_Skillcape"
-      | "melvorTotH:Superior_Ranged_Skillcape"
-      | "melvorTotH:Superior_Runecrafting_Skillcape"
-      | "melvorTotH:Superior_Slayer_Skillcape"
-      | "melvorTotH:Superior_Smithing_Skillcape"
-      | "melvorTotH:Superior_Strength_Skillcape"
-      | "melvorTotH:Superior_Summoning_Skillcape"
-      | "melvorTotH:Superior_Thieving_Skillcape"
-      | "melvorTotH:Superior_Township_Skillcape"
-      | "melvorTotH:Superior_Woodcutting_Skillcape"
-      | "melvorTotH:ClassyRock"
-      | "melvorTotH:CuteRock"
-      | "melvorTotH:RoyalRock"
-      | "melvorTotH:ElfRock"
-      | "melvorTotH:MagicRock"
-      | "melvorTotH:PartyRock"
-    );
+declare type Namespace = ("melvorBaseGame" | "melvorTrue" | "melvorD" | "melvorF" | "melvorTotH") | string;
+declare type ShopPurchaseID =
+  | "melvorD:Extra_Bank_Slot"
+  | "melvorD:Auto_Eat_Tier_I"
+  | "melvorD:Auto_Eat_Tier_II"
+  | "melvorD:Auto_Eat_Tier_III"
+  | "melvorD:Extra_Equipment_Set_I"
+  | "melvorD:Dungeon_Equipment_Swapping"
+  | "melvorD:Multi_Tree"
+  | "melvorD:AutoEquipFood"
+  | "melvorD:AutoSwapFood"
+  | "melvorD:Iron_Axe"
+  | "melvorD:Steel_Axe"
+  | "melvorD:Black_Axe"
+  | "melvorD:Mithril_Axe"
+  | "melvorD:Adamant_Axe"
+  | "melvorD:Rune_Axe"
+  | "melvorD:Dragon_Axe"
+  | "melvorD:Iron_Fishing_Rod"
+  | "melvorD:Steel_Fishing_Rod"
+  | "melvorD:Black_Fishing_Rod"
+  | "melvorD:Mithril_Fishing_Rod"
+  | "melvorD:Adamant_Fishing_Rod"
+  | "melvorD:Rune_Fishing_Rod"
+  | "melvorD:Dragon_Fishing_Rod"
+  | "melvorD:Iron_Pickaxe"
+  | "melvorD:Steel_Pickaxe"
+  | "melvorD:Black_Pickaxe"
+  | "melvorD:Mithril_Pickaxe"
+  | "melvorD:Adamant_Pickaxe"
+  | "melvorD:Rune_Pickaxe"
+  | "melvorD:Dragon_Pickaxe"
+  | "melvorD:Normal_Cooking_Fire"
+  | "melvorD:Oak_Cooking_Fire"
+  | "melvorD:Willow_Cooking_Fire"
+  | "melvorD:Teak_Cooking_Fire"
+  | "melvorD:Maple_Cooking_Fire"
+  | "melvorD:Mahogany_Cooking_Fire"
+  | "melvorD:Yew_Cooking_Fire"
+  | "melvorD:Magic_Cooking_Fire"
+  | "melvorD:Redwood_Cooking_Fire"
+  | "melvorD:Basic_Furnace"
+  | "melvorD:Strong_Furnace"
+  | "melvorD:Magic_Furnace"
+  | "melvorD:Basic_Pot"
+  | "melvorD:Strong_Pot"
+  | "melvorD:Magic_Pot"
+  | "melvorD:Cooking"
+  | "melvorD:Mining"
+  | "melvorD:Smithing"
+  | "melvorD:Gem"
+  | "melvorD:Attack_Skillcape"
+  | "melvorD:Cooking_Skillcape"
+  | "melvorD:Defence_Skillcape"
+  | "melvorD:Farming_Skillcape"
+  | "melvorD:Firemaking_Skillcape"
+  | "melvorD:Fishing_Skillcape"
+  | "melvorD:Hitpoints_Skillcape"
+  | "melvorD:Mining_Skillcape"
+  | "melvorD:Smithing_Skillcape"
+  | "melvorD:Strength_Skillcape"
+  | "melvorD:Woodcutting_Skillcape"
+  | "melvorD:Bag_of_Flour"
+  | "melvorD:Cheese"
+  | "melvorD:Cream"
+  | "melvorD:Feathers"
+  | "melvorD:Compost"
+  | "melvorD:Weird_Gloop"
+  | "melvorD:Bowstring"
+  | "melvorD:Red_Party_Hat"
+  | "melvorD:SkipCostReduction"
+  | "melvorD:FoodBonus"
+  | "melvorD:AmmoBonus"
+  | "melvorD:RuneBonus"
+  | "melvorD:PrayerUnlock"
+  | "melvorD:PrayerLevel"
+  | "melvorD:WaveCompletionPrayerPoints"
+  | "melvorD:StartingPrayerPoints"
+  | "melvorD:PassiveUnlock"
+  | "melvorD:YellowPartyHat"
+  | "melvorD:Preston"
+  | "melvorD:Jerry"
+  | "melvorD:FasterSpawns"
+  | "melvorD:GolbinCrate"
+  | "melvorF:Extra_Equipment_Set_II"
+  | "melvorF:Extra_Equipment_Set_III"
+  | "melvorF:LootContainerStacking"
+  | "melvorF:Perpetual_Haste"
+  | "melvorF:Expanded_Knowledge"
+  | "melvorF:Master_of_Nature"
+  | "melvorF:Art_of_Control"
+  | "melvorF:Auto_Slayer"
+  | "melvorF:Map_To_The_Unhallowed_Wasteland"
+  | "melvorF:Basic_Resupply"
+  | "melvorF:Standard_Resupply"
+  | "melvorF:Generous_Resupply"
+  | "melvorF:Mirror_Shield"
+  | "melvorF:Magical_Ring"
+  | "melvorF:Blazing_Lantern"
+  | "melvorF:Desert_Hat"
+  | "melvorF:Climbing_Boots"
+  | "melvorF:Confetti_Crossbow"
+  | "melvorF:Skull_Cape"
+  | "melvorF:Green_Party_Hat"
+  | "melvorF:Necromancer_Hat"
+  | "melvorF:Necromancer_Boots"
+  | "melvorF:Necromancer_Bottoms"
+  | "melvorF:Necromancer_Robes"
+  | "melvorF:Slayer_Helmet_Basic"
+  | "melvorF:Slayer_Platebody_Basic"
+  | "melvorF:Slayer_Cowl_Basic"
+  | "melvorF:Slayer_Leather_Body_Basic"
+  | "melvorF:Slayer_Wizard_Hat_Basic"
+  | "melvorF:Slayer_Wizard_Robes_Basic"
+  | "melvorF:Slayer_Upgrade_Kit_Strong"
+  | "melvorF:Slayer_Upgrade_Kit_Elite"
+  | "melvorF:Slayer_Upgrade_Kit_Master"
+  | "melvorF:Thieving"
+  | "melvorF:Max_Skillcape"
+  | "melvorF:Agility_Skillcape"
+  | "melvorF:Astrology_Skillcape"
+  | "melvorF:Crafting_Skillcape"
+  | "melvorF:Fletching_Skillcape"
+  | "melvorF:Herblore_Skillcape"
+  | "melvorF:Magic_Skillcape"
+  | "melvorF:Prayer_Skillcape"
+  | "melvorF:Ranged_Skillcape"
+  | "melvorF:Runecrafting_Skillcape"
+  | "melvorF:Slayer_Skillcape"
+  | "melvorF:Summoning_Skillcape"
+  | "melvorF:Thieving_Skillcape"
+  | "melvorF:Township_Skillcape"
+  | "melvorF:Cape_of_Completion"
+  | "melvorF:Leather"
+  | "melvorF:Green_Dragonhide"
+  | "melvorF:Blue_Dragonhide"
+  | "melvorF:Red_Dragonhide"
+  | "melvorF:Summoning_Shard_Red"
+  | "melvorF:Summoning_Shard_Green"
+  | "melvorF:Summoning_Shard_Blue"
+  | "melvorF:Summoning_Shard_Silver"
+  | "melvorF:Summoning_Shard_Gold"
+  | "melvorF:Summoning_Shard_Black"
+  | "melvorF:Woodcutters_Hat"
+  | "melvorF:Woodcutters_Body"
+  | "melvorF:Woodcutters_Leggings"
+  | "melvorF:Woodcutters_Boots"
+  | "melvorF:Burning_Mans_Hat"
+  | "melvorF:Burning_Mans_Body"
+  | "melvorF:Burning_Mans_Leggings"
+  | "melvorF:Burning_Mans_Boots"
+  | "melvorF:Fishermans_Hat"
+  | "melvorF:Fishermans_Body"
+  | "melvorF:Fishermans_Leggings"
+  | "melvorF:Fishermans_Boots"
+  | "melvorF:Miners_Hat"
+  | "melvorF:Miners_Body"
+  | "melvorF:Miners_Leggings"
+  | "melvorF:Miners_Boots"
+  | "melvorF:Blacksmiths_Hat"
+  | "melvorF:Blacksmiths_Body"
+  | "melvorF:Blacksmiths_Leggings"
+  | "melvorF:Blacksmiths_Boots"
+  | "melvorF:Fletchers_Hat"
+  | "melvorF:Fletchers_Body"
+  | "melvorF:Fletchers_Leggings"
+  | "melvorF:Fletchers_Boots"
+  | "melvorF:Crafters_Hat"
+  | "melvorF:Crafters_Body"
+  | "melvorF:Crafters_Leggings"
+  | "melvorF:Crafters_Boots"
+  | "melvorF:Runecrafters_Hat"
+  | "melvorF:Runecrafters_Body"
+  | "melvorF:Runecrafters_Leggings"
+  | "melvorF:Runecrafters_Boots"
+  | "melvorF:Potion_Makers_Hat"
+  | "melvorF:Potion_Makers_Body"
+  | "melvorF:Potion_Makers_Leggings"
+  | "melvorF:Potion_Makers_Boots"
+  | "melvorF:Performance_Enhancing_Hat"
+  | "melvorF:Performance_Enhancing_Body"
+  | "melvorF:Performance_Enhancing_Leggings"
+  | "melvorF:Performance_Enhancing_Boots"
+  | "melvorF:Star_Gazing_Hat"
+  | "melvorF:Star_Gazing_Body"
+  | "melvorF:Star_Gazing_Leggings"
+  | "melvorF:Star_Gazing_Boots"
+  | "melvorF:Marcy"
+  | "melvorF:Roger"
+  | "melvorF:Ace"
+  | "melvorF:Layla"
+  | "melvorF:MisterFuzzbutt"
+  | "melvorF:OctaviusLepidus"
+  | "melvorF:Warm_Beanie"
+  | "melvorF:Pirate_Captain_Hat"
+  | "melvorF:Prats_Hat"
+  | "melvorF:Top_Hat"
+  | "melvorF:Hunters_Hat"
+  | "melvorF:Clown_Hat"
+  | "melvorTotH:Corundum_Axe"
+  | "melvorTotH:Augite_Axe"
+  | "melvorTotH:Meteorite_Axe"
+  | "melvorTotH:Divine_Axe"
+  | "melvorTotH:Corundum_Pickaxe"
+  | "melvorTotH:Augite_Pickaxe"
+  | "melvorTotH:Meteorite_Pickaxe"
+  | "melvorTotH:Divine_Pickaxe"
+  | "melvorTotH:Corundum_Fishing_Rod"
+  | "melvorTotH:Augite_Fishing_Rod"
+  | "melvorTotH:Meteorite_Fishing_Rod"
+  | "melvorTotH:Divine_Fishing_Rod"
+  | "melvorTotH:SpruceCookingFire"
+  | "melvorTotH:ElderWoodCookingFire"
+  | "melvorTotH:CarrionCookingFire"
+  | "melvorTotH:IridiumPot"
+  | "melvorTotH:PalladiumPot"
+  | "melvorTotH:DivinePot"
+  | "melvorTotH:CorundumFurnace"
+  | "melvorTotH:AugiteFurnace"
+  | "melvorTotH:DivineFurnace"
+  | "melvorTotH:Labyrinth_Solution"
+  | "melvorTotH:Linden_Boat"
+  | "melvorTotH:Golden_Compass"
+  | "melvorTotH:Golden_Key"
+  | "melvorTotH:Slayer_Torch"
+  | "melvorTotH:Mystic_Lantern"
+  | "melvorTotH:Slayer_Upgrade_Kit_Legendary"
+  | "melvorTotH:Slayer_Upgrade_Kit_Mythical"
+  | "melvorTotH:Superior_Max_Skillcape"
+  | "melvorTotH:Superior_Agility_Skillcape"
+  | "melvorTotH:Superior_Attack_Skillcape"
+  | "melvorTotH:Superior_Astrology_Skillcape"
+  | "melvorTotH:Superior_Cooking_Skillcape"
+  | "melvorTotH:Superior_Crafting_Skillcape"
+  | "melvorTotH:Superior_Defence_Skillcape"
+  | "melvorTotH:Superior_Farming_Skillcape"
+  | "melvorTotH:Superior_Firemaking_Skillcape"
+  | "melvorTotH:Superior_Fishing_Skillcape"
+  | "melvorTotH:Superior_Fletching_Skillcape"
+  | "melvorTotH:Superior_Herblore_Skillcape"
+  | "melvorTotH:Superior_Hitpoints_Skillcape"
+  | "melvorTotH:Superior_Magic_Skillcape"
+  | "melvorTotH:Superior_Mining_Skillcape"
+  | "melvorTotH:Superior_Prayer_Skillcape"
+  | "melvorTotH:Superior_Ranged_Skillcape"
+  | "melvorTotH:Superior_Runecrafting_Skillcape"
+  | "melvorTotH:Superior_Slayer_Skillcape"
+  | "melvorTotH:Superior_Smithing_Skillcape"
+  | "melvorTotH:Superior_Strength_Skillcape"
+  | "melvorTotH:Superior_Summoning_Skillcape"
+  | "melvorTotH:Superior_Thieving_Skillcape"
+  | "melvorTotH:Superior_Township_Skillcape"
+  | "melvorTotH:Superior_Woodcutting_Skillcape"
+  | "melvorTotH:ClassyRock"
+  | "melvorTotH:CuteRock"
+  | "melvorTotH:RoyalRock"
+  | "melvorTotH:ElfRock"
+  | "melvorTotH:MagicRock"
+  | "melvorTotH:PartyRock";
 /**
  * The tier of a slayer task
  */
-export type SlayerTier = "Easy" | "Normal" | "Hard" | "Elite" | "Master" | "Legendary" | "Mythical";
-export type MonsterID =
-  | ValidID
-  | (
-      | "melvorD:BlackKnight"
-      | "melvorD:HillGiant"
-      | "melvorD:MossGiant"
-      | "melvorD:GiantCrab"
-      | "melvorD:Tentacle"
-      | "melvorD:Seagull"
-      | "melvorD:ConfusedPirate"
-      | "melvorD:FrozenMammoth"
-      | "melvorD:FrozenArcher"
-      | "melvorD:WetMonster"
-      | "melvorD:MoistMonster"
-      | "melvorD:SweatyMonster"
-      | "melvorD:Golbin"
-      | "melvorD:RangedGolbin"
-      | "melvorD:Chicken"
-      | "melvorD:Cow"
-      | "melvorD:Chick"
-      | "melvorD:MummaChicken"
-      | "melvorD:Pirate"
-      | "melvorD:PirateCaptain"
-      | "melvorD:TheKraken"
-      | "melvorD:Bat"
-      | "melvorD:BigBat"
-      | "melvorD:TheEye"
-      | "melvorD:ResurrectedEye"
-      | "melvorD:PratTheProtectorOfSecrets"
-      | "melvorD:MalcsTheGuardianOfMelvor"
-      | "melvorD:Spider"
-      | "melvorD:BrownSpider"
-      | "melvorD:EvilSpider"
-      | "melvorD:SpiderKing"
-      | "melvorD:IceMonster"
-      | "melvorD:IceTroll"
-      | "melvorD:Ice"
-      | "melvorD:ProtectorofIce"
-      | "melvorD:FirstMate"
-      | "melvorD:ZombieHand"
-      | "melvorD:Zombie"
-      | "melvorD:ZombieLeader"
-      | "melvorD:Ghost"
-      | "melvorD:GreenDragon"
-      | "melvorD:BlueDragon"
-      | "melvorD:RedDragon"
-      | "melvorD:BlackDragon"
-      | "melvorD:JuniorFarmer"
-      | "melvorD:AdultFarmer"
-      | "melvorD:MasterFarmer"
-      | "melvorD:Wizard"
-      | "melvorD:SteelKnight"
-      | "melvorD:MithrilKnight"
-      | "melvorD:AdamantKnight"
-      | "melvorD:RuneKnight"
-      | "melvorD:BanditTrainee"
-      | "melvorD:Bandit"
-      | "melvorD:BanditLeader"
-      | "melvorD:DarkWizard"
-      | "melvorD:MasterWizard"
-      | "melvorD:ElderWizard"
-      | "melvorD:Skeleton"
-      | "melvorD:Leech"
-      | "melvorD:ViciousSerpent"
-      | "melvorD:FireSpirit"
-      | "melvorD:Plant"
-      | "melvorD:ElerineArcher"
-      | "melvorD:ElerineWarrior"
-      | "melvorD:ElerineMage"
-      | "melvorF:RandomITM"
-      | "melvorF:Mummy"
-      | "melvorF:Statue"
-      | "melvorF:StoneSnake"
-      | "melvorF:UndeadWerewolf"
-      | "melvorF:Vampire"
-      | "melvorF:FierceDevil"
-      | "melvorF:ManyEyedMonster"
-      | "melvorF:StrangeEyedMonster"
-      | "melvorF:LotsofEyes"
-      | "melvorF:Eyes"
-      | "melvorF:Griffin"
-      | "melvorF:Pegasus"
-      | "melvorF:Fairy"
-      | "melvorF:Valkyrie"
-      | "melvorF:Angel"
-      | "melvorF:HolyArcher"
-      | "melvorF:GooMonster"
-      | "melvorF:GreenGooMonster"
-      | "melvorF:PurpleGooMonster"
-      | "melvorF:ScatteredGooMonster"
-      | "melvorF:RagingHornedElite"
-      | "melvorF:SeethingHornedElite"
-      | "melvorF:DarkHornedElite"
-      | "melvorF:AirGuard"
-      | "melvorF:AirMonster"
-      | "melvorF:AirGolem"
-      | "melvorF:Aleron"
-      | "melvorF:Voltaire"
-      | "melvorF:Aeris"
-      | "melvorF:WaterGuard"
-      | "melvorF:WaterMonster"
-      | "melvorF:WaterGolem"
-      | "melvorF:Lissia"
-      | "melvorF:Murtia"
-      | "melvorF:Glacia"
-      | "melvorF:EarthGuard"
-      | "melvorF:EarthMonster"
-      | "melvorF:EarthGolem"
-      | "melvorF:Mistral"
-      | "melvorF:Ophidia"
-      | "melvorF:Terran"
-      | "melvorF:FireGuard"
-      | "melvorF:FireMonster"
-      | "melvorF:FireGolem"
-      | "melvorF:Pyra"
-      | "melvorF:Ignis"
-      | "melvorF:Ragnar"
-      | "melvorF:ElderDragon"
-      | "melvorF:FuriousHornedElite"
-      | "melvorF:MioliteSprig"
-      | "melvorF:MioliteTrio"
-      | "melvorF:MioliteWarden"
-      | "melvorF:MioliteMonarch"
-      | "melvorF:Druid"
-      | "melvorF:Thief"
-      | "melvorF:Shaman"
-      | "melvorF:Necromancer"
-      | "melvorF:Elementalist"
-      | "melvorF:TurkulRiders"
-      | "melvorF:TurkulArchers"
-      | "melvorF:TurkulThrowers"
-      | "melvorF:TurkulGiant"
-      | "melvorF:TurkulGeneral"
-      | "melvorF:SandBeast"
-      | "melvorF:RancoraSpider"
-      | "melvorF:ElderVampire"
-      | "melvorF:CursedMaiden"
-      | "melvorF:BountyHunter"
-      | "melvorF:ChaoticGreaterDragon"
-      | "melvorF:HuntingGreaterDragon"
-      | "melvorF:WickedGreaterDragon"
-      | "melvorF:Umbora"
-      | "melvorF:Rokken"
-      | "melvorF:Kutul"
-      | "melvorF:Paladin"
-      | "melvorF:Priest"
-      | "melvorF:WanderingBard"
-      | "melvorF:Cerberus"
-      | "melvorF:FearfulEye"
-      | "melvorF:RedDevil"
-      | "melvorF:Phoenix"
-      | "melvorF:Incendius"
-      | "melvorF:PratTheGuardianOfSecrets"
-      | "melvorF:MalcsTheLeaderOfDragons"
-      | "melvorF:MysteriousFigurePhase1"
-      | "melvorF:MysteriousFigurePhase2"
-      | "melvorF:Ahrenia"
-      | "melvorF:SuperiorEyedMonster"
-      | "melvorF:EyeOfFear"
-      | "melvorF:Bane"
-      | "melvorF:NoxiousSerpent"
-      | "melvorF:VenomousSnake"
-      | "melvorF:GiantMoth"
-      | "melvorF:LegaranWurm"
-      | "melvorF:CursedLich"
-      | "melvorF:SpikedRedClaw"
-      | "melvorF:GreaterSkeletalDragon"
-      | "melvorF:BaneInstrumentOfFear"
-      | "melvorTotH:RandomSpiderLair"
-      | "melvorTotH:HungryPlant"
-      | "melvorTotH:PoisonToad"
-      | "melvorTotH:Kongamato"
-      | "melvorTotH:Conda"
-      | "melvorTotH:Alraune"
-      | "melvorTotH:Morellia"
-      | "melvorTotH:BurningSnake"
-      | "melvorTotH:InfernalGolem"
-      | "melvorTotH:MagicFireDemon"
-      | "melvorTotH:Manticore"
-      | "melvorTotH:GretYun"
-      | "melvorTotH:Trogark"
-      | "melvorTotH:LargeIceTroll"
-      | "melvorTotH:FrostGolem"
-      | "melvorTotH:PolarBear"
-      | "melvorTotH:SpectralIceWolf"
-      | "melvorTotH:IceHydra"
-      | "melvorTotH:LightningSpirit"
-      | "melvorTotH:LightningMonkey"
-      | "melvorTotH:LightningGolem"
-      | "melvorTotH:RaZu"
-      | "melvorTotH:Siren"
-      | "melvorTotH:MonsterCroc"
-      | "melvorTotH:Leviathan"
-      | "melvorTotH:TwinSeaDragonSerpent"
-      | "melvorTotH:ScouterSpider"
-      | "melvorTotH:TrapperSpider"
-      | "melvorTotH:WickedSpider"
-      | "melvorTotH:BasherSpider"
-      | "melvorTotH:EnforcerSpider"
-      | "melvorTotH:GuardianSpider"
-      | "melvorTotH:SpiderQueen"
-      | "melvorTotH:ShadowBeast"
-      | "melvorTotH:PlagueDoctor"
-      | "melvorTotH:Cockatrice"
-      | "melvorTotH:GoliathWerewolf"
-      | "melvorTotH:TreeGiant"
-      | "melvorTotH:TreeSpirit"
-      | "melvorTotH:CursedSpirit"
-      | "melvorTotH:LadyDarkheart"
-      | "melvorTotH:Phantom"
-      | "melvorTotH:Banshee"
-      | "melvorTotH:Spectre"
-      | "melvorTotH:CursedSkeletonWarrior"
-      | "melvorTotH:Beholder"
-      | "melvorTotH:DarkKnight"
-      | "melvorTotH:Fiozor"
-      | "melvorTotH:Torvair"
-      | "melvorTotH:Arctair"
-      | "melvorTotH:Harkair"
-      | "melvorTotH:VorloranDevastator"
-      | "melvorTotH:VorloranWatcher"
-      | "melvorTotH:VorloranProtector"
-      | "melvorTotH:GuardianoftheHerald"
-      | "melvorTotH:TheHeraldPhase1"
-      | "melvorTotH:TheHeraldPhase2"
-      | "melvorTotH:TheHeraldPhase3"
-    );
-export type TownshipBuildingID =
-  | ValidID
-  | (
-      | "melvorF:Blacksmiths_Smithy"
-      | "melvorF:Magic_Emporium"
-      | "melvorF:Hunters_Cabin"
-      | "melvorF:Fishermans_Dock"
-      | "melvorF:Herbalist"
-      | "melvorF:Miners_Pit"
-      | "melvorF:Town_Hall"
-      | "melvorF:Storehouse"
-      | "melvorF:Woodcutters_Camp"
-      | "melvorF:Carpenters_Workshop"
-      | "melvorF:Farmland"
-      | "melvorF:Farmers_Market"
-      | "melvorF:Gatherers_Hut"
-      | "melvorF:School"
-      | "melvorF:Large_School"
-      | "melvorF:Academy"
-      | "melvorF:Gardens"
-      | "melvorF:Tavern"
-      | "melvorF:Cemetery"
-      | "melvorF:Blacksmiths_Workshop"
-      | "melvorF:Hunters_Lodge"
-      | "melvorF:Fishermans_Pier"
-      | "melvorF:Infirmary"
-      | "melvorF:Miners_Field"
-      | "melvorF:Logging_Camp"
-      | "melvorF:Carpenters_Factory"
-      | "melvorF:Plantation"
-      | "melvorF:Gatherers_Lodge"
-      | "melvorF:Blacksmiths_Forge"
-      | "melvorF:Hunters_Villa"
-      | "melvorF:Fishermans_Port"
-      | "melvorF:Healing_Centre"
-      | "melvorF:Miners_Quarry"
-      | "melvorF:Forestry_Camp"
-      | "melvorF:Carpenters_Foundry"
-      | "melvorF:Mill"
-      | "melvorF:Gatherers_Villa"
-      | "melvorF:Warehouse"
-      | "melvorF:Repository"
-      | "melvorF:Tailor"
-      | "melvorF:Clothier"
-      | "melvorF:Outfitter"
-      | "melvorF:Prats_Hats"
-      | "melvorF:Malcs_Cats"
-      | "melvorF:Statues"
-      | "melvorF:Chapel"
-      | "melvorF:Library"
-      | "melvorF:Trading_Post"
-      | "melvorF:Orchard"
-      | "melvorF:Basic_Shelter"
-      | "melvorF:Wooden_Hut"
-      | "melvorF:House"
-      | "melvorF:Cottage"
-      | "melvorF:Large_Cottage"
-      | "melvorTotH:Lemvor_Lemon_Stall"
-      | "melvorTotH:Blacksmiths_Estate"
-      | "melvorTotH:Hunters_Estate"
-      | "melvorTotH:Fishermans_Estate"
-      | "melvorTotH:Hospital"
-      | "melvorTotH:Miners_Estate"
-      | "melvorTotH:Forestry_Estate"
-      | "melvorTotH:Carpenters_Estate"
-      | "melvorTotH:Farming_Estate"
-      | "melvorTotH:Gatherers_Estate"
-      | "melvorTotH:Clothier_Estate"
-      | "melvorTotH:Large_Repository"
-      | "melvorTotH:Large_Academy"
-      | "melvorTotH:Cool_Rocks"
-      | "melvorTotH:Manor"
-      | "melvorTotH:Estate"
-    );
-export type EquipStatKey =
+declare type SlayerTier = "Easy" | "Normal" | "Hard" | "Elite" | "Master" | "Legendary" | "Mythical";
+declare type MonsterID =
+  | "melvorD:BlackKnight"
+  | "melvorD:HillGiant"
+  | "melvorD:MossGiant"
+  | "melvorD:GiantCrab"
+  | "melvorD:Tentacle"
+  | "melvorD:Seagull"
+  | "melvorD:ConfusedPirate"
+  | "melvorD:FrozenMammoth"
+  | "melvorD:FrozenArcher"
+  | "melvorD:WetMonster"
+  | "melvorD:MoistMonster"
+  | "melvorD:SweatyMonster"
+  | "melvorD:Golbin"
+  | "melvorD:RangedGolbin"
+  | "melvorD:Chicken"
+  | "melvorD:Cow"
+  | "melvorD:Chick"
+  | "melvorD:MummaChicken"
+  | "melvorD:Pirate"
+  | "melvorD:PirateCaptain"
+  | "melvorD:TheKraken"
+  | "melvorD:Bat"
+  | "melvorD:BigBat"
+  | "melvorD:TheEye"
+  | "melvorD:ResurrectedEye"
+  | "melvorD:PratTheProtectorOfSecrets"
+  | "melvorD:MalcsTheGuardianOfMelvor"
+  | "melvorD:Spider"
+  | "melvorD:BrownSpider"
+  | "melvorD:EvilSpider"
+  | "melvorD:SpiderKing"
+  | "melvorD:IceMonster"
+  | "melvorD:IceTroll"
+  | "melvorD:Ice"
+  | "melvorD:ProtectorofIce"
+  | "melvorD:FirstMate"
+  | "melvorD:ZombieHand"
+  | "melvorD:Zombie"
+  | "melvorD:ZombieLeader"
+  | "melvorD:Ghost"
+  | "melvorD:GreenDragon"
+  | "melvorD:BlueDragon"
+  | "melvorD:RedDragon"
+  | "melvorD:BlackDragon"
+  | "melvorD:JuniorFarmer"
+  | "melvorD:AdultFarmer"
+  | "melvorD:MasterFarmer"
+  | "melvorD:Wizard"
+  | "melvorD:SteelKnight"
+  | "melvorD:MithrilKnight"
+  | "melvorD:AdamantKnight"
+  | "melvorD:RuneKnight"
+  | "melvorD:BanditTrainee"
+  | "melvorD:Bandit"
+  | "melvorD:BanditLeader"
+  | "melvorD:DarkWizard"
+  | "melvorD:MasterWizard"
+  | "melvorD:ElderWizard"
+  | "melvorD:Skeleton"
+  | "melvorD:Leech"
+  | "melvorD:ViciousSerpent"
+  | "melvorD:FireSpirit"
+  | "melvorD:Plant"
+  | "melvorD:ElerineArcher"
+  | "melvorD:ElerineWarrior"
+  | "melvorD:ElerineMage"
+  | "melvorF:RandomITM"
+  | "melvorF:Mummy"
+  | "melvorF:Statue"
+  | "melvorF:StoneSnake"
+  | "melvorF:UndeadWerewolf"
+  | "melvorF:Vampire"
+  | "melvorF:FierceDevil"
+  | "melvorF:ManyEyedMonster"
+  | "melvorF:StrangeEyedMonster"
+  | "melvorF:LotsofEyes"
+  | "melvorF:Eyes"
+  | "melvorF:Griffin"
+  | "melvorF:Pegasus"
+  | "melvorF:Fairy"
+  | "melvorF:Valkyrie"
+  | "melvorF:Angel"
+  | "melvorF:HolyArcher"
+  | "melvorF:GooMonster"
+  | "melvorF:GreenGooMonster"
+  | "melvorF:PurpleGooMonster"
+  | "melvorF:ScatteredGooMonster"
+  | "melvorF:RagingHornedElite"
+  | "melvorF:SeethingHornedElite"
+  | "melvorF:DarkHornedElite"
+  | "melvorF:AirGuard"
+  | "melvorF:AirMonster"
+  | "melvorF:AirGolem"
+  | "melvorF:Aleron"
+  | "melvorF:Voltaire"
+  | "melvorF:Aeris"
+  | "melvorF:WaterGuard"
+  | "melvorF:WaterMonster"
+  | "melvorF:WaterGolem"
+  | "melvorF:Lissia"
+  | "melvorF:Murtia"
+  | "melvorF:Glacia"
+  | "melvorF:EarthGuard"
+  | "melvorF:EarthMonster"
+  | "melvorF:EarthGolem"
+  | "melvorF:Mistral"
+  | "melvorF:Ophidia"
+  | "melvorF:Terran"
+  | "melvorF:FireGuard"
+  | "melvorF:FireMonster"
+  | "melvorF:FireGolem"
+  | "melvorF:Pyra"
+  | "melvorF:Ignis"
+  | "melvorF:Ragnar"
+  | "melvorF:ElderDragon"
+  | "melvorF:FuriousHornedElite"
+  | "melvorF:MioliteSprig"
+  | "melvorF:MioliteTrio"
+  | "melvorF:MioliteWarden"
+  | "melvorF:MioliteMonarch"
+  | "melvorF:Druid"
+  | "melvorF:Thief"
+  | "melvorF:Shaman"
+  | "melvorF:Necromancer"
+  | "melvorF:Elementalist"
+  | "melvorF:TurkulRiders"
+  | "melvorF:TurkulArchers"
+  | "melvorF:TurkulThrowers"
+  | "melvorF:TurkulGiant"
+  | "melvorF:TurkulGeneral"
+  | "melvorF:SandBeast"
+  | "melvorF:RancoraSpider"
+  | "melvorF:ElderVampire"
+  | "melvorF:CursedMaiden"
+  | "melvorF:BountyHunter"
+  | "melvorF:ChaoticGreaterDragon"
+  | "melvorF:HuntingGreaterDragon"
+  | "melvorF:WickedGreaterDragon"
+  | "melvorF:Umbora"
+  | "melvorF:Rokken"
+  | "melvorF:Kutul"
+  | "melvorF:Paladin"
+  | "melvorF:Priest"
+  | "melvorF:WanderingBard"
+  | "melvorF:Cerberus"
+  | "melvorF:FearfulEye"
+  | "melvorF:RedDevil"
+  | "melvorF:Phoenix"
+  | "melvorF:Incendius"
+  | "melvorF:PratTheGuardianOfSecrets"
+  | "melvorF:MalcsTheLeaderOfDragons"
+  | "melvorF:MysteriousFigurePhase1"
+  | "melvorF:MysteriousFigurePhase2"
+  | "melvorF:Ahrenia"
+  | "melvorF:SuperiorEyedMonster"
+  | "melvorF:EyeOfFear"
+  | "melvorF:Bane"
+  | "melvorF:NoxiousSerpent"
+  | "melvorF:VenomousSnake"
+  | "melvorF:GiantMoth"
+  | "melvorF:LegaranWurm"
+  | "melvorF:CursedLich"
+  | "melvorF:SpikedRedClaw"
+  | "melvorF:GreaterSkeletalDragon"
+  | "melvorF:BaneInstrumentOfFear"
+  | "melvorTotH:RandomSpiderLair"
+  | "melvorTotH:HungryPlant"
+  | "melvorTotH:PoisonToad"
+  | "melvorTotH:Kongamato"
+  | "melvorTotH:Conda"
+  | "melvorTotH:Alraune"
+  | "melvorTotH:Morellia"
+  | "melvorTotH:BurningSnake"
+  | "melvorTotH:InfernalGolem"
+  | "melvorTotH:MagicFireDemon"
+  | "melvorTotH:Manticore"
+  | "melvorTotH:GretYun"
+  | "melvorTotH:Trogark"
+  | "melvorTotH:LargeIceTroll"
+  | "melvorTotH:FrostGolem"
+  | "melvorTotH:PolarBear"
+  | "melvorTotH:SpectralIceWolf"
+  | "melvorTotH:IceHydra"
+  | "melvorTotH:LightningSpirit"
+  | "melvorTotH:LightningMonkey"
+  | "melvorTotH:LightningGolem"
+  | "melvorTotH:RaZu"
+  | "melvorTotH:Siren"
+  | "melvorTotH:MonsterCroc"
+  | "melvorTotH:Leviathan"
+  | "melvorTotH:TwinSeaDragonSerpent"
+  | "melvorTotH:ScouterSpider"
+  | "melvorTotH:TrapperSpider"
+  | "melvorTotH:WickedSpider"
+  | "melvorTotH:BasherSpider"
+  | "melvorTotH:EnforcerSpider"
+  | "melvorTotH:GuardianSpider"
+  | "melvorTotH:SpiderQueen"
+  | "melvorTotH:ShadowBeast"
+  | "melvorTotH:PlagueDoctor"
+  | "melvorTotH:Cockatrice"
+  | "melvorTotH:GoliathWerewolf"
+  | "melvorTotH:TreeGiant"
+  | "melvorTotH:TreeSpirit"
+  | "melvorTotH:CursedSpirit"
+  | "melvorTotH:LadyDarkheart"
+  | "melvorTotH:Phantom"
+  | "melvorTotH:Banshee"
+  | "melvorTotH:Spectre"
+  | "melvorTotH:CursedSkeletonWarrior"
+  | "melvorTotH:Beholder"
+  | "melvorTotH:DarkKnight"
+  | "melvorTotH:Fiozor"
+  | "melvorTotH:Torvair"
+  | "melvorTotH:Arctair"
+  | "melvorTotH:Harkair"
+  | "melvorTotH:VorloranDevastator"
+  | "melvorTotH:VorloranWatcher"
+  | "melvorTotH:VorloranProtector"
+  | "melvorTotH:GuardianoftheHerald"
+  | "melvorTotH:TheHeraldPhase1"
+  | "melvorTotH:TheHeraldPhase2"
+  | "melvorTotH:TheHeraldPhase3";
+declare type TownshipBuildingID =
+  | "melvorF:Blacksmiths_Smithy"
+  | "melvorF:Magic_Emporium"
+  | "melvorF:Hunters_Cabin"
+  | "melvorF:Fishermans_Dock"
+  | "melvorF:Herbalist"
+  | "melvorF:Miners_Pit"
+  | "melvorF:Town_Hall"
+  | "melvorF:Storehouse"
+  | "melvorF:Woodcutters_Camp"
+  | "melvorF:Carpenters_Workshop"
+  | "melvorF:Farmland"
+  | "melvorF:Farmers_Market"
+  | "melvorF:Gatherers_Hut"
+  | "melvorF:School"
+  | "melvorF:Large_School"
+  | "melvorF:Academy"
+  | "melvorF:Gardens"
+  | "melvorF:Tavern"
+  | "melvorF:Cemetery"
+  | "melvorF:Blacksmiths_Workshop"
+  | "melvorF:Hunters_Lodge"
+  | "melvorF:Fishermans_Pier"
+  | "melvorF:Infirmary"
+  | "melvorF:Miners_Field"
+  | "melvorF:Logging_Camp"
+  | "melvorF:Carpenters_Factory"
+  | "melvorF:Plantation"
+  | "melvorF:Gatherers_Lodge"
+  | "melvorF:Blacksmiths_Forge"
+  | "melvorF:Hunters_Villa"
+  | "melvorF:Fishermans_Port"
+  | "melvorF:Healing_Centre"
+  | "melvorF:Miners_Quarry"
+  | "melvorF:Forestry_Camp"
+  | "melvorF:Carpenters_Foundry"
+  | "melvorF:Mill"
+  | "melvorF:Gatherers_Villa"
+  | "melvorF:Warehouse"
+  | "melvorF:Repository"
+  | "melvorF:Tailor"
+  | "melvorF:Clothier"
+  | "melvorF:Outfitter"
+  | "melvorF:Prats_Hats"
+  | "melvorF:Malcs_Cats"
+  | "melvorF:Statues"
+  | "melvorF:Chapel"
+  | "melvorF:Library"
+  | "melvorF:Trading_Post"
+  | "melvorF:Orchard"
+  | "melvorF:Basic_Shelter"
+  | "melvorF:Wooden_Hut"
+  | "melvorF:House"
+  | "melvorF:Cottage"
+  | "melvorF:Large_Cottage"
+  | "melvorTotH:Lemvor_Lemon_Stall"
+  | "melvorTotH:Blacksmiths_Estate"
+  | "melvorTotH:Hunters_Estate"
+  | "melvorTotH:Fishermans_Estate"
+  | "melvorTotH:Hospital"
+  | "melvorTotH:Miners_Estate"
+  | "melvorTotH:Forestry_Estate"
+  | "melvorTotH:Carpenters_Estate"
+  | "melvorTotH:Farming_Estate"
+  | "melvorTotH:Gatherers_Estate"
+  | "melvorTotH:Clothier_Estate"
+  | "melvorTotH:Large_Repository"
+  | "melvorTotH:Large_Academy"
+  | "melvorTotH:Cool_Rocks"
+  | "melvorTotH:Manor"
+  | "melvorTotH:Estate";
+declare type EquipStatKey =
   | "attackSpeed"
   | "stabAttackBonus"
   | "slashAttackBonus"
@@ -5029,7 +4980,7 @@ export type EquipStatKey =
   | "magicDefenceBonus"
   | "damageReduction"
   | "summoningMaxhit";
-export type AnyConditionData =
+declare type AnyConditionData =
   | CombatCondition
   | ItemInBankConditionData
   | ItemChargeConditionData
@@ -5037,7 +4988,7 @@ export type AnyConditionData =
   | SomeConditionData
   | FightingBossCondition
   | EquipStatCompareCondition;
-export type CombatCondition =
+declare type CombatCondition =
   | HitpointsCondition
   | DOTCondition
   | ModifierEffectCondition
@@ -5048,16 +4999,16 @@ export type CombatCondition =
 /**
  * Compares the hitpoints percent of the specified character with value
  */
-export type HitpointsCondition = HitpointsCondition1 & {
+declare type HitpointsCondition = HitpointsCondition1 & {
   type: "Hitpoints";
   [k: string]: unknown;
 };
-export type HitpointsCondition1 = ValueCondition;
-export type Comparison = "==" | "!=" | ">" | "<" | "<=" | ">=";
+declare type HitpointsCondition1 = ValueCondition;
+declare type Comparison = "==" | "!=" | ">" | "<" | "<=" | ">=";
 /**
  * Requires that character has a DOT of the specified type
  */
-export type DOTCondition = DOTCondition1 & {
+declare type DOTCondition = DOTCondition1 & {
   type: "DOT";
   /**
    * The DOT subtype that must be on the character
@@ -5065,11 +5016,11 @@ export type DOTCondition = DOTCondition1 & {
   dotType: DOTType;
   [k: string]: unknown;
 };
-export type DOTCondition1 = BooleanCondition;
+declare type DOTCondition1 = BooleanCondition;
 /**
  * Requires that character has a Modifier Effect of the specified type
  */
-export type ModifierEffectCondition = ModifierEffectCondition1 & {
+declare type ModifierEffectCondition = ModifierEffectCondition1 & {
   type: "Effect";
   /**
    * Specifies the modifier effect that must be on the character.
@@ -5077,11 +5028,11 @@ export type ModifierEffectCondition = ModifierEffectCondition1 & {
   effectType: "Slow" | "Frostburn";
   [k: string]: unknown;
 };
-export type ModifierEffectCondition1 = BooleanCondition;
+declare type ModifierEffectCondition1 = BooleanCondition;
 /**
  * Requires that the character and their target have the specified Combat Styles
  */
-export type AttackTypeCondition = AttackTypeCondition1 & {
+declare type AttackTypeCondition = AttackTypeCondition1 & {
   type: "CombatType";
   /**
    * The combat style that the character must use
@@ -5093,20 +5044,20 @@ export type AttackTypeCondition = AttackTypeCondition1 & {
   targetAttackType: AttackType | "any";
   [k: string]: unknown;
 };
-export type AttackTypeCondition1 = BooleanCondition;
-export type AttackType = "melee" | "ranged" | "magic";
+declare type AttackTypeCondition1 = BooleanCondition;
+declare type AttackType = "melee" | "ranged" | "magic";
 /**
  * Requires that the player is fighting something
  */
-export type IsFightingCondition = IsFightingCondition1 & {
+declare type IsFightingCondition = IsFightingCondition1 & {
   type: "IsFighting";
   [k: string]: unknown;
 };
-export type IsFightingCondition1 = BooleanCondition;
+declare type IsFightingCondition1 = BooleanCondition;
 /**
  * Requires that the specified character is stunned/frozen
  */
-export type StunnedCondition = StunnedCondition1 & {
+declare type StunnedCondition = StunnedCondition1 & {
   type: "IsStunned";
   /**
    * Optional. If present, the stun flavour on the character must match, otherwise matches both stuns and freezes
@@ -5114,19 +5065,19 @@ export type StunnedCondition = StunnedCondition1 & {
   flavour?: StunFlavour;
   [k: string]: unknown;
 };
-export type StunnedCondition1 = BooleanCondition;
+declare type StunnedCondition1 = BooleanCondition;
 /**
  * Requires that the specified character is sleeping
  */
-export type SleepingCondition = SleepingCondition1 & {
+declare type SleepingCondition = SleepingCondition1 & {
   type: "IsSleeping";
   [k: string]: unknown;
 };
-export type SleepingCondition1 = BooleanCondition;
+declare type SleepingCondition1 = BooleanCondition;
 /**
  * Compares the quantity of the specified item in the bank with value
  */
-export type ItemInBankConditionData = ItemInBankConditionData1 & {
+declare type ItemInBankConditionData = ItemInBankConditionData1 & {
   type: "BankItem";
   /**
    * The ID of the item that must be present in the bank
@@ -5134,11 +5085,11 @@ export type ItemInBankConditionData = ItemInBankConditionData1 & {
   itemID: AnyItemID;
   [k: string]: unknown;
 };
-export type ItemInBankConditionData1 = ValueCondition;
+declare type ItemInBankConditionData1 = ValueCondition;
 /**
  * Compares the quantity of item charges of the equipment item with value
  */
-export type ItemChargeConditionData = ItemChargeConditionData1 & {
+declare type ItemChargeConditionData = ItemChargeConditionData1 & {
   type: "ItemCharge";
   /**
    * The ID of the equipment item that has charges
@@ -5146,330 +5097,327 @@ export type ItemChargeConditionData = ItemChargeConditionData1 & {
   itemID: EquipmentItemID;
   [k: string]: unknown;
 };
-export type ItemChargeConditionData1 = ValueCondition;
+declare type ItemChargeConditionData1 = ValueCondition;
 /**
  * Requires that the Player is fighting a Boss monster
  */
-export type FightingBossCondition = FightingBossCondition1 & {
+declare type FightingBossCondition = FightingBossCondition1 & {
   type: "FightingBoss";
   [k: string]: unknown;
 };
-export type FightingBossCondition1 = BooleanCondition;
-export type SpecialAttackID =
-  | ValidID
-  | (
-      | "melvorD:Normal"
-      | "melvorD:BruteForce"
-      | "melvorD:LifeLeech"
-      | "melvorD:FrozenWind"
-      | "melvorD:SunsetStab"
-      | "melvorD:PiercingArrow"
-      | "melvorD:Volley"
-      | "melvorD:RazorSharpClaws"
-      | "melvorD:Dragonbreath"
-      | "melvorD:FrozenShot"
-      | "melvorD:XmasDeath"
-      | "melvorD:XmasKill"
-      | "melvorD:Frostburn"
-      | "melvorD:LesserDragonbreath"
-      | "melvorD:Venom"
-      | "melvorD:RapidFire"
-      | "melvorD:Fleetness"
-      | "melvorD:PebbleShot"
-      | "melvorD:OnTheHunt"
-      | "melvorD:Onslaught"
-      | "melvorD:TopazShots"
-      | "melvorD:SapphireShots"
-      | "melvorD:RubyShots"
-      | "melvorD:EmeraldShots"
-      | "melvorD:DiamondShots"
-      | "melvorD:JadestoneShots"
-      | "melvorD:PoisonMelee"
-      | "melvorD:BurnMelee"
-      | "melvorD:FrostburnMelee"
-      | "melvorD:PoisonRanged"
-      | "melvorD:BurnRanged"
-      | "melvorD:FrostburnRanged"
-      | "melvorD:Burn"
-      | "melvorD:FrostburnPlayer"
-      | "melvorD:TripleDamage"
-      | "melvorD:NoDamage"
-      | "melvorD:TiltedShot"
-      | "melvorD:UnlimitedSlappingPower"
-      | "melvorD:Firebreathing"
-      | "melvorD:StoneBarrier"
-      | "melvorD:ImpossibleShot"
-      | "melvorD:Heal"
-      | "melvorF:DoubleSwipe"
-      | "melvorF:TripleSwipe"
-      | "melvorF:Flurry"
-      | "melvorF:IcePrison"
-      | "melvorF:Infernum"
-      | "melvorF:CrushingBlow"
-      | "melvorF:Stormsnap"
-      | "melvorF:DualAttack"
-      | "melvorF:FreezeRay"
-      | "melvorF:SlicingWinds"
-      | "melvorF:IcicleVolley"
-      | "melvorF:Ignite"
-      | "melvorF:Gust"
-      | "melvorF:Frostbite"
-      | "melvorF:Quake"
-      | "melvorF:Incinerate"
-      | "melvorF:ImpairingShot"
-      | "melvorF:DrowsySpores"
-      | "melvorF:Quicksand"
-      | "melvorF:Sandblast"
-      | "melvorF:Sandstorm"
-      | "melvorF:DeadlyCut"
-      | "melvorF:Rend"
-      | "melvorF:QuadSwipe"
-      | "melvorF:TidalWave"
-      | "melvorF:OceanSong"
-      | "melvorF:Shockwave"
-      | "melvorF:Barrage"
-      | "melvorF:WindBlade"
-      | "melvorF:Whirlwind"
-      | "melvorF:Tornado"
-      | "melvorF:Cyclone"
-      | "melvorF:IcyChill"
-      | "melvorF:FrozenSpears"
-      | "melvorF:IceBreak"
-      | "melvorF:FlashFreeze"
-      | "melvorF:Winterland"
-      | "melvorF:FrigidWaves"
-      | "melvorF:StoneWall"
-      | "melvorF:Charge"
-      | "melvorF:Boulder"
-      | "melvorF:GraspingRoots"
-      | "melvorF:SeismicSlam"
-      | "melvorF:Fireball"
-      | "melvorF:BurningClaws"
-      | "melvorF:ScorchingRay"
-      | "melvorF:MeteorShower"
-      | "melvorF:Cataclysm"
-      | "melvorF:Spores"
-      | "melvorF:DrowsySporesEnemy"
-      | "melvorF:GreaterSandstorm"
-      | "melvorF:Webshot"
-      | "melvorF:Drain"
-      | "melvorF:CurseofFear"
-      | "melvorF:HunterExpertise"
-      | "melvorF:GreaterDragonbreath"
-      | "melvorF:ChaoticSlam"
-      | "melvorF:Agility"
-      | "melvorF:Confusion"
-      | "melvorF:Elusiveness"
-      | "melvorF:RapidOnslaught"
-      | "melvorF:ShockwaveEnemy"
-      | "melvorF:CurseoftheDeep"
-      | "melvorF:BurningTrail"
-      | "melvorF:InfernalVolley"
-      | "melvorF:TailWhip"
-      | "melvorF:PenetratingClaws"
-      | "melvorF:Inferno"
-      | "melvorF:Sealing"
-      | "melvorF:MarkofDeath"
-      | "melvorF:CursedEdge"
-      | "melvorF:ReapandReturn"
-      | "melvorF:ConcealedDanger"
-      | "melvorF:Shadowstep"
-      | "melvorF:ShadowBurst"
-      | "melvorF:IntotheMist"
-      | "melvorF:FallenLight"
-      | "melvorF:InfinityDragonbreath"
-      | "melvorF:LesserSandstorm"
-      | "melvorF:ElementalImpactBurn"
-      | "melvorF:ElementalImpactStun"
-      | "melvorF:ElementalImpactFreeze"
-      | "melvorF:ElementalImpactFrostburn"
-      | "melvorF:BurningFireball"
-      | "melvorF:FragileMind"
-      | "melvorF:UnknownThreat"
-      | "melvorF:MistWalk"
-      | "melvorF:Suffocate"
-      | "melvorF:PoisonBreath"
-      | "melvorF:ToxicBite"
-      | "melvorF:NoxiousPowder"
-      | "melvorF:PenetratingSpikeShot"
-      | "melvorF:ToxicNeedles"
-      | "melvorF:Burrow"
-      | "melvorF:CursedFlames"
-      | "melvorF:CursedFrostShards"
-      | "melvorF:CursedTether"
-      | "melvorF:CrushingClaws"
-      | "melvorF:Cleave"
-      | "melvorF:SavageSpike"
-      | "melvorF:BoneCrush"
-      | "melvorF:SpikedTailWhip"
-      | "melvorF:Desecration"
-      | "melvorF:DoubleEdged"
-      | "melvorF:SwiftAttack"
-      | "melvorF:PoisonedHit"
-      | "melvorF:BladeEchoes"
-      | "melvorF:BarragePlayer"
-      | "melvorF:SpiritPower"
-      | "melvorF:CrushingDoubleSlash"
-      | "melvorF:NaturesCall"
-      | "melvorF:NaturesWrath"
-      | "melvorF:Ram"
-      | "melvorF:HornShots"
-      | "melvorF:OverwhelmingPower"
-      | "melvorTotH:MeteorShot"
-      | "melvorTotH:Bind"
-      | "melvorTotH:LureTrap"
-      | "melvorTotH:SharpWing"
-      | "melvorTotH:FerociousBite"
-      | "melvorTotH:PoisonousFangs"
-      | "melvorTotH:DeadlyWrap"
-      | "melvorTotH:Efflorescence"
-      | "melvorTotH:ThornedRoots"
-      | "melvorTotH:RazorWind"
-      | "melvorTotH:PoisonBulbs"
-      | "melvorTotH:SeekingRoots"
-      | "melvorTotH:FullBloom"
-      | "melvorTotH:PoisonBite"
-      | "melvorTotH:Smother"
-      | "melvorTotH:FlameBarrage"
-      | "melvorTotH:SmolderingBlow"
-      | "melvorTotH:LavaWave"
-      | "melvorTotH:Explosion"
-      | "melvorTotH:FlameRush"
-      | "melvorTotH:FatalSpike"
-      | "melvorTotH:GreaterFireball"
-      | "melvorTotH:Headbutt"
-      | "melvorTotH:MasterOfHeat"
-      | "melvorTotH:MegaFireball"
-      | "melvorTotH:BurningFury"
-      | "melvorTotH:WardOfFlame"
-      | "melvorTotH:UnleashedPower"
-      | "melvorTotH:FrozenClub"
-      | "melvorTotH:RollingSnowball"
-      | "melvorTotH:ChillingWinds"
-      | "melvorTotH:IceShards"
-      | "melvorTotH:FreezingRoar"
-      | "melvorTotH:SpectralClones"
-      | "melvorTotH:IceBlast"
-      | "melvorTotH:FreezingBreath"
-      | "melvorTotH:IceReanimation"
-      | "melvorTotH:ElectricBall"
-      | "melvorTotH:RapidStaticStrikes"
-      | "melvorTotH:FocusedStaticPunch"
-      | "melvorTotH:ShockBlast"
-      | "melvorTotH:LightningStrike"
-      | "melvorTotH:ElectricCharge"
-      | "melvorTotH:LightningBreath"
-      | "melvorTotH:Thunderbolt"
-      | "melvorTotH:Allure"
-      | "melvorTotH:Drown"
-      | "melvorTotH:Predator"
-      | "melvorTotH:CrushingJaws"
-      | "melvorTotH:SpikesFromBelow"
-      | "melvorTotH:SpikedSlam"
-      | "melvorTotH:WaterDance"
-      | "melvorTotH:TorrentialDragonbreath"
-      | "melvorTotH:GiantBubble"
-      | "melvorTotH:Tsunami"
-      | "melvorTotH:WebTrap"
-      | "melvorTotH:DeadlyBite"
-      | "melvorTotH:SharpSlice"
-      | "melvorTotH:FatalBite"
-      | "melvorTotH:CaughtInTheWeb"
-      | "melvorTotH:Surrounded"
-      | "melvorTotH:ShadowBite"
-      | "melvorTotH:HarmfulConcoction"
-      | "melvorTotH:DiseaseSwarm"
-      | "melvorTotH:Lifedrain"
-      | "melvorTotH:DecayingShots"
-      | "melvorTotH:CrushingSmash"
-      | "melvorTotH:Entangle"
-      | "melvorTotH:TreeSlam"
-      | "melvorTotH:Regrowth"
-      | "melvorTotH:CurseOfMadness"
-      | "melvorTotH:SilenceOfTheForest"
-      | "melvorTotH:CurseOfTorment"
-      | "melvorTotH:Soulburn"
-      | "melvorTotH:CurseOfDespair"
-      | "melvorTotH:DevourerOfTheCursed"
-      | "melvorTotH:EtheralShots"
-      | "melvorTotH:WeakeningShot"
-      | "melvorTotH:GhostlyTerror"
-      | "melvorTotH:BlindingFear"
-      | "melvorTotH:SpinningAxe"
-      | "melvorTotH:Anguish"
-      | "melvorTotH:ConfusedTouch"
-      | "melvorTotH:BlindingBeams"
-      | "melvorTotH:PetrifyingGlare"
-      | "melvorTotH:ShadeSummon"
-      | "melvorTotH:GreaterShadeSummon"
-      | "melvorTotH:BladeShadow"
-      | "melvorTotH:Darkblade"
-      | "melvorTotH:PhantomSummon"
-      | "melvorTotH:CurseTotemSummon"
-      | "melvorTotH:FeatherStorm"
-      | "melvorTotH:FeatherBarrier"
-      | "melvorTotH:FeatherLance"
-      | "melvorTotH:AgileWings"
-      | "melvorTotH:RapidParry"
-      | "melvorTotH:FullCharge"
-      | "melvorTotH:WindBarrier"
-      | "melvorTotH:FeatherTornado"
-      | "melvorTotH:AggressiveOnslaught"
-      | "melvorTotH:Battlecry"
-      | "melvorTotH:UnstoppableForce"
-      | "melvorTotH:Sunder"
-      | "melvorTotH:ChronoCurse"
-      | "melvorTotH:Alacrity"
-      | "melvorTotH:DejaVu"
-      | "melvorTotH:TouchOfAffliction"
-      | "melvorTotH:ShardsOfMillennia"
-      | "melvorTotH:PowerOfTheMist"
-      | "melvorTotH:UnisonOfFireAndEarth"
-      | "melvorTotH:UnisonOfAirAndWater"
-      | "melvorTotH:SealedFate"
-      | "melvorTotH:SlicingMaelstrom"
-      | "melvorTotH:PoisonPods"
-      | "melvorTotH:GiantFireball"
-      | "melvorTotH:ThunderStrike"
-      | "melvorTotH:MeteorShowerArchaic"
-      | "melvorTotH:TsunamiArchaic"
-      | "melvorTotH:NaturesBloom"
-      | "melvorTotH:InfernalPower"
-      | "melvorTotH:Soulash"
-      | "melvorTotH:DragonStormCall"
-      | "melvorTotH:SlicingMaelstromArchaic"
-      | "melvorTotH:BurningEmbers"
-      | "melvorTotH:MeteorSwing"
-      | "melvorTotH:Reduction"
-      | "melvorTotH:DarkBladePlayer"
-      | "melvorTotH:BadThrow"
-      | "melvorTotH:GoodThrow"
-      | "melvorTotH:ThornedPower"
-      | "melvorTotH:HeatedFury"
-      | "melvorTotH:SpectralIceBlades"
-      | "melvorTotH:LargeLightningStrike"
-      | "melvorTotH:LargeThunderStrike"
-      | "melvorTotH:TorrentialBlast"
-      | "melvorTotH:PiercingToxicStrike"
-      | "melvorTotH:EtheralArrows"
-      | "melvorTotH:SoulashPlayer"
-      | "melvorTotH:SpinningAxePlayer"
-      | "melvorTotH:CorundumWounds"
-      | "melvorTotH:AugiteCrystallization"
-      | "melvorTotH:DivineBreaker"
-      | "melvorTotH:ElderwoodPoison"
-      | "melvorTotH:RevenantHunter"
-      | "melvorTotH:CarrionMarker"
-      | "melvorTotH:PoisonSplit"
-      | "melvorTotH:AgileWingsPlayer"
-      | "melvorTotH:LightningStrikeEnemy"
-    );
-export type ItemEffectID = ValidID | ("melvorF:Absorbing_Shield" | "melvorTotH:Leviathan" | "melvorTotH:Rage");
+declare type FightingBossCondition1 = BooleanCondition;
+declare type SpecialAttackID =
+  | "melvorD:Normal"
+  | "melvorD:BruteForce"
+  | "melvorD:LifeLeech"
+  | "melvorD:FrozenWind"
+  | "melvorD:SunsetStab"
+  | "melvorD:PiercingArrow"
+  | "melvorD:Volley"
+  | "melvorD:RazorSharpClaws"
+  | "melvorD:Dragonbreath"
+  | "melvorD:FrozenShot"
+  | "melvorD:XmasDeath"
+  | "melvorD:XmasKill"
+  | "melvorD:Frostburn"
+  | "melvorD:LesserDragonbreath"
+  | "melvorD:Venom"
+  | "melvorD:RapidFire"
+  | "melvorD:Fleetness"
+  | "melvorD:PebbleShot"
+  | "melvorD:OnTheHunt"
+  | "melvorD:Onslaught"
+  | "melvorD:TopazShots"
+  | "melvorD:SapphireShots"
+  | "melvorD:RubyShots"
+  | "melvorD:EmeraldShots"
+  | "melvorD:DiamondShots"
+  | "melvorD:JadestoneShots"
+  | "melvorD:PoisonMelee"
+  | "melvorD:BurnMelee"
+  | "melvorD:FrostburnMelee"
+  | "melvorD:PoisonRanged"
+  | "melvorD:BurnRanged"
+  | "melvorD:FrostburnRanged"
+  | "melvorD:Burn"
+  | "melvorD:FrostburnPlayer"
+  | "melvorD:TripleDamage"
+  | "melvorD:NoDamage"
+  | "melvorD:TiltedShot"
+  | "melvorD:UnlimitedSlappingPower"
+  | "melvorD:Firebreathing"
+  | "melvorD:StoneBarrier"
+  | "melvorD:ImpossibleShot"
+  | "melvorD:Heal"
+  | "melvorF:DoubleSwipe"
+  | "melvorF:TripleSwipe"
+  | "melvorF:Flurry"
+  | "melvorF:IcePrison"
+  | "melvorF:Infernum"
+  | "melvorF:CrushingBlow"
+  | "melvorF:Stormsnap"
+  | "melvorF:DualAttack"
+  | "melvorF:FreezeRay"
+  | "melvorF:SlicingWinds"
+  | "melvorF:IcicleVolley"
+  | "melvorF:Ignite"
+  | "melvorF:Gust"
+  | "melvorF:Frostbite"
+  | "melvorF:Quake"
+  | "melvorF:Incinerate"
+  | "melvorF:ImpairingShot"
+  | "melvorF:DrowsySpores"
+  | "melvorF:Quicksand"
+  | "melvorF:Sandblast"
+  | "melvorF:Sandstorm"
+  | "melvorF:DeadlyCut"
+  | "melvorF:Rend"
+  | "melvorF:QuadSwipe"
+  | "melvorF:TidalWave"
+  | "melvorF:OceanSong"
+  | "melvorF:Shockwave"
+  | "melvorF:Barrage"
+  | "melvorF:WindBlade"
+  | "melvorF:Whirlwind"
+  | "melvorF:Tornado"
+  | "melvorF:Cyclone"
+  | "melvorF:IcyChill"
+  | "melvorF:FrozenSpears"
+  | "melvorF:IceBreak"
+  | "melvorF:FlashFreeze"
+  | "melvorF:Winterland"
+  | "melvorF:FrigidWaves"
+  | "melvorF:StoneWall"
+  | "melvorF:Charge"
+  | "melvorF:Boulder"
+  | "melvorF:GraspingRoots"
+  | "melvorF:SeismicSlam"
+  | "melvorF:Fireball"
+  | "melvorF:BurningClaws"
+  | "melvorF:ScorchingRay"
+  | "melvorF:MeteorShower"
+  | "melvorF:Cataclysm"
+  | "melvorF:Spores"
+  | "melvorF:DrowsySporesEnemy"
+  | "melvorF:GreaterSandstorm"
+  | "melvorF:Webshot"
+  | "melvorF:Drain"
+  | "melvorF:CurseofFear"
+  | "melvorF:HunterExpertise"
+  | "melvorF:GreaterDragonbreath"
+  | "melvorF:ChaoticSlam"
+  | "melvorF:Agility"
+  | "melvorF:Confusion"
+  | "melvorF:Elusiveness"
+  | "melvorF:RapidOnslaught"
+  | "melvorF:ShockwaveEnemy"
+  | "melvorF:CurseoftheDeep"
+  | "melvorF:BurningTrail"
+  | "melvorF:InfernalVolley"
+  | "melvorF:TailWhip"
+  | "melvorF:PenetratingClaws"
+  | "melvorF:Inferno"
+  | "melvorF:Sealing"
+  | "melvorF:MarkofDeath"
+  | "melvorF:CursedEdge"
+  | "melvorF:ReapandReturn"
+  | "melvorF:ConcealedDanger"
+  | "melvorF:Shadowstep"
+  | "melvorF:ShadowBurst"
+  | "melvorF:IntotheMist"
+  | "melvorF:FallenLight"
+  | "melvorF:InfinityDragonbreath"
+  | "melvorF:LesserSandstorm"
+  | "melvorF:ElementalImpactBurn"
+  | "melvorF:ElementalImpactStun"
+  | "melvorF:ElementalImpactFreeze"
+  | "melvorF:ElementalImpactFrostburn"
+  | "melvorF:BurningFireball"
+  | "melvorF:FragileMind"
+  | "melvorF:UnknownThreat"
+  | "melvorF:MistWalk"
+  | "melvorF:Suffocate"
+  | "melvorF:PoisonBreath"
+  | "melvorF:ToxicBite"
+  | "melvorF:NoxiousPowder"
+  | "melvorF:PenetratingSpikeShot"
+  | "melvorF:ToxicNeedles"
+  | "melvorF:Burrow"
+  | "melvorF:CursedFlames"
+  | "melvorF:CursedFrostShards"
+  | "melvorF:CursedTether"
+  | "melvorF:CrushingClaws"
+  | "melvorF:Cleave"
+  | "melvorF:SavageSpike"
+  | "melvorF:BoneCrush"
+  | "melvorF:SpikedTailWhip"
+  | "melvorF:Desecration"
+  | "melvorF:DoubleEdged"
+  | "melvorF:SwiftAttack"
+  | "melvorF:PoisonedHit"
+  | "melvorF:BladeEchoes"
+  | "melvorF:BarragePlayer"
+  | "melvorF:SpiritPower"
+  | "melvorF:CrushingDoubleSlash"
+  | "melvorF:NaturesCall"
+  | "melvorF:NaturesWrath"
+  | "melvorF:Ram"
+  | "melvorF:HornShots"
+  | "melvorF:OverwhelmingPower"
+  | "melvorTotH:MeteorShot"
+  | "melvorTotH:Bind"
+  | "melvorTotH:LureTrap"
+  | "melvorTotH:SharpWing"
+  | "melvorTotH:FerociousBite"
+  | "melvorTotH:PoisonousFangs"
+  | "melvorTotH:DeadlyWrap"
+  | "melvorTotH:Efflorescence"
+  | "melvorTotH:ThornedRoots"
+  | "melvorTotH:RazorWind"
+  | "melvorTotH:PoisonBulbs"
+  | "melvorTotH:SeekingRoots"
+  | "melvorTotH:FullBloom"
+  | "melvorTotH:PoisonBite"
+  | "melvorTotH:Smother"
+  | "melvorTotH:FlameBarrage"
+  | "melvorTotH:SmolderingBlow"
+  | "melvorTotH:LavaWave"
+  | "melvorTotH:Explosion"
+  | "melvorTotH:FlameRush"
+  | "melvorTotH:FatalSpike"
+  | "melvorTotH:GreaterFireball"
+  | "melvorTotH:Headbutt"
+  | "melvorTotH:MasterOfHeat"
+  | "melvorTotH:MegaFireball"
+  | "melvorTotH:BurningFury"
+  | "melvorTotH:WardOfFlame"
+  | "melvorTotH:UnleashedPower"
+  | "melvorTotH:FrozenClub"
+  | "melvorTotH:RollingSnowball"
+  | "melvorTotH:ChillingWinds"
+  | "melvorTotH:IceShards"
+  | "melvorTotH:FreezingRoar"
+  | "melvorTotH:SpectralClones"
+  | "melvorTotH:IceBlast"
+  | "melvorTotH:FreezingBreath"
+  | "melvorTotH:IceReanimation"
+  | "melvorTotH:ElectricBall"
+  | "melvorTotH:RapidStaticStrikes"
+  | "melvorTotH:FocusedStaticPunch"
+  | "melvorTotH:ShockBlast"
+  | "melvorTotH:LightningStrike"
+  | "melvorTotH:ElectricCharge"
+  | "melvorTotH:LightningBreath"
+  | "melvorTotH:Thunderbolt"
+  | "melvorTotH:Allure"
+  | "melvorTotH:Drown"
+  | "melvorTotH:Predator"
+  | "melvorTotH:CrushingJaws"
+  | "melvorTotH:SpikesFromBelow"
+  | "melvorTotH:SpikedSlam"
+  | "melvorTotH:WaterDance"
+  | "melvorTotH:TorrentialDragonbreath"
+  | "melvorTotH:GiantBubble"
+  | "melvorTotH:Tsunami"
+  | "melvorTotH:WebTrap"
+  | "melvorTotH:DeadlyBite"
+  | "melvorTotH:SharpSlice"
+  | "melvorTotH:FatalBite"
+  | "melvorTotH:CaughtInTheWeb"
+  | "melvorTotH:Surrounded"
+  | "melvorTotH:ShadowBite"
+  | "melvorTotH:HarmfulConcoction"
+  | "melvorTotH:DiseaseSwarm"
+  | "melvorTotH:Lifedrain"
+  | "melvorTotH:DecayingShots"
+  | "melvorTotH:CrushingSmash"
+  | "melvorTotH:Entangle"
+  | "melvorTotH:TreeSlam"
+  | "melvorTotH:Regrowth"
+  | "melvorTotH:CurseOfMadness"
+  | "melvorTotH:SilenceOfTheForest"
+  | "melvorTotH:CurseOfTorment"
+  | "melvorTotH:Soulburn"
+  | "melvorTotH:CurseOfDespair"
+  | "melvorTotH:DevourerOfTheCursed"
+  | "melvorTotH:EtheralShots"
+  | "melvorTotH:WeakeningShot"
+  | "melvorTotH:GhostlyTerror"
+  | "melvorTotH:BlindingFear"
+  | "melvorTotH:SpinningAxe"
+  | "melvorTotH:Anguish"
+  | "melvorTotH:ConfusedTouch"
+  | "melvorTotH:BlindingBeams"
+  | "melvorTotH:PetrifyingGlare"
+  | "melvorTotH:ShadeSummon"
+  | "melvorTotH:GreaterShadeSummon"
+  | "melvorTotH:BladeShadow"
+  | "melvorTotH:Darkblade"
+  | "melvorTotH:PhantomSummon"
+  | "melvorTotH:CurseTotemSummon"
+  | "melvorTotH:FeatherStorm"
+  | "melvorTotH:FeatherBarrier"
+  | "melvorTotH:FeatherLance"
+  | "melvorTotH:AgileWings"
+  | "melvorTotH:RapidParry"
+  | "melvorTotH:FullCharge"
+  | "melvorTotH:WindBarrier"
+  | "melvorTotH:FeatherTornado"
+  | "melvorTotH:AggressiveOnslaught"
+  | "melvorTotH:Battlecry"
+  | "melvorTotH:UnstoppableForce"
+  | "melvorTotH:Sunder"
+  | "melvorTotH:ChronoCurse"
+  | "melvorTotH:Alacrity"
+  | "melvorTotH:DejaVu"
+  | "melvorTotH:TouchOfAffliction"
+  | "melvorTotH:ShardsOfMillennia"
+  | "melvorTotH:PowerOfTheMist"
+  | "melvorTotH:UnisonOfFireAndEarth"
+  | "melvorTotH:UnisonOfAirAndWater"
+  | "melvorTotH:SealedFate"
+  | "melvorTotH:SlicingMaelstrom"
+  | "melvorTotH:PoisonPods"
+  | "melvorTotH:GiantFireball"
+  | "melvorTotH:ThunderStrike"
+  | "melvorTotH:MeteorShowerArchaic"
+  | "melvorTotH:TsunamiArchaic"
+  | "melvorTotH:NaturesBloom"
+  | "melvorTotH:InfernalPower"
+  | "melvorTotH:Soulash"
+  | "melvorTotH:DragonStormCall"
+  | "melvorTotH:SlicingMaelstromArchaic"
+  | "melvorTotH:BurningEmbers"
+  | "melvorTotH:MeteorSwing"
+  | "melvorTotH:Reduction"
+  | "melvorTotH:DarkBladePlayer"
+  | "melvorTotH:BadThrow"
+  | "melvorTotH:GoodThrow"
+  | "melvorTotH:ThornedPower"
+  | "melvorTotH:HeatedFury"
+  | "melvorTotH:SpectralIceBlades"
+  | "melvorTotH:LargeLightningStrike"
+  | "melvorTotH:LargeThunderStrike"
+  | "melvorTotH:TorrentialBlast"
+  | "melvorTotH:PiercingToxicStrike"
+  | "melvorTotH:EtheralArrows"
+  | "melvorTotH:SoulashPlayer"
+  | "melvorTotH:SpinningAxePlayer"
+  | "melvorTotH:CorundumWounds"
+  | "melvorTotH:AugiteCrystallization"
+  | "melvorTotH:DivineBreaker"
+  | "melvorTotH:ElderwoodPoison"
+  | "melvorTotH:RevenantHunter"
+  | "melvorTotH:CarrionMarker"
+  | "melvorTotH:PoisonSplit"
+  | "melvorTotH:AgileWingsPlayer"
+  | "melvorTotH:LightningStrikeEnemy";
+declare type ItemEffectID = "melvorF:Absorbing_Shield" | "melvorTotH:Leviathan" | "melvorTotH:Rage";
 /**
  * Type of ammo
  */
-export type AmmoType = "Arrows" | "Bolts" | "Javelins" | "ThrowingKnives" | "None";
-export type GameEventMatcherData =
+declare type AmmoType = "Arrows" | "Bolts" | "Javelins" | "ThrowingKnives" | "None";
+declare type GameEventMatcherData =
   | WoodcuttingEventMatcherOptions
   | FishingActionEventMatcherOptions
   | FiremakingActionEventMatcherOptions
@@ -5506,7 +5454,7 @@ export type GameEventMatcherData =
 /**
  * Matches when a Woodcutting action occurs
  */
-export type WoodcuttingEventMatcherOptions = WoodcuttingEventMatcherOptions1 & {
+declare type WoodcuttingEventMatcherOptions = WoodcuttingEventMatcherOptions1 & {
   type: "WoodcuttingAction";
   /**
    * Optional. If present the action giving a Bird's nest item as a reward must match
@@ -5520,33 +5468,30 @@ export type WoodcuttingEventMatcherOptions = WoodcuttingEventMatcherOptions1 & {
   actionIDs?: [WoodcuttingActionID, ...WoodcuttingActionID[]];
   [k: string]: unknown;
 };
-export type WoodcuttingEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type WoodcuttingActionID =
-  | ValidID
-  | (
-      | "melvorD:Normal"
-      | "melvorD:Oak"
-      | "melvorD:Willow"
-      | "melvorD:Teak"
-      | "melvorD:Maple"
-      | "melvorD:Mahogany"
-      | "melvorD:Yew"
-      | "melvorD:Magic"
-      | "melvorD:Redwood"
-      | "melvorTotH:Spruce"
-      | "melvorTotH:Hornbeam"
-      | "melvorTotH:Grove"
-      | "melvorTotH:Linden"
-      | "melvorTotH:Elderwood"
-      | "melvorTotH:Red_Oak"
-      | "melvorTotH:Revenant"
-      | "melvorTotH:Mystic"
-      | "melvorTotH:Carrion"
-    );
+declare type WoodcuttingEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type WoodcuttingActionID =
+  | "melvorD:Normal"
+  | "melvorD:Oak"
+  | "melvorD:Willow"
+  | "melvorD:Teak"
+  | "melvorD:Maple"
+  | "melvorD:Mahogany"
+  | "melvorD:Yew"
+  | "melvorD:Magic"
+  | "melvorD:Redwood"
+  | "melvorTotH:Spruce"
+  | "melvorTotH:Hornbeam"
+  | "melvorTotH:Grove"
+  | "melvorTotH:Linden"
+  | "melvorTotH:Elderwood"
+  | "melvorTotH:Red_Oak"
+  | "melvorTotH:Revenant"
+  | "melvorTotH:Mystic"
+  | "melvorTotH:Carrion";
 /**
  * Matches when a Fishing action occurs
  */
-export type FishingActionEventMatcherOptions = FishingActionEventMatcherOptions1 & {
+declare type FishingActionEventMatcherOptions = FishingActionEventMatcherOptions1 & {
   type: "FishingAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -5570,70 +5515,64 @@ export type FishingActionEventMatcherOptions = FishingActionEventMatcherOptions1
   cookedVersionExists?: boolean;
   [k: string]: unknown;
 };
-export type FishingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type FishingActionID =
-  | ValidID
-  | (
-      | "melvorD:Raw_Shrimp"
-      | "melvorD:Raw_Sardine"
-      | "melvorD:Raw_Herring"
-      | "melvorD:Raw_Trout"
-      | "melvorD:Raw_Salmon"
-      | "melvorD:Raw_Lobster"
-      | "melvorD:Raw_Swordfish"
-      | "melvorD:Raw_Crab"
-      | "melvorD:Raw_Shark"
-      | "melvorD:Raw_Cave_Fish"
-      | "melvorD:Raw_Manta_Ray"
-      | "melvorD:Raw_Whale"
-      | "melvorD:Raw_Blowfish"
-      | "melvorD:Raw_Poison_Fish"
-      | "melvorD:Leaping_Trout"
-      | "melvorD:Leaping_Salmon"
-      | "melvorD:Leaping_Broad_Fish"
-      | "melvorD:Raw_Magic_Fish"
-      | "melvorD:Raw_Anglerfish"
-      | "melvorD:Raw_Fanfish"
-      | "melvorD:Raw_Seahorse"
-      | "melvorD:Raw_Carp"
-      | "melvorD:Raw_Skeleton_Fish"
-      | "melvorTotH:Raw_Lava_Fish"
-      | "melvorTotH:Raw_Spike_Fish"
-      | "melvorTotH:Raw_Rockfish"
-      | "melvorTotH:Raw_Blue_Crab"
-      | "melvorTotH:Raw_Magma_Fish"
-      | "melvorTotH:Raw_Large_Blowfish"
-      | "melvorTotH:Raw_Static_Jellyfish"
-      | "melvorTotH:Raw_Frost_Crab"
-      | "melvorTotH:Raw_Magma_Eel"
-      | "melvorTotH:Raw_Frozen_Manta_Ray"
-      | "melvorTotH:Raw_Ghost_Fish"
-      | "melvorTotH:Raw_Mystic_Seahorse"
-      | "melvorTotH:Raw_Terrorfish"
-      | "melvorTotH:Raw_Mystic_Shark"
-    );
-export type FishingAreaID =
-  | ValidID
-  | (
-      | "melvorD:ShallowShores"
-      | "melvorD:ShrapnelRiver"
-      | "melvorD:TrenchOfDespair"
-      | "melvorD:LemvorPier"
-      | "melvorD:OpenWaters"
-      | "melvorD:BarrenOcean"
-      | "melvorD:BarbarianFishing"
-      | "melvorD:SecretArea"
-      | "melvorTotH:MagmaLake"
-      | "melvorTotH:JungleWaters"
-      | "melvorTotH:StaticValley"
-      | "melvorTotH:FrozenSea"
-      | "melvorTotH:MidnightLagoon"
-      | "melvorTotH:MysticPond"
-    );
+declare type FishingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type FishingActionID =
+  | "melvorD:Raw_Shrimp"
+  | "melvorD:Raw_Sardine"
+  | "melvorD:Raw_Herring"
+  | "melvorD:Raw_Trout"
+  | "melvorD:Raw_Salmon"
+  | "melvorD:Raw_Lobster"
+  | "melvorD:Raw_Swordfish"
+  | "melvorD:Raw_Crab"
+  | "melvorD:Raw_Shark"
+  | "melvorD:Raw_Cave_Fish"
+  | "melvorD:Raw_Manta_Ray"
+  | "melvorD:Raw_Whale"
+  | "melvorD:Raw_Blowfish"
+  | "melvorD:Raw_Poison_Fish"
+  | "melvorD:Leaping_Trout"
+  | "melvorD:Leaping_Salmon"
+  | "melvorD:Leaping_Broad_Fish"
+  | "melvorD:Raw_Magic_Fish"
+  | "melvorD:Raw_Anglerfish"
+  | "melvorD:Raw_Fanfish"
+  | "melvorD:Raw_Seahorse"
+  | "melvorD:Raw_Carp"
+  | "melvorD:Raw_Skeleton_Fish"
+  | "melvorTotH:Raw_Lava_Fish"
+  | "melvorTotH:Raw_Spike_Fish"
+  | "melvorTotH:Raw_Rockfish"
+  | "melvorTotH:Raw_Blue_Crab"
+  | "melvorTotH:Raw_Magma_Fish"
+  | "melvorTotH:Raw_Large_Blowfish"
+  | "melvorTotH:Raw_Static_Jellyfish"
+  | "melvorTotH:Raw_Frost_Crab"
+  | "melvorTotH:Raw_Magma_Eel"
+  | "melvorTotH:Raw_Frozen_Manta_Ray"
+  | "melvorTotH:Raw_Ghost_Fish"
+  | "melvorTotH:Raw_Mystic_Seahorse"
+  | "melvorTotH:Raw_Terrorfish"
+  | "melvorTotH:Raw_Mystic_Shark";
+declare type FishingAreaID =
+  | "melvorD:ShallowShores"
+  | "melvorD:ShrapnelRiver"
+  | "melvorD:TrenchOfDespair"
+  | "melvorD:LemvorPier"
+  | "melvorD:OpenWaters"
+  | "melvorD:BarrenOcean"
+  | "melvorD:BarbarianFishing"
+  | "melvorD:SecretArea"
+  | "melvorTotH:MagmaLake"
+  | "melvorTotH:JungleWaters"
+  | "melvorTotH:StaticValley"
+  | "melvorTotH:FrozenSea"
+  | "melvorTotH:MidnightLagoon"
+  | "melvorTotH:MysticPond";
 /**
  * Matches when a Firemaking action occurs
  */
-export type FiremakingActionEventMatcherOptions = FiremakingActionEventMatcherOptions1 & {
+declare type FiremakingActionEventMatcherOptions = FiremakingActionEventMatcherOptions1 & {
   type: "FiremakingAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -5643,33 +5582,30 @@ export type FiremakingActionEventMatcherOptions = FiremakingActionEventMatcherOp
   actionIDs?: [FiremakingActionID, ...FiremakingActionID[]];
   [k: string]: unknown;
 };
-export type FiremakingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type FiremakingActionID =
-  | ValidID
-  | (
-      | "melvorD:Normal_Logs"
-      | "melvorD:Oak_Logs"
-      | "melvorD:Willow_Logs"
-      | "melvorD:Teak_Logs"
-      | "melvorD:Maple_Logs"
-      | "melvorD:Mahogany_Logs"
-      | "melvorD:Yew_Logs"
-      | "melvorD:Magic_Logs"
-      | "melvorD:Redwood_Logs"
-      | "melvorTotH:Spruce_Logs"
-      | "melvorTotH:Hornbeam_Logs"
-      | "melvorTotH:Grove_Logs"
-      | "melvorTotH:Linden_Logs"
-      | "melvorTotH:Elderwood_Logs"
-      | "melvorTotH:Red_Oak_Logs"
-      | "melvorTotH:Revenant_Logs"
-      | "melvorTotH:Mystic_Logs"
-      | "melvorTotH:Carrion_Logs"
-    );
+declare type FiremakingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type FiremakingActionID =
+  | "melvorD:Normal_Logs"
+  | "melvorD:Oak_Logs"
+  | "melvorD:Willow_Logs"
+  | "melvorD:Teak_Logs"
+  | "melvorD:Maple_Logs"
+  | "melvorD:Mahogany_Logs"
+  | "melvorD:Yew_Logs"
+  | "melvorD:Magic_Logs"
+  | "melvorD:Redwood_Logs"
+  | "melvorTotH:Spruce_Logs"
+  | "melvorTotH:Hornbeam_Logs"
+  | "melvorTotH:Grove_Logs"
+  | "melvorTotH:Linden_Logs"
+  | "melvorTotH:Elderwood_Logs"
+  | "melvorTotH:Red_Oak_Logs"
+  | "melvorTotH:Revenant_Logs"
+  | "melvorTotH:Mystic_Logs"
+  | "melvorTotH:Carrion_Logs";
 /**
  * Matches when a Cooking action occurs
  */
-export type CookingActionEventMatcherOptions = CookingActionEventMatcherOptions1 & {
+declare type CookingActionEventMatcherOptions = CookingActionEventMatcherOptions1 & {
   type: "CookingAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -5689,66 +5625,63 @@ export type CookingActionEventMatcherOptions = CookingActionEventMatcherOptions1
   isPassiveCooking?: boolean;
   [k: string]: unknown;
 };
-export type CookingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type CookingActionID =
-  | ValidID
-  | (
-      | "melvorD:Shrimp"
-      | "melvorD:Sardine"
-      | "melvorD:Herring"
-      | "melvorD:Trout"
-      | "melvorD:Salmon"
-      | "melvorD:Lobster"
-      | "melvorD:Swordfish"
-      | "melvorD:Crab"
-      | "melvorD:Shark"
-      | "melvorD:Cave_Fish"
-      | "melvorD:Manta_Ray"
-      | "melvorD:Whale"
-      | "melvorD:Anglerfish"
-      | "melvorD:Fanfish"
-      | "melvorD:Seahorse"
-      | "melvorD:Carp"
-      | "melvorD:Bread"
-      | "melvorD:Beef"
-      | "melvorD:Chicken"
-      | "melvorD:Plain_Pizza_Slice"
-      | "melvorD:Beef_Pie"
-      | "melvorD:Meat_Pizza_Slice"
-      | "melvorD:Basic_Soup"
-      | "melvorD:Strawberry_Cupcake"
-      | "melvorD:Hearty_Soup"
-      | "melvorD:Cherry_Cupcake"
-      | "melvorD:Cream_Corn_Soup"
-      | "melvorD:Chicken_Soup"
-      | "melvorD:Strawberry_Cake"
-      | "melvorD:Carrot_Cake"
-      | "melvorTotH:Lava_Fish"
-      | "melvorTotH:Blue_Crab"
-      | "melvorTotH:Magma_Fish"
-      | "melvorTotH:Static_Jellyfish"
-      | "melvorTotH:Frost_Crab"
-      | "melvorTotH:Magma_Eel"
-      | "melvorTotH:Frozen_Manta_Ray"
-      | "melvorTotH:Terrorfish"
-      | "melvorTotH:Mystic_Shark"
-      | "melvorTotH:Banana_Bread"
-      | "melvorTotH:Mushroom_Soup"
-      | "melvorTotH:Spicy_Chicken_Pizza"
-      | "melvorTotH:Beef_Mushroom_Stew"
-      | "melvorTotH:Sandwich"
-      | "melvorTotH:Pumpkin_Soup"
-      | "melvorTotH:Spicy_Shrimp_Soup"
-      | "melvorTotH:Fancy_Meat_Pizza"
-      | "melvorTotH:Chicken_Cream_Mushroom_Soup"
-      | "melvorTotH:Chilli_Frost_Crab"
-      | "melvorTotH:Starfruit_Cake"
-    );
-export type CookingCategoryID = ValidID | ("melvorD:Fire" | "melvorD:Furnace" | "melvorD:Pot");
+declare type CookingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type CookingActionID =
+  | "melvorD:Shrimp"
+  | "melvorD:Sardine"
+  | "melvorD:Herring"
+  | "melvorD:Trout"
+  | "melvorD:Salmon"
+  | "melvorD:Lobster"
+  | "melvorD:Swordfish"
+  | "melvorD:Crab"
+  | "melvorD:Shark"
+  | "melvorD:Cave_Fish"
+  | "melvorD:Manta_Ray"
+  | "melvorD:Whale"
+  | "melvorD:Anglerfish"
+  | "melvorD:Fanfish"
+  | "melvorD:Seahorse"
+  | "melvorD:Carp"
+  | "melvorD:Bread"
+  | "melvorD:Beef"
+  | "melvorD:Chicken"
+  | "melvorD:Plain_Pizza_Slice"
+  | "melvorD:Beef_Pie"
+  | "melvorD:Meat_Pizza_Slice"
+  | "melvorD:Basic_Soup"
+  | "melvorD:Strawberry_Cupcake"
+  | "melvorD:Hearty_Soup"
+  | "melvorD:Cherry_Cupcake"
+  | "melvorD:Cream_Corn_Soup"
+  | "melvorD:Chicken_Soup"
+  | "melvorD:Strawberry_Cake"
+  | "melvorD:Carrot_Cake"
+  | "melvorTotH:Lava_Fish"
+  | "melvorTotH:Blue_Crab"
+  | "melvorTotH:Magma_Fish"
+  | "melvorTotH:Static_Jellyfish"
+  | "melvorTotH:Frost_Crab"
+  | "melvorTotH:Magma_Eel"
+  | "melvorTotH:Frozen_Manta_Ray"
+  | "melvorTotH:Terrorfish"
+  | "melvorTotH:Mystic_Shark"
+  | "melvorTotH:Banana_Bread"
+  | "melvorTotH:Mushroom_Soup"
+  | "melvorTotH:Spicy_Chicken_Pizza"
+  | "melvorTotH:Beef_Mushroom_Stew"
+  | "melvorTotH:Sandwich"
+  | "melvorTotH:Pumpkin_Soup"
+  | "melvorTotH:Spicy_Shrimp_Soup"
+  | "melvorTotH:Fancy_Meat_Pizza"
+  | "melvorTotH:Chicken_Cream_Mushroom_Soup"
+  | "melvorTotH:Chilli_Frost_Crab"
+  | "melvorTotH:Starfruit_Cake";
+declare type CookingCategoryID = "melvorD:Fire" | "melvorD:Furnace" | "melvorD:Pot";
 /**
  * Matches when a Mining action occurs
  */
-export type MiningActionEventMatcherOptions = MiningActionEventMatcherOptions1 & {
+declare type MiningActionEventMatcherOptions = MiningActionEventMatcherOptions1 & {
   type: "MiningAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -5780,37 +5713,34 @@ export type MiningActionEventMatcherOptions = MiningActionEventMatcherOptions1 &
   oreTypes?: [MiningRockType, ...MiningRockType[]];
   [k: string]: unknown;
 };
-export type MiningActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type MiningActionID =
-  | ValidID
-  | (
-      | "melvorD:Rune_Essence"
-      | "melvorD:Copper_Ore"
-      | "melvorD:Tin_Ore"
-      | "melvorD:Iron_Ore"
-      | "melvorD:Coal_Ore"
-      | "melvorD:Silver_Ore"
-      | "melvorD:Gold_Ore"
-      | "melvorD:Mithril_Ore"
-      | "melvorD:Adamantite_Ore"
-      | "melvorD:Runite_Ore"
-      | "melvorD:Dragonite_Ore"
-      | "melvorTotH:Corundumite_Ore"
-      | "melvorTotH:Pure_Essence"
-      | "melvorTotH:Onyx"
-      | "melvorTotH:Iridium_Ore"
-      | "melvorTotH:Palladium_Ore"
-      | "melvorTotH:Augite_Ore"
-      | "melvorTotH:Oricha"
-      | "melvorTotH:Meteorite_Ore"
-      | "melvorTotH:Divinite_Ore"
-      | "melvorTotH:Cerulean"
-    );
-export type MiningRockType = "Ore" | "Essence" | "Gem";
+declare type MiningActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type MiningActionID =
+  | "melvorD:Rune_Essence"
+  | "melvorD:Copper_Ore"
+  | "melvorD:Tin_Ore"
+  | "melvorD:Iron_Ore"
+  | "melvorD:Coal_Ore"
+  | "melvorD:Silver_Ore"
+  | "melvorD:Gold_Ore"
+  | "melvorD:Mithril_Ore"
+  | "melvorD:Adamantite_Ore"
+  | "melvorD:Runite_Ore"
+  | "melvorD:Dragonite_Ore"
+  | "melvorTotH:Corundumite_Ore"
+  | "melvorTotH:Pure_Essence"
+  | "melvorTotH:Onyx"
+  | "melvorTotH:Iridium_Ore"
+  | "melvorTotH:Palladium_Ore"
+  | "melvorTotH:Augite_Ore"
+  | "melvorTotH:Oricha"
+  | "melvorTotH:Meteorite_Ore"
+  | "melvorTotH:Divinite_Ore"
+  | "melvorTotH:Cerulean";
+declare type MiningRockType = "Ore" | "Essence" | "Gem";
 /**
  * Matches when a Smithing action occurs
  */
-export type SmithingActionEventMatcherOptions = SmithingActionEventMatcherOptions1 & {
+declare type SmithingActionEventMatcherOptions = SmithingActionEventMatcherOptions1 & {
   type: "SmithingAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -5832,203 +5762,197 @@ export type SmithingActionEventMatcherOptions = SmithingActionEventMatcherOption
   consumedItemIDs?: [AnyItemID, ...AnyItemID[]];
   [k: string]: unknown;
 };
-export type SmithingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type SmithingActionID =
-  | ValidID
-  | (
-      | "melvorD:Bronze_Bar"
-      | "melvorD:Iron_Bar"
-      | "melvorD:Steel_Bar"
-      | "melvorD:Gold_Bar"
-      | "melvorD:Mithril_Bar"
-      | "melvorD:Adamantite_Bar"
-      | "melvorD:Runite_Bar"
-      | "melvorD:Dragonite_Bar"
-      | "melvorD:Silver_Bar"
-      | "melvorD:Bronze_Dagger"
-      | "melvorD:Bronze_Sword"
-      | "melvorD:Bronze_Battleaxe"
-      | "melvorD:Bronze_2H_Sword"
-      | "melvorD:Bronze_Helmet"
-      | "melvorD:Bronze_Boots"
-      | "melvorD:Bronze_Platelegs"
-      | "melvorD:Bronze_Platebody"
-      | "melvorD:Iron_Dagger"
-      | "melvorD:Iron_Sword"
-      | "melvorD:Iron_Battleaxe"
-      | "melvorD:Iron_2H_Sword"
-      | "melvorD:Iron_Helmet"
-      | "melvorD:Iron_Boots"
-      | "melvorD:Iron_Platelegs"
-      | "melvorD:Iron_Platebody"
-      | "melvorD:Steel_Dagger"
-      | "melvorD:Steel_Sword"
-      | "melvorD:Steel_Battleaxe"
-      | "melvorD:Steel_2H_Sword"
-      | "melvorD:Steel_Helmet"
-      | "melvorD:Steel_Boots"
-      | "melvorD:Steel_Platelegs"
-      | "melvorD:Steel_Platebody"
-      | "melvorD:Mithril_Dagger"
-      | "melvorD:Mithril_Sword"
-      | "melvorD:Mithril_Battleaxe"
-      | "melvorD:Mithril_2H_Sword"
-      | "melvorD:Mithril_Helmet"
-      | "melvorD:Mithril_Boots"
-      | "melvorD:Mithril_Platelegs"
-      | "melvorD:Mithril_Platebody"
-      | "melvorD:Adamant_Dagger"
-      | "melvorD:Adamant_Sword"
-      | "melvorD:Adamant_Battleaxe"
-      | "melvorD:Adamant_2H_Sword"
-      | "melvorD:Adamant_Helmet"
-      | "melvorD:Adamant_Boots"
-      | "melvorD:Adamant_Platelegs"
-      | "melvorD:Adamant_Platebody"
-      | "melvorD:Rune_Dagger"
-      | "melvorD:Rune_Sword"
-      | "melvorD:Rune_Battleaxe"
-      | "melvorD:Rune_2H_Sword"
-      | "melvorD:Rune_Helmet"
-      | "melvorD:Rune_Boots"
-      | "melvorD:Rune_Platelegs"
-      | "melvorD:Rune_Platebody"
-      | "melvorD:Dragon_Dagger"
-      | "melvorD:Dragon_Sword"
-      | "melvorD:Dragon_Battleaxe"
-      | "melvorD:Dragon_2H_Sword"
-      | "melvorD:Dragon_Helmet"
-      | "melvorD:Dragon_Boots"
-      | "melvorD:Dragon_Platelegs"
-      | "melvorD:Dragon_Platebody"
-      | "melvorD:Bronze_Shield"
-      | "melvorD:Iron_Shield"
-      | "melvorD:Steel_Shield"
-      | "melvorD:Mithril_Shield"
-      | "melvorD:Adamant_Shield"
-      | "melvorD:Rune_Shield"
-      | "melvorD:Dragon_Shield"
-      | "melvorD:Bronze_Arrowtips"
-      | "melvorD:Iron_Arrowtips"
-      | "melvorD:Steel_Arrowtips"
-      | "melvorD:Mithril_Arrowtips"
-      | "melvorD:Adamant_Arrowtips"
-      | "melvorD:Rune_Arrowtips"
-      | "melvorD:Dragon_Arrowtips"
-      | "melvorD:Bronze_Scimitar"
-      | "melvorD:Iron_Scimitar"
-      | "melvorD:Steel_Scimitar"
-      | "melvorD:Mithril_Scimitar"
-      | "melvorD:Adamant_Scimitar"
-      | "melvorD:Rune_Scimitar"
-      | "melvorD:Dragon_Scimitar"
-      | "melvorD:Bronze_Gloves"
-      | "melvorD:Iron_Gloves"
-      | "melvorD:Steel_Gloves"
-      | "melvorD:Mithril_Gloves"
-      | "melvorD:Adamant_Gloves"
-      | "melvorD:Rune_Gloves"
-      | "melvorD:Dragon_Gloves"
-      | "melvorD:Bronze_Crossbow_Head"
-      | "melvorD:Iron_Crossbow_Head"
-      | "melvorD:Steel_Crossbow_Head"
-      | "melvorD:Mithril_Crossbow_Head"
-      | "melvorD:Adamant_Crossbow_Head"
-      | "melvorD:Rune_Crossbow_Head"
-      | "melvorD:Dragon_Crossbow_Head"
-      | "melvorD:Bronze_Javelin_Heads"
-      | "melvorD:Iron_Javelin_Heads"
-      | "melvorD:Steel_Javelin_Heads"
-      | "melvorD:Mithril_Javelin_Heads"
-      | "melvorD:Adamant_Javelin_Heads"
-      | "melvorD:Rune_Javelin_Heads"
-      | "melvorD:Dragon_Javelin_Heads"
-      | "melvorD:Bronze_Throwing_Knife"
-      | "melvorD:Iron_Throwing_Knife"
-      | "melvorD:Steel_Throwing_Knife"
-      | "melvorD:Mithril_Throwing_Knife"
-      | "melvorD:Adamant_Throwing_Knife"
-      | "melvorD:Rune_Throwing_Knife"
-      | "melvorD:Dragon_Throwing_Knife"
-      | "melvorD:Headless_Bolts"
-      | "melvorTotH:Corundumite_Bar"
-      | "melvorTotH:Iridium_Bar"
-      | "melvorTotH:Palladium_Bar"
-      | "melvorTotH:Augite_Bar"
-      | "melvorTotH:Meteorite_Bar"
-      | "melvorTotH:Divinite_Bar"
-      | "melvorTotH:Corundum_Dagger"
-      | "melvorTotH:Corundum_Sword"
-      | "melvorTotH:Corundum_Battleaxe"
-      | "melvorTotH:Corundum_2H_Sword"
-      | "melvorTotH:Corundum_Scimitar"
-      | "melvorTotH:Corundum_Helmet"
-      | "melvorTotH:Corundum_Boots"
-      | "melvorTotH:Corundum_Platelegs"
-      | "melvorTotH:Corundum_Platebody"
-      | "melvorTotH:Corundum_Shield"
-      | "melvorTotH:Corundum_Arrowtips"
-      | "melvorTotH:Corundum_Gloves"
-      | "melvorTotH:Corundum_Crossbow_Head"
-      | "melvorTotH:Corundum_Javelin_Heads"
-      | "melvorTotH:Corundum_Throwing_Knife"
-      | "melvorTotH:Augite_Dagger"
-      | "melvorTotH:Augite_Sword"
-      | "melvorTotH:Augite_Battleaxe"
-      | "melvorTotH:Augite_2H_Sword"
-      | "melvorTotH:Augite_Scimitar"
-      | "melvorTotH:Augite_Helmet"
-      | "melvorTotH:Augite_Boots"
-      | "melvorTotH:Augite_Platelegs"
-      | "melvorTotH:Augite_Platebody"
-      | "melvorTotH:Augite_Shield"
-      | "melvorTotH:Augite_Arrowtips"
-      | "melvorTotH:Augite_Gloves"
-      | "melvorTotH:Augite_Crossbow_Head"
-      | "melvorTotH:Augite_Javelin_Heads"
-      | "melvorTotH:Augite_Throwing_Knife"
-      | "melvorTotH:Meteorite_2H_Sword"
-      | "melvorTotH:Meteorite_Helmet"
-      | "melvorTotH:Meteorite_Platelegs"
-      | "melvorTotH:Meteorite_Platebody"
-      | "melvorTotH:Meteorite_Crossbow_Head"
-      | "melvorTotH:Meteorite_Javelin_Heads"
-      | "melvorTotH:Divine_Dagger"
-      | "melvorTotH:Divine_Sword"
-      | "melvorTotH:Divine_Battleaxe"
-      | "melvorTotH:Divine_2H_Sword"
-      | "melvorTotH:Divine_Scimitar"
-      | "melvorTotH:Divine_Helmet"
-      | "melvorTotH:Divine_Boots"
-      | "melvorTotH:Divine_Platelegs"
-      | "melvorTotH:Divine_Platebody"
-      | "melvorTotH:Divine_Shield"
-      | "melvorTotH:Divine_Arrowtips"
-      | "melvorTotH:Divine_Gloves"
-      | "melvorTotH:Divine_Crossbow_Head"
-      | "melvorTotH:Divine_Javelin_Heads"
-      | "melvorTotH:Divine_Throwing_Knife"
-    );
-export type SmithingCategoryID =
-  | ValidID
-  | (
-      | "melvorD:Bars"
-      | "melvorD:BronzeGear"
-      | "melvorD:IronGear"
-      | "melvorD:SteelGear"
-      | "melvorD:MithrilGear"
-      | "melvorD:AdamantGear"
-      | "melvorD:RuneGear"
-      | "melvorD:DragonGear"
-      | "melvorTotH:CorundumGear"
-      | "melvorTotH:AugiteGear"
-      | "melvorTotH:MeteoriteGear"
-      | "melvorTotH:DivineGear"
-    );
+declare type SmithingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type SmithingActionID =
+  | "melvorD:Bronze_Bar"
+  | "melvorD:Iron_Bar"
+  | "melvorD:Steel_Bar"
+  | "melvorD:Gold_Bar"
+  | "melvorD:Mithril_Bar"
+  | "melvorD:Adamantite_Bar"
+  | "melvorD:Runite_Bar"
+  | "melvorD:Dragonite_Bar"
+  | "melvorD:Silver_Bar"
+  | "melvorD:Bronze_Dagger"
+  | "melvorD:Bronze_Sword"
+  | "melvorD:Bronze_Battleaxe"
+  | "melvorD:Bronze_2H_Sword"
+  | "melvorD:Bronze_Helmet"
+  | "melvorD:Bronze_Boots"
+  | "melvorD:Bronze_Platelegs"
+  | "melvorD:Bronze_Platebody"
+  | "melvorD:Iron_Dagger"
+  | "melvorD:Iron_Sword"
+  | "melvorD:Iron_Battleaxe"
+  | "melvorD:Iron_2H_Sword"
+  | "melvorD:Iron_Helmet"
+  | "melvorD:Iron_Boots"
+  | "melvorD:Iron_Platelegs"
+  | "melvorD:Iron_Platebody"
+  | "melvorD:Steel_Dagger"
+  | "melvorD:Steel_Sword"
+  | "melvorD:Steel_Battleaxe"
+  | "melvorD:Steel_2H_Sword"
+  | "melvorD:Steel_Helmet"
+  | "melvorD:Steel_Boots"
+  | "melvorD:Steel_Platelegs"
+  | "melvorD:Steel_Platebody"
+  | "melvorD:Mithril_Dagger"
+  | "melvorD:Mithril_Sword"
+  | "melvorD:Mithril_Battleaxe"
+  | "melvorD:Mithril_2H_Sword"
+  | "melvorD:Mithril_Helmet"
+  | "melvorD:Mithril_Boots"
+  | "melvorD:Mithril_Platelegs"
+  | "melvorD:Mithril_Platebody"
+  | "melvorD:Adamant_Dagger"
+  | "melvorD:Adamant_Sword"
+  | "melvorD:Adamant_Battleaxe"
+  | "melvorD:Adamant_2H_Sword"
+  | "melvorD:Adamant_Helmet"
+  | "melvorD:Adamant_Boots"
+  | "melvorD:Adamant_Platelegs"
+  | "melvorD:Adamant_Platebody"
+  | "melvorD:Rune_Dagger"
+  | "melvorD:Rune_Sword"
+  | "melvorD:Rune_Battleaxe"
+  | "melvorD:Rune_2H_Sword"
+  | "melvorD:Rune_Helmet"
+  | "melvorD:Rune_Boots"
+  | "melvorD:Rune_Platelegs"
+  | "melvorD:Rune_Platebody"
+  | "melvorD:Dragon_Dagger"
+  | "melvorD:Dragon_Sword"
+  | "melvorD:Dragon_Battleaxe"
+  | "melvorD:Dragon_2H_Sword"
+  | "melvorD:Dragon_Helmet"
+  | "melvorD:Dragon_Boots"
+  | "melvorD:Dragon_Platelegs"
+  | "melvorD:Dragon_Platebody"
+  | "melvorD:Bronze_Shield"
+  | "melvorD:Iron_Shield"
+  | "melvorD:Steel_Shield"
+  | "melvorD:Mithril_Shield"
+  | "melvorD:Adamant_Shield"
+  | "melvorD:Rune_Shield"
+  | "melvorD:Dragon_Shield"
+  | "melvorD:Bronze_Arrowtips"
+  | "melvorD:Iron_Arrowtips"
+  | "melvorD:Steel_Arrowtips"
+  | "melvorD:Mithril_Arrowtips"
+  | "melvorD:Adamant_Arrowtips"
+  | "melvorD:Rune_Arrowtips"
+  | "melvorD:Dragon_Arrowtips"
+  | "melvorD:Bronze_Scimitar"
+  | "melvorD:Iron_Scimitar"
+  | "melvorD:Steel_Scimitar"
+  | "melvorD:Mithril_Scimitar"
+  | "melvorD:Adamant_Scimitar"
+  | "melvorD:Rune_Scimitar"
+  | "melvorD:Dragon_Scimitar"
+  | "melvorD:Bronze_Gloves"
+  | "melvorD:Iron_Gloves"
+  | "melvorD:Steel_Gloves"
+  | "melvorD:Mithril_Gloves"
+  | "melvorD:Adamant_Gloves"
+  | "melvorD:Rune_Gloves"
+  | "melvorD:Dragon_Gloves"
+  | "melvorD:Bronze_Crossbow_Head"
+  | "melvorD:Iron_Crossbow_Head"
+  | "melvorD:Steel_Crossbow_Head"
+  | "melvorD:Mithril_Crossbow_Head"
+  | "melvorD:Adamant_Crossbow_Head"
+  | "melvorD:Rune_Crossbow_Head"
+  | "melvorD:Dragon_Crossbow_Head"
+  | "melvorD:Bronze_Javelin_Heads"
+  | "melvorD:Iron_Javelin_Heads"
+  | "melvorD:Steel_Javelin_Heads"
+  | "melvorD:Mithril_Javelin_Heads"
+  | "melvorD:Adamant_Javelin_Heads"
+  | "melvorD:Rune_Javelin_Heads"
+  | "melvorD:Dragon_Javelin_Heads"
+  | "melvorD:Bronze_Throwing_Knife"
+  | "melvorD:Iron_Throwing_Knife"
+  | "melvorD:Steel_Throwing_Knife"
+  | "melvorD:Mithril_Throwing_Knife"
+  | "melvorD:Adamant_Throwing_Knife"
+  | "melvorD:Rune_Throwing_Knife"
+  | "melvorD:Dragon_Throwing_Knife"
+  | "melvorD:Headless_Bolts"
+  | "melvorTotH:Corundumite_Bar"
+  | "melvorTotH:Iridium_Bar"
+  | "melvorTotH:Palladium_Bar"
+  | "melvorTotH:Augite_Bar"
+  | "melvorTotH:Meteorite_Bar"
+  | "melvorTotH:Divinite_Bar"
+  | "melvorTotH:Corundum_Dagger"
+  | "melvorTotH:Corundum_Sword"
+  | "melvorTotH:Corundum_Battleaxe"
+  | "melvorTotH:Corundum_2H_Sword"
+  | "melvorTotH:Corundum_Scimitar"
+  | "melvorTotH:Corundum_Helmet"
+  | "melvorTotH:Corundum_Boots"
+  | "melvorTotH:Corundum_Platelegs"
+  | "melvorTotH:Corundum_Platebody"
+  | "melvorTotH:Corundum_Shield"
+  | "melvorTotH:Corundum_Arrowtips"
+  | "melvorTotH:Corundum_Gloves"
+  | "melvorTotH:Corundum_Crossbow_Head"
+  | "melvorTotH:Corundum_Javelin_Heads"
+  | "melvorTotH:Corundum_Throwing_Knife"
+  | "melvorTotH:Augite_Dagger"
+  | "melvorTotH:Augite_Sword"
+  | "melvorTotH:Augite_Battleaxe"
+  | "melvorTotH:Augite_2H_Sword"
+  | "melvorTotH:Augite_Scimitar"
+  | "melvorTotH:Augite_Helmet"
+  | "melvorTotH:Augite_Boots"
+  | "melvorTotH:Augite_Platelegs"
+  | "melvorTotH:Augite_Platebody"
+  | "melvorTotH:Augite_Shield"
+  | "melvorTotH:Augite_Arrowtips"
+  | "melvorTotH:Augite_Gloves"
+  | "melvorTotH:Augite_Crossbow_Head"
+  | "melvorTotH:Augite_Javelin_Heads"
+  | "melvorTotH:Augite_Throwing_Knife"
+  | "melvorTotH:Meteorite_2H_Sword"
+  | "melvorTotH:Meteorite_Helmet"
+  | "melvorTotH:Meteorite_Platelegs"
+  | "melvorTotH:Meteorite_Platebody"
+  | "melvorTotH:Meteorite_Crossbow_Head"
+  | "melvorTotH:Meteorite_Javelin_Heads"
+  | "melvorTotH:Divine_Dagger"
+  | "melvorTotH:Divine_Sword"
+  | "melvorTotH:Divine_Battleaxe"
+  | "melvorTotH:Divine_2H_Sword"
+  | "melvorTotH:Divine_Scimitar"
+  | "melvorTotH:Divine_Helmet"
+  | "melvorTotH:Divine_Boots"
+  | "melvorTotH:Divine_Platelegs"
+  | "melvorTotH:Divine_Platebody"
+  | "melvorTotH:Divine_Shield"
+  | "melvorTotH:Divine_Arrowtips"
+  | "melvorTotH:Divine_Gloves"
+  | "melvorTotH:Divine_Crossbow_Head"
+  | "melvorTotH:Divine_Javelin_Heads"
+  | "melvorTotH:Divine_Throwing_Knife";
+declare type SmithingCategoryID =
+  | "melvorD:Bars"
+  | "melvorD:BronzeGear"
+  | "melvorD:IronGear"
+  | "melvorD:SteelGear"
+  | "melvorD:MithrilGear"
+  | "melvorD:AdamantGear"
+  | "melvorD:RuneGear"
+  | "melvorD:DragonGear"
+  | "melvorTotH:CorundumGear"
+  | "melvorTotH:AugiteGear"
+  | "melvorTotH:MeteoriteGear"
+  | "melvorTotH:DivineGear";
 /**
  * Matches when a Thieving action occurs
  */
-export type ThievingActionEventMatcherOptions = ThievingActionEventMatcherOptions1 & {
+declare type ThievingActionEventMatcherOptions = ThievingActionEventMatcherOptions1 & {
   type: "ThievingAction";
   /**
    * Optional. If present, the npc must have an ID that matches one element of the array
@@ -6048,110 +5972,101 @@ export type ThievingActionEventMatcherOptions = ThievingActionEventMatcherOption
   commonDropObtained?: boolean;
   [k: string]: unknown;
 };
-export type ThievingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type ThievingActionID =
-  | ValidID
-  | (
-      | "melvorF:MAN"
-      | "melvorF:GOLBIN"
-      | "melvorF:LUMBERJACK"
-      | "melvorF:BOB_THE_FARMER"
-      | "melvorF:FISHERMAN"
-      | "melvorF:CHEF"
-      | "melvorF:MINER"
-      | "melvorF:KNIGHT"
-      | "melvorF:WOMAN"
-      | "melvorF:GOLBIN_CHIEF"
-      | "melvorF:BANDIT_THUG"
-      | "melvorF:MARAUDER"
-      | "melvorF:MERCHANT"
-      | "melvorF:ASSISTANT_COOK"
-      | "melvorF:DOCK_HAND"
-      | "melvorF:TROLL"
-      | "melvorF:CYCLOPS"
-      | "melvorF:SQUIRE"
-      | "melvorF:WIZARD"
-      | "melvorF:ACOLYTE"
-      | "melvorF:COURT_JESTER"
-      | "melvorF:KING"
-      | "melvorF:PRINCESS"
-      | "melvorTotH:EXPLORER"
-      | "melvorTotH:NECROMANCER"
-      | "melvorTotH:PILGRIM"
-      | "melvorTotH:ADVENTURER"
-      | "melvorTotH:DARK_KNIGHT"
-      | "melvorTotH:SAGE"
-      | "melvorTotH:TREASURE_HUNTER"
-      | "melvorTotH:TRAVELLING_MERCHANT"
-      | "melvorTotH:VAMPIRE"
-      | "melvorTotH:MADREMONTE"
-      | "melvorTotH:VAMPIRE_LORD"
-    );
-export type ThievingAreaID =
-  | ValidID
-  | (
-      | "melvorF:LOW_TOWN"
-      | "melvorF:GOLBIN_VILLAGE"
-      | "melvorF:BANDIT_HIDEOUT"
-      | "melvorF:FARMERS_MARKET"
-      | "melvorF:BANQUET"
-      | "melvorF:PORT_OF_LEMVOR"
-      | "melvorF:CAVE_OF_GIANTS"
-      | "melvorF:OUTSKIRTS"
-      | "melvorF:FORT"
-      | "melvorF:WIZARD_TOWER"
-      | "melvorF:ROYAL_CASTLE"
-      | "melvorTotH:LOST_RUINS"
-      | "melvorTotH:UNDEAD_PALACE"
-      | "melvorTotH:DESERT"
-      | "melvorTotH:MUSHROOM_FOREST"
-      | "melvorTotH:TWILIGHT"
-    );
-export type FarmingActionID =
-  | ValidID
-  | (
-      | "melvorD:Potatoes"
-      | "melvorD:Onions"
-      | "melvorD:Cabbage"
-      | "melvorD:Tomatoes"
-      | "melvorD:Sweetcorn"
-      | "melvorD:Strawberries"
-      | "melvorD:Watermelon"
-      | "melvorD:Snape_Grass"
-      | "melvorD:Oak_Logs"
-      | "melvorD:Willow_Logs"
-      | "melvorD:Maple_Logs"
-      | "melvorD:Yew_Logs"
-      | "melvorD:Magic_Logs"
-      | "melvorD:Carrot"
-      | "melvorD:Garum_Herb"
-      | "melvorD:Sourweed_Herb"
-      | "melvorD:Mantalyme_Herb"
-      | "melvorD:Lemontyle_Herb"
-      | "melvorD:Oxilyme_Herb"
-      | "melvorD:Cherry"
-      | "melvorF:Poraxx_Herb"
-      | "melvorF:Pigtayle_Herb"
-      | "melvorF:Barrentoe_Herb"
-      | "melvorF:Apple"
-      | "melvorTotH:Pumpkin"
-      | "melvorTotH:Chilli"
-      | "melvorTotH:Mushrooms"
-      | "melvorTotH:Starfruit"
-      | "melvorTotH:Snowcress_Herb"
-      | "melvorTotH:Bitterlyme_Herb"
-      | "melvorTotH:Moonwort_Herb"
-      | "melvorTotH:Wurmtayle_Herb"
-      | "melvorTotH:Bananas"
-      | "melvorTotH:Grove_Logs"
-      | "melvorTotH:Elderwood_Logs"
-      | "melvorTotH:Carrion_Logs"
-    );
-export type FarmingCategoryID = ValidID | ("melvorD:Allotment" | "melvorD:Herb" | "melvorD:Tree");
+declare type ThievingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type ThievingActionID =
+  | "melvorF:MAN"
+  | "melvorF:GOLBIN"
+  | "melvorF:LUMBERJACK"
+  | "melvorF:BOB_THE_FARMER"
+  | "melvorF:FISHERMAN"
+  | "melvorF:CHEF"
+  | "melvorF:MINER"
+  | "melvorF:KNIGHT"
+  | "melvorF:WOMAN"
+  | "melvorF:GOLBIN_CHIEF"
+  | "melvorF:BANDIT_THUG"
+  | "melvorF:MARAUDER"
+  | "melvorF:MERCHANT"
+  | "melvorF:ASSISTANT_COOK"
+  | "melvorF:DOCK_HAND"
+  | "melvorF:TROLL"
+  | "melvorF:CYCLOPS"
+  | "melvorF:SQUIRE"
+  | "melvorF:WIZARD"
+  | "melvorF:ACOLYTE"
+  | "melvorF:COURT_JESTER"
+  | "melvorF:KING"
+  | "melvorF:PRINCESS"
+  | "melvorTotH:EXPLORER"
+  | "melvorTotH:NECROMANCER"
+  | "melvorTotH:PILGRIM"
+  | "melvorTotH:ADVENTURER"
+  | "melvorTotH:DARK_KNIGHT"
+  | "melvorTotH:SAGE"
+  | "melvorTotH:TREASURE_HUNTER"
+  | "melvorTotH:TRAVELLING_MERCHANT"
+  | "melvorTotH:VAMPIRE"
+  | "melvorTotH:MADREMONTE"
+  | "melvorTotH:VAMPIRE_LORD";
+declare type ThievingAreaID =
+  | "melvorF:LOW_TOWN"
+  | "melvorF:GOLBIN_VILLAGE"
+  | "melvorF:BANDIT_HIDEOUT"
+  | "melvorF:FARMERS_MARKET"
+  | "melvorF:BANQUET"
+  | "melvorF:PORT_OF_LEMVOR"
+  | "melvorF:CAVE_OF_GIANTS"
+  | "melvorF:OUTSKIRTS"
+  | "melvorF:FORT"
+  | "melvorF:WIZARD_TOWER"
+  | "melvorF:ROYAL_CASTLE"
+  | "melvorTotH:LOST_RUINS"
+  | "melvorTotH:UNDEAD_PALACE"
+  | "melvorTotH:DESERT"
+  | "melvorTotH:MUSHROOM_FOREST"
+  | "melvorTotH:TWILIGHT";
+declare type FarmingActionID =
+  | "melvorD:Potatoes"
+  | "melvorD:Onions"
+  | "melvorD:Cabbage"
+  | "melvorD:Tomatoes"
+  | "melvorD:Sweetcorn"
+  | "melvorD:Strawberries"
+  | "melvorD:Watermelon"
+  | "melvorD:Snape_Grass"
+  | "melvorD:Oak_Logs"
+  | "melvorD:Willow_Logs"
+  | "melvorD:Maple_Logs"
+  | "melvorD:Yew_Logs"
+  | "melvorD:Magic_Logs"
+  | "melvorD:Carrot"
+  | "melvorD:Garum_Herb"
+  | "melvorD:Sourweed_Herb"
+  | "melvorD:Mantalyme_Herb"
+  | "melvorD:Lemontyle_Herb"
+  | "melvorD:Oxilyme_Herb"
+  | "melvorD:Cherry"
+  | "melvorF:Poraxx_Herb"
+  | "melvorF:Pigtayle_Herb"
+  | "melvorF:Barrentoe_Herb"
+  | "melvorF:Apple"
+  | "melvorTotH:Pumpkin"
+  | "melvorTotH:Chilli"
+  | "melvorTotH:Mushrooms"
+  | "melvorTotH:Starfruit"
+  | "melvorTotH:Snowcress_Herb"
+  | "melvorTotH:Bitterlyme_Herb"
+  | "melvorTotH:Moonwort_Herb"
+  | "melvorTotH:Wurmtayle_Herb"
+  | "melvorTotH:Bananas"
+  | "melvorTotH:Grove_Logs"
+  | "melvorTotH:Elderwood_Logs"
+  | "melvorTotH:Carrion_Logs";
+declare type FarmingCategoryID = "melvorD:Allotment" | "melvorD:Herb" | "melvorD:Tree";
 /**
  * Matches when a Farming Harvest action occurs
  */
-export type FarmingHarvestActionEventMatcherOptions = FarmingHarvestActionEventMatcherOptions1 & {
+declare type FarmingHarvestActionEventMatcherOptions = FarmingHarvestActionEventMatcherOptions1 & {
   type: "FarmingHarvestAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -6167,11 +6082,11 @@ export type FarmingHarvestActionEventMatcherOptions = FarmingHarvestActionEventM
   categoryIDs?: [FarmingCategoryID, ...FarmingCategoryID[]];
   [k: string]: unknown;
 };
-export type FarmingHarvestActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type FarmingHarvestActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
 /**
  * Matches when a Fletching action occurs
  */
-export type FletchingActionEventMatcherOptions = FletchingActionEventMatcherOptions1 & {
+declare type FletchingActionEventMatcherOptions = FletchingActionEventMatcherOptions1 & {
   type: "FletchingAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -6195,110 +6110,104 @@ export type FletchingActionEventMatcherOptions = FletchingActionEventMatcherOpti
   isUnstrungBows?: boolean;
   [k: string]: unknown;
 };
-export type FletchingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type FletchingActionID =
-  | ValidID
-  | (
-      | "melvorF:Arrow_Shafts"
-      | "melvorF:Headless_Arrows"
-      | "melvorF:Bronze_Arrows"
-      | "melvorF:Iron_Arrows"
-      | "melvorF:Steel_Arrows"
-      | "melvorF:Mithril_Arrows"
-      | "melvorF:Adamant_Arrows"
-      | "melvorF:Rune_Arrows"
-      | "melvorF:Dragon_Arrows"
-      | "melvorF:Normal_Shortbow_U"
-      | "melvorF:Oak_Shortbow_U"
-      | "melvorF:Willow_Shortbow_U"
-      | "melvorF:Maple_Shortbow_U"
-      | "melvorF:Yew_Shortbow_U"
-      | "melvorF:Magic_Shortbow_U"
-      | "melvorF:Normal_Shortbow"
-      | "melvorF:Oak_Shortbow"
-      | "melvorF:Willow_Shortbow"
-      | "melvorF:Maple_Shortbow"
-      | "melvorF:Yew_Shortbow"
-      | "melvorF:Magic_Shortbow"
-      | "melvorF:Normal_Longbow_U"
-      | "melvorF:Oak_Longbow_U"
-      | "melvorF:Willow_Longbow_U"
-      | "melvorF:Maple_Longbow_U"
-      | "melvorF:Yew_Longbow_U"
-      | "melvorF:Magic_Longbow_U"
-      | "melvorF:Normal_Longbow"
-      | "melvorF:Oak_Longbow"
-      | "melvorF:Willow_Longbow"
-      | "melvorF:Maple_Longbow"
-      | "melvorF:Yew_Longbow"
-      | "melvorF:Magic_Longbow"
-      | "melvorF:Redwood_Shortbow_U"
-      | "melvorF:Redwood_Shortbow"
-      | "melvorF:Redwood_Longbow_U"
-      | "melvorF:Redwood_Longbow"
-      | "melvorF:Topaz_Bolts"
-      | "melvorF:Sapphire_Bolts"
-      | "melvorF:Ruby_Bolts"
-      | "melvorF:Emerald_Bolts"
-      | "melvorF:Diamond_Bolts"
-      | "melvorF:Bronze_Crossbow"
-      | "melvorF:Iron_Crossbow"
-      | "melvorF:Steel_Crossbow"
-      | "melvorF:Mithril_Crossbow"
-      | "melvorF:Adamant_Crossbow"
-      | "melvorF:Rune_Crossbow"
-      | "melvorF:Dragon_Crossbow"
-      | "melvorF:Bronze_Javelin"
-      | "melvorF:Iron_Javelin"
-      | "melvorF:Steel_Javelin"
-      | "melvorF:Mithril_Javelin"
-      | "melvorF:Adamant_Javelin"
-      | "melvorF:Rune_Javelin"
-      | "melvorF:Dragon_Javelin"
-      | "melvorF:Jadestone_Bolts"
-      | "melvorTotH:Elderwood_Shortbow_U"
-      | "melvorTotH:Elderwood_Shortbow"
-      | "melvorTotH:Elderwood_Longbow_U"
-      | "melvorTotH:Elderwood_Longbow"
-      | "melvorTotH:Revenant_Shortbow_U"
-      | "melvorTotH:Revenant_Shortbow"
-      | "melvorTotH:Revenant_Longbow_U"
-      | "melvorTotH:Revenant_Longbow"
-      | "melvorTotH:Carrion_Shortbow_U"
-      | "melvorTotH:Carrion_Shortbow"
-      | "melvorTotH:Carrion_Longbow_U"
-      | "melvorTotH:Carrion_Longbow"
-      | "melvorTotH:Corundum_Arrows"
-      | "melvorTotH:Augite_Arrows"
-      | "melvorTotH:Divine_Arrows"
-      | "melvorTotH:Ethereal_Arrows"
-      | "melvorTotH:Onyx_Bolts"
-      | "melvorTotH:Meteorite_Bolts"
-      | "melvorTotH:Decay_Bolts"
-      | "melvorTotH:Zephyte_Bolts"
-      | "melvorTotH:Corundum_Crossbow"
-      | "melvorTotH:Augite_Crossbow"
-      | "melvorTotH:Divine_Crossbow"
-      | "melvorTotH:Meteorite_Crossbow"
-      | "melvorTotH:Corundum_Javelin"
-      | "melvorTotH:Augite_Javelin"
-      | "melvorTotH:Divine_Javelin"
-      | "melvorTotH:Meteorite_Javelin"
-    );
-export type FletchingCategoryID =
-  | ValidID
-  | (
-      | "melvorF:Arrows"
-      | "melvorF:Shortbows"
-      | "melvorF:Longbows"
-      | "melvorF:Bolts"
-      | "melvorF:Crossbows"
-      | "melvorF:Javelins"
-    );
+declare type FletchingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type FletchingActionID =
+  | "melvorF:Arrow_Shafts"
+  | "melvorF:Headless_Arrows"
+  | "melvorF:Bronze_Arrows"
+  | "melvorF:Iron_Arrows"
+  | "melvorF:Steel_Arrows"
+  | "melvorF:Mithril_Arrows"
+  | "melvorF:Adamant_Arrows"
+  | "melvorF:Rune_Arrows"
+  | "melvorF:Dragon_Arrows"
+  | "melvorF:Normal_Shortbow_U"
+  | "melvorF:Oak_Shortbow_U"
+  | "melvorF:Willow_Shortbow_U"
+  | "melvorF:Maple_Shortbow_U"
+  | "melvorF:Yew_Shortbow_U"
+  | "melvorF:Magic_Shortbow_U"
+  | "melvorF:Normal_Shortbow"
+  | "melvorF:Oak_Shortbow"
+  | "melvorF:Willow_Shortbow"
+  | "melvorF:Maple_Shortbow"
+  | "melvorF:Yew_Shortbow"
+  | "melvorF:Magic_Shortbow"
+  | "melvorF:Normal_Longbow_U"
+  | "melvorF:Oak_Longbow_U"
+  | "melvorF:Willow_Longbow_U"
+  | "melvorF:Maple_Longbow_U"
+  | "melvorF:Yew_Longbow_U"
+  | "melvorF:Magic_Longbow_U"
+  | "melvorF:Normal_Longbow"
+  | "melvorF:Oak_Longbow"
+  | "melvorF:Willow_Longbow"
+  | "melvorF:Maple_Longbow"
+  | "melvorF:Yew_Longbow"
+  | "melvorF:Magic_Longbow"
+  | "melvorF:Redwood_Shortbow_U"
+  | "melvorF:Redwood_Shortbow"
+  | "melvorF:Redwood_Longbow_U"
+  | "melvorF:Redwood_Longbow"
+  | "melvorF:Topaz_Bolts"
+  | "melvorF:Sapphire_Bolts"
+  | "melvorF:Ruby_Bolts"
+  | "melvorF:Emerald_Bolts"
+  | "melvorF:Diamond_Bolts"
+  | "melvorF:Bronze_Crossbow"
+  | "melvorF:Iron_Crossbow"
+  | "melvorF:Steel_Crossbow"
+  | "melvorF:Mithril_Crossbow"
+  | "melvorF:Adamant_Crossbow"
+  | "melvorF:Rune_Crossbow"
+  | "melvorF:Dragon_Crossbow"
+  | "melvorF:Bronze_Javelin"
+  | "melvorF:Iron_Javelin"
+  | "melvorF:Steel_Javelin"
+  | "melvorF:Mithril_Javelin"
+  | "melvorF:Adamant_Javelin"
+  | "melvorF:Rune_Javelin"
+  | "melvorF:Dragon_Javelin"
+  | "melvorF:Jadestone_Bolts"
+  | "melvorTotH:Elderwood_Shortbow_U"
+  | "melvorTotH:Elderwood_Shortbow"
+  | "melvorTotH:Elderwood_Longbow_U"
+  | "melvorTotH:Elderwood_Longbow"
+  | "melvorTotH:Revenant_Shortbow_U"
+  | "melvorTotH:Revenant_Shortbow"
+  | "melvorTotH:Revenant_Longbow_U"
+  | "melvorTotH:Revenant_Longbow"
+  | "melvorTotH:Carrion_Shortbow_U"
+  | "melvorTotH:Carrion_Shortbow"
+  | "melvorTotH:Carrion_Longbow_U"
+  | "melvorTotH:Carrion_Longbow"
+  | "melvorTotH:Corundum_Arrows"
+  | "melvorTotH:Augite_Arrows"
+  | "melvorTotH:Divine_Arrows"
+  | "melvorTotH:Ethereal_Arrows"
+  | "melvorTotH:Onyx_Bolts"
+  | "melvorTotH:Meteorite_Bolts"
+  | "melvorTotH:Decay_Bolts"
+  | "melvorTotH:Zephyte_Bolts"
+  | "melvorTotH:Corundum_Crossbow"
+  | "melvorTotH:Augite_Crossbow"
+  | "melvorTotH:Divine_Crossbow"
+  | "melvorTotH:Meteorite_Crossbow"
+  | "melvorTotH:Corundum_Javelin"
+  | "melvorTotH:Augite_Javelin"
+  | "melvorTotH:Divine_Javelin"
+  | "melvorTotH:Meteorite_Javelin";
+declare type FletchingCategoryID =
+  | "melvorF:Arrows"
+  | "melvorF:Shortbows"
+  | "melvorF:Longbows"
+  | "melvorF:Bolts"
+  | "melvorF:Crossbows"
+  | "melvorF:Javelins";
 /**
  * Matches when a Crafting action occurs
  */
-export type CraftingActionEventMatcherOptions = CraftingActionEventMatcherOptions1 & {
+declare type CraftingActionEventMatcherOptions = CraftingActionEventMatcherOptions1 & {
   type: "CraftingAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -6314,125 +6223,119 @@ export type CraftingActionEventMatcherOptions = CraftingActionEventMatcherOption
   categoryIDs?: [CraftingCategoryID, ...CraftingCategoryID[]];
   [k: string]: unknown;
 };
-export type CraftingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type CraftingActionID =
-  | ValidID
-  | (
-      | "melvorF:Leather_Gloves"
-      | "melvorF:Leather_Boots"
-      | "melvorF:Leather_Cowl"
-      | "melvorF:Leather_Vambraces"
-      | "melvorF:Leather_Body"
-      | "melvorF:Leather_Chaps"
-      | "melvorF:Green_Dhide_Vambraces"
-      | "melvorF:Green_Dhide_Chaps"
-      | "melvorF:Green_Dhide_Body"
-      | "melvorF:Blue_Dhide_Vambraces"
-      | "melvorF:Blue_Dhide_Chaps"
-      | "melvorF:Blue_Dhide_Body"
-      | "melvorF:Red_Dhide_Vambraces"
-      | "melvorF:Red_Dhide_Chaps"
-      | "melvorF:Red_Dhide_Body"
-      | "melvorF:Black_Dhide_Vambraces"
-      | "melvorF:Black_Dhide_Chaps"
-      | "melvorF:Black_Dhide_Body"
-      | "melvorF:Silver_Topaz_Ring"
-      | "melvorF:Silver_Sapphire_Ring"
-      | "melvorF:Silver_Ruby_Ring"
-      | "melvorF:Silver_Emerald_Ring"
-      | "melvorF:Silver_Diamond_Ring"
-      | "melvorF:Gold_Topaz_Ring"
-      | "melvorF:Gold_Sapphire_Ring"
-      | "melvorF:Gold_Ruby_Ring"
-      | "melvorF:Gold_Emerald_Ring"
-      | "melvorF:Gold_Diamond_Ring"
-      | "melvorF:Silver_Topaz_Necklace"
-      | "melvorF:Silver_Sapphire_Necklace"
-      | "melvorF:Silver_Ruby_Necklace"
-      | "melvorF:Silver_Emerald_Necklace"
-      | "melvorF:Silver_Diamond_Necklace"
-      | "melvorF:Gold_Topaz_Necklace"
-      | "melvorF:Gold_Sapphire_Necklace"
-      | "melvorF:Gold_Ruby_Necklace"
-      | "melvorF:Gold_Emerald_Necklace"
-      | "melvorF:Gold_Diamond_Necklace"
-      | "melvorF:Hard_Leather_Gloves"
-      | "melvorF:Hard_Leather_Boots"
-      | "melvorF:Hard_Leather_Cowl"
-      | "melvorF:Hard_Leather_Vambraces"
-      | "melvorF:Hard_Leather_Body"
-      | "melvorF:Hard_Leather_Chaps"
-      | "melvorF:Green_Dhide_Shield"
-      | "melvorF:Blue_Dhide_Shield"
-      | "melvorF:Red_Dhide_Shield"
-      | "melvorF:Black_Dhide_Shield"
-      | "melvorF:Thiefs_Moneysack"
-      | "melvorF:Seed_Pouch"
-      | "melvorF:Runecrafting_Pouch"
-      | "melvorF:Alchemists_Bag"
-      | "melvorF:Ring_Of_Blade_Echoes"
-      | "melvorF:Ring_Of_Barrage"
-      | "melvorF:Ring_Of_Spirit_Power"
-      | "melvorF:Small_Urn"
-      | "melvorF:Medium_Urn"
-      | "melvorTotH:Elderwood_Vambraces"
-      | "melvorTotH:Elderwood_Chaps"
-      | "melvorTotH:Elderwood_Shield"
-      | "melvorTotH:Elderwood_Body"
-      | "melvorTotH:Revenant_Vambraces"
-      | "melvorTotH:Revenant_Chaps"
-      | "melvorTotH:Revenant_Shield"
-      | "melvorTotH:Revenant_Body"
-      | "melvorTotH:Carrion_Vambraces"
-      | "melvorTotH:Carrion_Chaps"
-      | "melvorTotH:Carrion_Shield"
-      | "melvorTotH:Carrion_Body"
-      | "melvorTotH:Iridium_Onyx_Ring"
-      | "melvorTotH:Palladium_Onyx_Ring"
-      | "melvorTotH:Iridium_Oricha_Ring"
-      | "melvorTotH:Palladium_Oricha_Ring"
-      | "melvorTotH:Iridium_Cerulean_Ring"
-      | "melvorTotH:Palladium_Cerulean_Ring"
-      | "melvorTotH:Iridium_Runestone_Ring"
-      | "melvorTotH:Palladium_Runestone_Ring"
-      | "melvorTotH:Iridium_Zephyte_Ring"
-      | "melvorTotH:Palladium_Zephyte_Ring"
-      | "melvorTotH:Meteorite_Warrior_Ring"
-      | "melvorTotH:Meteorite_Marksman_Ring"
-      | "melvorTotH:Meteorite_Spellcaster_Ring"
-      | "melvorTotH:Iridium_Onyx_Necklace"
-      | "melvorTotH:Palladium_Onyx_Necklace"
-      | "melvorTotH:Iridium_Oricha_Necklace"
-      | "melvorTotH:Palladium_Oricha_Necklace"
-      | "melvorTotH:Iridium_Cerulean_Necklace"
-      | "melvorTotH:Palladium_Cerulean_Necklace"
-      | "melvorTotH:Iridium_Runestone_Necklace"
-      | "melvorTotH:Palladium_Runestone_Necklace"
-      | "melvorTotH:Iridium_Zephyte_Necklace"
-      | "melvorTotH:Palladium_Zephyte_Necklace"
-      | "melvorTotH:Artisan_Pouch"
-      | "melvorTotH:Kindling_Pouch"
-      | "melvorTotH:Stamina_Pouch"
-      | "melvorTotH:Spirit_Bag"
-      | "melvorTotH:Chefs_Bag"
-      | "melvorTotH:Summoners_Bag"
-      | "melvorTotH:Large_Urn"
-    );
-export type CraftingCategoryID =
-  | ValidID
-  | (
-      | "melvorF:LeatherArmour"
-      | "melvorF:Dragonhide"
-      | "melvorF:Rings"
-      | "melvorF:Necklaces"
-      | "melvorF:Bags"
-      | "melvorF:Urns"
-      | "melvorTotH:HardwoodArmour"
-    );
+declare type CraftingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type CraftingActionID =
+  | "melvorF:Leather_Gloves"
+  | "melvorF:Leather_Boots"
+  | "melvorF:Leather_Cowl"
+  | "melvorF:Leather_Vambraces"
+  | "melvorF:Leather_Body"
+  | "melvorF:Leather_Chaps"
+  | "melvorF:Green_Dhide_Vambraces"
+  | "melvorF:Green_Dhide_Chaps"
+  | "melvorF:Green_Dhide_Body"
+  | "melvorF:Blue_Dhide_Vambraces"
+  | "melvorF:Blue_Dhide_Chaps"
+  | "melvorF:Blue_Dhide_Body"
+  | "melvorF:Red_Dhide_Vambraces"
+  | "melvorF:Red_Dhide_Chaps"
+  | "melvorF:Red_Dhide_Body"
+  | "melvorF:Black_Dhide_Vambraces"
+  | "melvorF:Black_Dhide_Chaps"
+  | "melvorF:Black_Dhide_Body"
+  | "melvorF:Silver_Topaz_Ring"
+  | "melvorF:Silver_Sapphire_Ring"
+  | "melvorF:Silver_Ruby_Ring"
+  | "melvorF:Silver_Emerald_Ring"
+  | "melvorF:Silver_Diamond_Ring"
+  | "melvorF:Gold_Topaz_Ring"
+  | "melvorF:Gold_Sapphire_Ring"
+  | "melvorF:Gold_Ruby_Ring"
+  | "melvorF:Gold_Emerald_Ring"
+  | "melvorF:Gold_Diamond_Ring"
+  | "melvorF:Silver_Topaz_Necklace"
+  | "melvorF:Silver_Sapphire_Necklace"
+  | "melvorF:Silver_Ruby_Necklace"
+  | "melvorF:Silver_Emerald_Necklace"
+  | "melvorF:Silver_Diamond_Necklace"
+  | "melvorF:Gold_Topaz_Necklace"
+  | "melvorF:Gold_Sapphire_Necklace"
+  | "melvorF:Gold_Ruby_Necklace"
+  | "melvorF:Gold_Emerald_Necklace"
+  | "melvorF:Gold_Diamond_Necklace"
+  | "melvorF:Hard_Leather_Gloves"
+  | "melvorF:Hard_Leather_Boots"
+  | "melvorF:Hard_Leather_Cowl"
+  | "melvorF:Hard_Leather_Vambraces"
+  | "melvorF:Hard_Leather_Body"
+  | "melvorF:Hard_Leather_Chaps"
+  | "melvorF:Green_Dhide_Shield"
+  | "melvorF:Blue_Dhide_Shield"
+  | "melvorF:Red_Dhide_Shield"
+  | "melvorF:Black_Dhide_Shield"
+  | "melvorF:Thiefs_Moneysack"
+  | "melvorF:Seed_Pouch"
+  | "melvorF:Runecrafting_Pouch"
+  | "melvorF:Alchemists_Bag"
+  | "melvorF:Ring_Of_Blade_Echoes"
+  | "melvorF:Ring_Of_Barrage"
+  | "melvorF:Ring_Of_Spirit_Power"
+  | "melvorF:Small_Urn"
+  | "melvorF:Medium_Urn"
+  | "melvorTotH:Elderwood_Vambraces"
+  | "melvorTotH:Elderwood_Chaps"
+  | "melvorTotH:Elderwood_Shield"
+  | "melvorTotH:Elderwood_Body"
+  | "melvorTotH:Revenant_Vambraces"
+  | "melvorTotH:Revenant_Chaps"
+  | "melvorTotH:Revenant_Shield"
+  | "melvorTotH:Revenant_Body"
+  | "melvorTotH:Carrion_Vambraces"
+  | "melvorTotH:Carrion_Chaps"
+  | "melvorTotH:Carrion_Shield"
+  | "melvorTotH:Carrion_Body"
+  | "melvorTotH:Iridium_Onyx_Ring"
+  | "melvorTotH:Palladium_Onyx_Ring"
+  | "melvorTotH:Iridium_Oricha_Ring"
+  | "melvorTotH:Palladium_Oricha_Ring"
+  | "melvorTotH:Iridium_Cerulean_Ring"
+  | "melvorTotH:Palladium_Cerulean_Ring"
+  | "melvorTotH:Iridium_Runestone_Ring"
+  | "melvorTotH:Palladium_Runestone_Ring"
+  | "melvorTotH:Iridium_Zephyte_Ring"
+  | "melvorTotH:Palladium_Zephyte_Ring"
+  | "melvorTotH:Meteorite_Warrior_Ring"
+  | "melvorTotH:Meteorite_Marksman_Ring"
+  | "melvorTotH:Meteorite_Spellcaster_Ring"
+  | "melvorTotH:Iridium_Onyx_Necklace"
+  | "melvorTotH:Palladium_Onyx_Necklace"
+  | "melvorTotH:Iridium_Oricha_Necklace"
+  | "melvorTotH:Palladium_Oricha_Necklace"
+  | "melvorTotH:Iridium_Cerulean_Necklace"
+  | "melvorTotH:Palladium_Cerulean_Necklace"
+  | "melvorTotH:Iridium_Runestone_Necklace"
+  | "melvorTotH:Palladium_Runestone_Necklace"
+  | "melvorTotH:Iridium_Zephyte_Necklace"
+  | "melvorTotH:Palladium_Zephyte_Necklace"
+  | "melvorTotH:Artisan_Pouch"
+  | "melvorTotH:Kindling_Pouch"
+  | "melvorTotH:Stamina_Pouch"
+  | "melvorTotH:Spirit_Bag"
+  | "melvorTotH:Chefs_Bag"
+  | "melvorTotH:Summoners_Bag"
+  | "melvorTotH:Large_Urn";
+declare type CraftingCategoryID =
+  | "melvorF:LeatherArmour"
+  | "melvorF:Dragonhide"
+  | "melvorF:Rings"
+  | "melvorF:Necklaces"
+  | "melvorF:Bags"
+  | "melvorF:Urns"
+  | "melvorTotH:HardwoodArmour";
 /**
  * Matches when a Runecrafting action occurs
  */
-export type RunecraftingActionEventMatcherOptions = RunecraftingActionEventMatcherOptions1 & {
+declare type RunecraftingActionEventMatcherOptions = RunecraftingActionEventMatcherOptions1 & {
   type: "RunecraftingAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -6460,165 +6363,159 @@ export type RunecraftingActionEventMatcherOptions = RunecraftingActionEventMatch
   subCategories?: [RunecraftingSubCategory, ...RunecraftingSubCategory[]];
   [k: string]: unknown;
 };
-export type RunecraftingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type RunecraftingActionID =
-  | ValidID
-  | (
-      | "melvorF:Air_Rune"
-      | "melvorF:Mind_Rune"
-      | "melvorF:Water_Rune"
-      | "melvorF:Earth_Rune"
-      | "melvorF:Fire_Rune"
-      | "melvorF:Body_Rune"
-      | "melvorF:Chaos_Rune"
-      | "melvorF:Death_Rune"
-      | "melvorF:Blood_Rune"
-      | "melvorF:Ancient_Rune"
-      | "melvorF:Light_Rune"
-      | "melvorF:Nature_Rune"
-      | "melvorF:Havoc_Rune"
-      | "melvorF:Spirit_Rune"
-      | "melvorF:Mist_Rune"
-      | "melvorF:Dust_Rune"
-      | "melvorF:Mud_Rune"
-      | "melvorF:Smoke_Rune"
-      | "melvorF:Steam_Rune"
-      | "melvorF:Lava_Rune"
-      | "melvorF:Staff_of_Air"
-      | "melvorF:Staff_of_Water"
-      | "melvorF:Staff_of_Earth"
-      | "melvorF:Staff_of_Fire"
-      | "melvorF:Air_Battlestaff"
-      | "melvorF:Water_Battlestaff"
-      | "melvorF:Earth_Battlestaff"
-      | "melvorF:Fire_Battlestaff"
-      | "melvorF:Mystic_Air_Staff"
-      | "melvorF:Mystic_Water_Staff"
-      | "melvorF:Mystic_Earth_Staff"
-      | "melvorF:Mystic_Fire_Staff"
-      | "melvorF:Air_Acolyte_Wizard_Hat"
-      | "melvorF:Air_Acolyte_Wizard_Robes"
-      | "melvorF:Air_Acolyte_Wizard_Bottoms"
-      | "melvorF:Air_Acolyte_Wizard_Boots"
-      | "melvorF:Water_Acolyte_Wizard_Hat"
-      | "melvorF:Water_Acolyte_Wizard_Robes"
-      | "melvorF:Water_Acolyte_Wizard_Bottoms"
-      | "melvorF:Water_Acolyte_Wizard_Boots"
-      | "melvorF:Earth_Acolyte_Wizard_Hat"
-      | "melvorF:Earth_Acolyte_Wizard_Robes"
-      | "melvorF:Earth_Acolyte_Wizard_Bottoms"
-      | "melvorF:Earth_Acolyte_Wizard_Boots"
-      | "melvorF:Fire_Acolyte_Wizard_Hat"
-      | "melvorF:Fire_Acolyte_Wizard_Robes"
-      | "melvorF:Fire_Acolyte_Wizard_Bottoms"
-      | "melvorF:Fire_Acolyte_Wizard_Boots"
-      | "melvorF:Air_Adept_Wizard_Hat"
-      | "melvorF:Air_Adept_Wizard_Robes"
-      | "melvorF:Air_Adept_Wizard_Bottoms"
-      | "melvorF:Air_Adept_Wizard_Boots"
-      | "melvorF:Water_Adept_Wizard_Hat"
-      | "melvorF:Water_Adept_Wizard_Robes"
-      | "melvorF:Water_Adept_Wizard_Bottoms"
-      | "melvorF:Water_Adept_Wizard_Boots"
-      | "melvorF:Earth_Adept_Wizard_Hat"
-      | "melvorF:Earth_Adept_Wizard_Robes"
-      | "melvorF:Earth_Adept_Wizard_Bottoms"
-      | "melvorF:Earth_Adept_Wizard_Boots"
-      | "melvorF:Fire_Adept_Wizard_Hat"
-      | "melvorF:Fire_Adept_Wizard_Robes"
-      | "melvorF:Fire_Adept_Wizard_Bottoms"
-      | "melvorF:Fire_Adept_Wizard_Boots"
-      | "melvorF:Air_Expert_Wizard_Hat"
-      | "melvorF:Air_Expert_Wizard_Robes"
-      | "melvorF:Air_Expert_Wizard_Bottoms"
-      | "melvorF:Air_Expert_Wizard_Boots"
-      | "melvorF:Water_Expert_Wizard_Hat"
-      | "melvorF:Water_Expert_Wizard_Robes"
-      | "melvorF:Water_Expert_Wizard_Bottoms"
-      | "melvorF:Water_Expert_Wizard_Boots"
-      | "melvorF:Earth_Expert_Wizard_Hat"
-      | "melvorF:Earth_Expert_Wizard_Robes"
-      | "melvorF:Earth_Expert_Wizard_Bottoms"
-      | "melvorF:Earth_Expert_Wizard_Boots"
-      | "melvorF:Fire_Expert_Wizard_Hat"
-      | "melvorF:Fire_Expert_Wizard_Robes"
-      | "melvorF:Fire_Expert_Wizard_Bottoms"
-      | "melvorF:Fire_Expert_Wizard_Boots"
-      | "melvorF:Air_Imbued_Wand"
-      | "melvorF:Water_Imbued_Wand"
-      | "melvorF:Earth_Imbued_Wand"
-      | "melvorF:Fire_Imbued_Wand"
-      | "melvorTotH:Poison_Rune"
-      | "melvorTotH:Decay_Rune"
-      | "melvorTotH:Infernal_Rune"
-      | "melvorTotH:Despair_Rune"
-      | "melvorTotH:Soul_Rune"
-      | "melvorTotH:Lightning_Rune"
-      | "melvorTotH:Archaic_Rune"
-      | "melvorTotH:Calamity_Rune"
-      | "melvorTotH:Poison_Master_Wizard_Hat"
-      | "melvorTotH:Poison_Master_Wizard_Robes"
-      | "melvorTotH:Poison_Master_Wizard_Bottoms"
-      | "melvorTotH:Poison_Master_Wizard_Boots"
-      | "melvorTotH:Infernal_Master_Wizard_Hat"
-      | "melvorTotH:Infernal_Master_Wizard_Robes"
-      | "melvorTotH:Infernal_Master_Wizard_Bottoms"
-      | "melvorTotH:Infernal_Master_Wizard_Boots"
-      | "melvorTotH:Lightning_Master_Wizard_Hat"
-      | "melvorTotH:Lightning_Master_Wizard_Robes"
-      | "melvorTotH:Lightning_Master_Wizard_Bottoms"
-      | "melvorTotH:Lightning_Master_Wizard_Boots"
-      | "melvorTotH:Poison_Legendary_Wizard_Hat"
-      | "melvorTotH:Poison_Legendary_Wizard_Robes"
-      | "melvorTotH:Poison_Legendary_Wizard_Bottoms"
-      | "melvorTotH:Poison_Legendary_Wizard_Boots"
-      | "melvorTotH:Infernal_Legendary_Wizard_Hat"
-      | "melvorTotH:Infernal_Legendary_Wizard_Robes"
-      | "melvorTotH:Infernal_Legendary_Wizard_Bottoms"
-      | "melvorTotH:Infernal_Legendary_Wizard_Boots"
-      | "melvorTotH:Lightning_Legendary_Wizard_Hat"
-      | "melvorTotH:Lightning_Legendary_Wizard_Robes"
-      | "melvorTotH:Lightning_Legendary_Wizard_Bottoms"
-      | "melvorTotH:Lightning_Legendary_Wizard_Boots"
-      | "melvorTotH:Poison_Mythical_Wizard_Hat"
-      | "melvorTotH:Poison_Mythical_Wizard_Robes"
-      | "melvorTotH:Poison_Mythical_Wizard_Bottoms"
-      | "melvorTotH:Poison_Mythical_Wizard_Boots"
-      | "melvorTotH:Infernal_Mythical_Wizard_Hat"
-      | "melvorTotH:Infernal_Mythical_Wizard_Robes"
-      | "melvorTotH:Infernal_Mythical_Wizard_Bottoms"
-      | "melvorTotH:Infernal_Mythical_Wizard_Boots"
-      | "melvorTotH:Lightning_Mythical_Wizard_Hat"
-      | "melvorTotH:Lightning_Mythical_Wizard_Robes"
-      | "melvorTotH:Lightning_Mythical_Wizard_Bottoms"
-      | "melvorTotH:Lightning_Mythical_Wizard_Boots"
-      | "melvorTotH:Poison_Staff"
-      | "melvorTotH:Infernal_Staff"
-      | "melvorTotH:Lightning_Staff"
-      | "melvorTotH:Meteorite_Staff"
-      | "melvorTotH:Despair_Wand"
-      | "melvorTotH:Archaic_Wand"
-      | "melvorTotH:Calamity_Wand"
-    );
-export type RunecraftingCategoryID =
-  | ValidID
-  | (
-      | "melvorF:StandardRunes"
-      | "melvorF:CombinationRunes"
-      | "melvorF:StavesWands"
-      | "melvorF:AirMagicGear"
-      | "melvorF:WaterMagicGear"
-      | "melvorF:EarthMagicGear"
-      | "melvorF:FireMagicGear"
-      | "melvorTotH:PoisonMagicGear"
-      | "melvorTotH:InfernalMagicGear"
-      | "melvorTotH:LightningMagicGear"
-    );
-export type RunecraftingSubCategory = "ElementalRunes" | "Staff" | "None";
+declare type RunecraftingActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type RunecraftingActionID =
+  | "melvorF:Air_Rune"
+  | "melvorF:Mind_Rune"
+  | "melvorF:Water_Rune"
+  | "melvorF:Earth_Rune"
+  | "melvorF:Fire_Rune"
+  | "melvorF:Body_Rune"
+  | "melvorF:Chaos_Rune"
+  | "melvorF:Death_Rune"
+  | "melvorF:Blood_Rune"
+  | "melvorF:Ancient_Rune"
+  | "melvorF:Light_Rune"
+  | "melvorF:Nature_Rune"
+  | "melvorF:Havoc_Rune"
+  | "melvorF:Spirit_Rune"
+  | "melvorF:Mist_Rune"
+  | "melvorF:Dust_Rune"
+  | "melvorF:Mud_Rune"
+  | "melvorF:Smoke_Rune"
+  | "melvorF:Steam_Rune"
+  | "melvorF:Lava_Rune"
+  | "melvorF:Staff_of_Air"
+  | "melvorF:Staff_of_Water"
+  | "melvorF:Staff_of_Earth"
+  | "melvorF:Staff_of_Fire"
+  | "melvorF:Air_Battlestaff"
+  | "melvorF:Water_Battlestaff"
+  | "melvorF:Earth_Battlestaff"
+  | "melvorF:Fire_Battlestaff"
+  | "melvorF:Mystic_Air_Staff"
+  | "melvorF:Mystic_Water_Staff"
+  | "melvorF:Mystic_Earth_Staff"
+  | "melvorF:Mystic_Fire_Staff"
+  | "melvorF:Air_Acolyte_Wizard_Hat"
+  | "melvorF:Air_Acolyte_Wizard_Robes"
+  | "melvorF:Air_Acolyte_Wizard_Bottoms"
+  | "melvorF:Air_Acolyte_Wizard_Boots"
+  | "melvorF:Water_Acolyte_Wizard_Hat"
+  | "melvorF:Water_Acolyte_Wizard_Robes"
+  | "melvorF:Water_Acolyte_Wizard_Bottoms"
+  | "melvorF:Water_Acolyte_Wizard_Boots"
+  | "melvorF:Earth_Acolyte_Wizard_Hat"
+  | "melvorF:Earth_Acolyte_Wizard_Robes"
+  | "melvorF:Earth_Acolyte_Wizard_Bottoms"
+  | "melvorF:Earth_Acolyte_Wizard_Boots"
+  | "melvorF:Fire_Acolyte_Wizard_Hat"
+  | "melvorF:Fire_Acolyte_Wizard_Robes"
+  | "melvorF:Fire_Acolyte_Wizard_Bottoms"
+  | "melvorF:Fire_Acolyte_Wizard_Boots"
+  | "melvorF:Air_Adept_Wizard_Hat"
+  | "melvorF:Air_Adept_Wizard_Robes"
+  | "melvorF:Air_Adept_Wizard_Bottoms"
+  | "melvorF:Air_Adept_Wizard_Boots"
+  | "melvorF:Water_Adept_Wizard_Hat"
+  | "melvorF:Water_Adept_Wizard_Robes"
+  | "melvorF:Water_Adept_Wizard_Bottoms"
+  | "melvorF:Water_Adept_Wizard_Boots"
+  | "melvorF:Earth_Adept_Wizard_Hat"
+  | "melvorF:Earth_Adept_Wizard_Robes"
+  | "melvorF:Earth_Adept_Wizard_Bottoms"
+  | "melvorF:Earth_Adept_Wizard_Boots"
+  | "melvorF:Fire_Adept_Wizard_Hat"
+  | "melvorF:Fire_Adept_Wizard_Robes"
+  | "melvorF:Fire_Adept_Wizard_Bottoms"
+  | "melvorF:Fire_Adept_Wizard_Boots"
+  | "melvorF:Air_Expert_Wizard_Hat"
+  | "melvorF:Air_Expert_Wizard_Robes"
+  | "melvorF:Air_Expert_Wizard_Bottoms"
+  | "melvorF:Air_Expert_Wizard_Boots"
+  | "melvorF:Water_Expert_Wizard_Hat"
+  | "melvorF:Water_Expert_Wizard_Robes"
+  | "melvorF:Water_Expert_Wizard_Bottoms"
+  | "melvorF:Water_Expert_Wizard_Boots"
+  | "melvorF:Earth_Expert_Wizard_Hat"
+  | "melvorF:Earth_Expert_Wizard_Robes"
+  | "melvorF:Earth_Expert_Wizard_Bottoms"
+  | "melvorF:Earth_Expert_Wizard_Boots"
+  | "melvorF:Fire_Expert_Wizard_Hat"
+  | "melvorF:Fire_Expert_Wizard_Robes"
+  | "melvorF:Fire_Expert_Wizard_Bottoms"
+  | "melvorF:Fire_Expert_Wizard_Boots"
+  | "melvorF:Air_Imbued_Wand"
+  | "melvorF:Water_Imbued_Wand"
+  | "melvorF:Earth_Imbued_Wand"
+  | "melvorF:Fire_Imbued_Wand"
+  | "melvorTotH:Poison_Rune"
+  | "melvorTotH:Decay_Rune"
+  | "melvorTotH:Infernal_Rune"
+  | "melvorTotH:Despair_Rune"
+  | "melvorTotH:Soul_Rune"
+  | "melvorTotH:Lightning_Rune"
+  | "melvorTotH:Archaic_Rune"
+  | "melvorTotH:Calamity_Rune"
+  | "melvorTotH:Poison_Master_Wizard_Hat"
+  | "melvorTotH:Poison_Master_Wizard_Robes"
+  | "melvorTotH:Poison_Master_Wizard_Bottoms"
+  | "melvorTotH:Poison_Master_Wizard_Boots"
+  | "melvorTotH:Infernal_Master_Wizard_Hat"
+  | "melvorTotH:Infernal_Master_Wizard_Robes"
+  | "melvorTotH:Infernal_Master_Wizard_Bottoms"
+  | "melvorTotH:Infernal_Master_Wizard_Boots"
+  | "melvorTotH:Lightning_Master_Wizard_Hat"
+  | "melvorTotH:Lightning_Master_Wizard_Robes"
+  | "melvorTotH:Lightning_Master_Wizard_Bottoms"
+  | "melvorTotH:Lightning_Master_Wizard_Boots"
+  | "melvorTotH:Poison_Legendary_Wizard_Hat"
+  | "melvorTotH:Poison_Legendary_Wizard_Robes"
+  | "melvorTotH:Poison_Legendary_Wizard_Bottoms"
+  | "melvorTotH:Poison_Legendary_Wizard_Boots"
+  | "melvorTotH:Infernal_Legendary_Wizard_Hat"
+  | "melvorTotH:Infernal_Legendary_Wizard_Robes"
+  | "melvorTotH:Infernal_Legendary_Wizard_Bottoms"
+  | "melvorTotH:Infernal_Legendary_Wizard_Boots"
+  | "melvorTotH:Lightning_Legendary_Wizard_Hat"
+  | "melvorTotH:Lightning_Legendary_Wizard_Robes"
+  | "melvorTotH:Lightning_Legendary_Wizard_Bottoms"
+  | "melvorTotH:Lightning_Legendary_Wizard_Boots"
+  | "melvorTotH:Poison_Mythical_Wizard_Hat"
+  | "melvorTotH:Poison_Mythical_Wizard_Robes"
+  | "melvorTotH:Poison_Mythical_Wizard_Bottoms"
+  | "melvorTotH:Poison_Mythical_Wizard_Boots"
+  | "melvorTotH:Infernal_Mythical_Wizard_Hat"
+  | "melvorTotH:Infernal_Mythical_Wizard_Robes"
+  | "melvorTotH:Infernal_Mythical_Wizard_Bottoms"
+  | "melvorTotH:Infernal_Mythical_Wizard_Boots"
+  | "melvorTotH:Lightning_Mythical_Wizard_Hat"
+  | "melvorTotH:Lightning_Mythical_Wizard_Robes"
+  | "melvorTotH:Lightning_Mythical_Wizard_Bottoms"
+  | "melvorTotH:Lightning_Mythical_Wizard_Boots"
+  | "melvorTotH:Poison_Staff"
+  | "melvorTotH:Infernal_Staff"
+  | "melvorTotH:Lightning_Staff"
+  | "melvorTotH:Meteorite_Staff"
+  | "melvorTotH:Despair_Wand"
+  | "melvorTotH:Archaic_Wand"
+  | "melvorTotH:Calamity_Wand";
+declare type RunecraftingCategoryID =
+  | "melvorF:StandardRunes"
+  | "melvorF:CombinationRunes"
+  | "melvorF:StavesWands"
+  | "melvorF:AirMagicGear"
+  | "melvorF:WaterMagicGear"
+  | "melvorF:EarthMagicGear"
+  | "melvorF:FireMagicGear"
+  | "melvorTotH:PoisonMagicGear"
+  | "melvorTotH:InfernalMagicGear"
+  | "melvorTotH:LightningMagicGear";
+declare type RunecraftingSubCategory = "ElementalRunes" | "Staff" | "None";
 /**
  * Matches when a Herblore action occurs
  */
-export type HerbloreActionEventMatcherOptions = HerbloreActionEventMatcherOptions1 & {
+declare type HerbloreActionEventMatcherOptions = HerbloreActionEventMatcherOptions1 & {
   type: "HerbloreAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -6634,62 +6531,59 @@ export type HerbloreActionEventMatcherOptions = HerbloreActionEventMatcherOption
   categoryIDs?: [HerbloreCategoryID, ...HerbloreCategoryID[]];
   [k: string]: unknown;
 };
-export type HerbloreActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type HerbloreActionID =
-  | ValidID
-  | (
-      | "melvorF:Melee_Accuracy_Potion"
-      | "melvorF:Melee_Strength_Potion"
-      | "melvorF:Melee_Evasion_Potion"
-      | "melvorF:Ranged_Assistance_Potion"
-      | "melvorF:Magic_Assistance_Potion"
-      | "melvorF:Regeneration_Potion"
-      | "melvorF:Damage_Reduction_Potion"
-      | "melvorF:Bird_Nest_Potion"
-      | "melvorF:Fishermans_Potion"
-      | "melvorF:Controlled_Heat_Potion"
-      | "melvorF:Generous_Cook_Potion"
-      | "melvorF:Perfect_Swing_Potion"
-      | "melvorF:Seeing_Gold_Potion"
-      | "melvorF:Gentle_Hands_Potion"
-      | "melvorF:Farming_Potion"
-      | "melvorF:Fletching_Potion"
-      | "melvorF:Crafting_Potion"
-      | "melvorF:Elemental_Potion"
-      | "melvorF:Herblore_Potion"
-      | "melvorF:Magic_Damage_Potion"
-      | "melvorF:Ranged_Strength_Potion"
-      | "melvorF:Diamond_Luck_Potion"
-      | "melvorF:Divine_Potion"
-      | "melvorF:Lucky_Herb_Potion"
-      | "melvorF:Performance_Enhancing_Potion"
-      | "melvorF:Necromancer_Potion"
-      | "melvorF:Hinder_Potion"
-      | "melvorF:Famished_Potion"
-      | "melvorF:Lethal_Toxins_Potion"
-      | "melvorF:Secret_Stardust_Potion"
-      | "melvorTotH:Area_Control_Potion"
-      | "melvorTotH:Adaptive_Defence_Potion"
-      | "melvorTotH:Slayer_Bounty_Potion"
-      | "melvorTotH:Holy_Bulwark_Potion"
-      | "melvorTotH:Adaptive_Accuracy_Potion"
-      | "melvorTotH:Reaper_Potion"
-      | "melvorTotH:Penetration_Potion"
-      | "melvorTotH:Critical_Strike_Potion"
-      | "melvorTotH:Alchemic_Practice_Potion"
-      | "melvorTotH:Gem_Detector_Potion"
-      | "melvorTotH:Multicooker_Potion"
-      | "melvorTotH:Star_Seeker_Potion"
-      | "melvorTotH:Traps_Potion"
-      | "melvorTotH:Blacksmith_Potion"
-      | "melvorTotH:Enkindled_Yields_Potion"
-      | "melvorTotH:Alt_Magic_Potion"
-    );
-export type HerbloreCategoryID = ValidID | ("melvorF:CombatPotions" | "melvorF:SkillPotions");
+declare type HerbloreActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type HerbloreActionID =
+  | "melvorF:Melee_Accuracy_Potion"
+  | "melvorF:Melee_Strength_Potion"
+  | "melvorF:Melee_Evasion_Potion"
+  | "melvorF:Ranged_Assistance_Potion"
+  | "melvorF:Magic_Assistance_Potion"
+  | "melvorF:Regeneration_Potion"
+  | "melvorF:Damage_Reduction_Potion"
+  | "melvorF:Bird_Nest_Potion"
+  | "melvorF:Fishermans_Potion"
+  | "melvorF:Controlled_Heat_Potion"
+  | "melvorF:Generous_Cook_Potion"
+  | "melvorF:Perfect_Swing_Potion"
+  | "melvorF:Seeing_Gold_Potion"
+  | "melvorF:Gentle_Hands_Potion"
+  | "melvorF:Farming_Potion"
+  | "melvorF:Fletching_Potion"
+  | "melvorF:Crafting_Potion"
+  | "melvorF:Elemental_Potion"
+  | "melvorF:Herblore_Potion"
+  | "melvorF:Magic_Damage_Potion"
+  | "melvorF:Ranged_Strength_Potion"
+  | "melvorF:Diamond_Luck_Potion"
+  | "melvorF:Divine_Potion"
+  | "melvorF:Lucky_Herb_Potion"
+  | "melvorF:Performance_Enhancing_Potion"
+  | "melvorF:Necromancer_Potion"
+  | "melvorF:Hinder_Potion"
+  | "melvorF:Famished_Potion"
+  | "melvorF:Lethal_Toxins_Potion"
+  | "melvorF:Secret_Stardust_Potion"
+  | "melvorTotH:Area_Control_Potion"
+  | "melvorTotH:Adaptive_Defence_Potion"
+  | "melvorTotH:Slayer_Bounty_Potion"
+  | "melvorTotH:Holy_Bulwark_Potion"
+  | "melvorTotH:Adaptive_Accuracy_Potion"
+  | "melvorTotH:Reaper_Potion"
+  | "melvorTotH:Penetration_Potion"
+  | "melvorTotH:Critical_Strike_Potion"
+  | "melvorTotH:Alchemic_Practice_Potion"
+  | "melvorTotH:Gem_Detector_Potion"
+  | "melvorTotH:Multicooker_Potion"
+  | "melvorTotH:Star_Seeker_Potion"
+  | "melvorTotH:Traps_Potion"
+  | "melvorTotH:Blacksmith_Potion"
+  | "melvorTotH:Enkindled_Yields_Potion"
+  | "melvorTotH:Alt_Magic_Potion";
+declare type HerbloreCategoryID = "melvorF:CombatPotions" | "melvorF:SkillPotions";
 /**
  * Matches when a SkillName action occurs
  */
-export type AgilityActionEventMatcherOptions = AgilityActionEventMatcherOptions1 & {
+declare type AgilityActionEventMatcherOptions = AgilityActionEventMatcherOptions1 & {
   type: "AgilityAction";
   /**
    * Optional. If present, the Agility Obstacle must have an ID that matches one element of the array
@@ -6705,91 +6599,88 @@ export type AgilityActionEventMatcherOptions = AgilityActionEventMatcherOptions1
   categoryIDs?: [number, ...number[]];
   [k: string]: unknown;
 };
-export type AgilityActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type AgilityObstacleID =
-  | ValidID
-  | (
-      | "melvorF:CargoNet"
-      | "melvorF:RopeSwing"
-      | "melvorF:RopeClimb"
-      | "melvorF:RopeJump"
-      | "melvorF:MonkeyBars"
-      | "melvorF:BalanceBeam"
-      | "melvorF:BalanceSeesaw"
-      | "melvorF:PipeClimb"
-      | "melvorF:PipeBalance"
-      | "melvorF:PitJump"
-      | "melvorF:SteppingStones"
-      | "melvorF:CoalStones"
-      | "melvorF:MudCrawl"
-      | "melvorF:MudDive"
-      | "melvorF:CaveClimb"
-      | "melvorF:GapJump"
-      | "melvorF:RockClimb"
-      | "melvorF:CliffClimb"
-      | "melvorF:CliffBalance"
-      | "melvorF:MountainClimb"
-      | "melvorF:TreeClimb"
-      | "melvorF:TreeHop"
-      | "melvorF:TreeBalance"
-      | "melvorF:RockyWaters"
-      | "melvorF:LakeSwim"
-      | "melvorF:RaftDrifting"
-      | "melvorF:SpikeTrap"
-      | "melvorF:HeatTrap"
-      | "melvorF:BoulderTrap"
-      | "melvorF:WaterTrap"
-      | "melvorF:FreezingTrap"
-      | "melvorF:PipeCrawl"
-      | "melvorF:RaftBuilding"
-      | "melvorF:SpikeJump"
-      | "melvorF:TreeHang"
-      | "melvorF:ALovelyJog"
-      | "melvorF:LavaJump"
-      | "melvorF:WaterJump"
-      | "melvorF:IceJump"
-      | "melvorF:CaveMaze"
-      | "melvorF:FrozenLakeCrossing"
-      | "melvorF:Waterfall"
-      | "melvorF:LavaWaterfallDodge"
-      | "melvorF:BoulderMove"
-      | "melvorF:DragonFight"
-      | "melvorF:OceanRafting"
-      | "melvorF:ForestTrail"
-      | "melvorF:RunicTrail"
-      | "melvorF:BurningCoals"
-      | "melvorF:SwelteringPools"
-      | "melvorF:RooftopRun"
-      | "melvorTotH:PitMaze"
-      | "melvorTotH:FrozenMaze"
-      | "melvorTotH:WaterMaze"
-      | "melvorTotH:ForestMaze"
-      | "melvorTotH:PipeMaze"
-      | "melvorTotH:BoulderBalance"
-      | "melvorTotH:CaveWaters"
-      | "melvorTotH:RuneCrawl"
-      | "melvorTotH:MonkeyTrail"
-      | "melvorTotH:ForestJog"
-      | "melvorTotH:RopeTrap"
-      | "melvorTotH:IceTrap"
-      | "melvorTotH:BurningTrap"
-      | "melvorTotH:CaveTrap"
-      | "melvorTotH:BalanceTrap"
-      | "melvorTotH:RooftopClimb"
-      | "melvorTotH:ForestClimb"
-      | "melvorTotH:FreezingClimb"
-      | "melvorTotH:GapClimb"
-      | "melvorTotH:WaterfallClimb"
-      | "melvorTotH:FreezingRafting"
-      | "melvorTotH:WaterDive"
-      | "melvorTotH:WaterfallCrossing"
-      | "melvorTotH:MountainTrail"
-      | "melvorTotH:LavaTrail"
-    );
+declare type AgilityActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type AgilityObstacleID =
+  | "melvorF:CargoNet"
+  | "melvorF:RopeSwing"
+  | "melvorF:RopeClimb"
+  | "melvorF:RopeJump"
+  | "melvorF:MonkeyBars"
+  | "melvorF:BalanceBeam"
+  | "melvorF:BalanceSeesaw"
+  | "melvorF:PipeClimb"
+  | "melvorF:PipeBalance"
+  | "melvorF:PitJump"
+  | "melvorF:SteppingStones"
+  | "melvorF:CoalStones"
+  | "melvorF:MudCrawl"
+  | "melvorF:MudDive"
+  | "melvorF:CaveClimb"
+  | "melvorF:GapJump"
+  | "melvorF:RockClimb"
+  | "melvorF:CliffClimb"
+  | "melvorF:CliffBalance"
+  | "melvorF:MountainClimb"
+  | "melvorF:TreeClimb"
+  | "melvorF:TreeHop"
+  | "melvorF:TreeBalance"
+  | "melvorF:RockyWaters"
+  | "melvorF:LakeSwim"
+  | "melvorF:RaftDrifting"
+  | "melvorF:SpikeTrap"
+  | "melvorF:HeatTrap"
+  | "melvorF:BoulderTrap"
+  | "melvorF:WaterTrap"
+  | "melvorF:FreezingTrap"
+  | "melvorF:PipeCrawl"
+  | "melvorF:RaftBuilding"
+  | "melvorF:SpikeJump"
+  | "melvorF:TreeHang"
+  | "melvorF:ALovelyJog"
+  | "melvorF:LavaJump"
+  | "melvorF:WaterJump"
+  | "melvorF:IceJump"
+  | "melvorF:CaveMaze"
+  | "melvorF:FrozenLakeCrossing"
+  | "melvorF:Waterfall"
+  | "melvorF:LavaWaterfallDodge"
+  | "melvorF:BoulderMove"
+  | "melvorF:DragonFight"
+  | "melvorF:OceanRafting"
+  | "melvorF:ForestTrail"
+  | "melvorF:RunicTrail"
+  | "melvorF:BurningCoals"
+  | "melvorF:SwelteringPools"
+  | "melvorF:RooftopRun"
+  | "melvorTotH:PitMaze"
+  | "melvorTotH:FrozenMaze"
+  | "melvorTotH:WaterMaze"
+  | "melvorTotH:ForestMaze"
+  | "melvorTotH:PipeMaze"
+  | "melvorTotH:BoulderBalance"
+  | "melvorTotH:CaveWaters"
+  | "melvorTotH:RuneCrawl"
+  | "melvorTotH:MonkeyTrail"
+  | "melvorTotH:ForestJog"
+  | "melvorTotH:RopeTrap"
+  | "melvorTotH:IceTrap"
+  | "melvorTotH:BurningTrap"
+  | "melvorTotH:CaveTrap"
+  | "melvorTotH:BalanceTrap"
+  | "melvorTotH:RooftopClimb"
+  | "melvorTotH:ForestClimb"
+  | "melvorTotH:FreezingClimb"
+  | "melvorTotH:GapClimb"
+  | "melvorTotH:WaterfallClimb"
+  | "melvorTotH:FreezingRafting"
+  | "melvorTotH:WaterDive"
+  | "melvorTotH:WaterfallCrossing"
+  | "melvorTotH:MountainTrail"
+  | "melvorTotH:LavaTrail";
 /**
  * Matches when a Summoning action occurs
  */
-export type SummoningActionEventMatcherOptions = SummoningActionEventMatcherOptions1 & {
+declare type SummoningActionEventMatcherOptions = SummoningActionEventMatcherOptions1 & {
   type: "SummoningAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -6805,44 +6696,41 @@ export type SummoningActionEventMatcherOptions = SummoningActionEventMatcherOpti
   categoryIDs?: [SummoningCategoryID, ...SummoningCategoryID[]];
   [k: string]: unknown;
 };
-export type SummoningActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type SummoningActionID =
-  | ValidID
-  | (
-      | "melvorF:GolbinThief"
-      | "melvorF:Occultist"
-      | "melvorF:Wolf"
-      | "melvorF:Ent"
-      | "melvorF:Mole"
-      | "melvorF:Octopus"
-      | "melvorF:Minotaur"
-      | "melvorF:Centaur"
-      | "melvorF:Witch"
-      | "melvorF:Pig"
-      | "melvorF:Crow"
-      | "melvorF:Leprechaun"
-      | "melvorF:Cyclops"
-      | "melvorF:Yak"
-      | "melvorF:Unicorn"
-      | "melvorF:Dragon"
-      | "melvorF:Monkey"
-      | "melvorF:Salamander"
-      | "melvorF:Bear"
-      | "melvorF:Devil"
-      | "melvorTotH:Eagle"
-      | "melvorTotH:Owl"
-      | "melvorTotH:Beaver"
-      | "melvorTotH:Fox"
-      | "melvorTotH:LightningSpirit"
-      | "melvorTotH:Siren"
-      | "melvorTotH:Spider"
-      | "melvorTotH:Spectre"
-    );
-export type SummoningCategoryID = ValidID | ("melvorD:Marks" | "melvorD:TabletsFamiliars" | "melvorD:Synergies");
+declare type SummoningActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type SummoningActionID =
+  | "melvorF:GolbinThief"
+  | "melvorF:Occultist"
+  | "melvorF:Wolf"
+  | "melvorF:Ent"
+  | "melvorF:Mole"
+  | "melvorF:Octopus"
+  | "melvorF:Minotaur"
+  | "melvorF:Centaur"
+  | "melvorF:Witch"
+  | "melvorF:Pig"
+  | "melvorF:Crow"
+  | "melvorF:Leprechaun"
+  | "melvorF:Cyclops"
+  | "melvorF:Yak"
+  | "melvorF:Unicorn"
+  | "melvorF:Dragon"
+  | "melvorF:Monkey"
+  | "melvorF:Salamander"
+  | "melvorF:Bear"
+  | "melvorF:Devil"
+  | "melvorTotH:Eagle"
+  | "melvorTotH:Owl"
+  | "melvorTotH:Beaver"
+  | "melvorTotH:Fox"
+  | "melvorTotH:LightningSpirit"
+  | "melvorTotH:Siren"
+  | "melvorTotH:Spider"
+  | "melvorTotH:Spectre";
+declare type SummoningCategoryID = "melvorD:Marks" | "melvorD:TabletsFamiliars" | "melvorD:Synergies";
 /**
  * Matches when an Astrology action occurs
  */
-export type AstrologyActionEventMatcherOptions = AstrologyActionEventMatcherOptions1 & {
+declare type AstrologyActionEventMatcherOptions = AstrologyActionEventMatcherOptions1 & {
   type: "AstrologyAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -6852,30 +6740,27 @@ export type AstrologyActionEventMatcherOptions = AstrologyActionEventMatcherOpti
   actionIDs?: [AstrologyActionID, ...AstrologyActionID[]];
   [k: string]: unknown;
 };
-export type AstrologyActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type AstrologyActionID =
-  | ValidID
-  | (
-      | "melvorF:Deedree"
-      | "melvorF:Iridan"
-      | "melvorF:Ameria"
-      | "melvorF:Terra"
-      | "melvorF:Vale"
-      | "melvorF:Syllia"
-      | "melvorF:Arachi"
-      | "melvorF:Ko"
-      | "melvorF:Tellus"
-      | "melvorF:Hyden"
-      | "melvorF:Qimican"
-      | "melvorTotH:Variel"
-      | "melvorTotH:Haemir"
-      | "melvorTotH:Rosaniya"
-      | "melvorTotH:Ashtar"
-    );
+declare type AstrologyActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type AstrologyActionID =
+  | "melvorF:Deedree"
+  | "melvorF:Iridan"
+  | "melvorF:Ameria"
+  | "melvorF:Terra"
+  | "melvorF:Vale"
+  | "melvorF:Syllia"
+  | "melvorF:Arachi"
+  | "melvorF:Ko"
+  | "melvorF:Tellus"
+  | "melvorF:Hyden"
+  | "melvorF:Qimican"
+  | "melvorTotH:Variel"
+  | "melvorTotH:Haemir"
+  | "melvorTotH:Rosaniya"
+  | "melvorTotH:Ashtar";
 /**
  * Matches when an Alt. Magic action occurs
  */
-export type AltMagicActionEventMatcherOptions = AltMagicActionEventMatcherOptions1 & {
+declare type AltMagicActionEventMatcherOptions = AltMagicActionEventMatcherOptions1 & {
   type: "AltMagicAction";
   /**
    * Optional. If present, the spell must have an ID that matches one element of the array
@@ -6885,35 +6770,32 @@ export type AltMagicActionEventMatcherOptions = AltMagicActionEventMatcherOption
   actionIDs?: [AltMagicSpellID, ...AltMagicSpellID[]];
   [k: string]: unknown;
 };
-export type AltMagicActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
-export type AltMagicSpellID =
-  | ValidID
-  | (
-      | "melvorF:JustLearning"
-      | "melvorF:SuperheatI"
-      | "melvorF:ItemAlchemyI"
-      | "melvorF:BoneOffering"
-      | "melvorF:SuperheatII"
-      | "melvorF:ItemAlchemyII"
-      | "melvorF:RagstoRichesI"
-      | "melvorF:BlessedOffering"
-      | "melvorF:SuperheatIII"
-      | "melvorF:RagstoRichesII"
-      | "melvorF:ItemAlchemyIII"
-      | "melvorF:SuperheatIV"
-      | "melvorF:HolyInvocationI"
-      | "melvorF:HolyInvocationII"
-      | "melvorTotH:Nullification"
-      | "melvorTotH:Transmutation"
-      | "melvorTotH:Purification"
-      | "melvorTotH:Fragmentation"
-      | "melvorTotH:SuperheatV"
-      | "melvorTotH:HolyInvocationIII"
-      | "melvorTotH:Embellish"
-      | "melvorTotH:RagstoRichesIII"
-      | "melvorTotH:ItemAlchemyIV"
-    );
-export type WeaponItemData = WeaponItemData1 & {
+declare type AltMagicActionEventMatcherOptions1 = SkillActionEventMatcherOptions;
+declare type AltMagicSpellID =
+  | "melvorF:JustLearning"
+  | "melvorF:SuperheatI"
+  | "melvorF:ItemAlchemyI"
+  | "melvorF:BoneOffering"
+  | "melvorF:SuperheatII"
+  | "melvorF:ItemAlchemyII"
+  | "melvorF:RagstoRichesI"
+  | "melvorF:BlessedOffering"
+  | "melvorF:SuperheatIII"
+  | "melvorF:RagstoRichesII"
+  | "melvorF:ItemAlchemyIII"
+  | "melvorF:SuperheatIV"
+  | "melvorF:HolyInvocationI"
+  | "melvorF:HolyInvocationII"
+  | "melvorTotH:Nullification"
+  | "melvorTotH:Transmutation"
+  | "melvorTotH:Purification"
+  | "melvorTotH:Fragmentation"
+  | "melvorTotH:SuperheatV"
+  | "melvorTotH:HolyInvocationIII"
+  | "melvorTotH:Embellish"
+  | "melvorTotH:RagstoRichesIII"
+  | "melvorTotH:ItemAlchemyIV";
+declare type WeaponItemData = WeaponItemData1 & {
   itemType: "Weapon";
   /**
    * Determines which combat style this weapon enables the player to use
@@ -6925,8 +6807,8 @@ export type WeaponItemData = WeaponItemData1 & {
   ammoTypeRequired?: AmmoType;
   [k: string]: unknown;
 };
-export type WeaponItemData1 = BaseEquipmentItemData1;
-export type FoodItemData = FoodItemData1 & {
+declare type WeaponItemData1 = BaseEquipmentItemData1;
+declare type FoodItemData = FoodItemData1 & {
   itemType: "Food";
   /**
    * The base healing value of the food. Specified as 1/10th of the desired value in Standard Mode.
@@ -6934,8 +6816,8 @@ export type FoodItemData = FoodItemData1 & {
   healsFor: number;
   [k: string]: unknown;
 };
-export type FoodItemData1 = BaseItemData1;
-export type BoneItemData = BoneItemData1 & {
+declare type FoodItemData1 = BaseItemData1;
+declare type BoneItemData = BoneItemData1 & {
   itemType: "Bone";
   /**
    * The base number of prayer points obtained by burying the item
@@ -6943,8 +6825,8 @@ export type BoneItemData = BoneItemData1 & {
   prayerPoints: number;
   [k: string]: unknown;
 };
-export type BoneItemData1 = BaseItemData1;
-export type PotionItemData = PotionItemData1 & {
+declare type BoneItemData1 = BaseItemData1;
+declare type PotionItemData = PotionItemData1 & {
   itemType: "Potion";
   /**
    * Modifiers provided to the Player when the potion is in use
@@ -6970,30 +6852,27 @@ export type PotionItemData = PotionItemData1 & {
   consumesOn: [GameEventMatcherData, ...GameEventMatcherData[]];
   [k: string]: unknown;
 };
-export type PotionItemData1 = BaseItemData1;
-export type ActionID =
-  | ValidID
-  | (
-      | "melvorD:Combat"
-      | "melvorD:GolbinRaid"
-      | "melvorD:Magic"
-      | "melvorD:Woodcutting"
-      | "melvorD:Fishing"
-      | "melvorD:Firemaking"
-      | "melvorD:Cooking"
-      | "melvorD:Mining"
-      | "melvorD:Smithing"
-      | "melvorD:Thieving"
-      | "melvorD:Farming"
-      | "melvorD:Fletching"
-      | "melvorD:Crafting"
-      | "melvorD:Runecrafting"
-      | "melvorD:Herblore"
-      | "melvorD:Agility"
-      | "melvorD:Summoning"
-      | "melvorD:Astrology"
-    );
-export type ReadableItemData = ReadableItemData1 & {
+declare type PotionItemData1 = BaseItemData1;
+declare type ActionID =
+  | "melvorD:Combat"
+  | "melvorD:GolbinRaid"
+  | "melvorD:Magic"
+  | "melvorD:Woodcutting"
+  | "melvorD:Fishing"
+  | "melvorD:Firemaking"
+  | "melvorD:Cooking"
+  | "melvorD:Mining"
+  | "melvorD:Smithing"
+  | "melvorD:Thieving"
+  | "melvorD:Farming"
+  | "melvorD:Fletching"
+  | "melvorD:Crafting"
+  | "melvorD:Runecrafting"
+  | "melvorD:Herblore"
+  | "melvorD:Agility"
+  | "melvorD:Summoning"
+  | "melvorD:Astrology";
+declare type ReadableItemData = ReadableItemData1 & {
   itemType: "Readable";
   /**
    * Optional. If present, specifies the Bootstrap 4 Modal HTMLElement-id in the DOM. This modal will be opened when the item is read. Has precendence over the swalData property
@@ -7015,8 +6894,8 @@ export type ReadableItemData = ReadableItemData1 & {
   };
   [k: string]: unknown;
 };
-export type ReadableItemData1 = BaseItemData1;
-export type LanguageCategory =
+declare type ReadableItemData1 = BaseItemData1;
+declare type LanguageCategory =
   | "SPECIAL_ATTACK"
   | "SKILL_NAME"
   | "ITEM_NAME"
@@ -7087,7 +6966,7 @@ export type LanguageCategory =
   | "MINING_TYPE"
   | "MOD_MANAGER"
   | "TOWNSHIP_TASKS";
-export type OpenableItemData = OpenableItemData1 & {
+declare type OpenableItemData = OpenableItemData1 & {
   itemType: "Openable";
   /**
    * Defines the items that can be obtained by opening this item
@@ -7101,8 +6980,8 @@ export type OpenableItemData = OpenableItemData1 & {
   keyItem?: AnyItemQuantity;
   [k: string]: unknown;
 };
-export type OpenableItemData1 = BaseItemData1;
-export type TokenItemData = TokenItemData1 & {
+declare type OpenableItemData1 = BaseItemData1;
+declare type TokenItemData = TokenItemData1 & {
   itemType: "Token";
   /**
    * Modifiers that are provided once for each time the item has been claimed. If the masteryToken modifier is present, this item acts as a Mastery Token instead, and provides Mastery Pool XP when claimed, proportional to the modifier value.
@@ -7110,8 +6989,8 @@ export type TokenItemData = TokenItemData1 & {
   modifiers: PlayerModifierData1;
   [k: string]: unknown;
 };
-export type TokenItemData1 = BaseItemData1;
-export type CompostItemData = CompostItemData1 & {
+declare type TokenItemData1 = BaseItemData1;
+declare type CompostItemData = CompostItemData1 & {
   itemType: "Compost";
   /**
    * The percent value that using this item will fill the compost meter in farming by.
@@ -7131,11 +7010,11 @@ export type CompostItemData = CompostItemData1 & {
   barStyle: string;
   [k: string]: unknown;
 };
-export type CompostItemData1 = BaseItemData1;
+declare type CompostItemData1 = BaseItemData1;
 /**
  * Data for constructing an AttackStyle object
  */
-export type AttackStyleData = AttackStyleData1 & {
+declare type AttackStyleData = AttackStyleData1 & {
   /**
    * Modifiers provided to the player when using this attack style
    */
@@ -7164,11 +7043,11 @@ export type AttackStyleData = AttackStyleData1 & {
   name: string;
   [k: string]: unknown;
 };
-export type AttackStyleData1 = IDData;
+declare type AttackStyleData1 = IDData;
 /**
  * Data for constructing a StackingEffect object
  */
-export type StackingEffectData = StackingEffectData1 & {
+declare type StackingEffectData = StackingEffectData1 & {
   /**
    * The number of stacks of this effect to add per proc
    */
@@ -7195,11 +7074,11 @@ export type StackingEffectData = StackingEffectData1 & {
   langeName?: LangStringData;
   [k: string]: unknown;
 };
-export type StackingEffectData1 = IDData;
+declare type StackingEffectData1 = IDData;
 /**
  * Data for constructing a SpecialAttack object
  */
-export type AttackData = AttackData1 & {
+declare type AttackData = AttackData1 & {
   /**
    * The default percentage chance that this attack is chosen
    */
@@ -7282,20 +7161,20 @@ export type AttackData = AttackData1 & {
   descriptionGenerator?: string;
   [k: string]: unknown;
 };
-export type AttackData1 = IDData;
-export type DamageData = NormalDamageData | CustomDamageData;
+declare type AttackData1 = IDData;
+declare type DamageData = NormalDamageData | CustomDamageData;
 /**
  * Defines customized damage for a special attack
  */
-export type CustomDamageData = CustomDamageData1 & {
+declare type CustomDamageData = CustomDamageData1 & {
   damageType: "Custom";
   [k: string]: unknown;
 };
-export type CustomDamageData1 = Damage;
+declare type CustomDamageData1 = Damage;
 /**
  * Data for constructing a CombatPassive object
  */
-export type CombatPassiveData = CombatPassiveData1 & {
+declare type CombatPassiveData = CombatPassiveData1 & {
   /**
    * The display name of the Passive
    */
@@ -7310,11 +7189,11 @@ export type CombatPassiveData = CombatPassiveData1 & {
   customDescription?: string;
   [k: string]: unknown;
 };
-export type CombatPassiveData1 = IDData;
+declare type CombatPassiveData1 = IDData;
 /**
  * Data for constructing a Monster object
  */
-export type MonsterData = MonsterData1 & {
+declare type MonsterData = MonsterData1 & {
   /**
    * Display name of the Monster
    */
@@ -7443,224 +7322,215 @@ export type MonsterData = MonsterData1 & {
   };
   [k: string]: unknown;
 };
-export type MonsterData1 = IDData;
-export type CombatPassiveID =
-  | ValidID
-  | (
-      | "melvorF:ControlledAffliction"
-      | "melvorD:SwingFirst"
-      | "melvorD:DontHurtMe"
-      | "melvorD:JustAScratch"
-      | "melvorD:BigBoi"
-      | "melvorD:CantTouchThis"
-      | "melvorD:Stronk"
-      | "melvorD:JustDontMiss"
-      | "melvorD:CheatsEnabled"
-      | "melvorD:SomethingWillHit"
-      | "melvorD:Yoink"
-      | "melvorD:NothingPersonalKid"
-      | "melvorD:Humungus"
-      | "melvorD:NerfThisGuy"
-      | "melvorD:No1Mixtape"
-      | "melvorD:AbsoluteThickness"
-      | "melvorD:OhNoooo"
-      | "melvorD:Rank1Ninja"
-      | "melvorD:ProGamer"
-      | "melvorD:AllOnRed"
-      | "melvorD:ImAlreadyToxic"
-      | "melvorD:CurseOfTheUndead"
-      | "melvorF:Purity"
-      | "melvorF:Rebirth"
-      | "melvorF:MeleeProficiency"
-      | "melvorF:RangedProficiency"
-      | "melvorF:MagicProficiency"
-      | "melvorF:AfflictedMight"
-      | "melvorF:Afflicted"
-      | "melvorF:MistBoss"
-      | "melvorF:ToxicGlands"
-      | "melvorF:PoisonousHide"
-      | "melvorF:CursedRobes"
-      | "melvorF:SpikedArmour"
-      | "melvorF:BonePlate"
-      | "melvorF:FleetingDefence"
-      | "melvorF:EventPassive1"
-      | "melvorF:EventPassive2"
-      | "melvorF:EventPassive3"
-      | "melvorF:EventPassive4"
-      | "melvorF:EventPassive5"
-      | "melvorF:EventPassive6"
-      | "melvorF:EventPassive7"
-      | "melvorF:EventPassive8"
-      | "melvorF:EventPassive9"
-      | "melvorF:EventPassive10"
-      | "melvorF:EventPassive11"
-      | "melvorF:EventPassive12"
-      | "melvorTotH:Intimidation3"
-      | "melvorTotH:Intimidation7"
-      | "melvorTotH:Intimidation8"
-      | "melvorTotH:Intimidation9"
-      | "melvorTotH:Intimidation10"
-      | "melvorTotH:Intimidation11"
-      | "melvorTotH:Intimidation13"
-      | "melvorTotH:Intimidation15"
-      | "melvorTotH:Intimidation16"
-      | "melvorTotH:Intimidation18"
-      | "melvorTotH:Intimidation19"
-      | "melvorTotH:Intimidation20"
-      | "melvorTotH:Intimidation21"
-      | "melvorTotH:Intimidation23"
-      | "melvorTotH:Intimidation24"
-      | "melvorTotH:Intimidation25"
-      | "melvorTotH:Intimidation29"
-      | "melvorTotH:Intimidation30"
-      | "melvorTotH:Intimidation36"
-      | "melvorTotH:ToxicSkin"
-      | "melvorTotH:AfflictedVitality"
-      | "melvorTotH:Ablaze"
-      | "melvorTotH:FrozenBuild"
-      | "melvorTotH:Shocked"
-      | "melvorTotH:AbsorbingSkin"
-      | "melvorTotH:Duality"
-      | "melvorTotH:StickyWebs"
-      | "melvorTotH:Decay"
-      | "melvorTotH:Rage"
-      | "melvorTotH:IngrainedRoots"
-      | "melvorTotH:CursedLifesteal"
-      | "melvorTotH:UndeadGrasp"
-      | "melvorTotH:DarkBlade"
-      | "melvorTotH:WeaknessFinder"
-      | "melvorTotH:ElementalMaster"
-      | "melvorTotH:Assassin"
-      | "melvorTotH:Warrior"
-      | "melvorTotH:PoisonLifesteal"
-      | "melvorTotH:PoisonImmunity"
-      | "melvorTotH:BurnImmunity"
-      | "melvorTotH:ProtectionOfTheForest"
-      | "melvorTotH:SlowImmunity"
-      | "melvorTotH:StunImmunity"
-      | "melvorTotH:BleedImmunity"
-      | "melvorTotH:Intimidation38"
-      | "melvorTotH:Intimidation39"
-      | "melvorTotH:Intimidation40"
-      | "melvorTotH:Intimidation42"
-      | "melvorTotH:Intimidation43"
-      | "melvorTotH:Intimidation44"
-      | "melvorTotH:Intimidation27"
-      | "melvorTotH:Intimidation35"
-      | "melvorTotH:BleedLifesteal500"
-      | "melvorTotH:Intimidation4"
-      | "melvorTotH:AfflictedResilience"
-      | "melvorTotH:GrowingMadness"
-      | "melvorTotH:MomentInTime"
-      | "melvorTotH:ReignOverTime"
-      | "melvorTotH:EndOfTurnHealing3_15"
-    );
-export type StandardSpellID =
-  | ValidID
-  | (
-      | "melvorD:WindStrike"
-      | "melvorD:WaterStrike"
-      | "melvorD:EarthStrike"
-      | "melvorD:FireStrike"
-      | "melvorD:WindBolt"
-      | "melvorD:WaterBolt"
-      | "melvorD:EarthBolt"
-      | "melvorD:FireBolt"
-      | "melvorD:WindBlast"
-      | "melvorD:WaterBlast"
-      | "melvorD:EarthBlast"
-      | "melvorD:FireBlast"
-      | "melvorD:WindWave"
-      | "melvorD:WaterWave"
-      | "melvorD:EarthWave"
-      | "melvorD:FireWave"
-      | "melvorD:WindSurge"
-      | "melvorD:WaterSurge"
-      | "melvorD:EarthSurge"
-      | "melvorD:FireSurge"
-      | "melvorF:NaturesCall"
-      | "melvorF:NaturesWrath"
-    );
-export type PetID =
-  | ValidID
-  | (
-      | "melvorD:Beavis"
-      | "melvorD:PuddingDuckie"
-      | "melvorD:Pyro"
-      | "melvorD:Cris"
-      | "melvorD:CoolRock"
-      | "melvorD:PuffTheBabyDragon"
-      | "melvorD:LarryTheLonelyLizard"
-      | "melvorD:Bruce"
-      | "melvorD:LilRon"
-      | "melvorD:Leonardo"
-      | "melvorD:FinnTheCat"
-      | "melvorD:GoldenGolbin"
-      | "melvorD:Ty"
-      | "melvorD:RipperTheReindeer"
-      | "melvorD:Chick"
-      | "melvorD:Zarrah"
-      | "melvorD:Chio"
-      | "melvorD:BouncingBob"
-      | "melvorD:Rosey"
-      | "melvorD:Ayyden"
-      | "melvorD:ArcticYeti"
-      | "melvorD:Mac"
-      | "melvorD:JerryTheGiraffe"
-      | "melvorD:PrestonThePlatypus"
-      | "melvorD:FestiveCoolRock"
-      | "melvorD:FestiveChio"
-      | "melvorF:Snek"
-      | "melvorF:Quill"
-      | "melvorF:Caaarrrlll"
-      | "melvorF:Gunter"
-      | "melvorF:Gronk"
-      | "melvorF:Marahute"
-      | "melvorF:Salem"
-      | "melvorF:Monkey"
-      | "melvorF:Asura"
-      | "melvorF:Peri"
-      | "melvorF:Otto"
-      | "melvorF:JellyJim"
-      | "melvorF:Harley"
-      | "melvorF:Singe"
-      | "melvorF:Aquarias"
-      | "melvorF:Norman"
-      | "melvorF:Erran"
-      | "melvorF:Ren"
-      | "melvorF:Pablo"
-      | "melvorF:Sam"
-      | "melvorF:TimTheWolf"
-      | "melvorF:Mark"
-      | "melvorF:Bone"
-      | "melvorF:Astro"
-      | "melvorF:B"
-      | "melvorF:Marcy"
-      | "melvorF:Roger"
-      | "melvorF:Ace"
-      | "melvorF:Layla"
-      | "melvorF:MisterFuzzbutt"
-      | "melvorF:OctaviusLepidus"
-      | "melvorTotH:Penelope"
-      | "melvorTotH:Harry"
-      | "melvorTotH:Azuzu"
-      | "melvorTotH:Webbie"
-      | "melvorTotH:BillAndWendy"
-      | "melvorTotH:Phantom"
-      | "melvorTotH:Patchy"
-      | "melvorTotH:Harold"
-      | "melvorTotH:ClassyRock"
-      | "melvorTotH:CuteRock"
-      | "melvorTotH:RoyalRock"
-      | "melvorTotH:ElfRock"
-      | "melvorTotH:MagicRock"
-      | "melvorTotH:PartyRock"
-      | "melvorTotH:WarmSnowflake"
-    );
+declare type MonsterData1 = IDData;
+declare type CombatPassiveID =
+  | "melvorF:ControlledAffliction"
+  | "melvorD:SwingFirst"
+  | "melvorD:DontHurtMe"
+  | "melvorD:JustAScratch"
+  | "melvorD:BigBoi"
+  | "melvorD:CantTouchThis"
+  | "melvorD:Stronk"
+  | "melvorD:JustDontMiss"
+  | "melvorD:CheatsEnabled"
+  | "melvorD:SomethingWillHit"
+  | "melvorD:Yoink"
+  | "melvorD:NothingPersonalKid"
+  | "melvorD:Humungus"
+  | "melvorD:NerfThisGuy"
+  | "melvorD:No1Mixtape"
+  | "melvorD:AbsoluteThickness"
+  | "melvorD:OhNoooo"
+  | "melvorD:Rank1Ninja"
+  | "melvorD:ProGamer"
+  | "melvorD:AllOnRed"
+  | "melvorD:ImAlreadyToxic"
+  | "melvorD:CurseOfTheUndead"
+  | "melvorF:Purity"
+  | "melvorF:Rebirth"
+  | "melvorF:MeleeProficiency"
+  | "melvorF:RangedProficiency"
+  | "melvorF:MagicProficiency"
+  | "melvorF:AfflictedMight"
+  | "melvorF:Afflicted"
+  | "melvorF:MistBoss"
+  | "melvorF:ToxicGlands"
+  | "melvorF:PoisonousHide"
+  | "melvorF:CursedRobes"
+  | "melvorF:SpikedArmour"
+  | "melvorF:BonePlate"
+  | "melvorF:FleetingDefence"
+  | "melvorF:EventPassive1"
+  | "melvorF:EventPassive2"
+  | "melvorF:EventPassive3"
+  | "melvorF:EventPassive4"
+  | "melvorF:EventPassive5"
+  | "melvorF:EventPassive6"
+  | "melvorF:EventPassive7"
+  | "melvorF:EventPassive8"
+  | "melvorF:EventPassive9"
+  | "melvorF:EventPassive10"
+  | "melvorF:EventPassive11"
+  | "melvorF:EventPassive12"
+  | "melvorTotH:Intimidation3"
+  | "melvorTotH:Intimidation7"
+  | "melvorTotH:Intimidation8"
+  | "melvorTotH:Intimidation9"
+  | "melvorTotH:Intimidation10"
+  | "melvorTotH:Intimidation11"
+  | "melvorTotH:Intimidation13"
+  | "melvorTotH:Intimidation15"
+  | "melvorTotH:Intimidation16"
+  | "melvorTotH:Intimidation18"
+  | "melvorTotH:Intimidation19"
+  | "melvorTotH:Intimidation20"
+  | "melvorTotH:Intimidation21"
+  | "melvorTotH:Intimidation23"
+  | "melvorTotH:Intimidation24"
+  | "melvorTotH:Intimidation25"
+  | "melvorTotH:Intimidation29"
+  | "melvorTotH:Intimidation30"
+  | "melvorTotH:Intimidation36"
+  | "melvorTotH:ToxicSkin"
+  | "melvorTotH:AfflictedVitality"
+  | "melvorTotH:Ablaze"
+  | "melvorTotH:FrozenBuild"
+  | "melvorTotH:Shocked"
+  | "melvorTotH:AbsorbingSkin"
+  | "melvorTotH:Duality"
+  | "melvorTotH:StickyWebs"
+  | "melvorTotH:Decay"
+  | "melvorTotH:Rage"
+  | "melvorTotH:IngrainedRoots"
+  | "melvorTotH:CursedLifesteal"
+  | "melvorTotH:UndeadGrasp"
+  | "melvorTotH:DarkBlade"
+  | "melvorTotH:WeaknessFinder"
+  | "melvorTotH:ElementalMaster"
+  | "melvorTotH:Assassin"
+  | "melvorTotH:Warrior"
+  | "melvorTotH:PoisonLifesteal"
+  | "melvorTotH:PoisonImmunity"
+  | "melvorTotH:BurnImmunity"
+  | "melvorTotH:ProtectionOfTheForest"
+  | "melvorTotH:SlowImmunity"
+  | "melvorTotH:StunImmunity"
+  | "melvorTotH:BleedImmunity"
+  | "melvorTotH:Intimidation38"
+  | "melvorTotH:Intimidation39"
+  | "melvorTotH:Intimidation40"
+  | "melvorTotH:Intimidation42"
+  | "melvorTotH:Intimidation43"
+  | "melvorTotH:Intimidation44"
+  | "melvorTotH:Intimidation27"
+  | "melvorTotH:Intimidation35"
+  | "melvorTotH:BleedLifesteal500"
+  | "melvorTotH:Intimidation4"
+  | "melvorTotH:AfflictedResilience"
+  | "melvorTotH:GrowingMadness"
+  | "melvorTotH:MomentInTime"
+  | "melvorTotH:ReignOverTime"
+  | "melvorTotH:EndOfTurnHealing3_15";
+declare type StandardSpellID =
+  | "melvorD:WindStrike"
+  | "melvorD:WaterStrike"
+  | "melvorD:EarthStrike"
+  | "melvorD:FireStrike"
+  | "melvorD:WindBolt"
+  | "melvorD:WaterBolt"
+  | "melvorD:EarthBolt"
+  | "melvorD:FireBolt"
+  | "melvorD:WindBlast"
+  | "melvorD:WaterBlast"
+  | "melvorD:EarthBlast"
+  | "melvorD:FireBlast"
+  | "melvorD:WindWave"
+  | "melvorD:WaterWave"
+  | "melvorD:EarthWave"
+  | "melvorD:FireWave"
+  | "melvorD:WindSurge"
+  | "melvorD:WaterSurge"
+  | "melvorD:EarthSurge"
+  | "melvorD:FireSurge"
+  | "melvorF:NaturesCall"
+  | "melvorF:NaturesWrath";
+declare type PetID =
+  | "melvorD:Beavis"
+  | "melvorD:PuddingDuckie"
+  | "melvorD:Pyro"
+  | "melvorD:Cris"
+  | "melvorD:CoolRock"
+  | "melvorD:PuffTheBabyDragon"
+  | "melvorD:LarryTheLonelyLizard"
+  | "melvorD:Bruce"
+  | "melvorD:LilRon"
+  | "melvorD:Leonardo"
+  | "melvorD:FinnTheCat"
+  | "melvorD:GoldenGolbin"
+  | "melvorD:Ty"
+  | "melvorD:RipperTheReindeer"
+  | "melvorD:Chick"
+  | "melvorD:Zarrah"
+  | "melvorD:Chio"
+  | "melvorD:BouncingBob"
+  | "melvorD:Rosey"
+  | "melvorD:Ayyden"
+  | "melvorD:ArcticYeti"
+  | "melvorD:Mac"
+  | "melvorD:JerryTheGiraffe"
+  | "melvorD:PrestonThePlatypus"
+  | "melvorD:FestiveCoolRock"
+  | "melvorD:FestiveChio"
+  | "melvorF:Snek"
+  | "melvorF:Quill"
+  | "melvorF:Caaarrrlll"
+  | "melvorF:Gunter"
+  | "melvorF:Gronk"
+  | "melvorF:Marahute"
+  | "melvorF:Salem"
+  | "melvorF:Monkey"
+  | "melvorF:Asura"
+  | "melvorF:Peri"
+  | "melvorF:Otto"
+  | "melvorF:JellyJim"
+  | "melvorF:Harley"
+  | "melvorF:Singe"
+  | "melvorF:Aquarias"
+  | "melvorF:Norman"
+  | "melvorF:Erran"
+  | "melvorF:Ren"
+  | "melvorF:Pablo"
+  | "melvorF:Sam"
+  | "melvorF:TimTheWolf"
+  | "melvorF:Mark"
+  | "melvorF:Bone"
+  | "melvorF:Astro"
+  | "melvorF:B"
+  | "melvorF:Marcy"
+  | "melvorF:Roger"
+  | "melvorF:Ace"
+  | "melvorF:Layla"
+  | "melvorF:MisterFuzzbutt"
+  | "melvorF:OctaviusLepidus"
+  | "melvorTotH:Penelope"
+  | "melvorTotH:Harry"
+  | "melvorTotH:Azuzu"
+  | "melvorTotH:Webbie"
+  | "melvorTotH:BillAndWendy"
+  | "melvorTotH:Phantom"
+  | "melvorTotH:Patchy"
+  | "melvorTotH:Harold"
+  | "melvorTotH:ClassyRock"
+  | "melvorTotH:CuteRock"
+  | "melvorTotH:RoyalRock"
+  | "melvorTotH:ElfRock"
+  | "melvorTotH:MagicRock"
+  | "melvorTotH:PartyRock"
+  | "melvorTotH:WarmSnowflake";
 /**
  * Data for constructing a CombatArea object
  */
-export type CombatAreaData = CombatAreaData1 & {
+declare type CombatAreaData = CombatAreaData1 & {
   /**
    * The display name of the area
    */
@@ -7688,18 +7558,18 @@ export type CombatAreaData = CombatAreaData1 & {
   entryRequirements: AnyRequirementData[];
   [k: string]: unknown;
 };
-export type CombatAreaData1 = IDData;
-export type InsertOrder = InsertStart | InsertEnd | InsertBefore | InsertAfter;
+declare type CombatAreaData1 = IDData;
+declare type InsertOrder = InsertStart | InsertEnd | InsertBefore | InsertAfter;
 /**
  * The IDs of the objects to insert
  *
  * @minItems 1
  */
-export type ObjectsToInsert = [ValidID, ...ValidID[]];
+declare type ObjectsToInsert = [string, ...string[]];
 /**
  * Data for constructing a SlayerArea object
  */
-export type SlayerAreaData = SlayerAreaData1 & {
+declare type SlayerAreaData = SlayerAreaData1 & {
   /**
    * Describes the slayer area's effect. Templated by
    */
@@ -7714,9 +7584,9 @@ export type SlayerAreaData = SlayerAreaData1 & {
   pet?: PetChanceData;
   [k: string]: unknown;
 };
-export type SlayerAreaData1 = CombatAreaData1;
-export type AreaEffect = PlayerAreaEffect | EnemyAreaEffect;
-export type StandardModifierKeys =
+declare type SlayerAreaData1 = CombatAreaData1;
+declare type AreaEffect = PlayerAreaEffect | EnemyAreaEffect;
+declare type StandardModifierKeys =
   | CombatModifierKey
   | (
       | "increasedChanceToDoubleLootCombat"
@@ -8187,7 +8057,7 @@ export type StandardModifierKeys =
       | "allowNonMagicCurses"
       | "increasedTownshipTraderStock"
     );
-export type CombatModifierKey =
+declare type CombatModifierKey =
   | "increasedGlobalAccuracy"
   | "decreasedGlobalAccuracy"
   | "increasedMeleeAccuracyBonus"
@@ -8464,7 +8334,7 @@ export type CombatModifierKey =
 /**
  * Data for constructing a Dungeon object
  */
-export type DungeonData = DungeonData1 & {
+declare type DungeonData = DungeonData1 & {
   /**
    * An array of item IDs that will be rewarded when the dungeon is completed
    */
@@ -8513,12 +8383,12 @@ export type DungeonData = DungeonData1 & {
   nonBossPassives?: [CombatPassiveID, ...CombatPassiveID[]];
   [k: string]: unknown;
 };
-export type DungeonData1 = CombatAreaData1;
-export type CombatEventID = ValidID | "melvorF:ImpendingDarkness";
+declare type DungeonData1 = CombatAreaData1;
+declare type CombatEventID = "melvorF:ImpendingDarkness";
 /**
  * Data for constructing a ActivePrayer object
  */
-export type PrayerData = PrayerData1 & {
+declare type PrayerData = PrayerData1 & {
   /**
    * The Prayer level required to use the prayer
    */
@@ -8553,11 +8423,11 @@ export type PrayerData = PrayerData1 & {
   enemyModifiers?: CombatModifierData;
   [k: string]: unknown;
 };
-export type PrayerData1 = IDData;
+declare type PrayerData1 = IDData;
 /**
  * Data for constructing a StandardSpell object
  */
-export type StandardSpellData = StandardSpellData1 & {
+declare type StandardSpellData = StandardSpellData1 & {
   /**
    * The base maximium hit used to calculate the player's max hit. 1/10th of the desired damage in Standard mode.
    */
@@ -8576,11 +8446,11 @@ export type StandardSpellData = StandardSpellData1 & {
   specialAttackID?: SpecialAttackID;
   [k: string]: unknown;
 };
-export type StandardSpellData1 = CombatSpellData;
+declare type StandardSpellData1 = CombatSpellData;
 /**
  * Data for constructing a CombatSpell object
  */
-export type CombatSpellData = CombatSpellData1 & {
+declare type CombatSpellData = CombatSpellData1 & {
   /**
    * Optional. If present, the player must have the specified EquipmentItem equipped to use the spell
    */
@@ -8591,11 +8461,11 @@ export type CombatSpellData = CombatSpellData1 & {
   requirements?: AnyRequirementData[];
   [k: string]: unknown;
 };
-export type CombatSpellData1 = BaseSpellData;
+declare type CombatSpellData1 = BaseSpellData;
 /**
  * Data for constructing a BaseSpell object
  */
-export type BaseSpellData = BaseSpellData1 & {
+declare type BaseSpellData = BaseSpellData1 & {
   /**
    * The display name of the spell
    */
@@ -8618,44 +8488,44 @@ export type BaseSpellData = BaseSpellData1 & {
   runesRequiredAlt?: AnyItemQuantity[];
   [k: string]: unknown;
 };
-export type BaseSpellData1 = IDData;
+declare type BaseSpellData1 = IDData;
 /**
  * Data for constructing a CurseSpell object
  */
-export type CurseSpellData = CurseSpellData1 & {
+declare type CurseSpellData = CurseSpellData1 & {
   /**
    * Combat modifiers that are applied when they are under the effect of the curse
    */
   targetModifiers: CombatModifierData;
   [k: string]: unknown;
 };
-export type CurseSpellData1 = CombatSpellData1;
+declare type CurseSpellData1 = CombatSpellData1;
 /**
  * Data for constructing a AuroraSpell object
  */
-export type AuroraSpellData = AuroraSpellData1 & {
+declare type AuroraSpellData = AuroraSpellData1 & {
   /**
    * Combat Modifiers provided to the player when using this spell
    */
   modifiers: CombatModifierData;
   [k: string]: unknown;
 };
-export type AuroraSpellData1 = CombatSpellData1;
+declare type AuroraSpellData1 = CombatSpellData1;
 /**
  * Data for constructing a AncientSpell object
  */
-export type AncientSpellData = AncientSpellData1 & {
+declare type AncientSpellData = AncientSpellData1 & {
   /**
    * The ID of the special attack that the player's attack selection will be replaced with when using this spell
    */
   specialAttackID: SpecialAttackID;
   [k: string]: unknown;
 };
-export type AncientSpellData1 = CombatSpellData1;
+declare type AncientSpellData1 = CombatSpellData1;
 /**
  * Data for constructing a ArchaicSpell object
  */
-export type ArchaicSpellData = ArchaicSpellData1 & {
+declare type ArchaicSpellData = ArchaicSpellData1 & {
   /**
    * The type of the spell being cast. Used by the modifier system to grant specific spell bonuses.
    */
@@ -8670,11 +8540,11 @@ export type ArchaicSpellData = ArchaicSpellData1 & {
   specialAttack: SpecialAttackID;
   [k: string]: unknown;
 };
-export type ArchaicSpellData1 = CombatSpellData1;
+declare type ArchaicSpellData1 = CombatSpellData1;
 /**
  * Data for constructing a Pet object
  */
-export type PetData = PetData1 & {
+declare type PetData = PetData1 & {
   /**
    * The display name of the Pet
    */
@@ -8729,11 +8599,11 @@ export type PetData = PetData1 & {
   langCustomDescription?: LangStringData;
   [k: string]: unknown;
 };
-export type PetData1 = IDData;
+declare type PetData1 = IDData;
 /**
  * Data for constructing a ShopCategory object
  */
-export type ShopCategoryData = ShopCategoryData1 & {
+declare type ShopCategoryData = ShopCategoryData1 & {
   /**
    * The display name of the category
    */
@@ -8748,11 +8618,11 @@ export type ShopCategoryData = ShopCategoryData1 & {
   isGolbinRaid?: boolean;
   [k: string]: unknown;
 };
-export type ShopCategoryData1 = IDData;
+declare type ShopCategoryData1 = IDData;
 /**
  * Data for constructing a ShopPurchase object
  */
-export type ShopPurchaseData = ShopPurchaseData1 & {
+declare type ShopPurchaseData = ShopPurchaseData1 & {
   /**
    * Optional. Custom name for the purchase. Overrides the name generated by the purchase contents.
    */
@@ -8873,37 +8743,31 @@ export type ShopPurchaseData = ShopPurchaseData1 & {
     | "SecondsDecrease";
   [k: string]: unknown;
 };
-export type ShopPurchaseData1 = IDData;
-export type ShopCategoryID =
-  | ValidID
-  | (
-      | "melvorD:General"
-      | "melvorD:SkillUpgrades"
-      | "melvorD:Gloves"
-      | "melvorD:Skillcapes"
-      | "melvorD:Materials"
-      | "melvorD:GolbinRaid"
-      | "melvorF:Slayer"
-      | "melvorF:Township"
-      | "melvorTotH:SuperiorSkillcapes"
-    );
-export type ShopCostAmount = FixedCost | LinearCost | BankSlotCost | GloveCost;
-export type GamemodeID =
-  | ValidID
-  | (
-      | "melvorD:Unset"
-      | "melvorD:Standard"
-      | "melvorF:Hardcore"
-      | "melvorF:Adventure"
-      | "melvorF:Chaos"
-      | "melvorF:HardcoreAdventureSpeedrun"
-      | "melvorF:InternalSuffering"
-      | "melvorF:HCCOSpeedrun"
-    );
+declare type ShopPurchaseData1 = IDData;
+declare type ShopCategoryID =
+  | "melvorD:General"
+  | "melvorD:SkillUpgrades"
+  | "melvorD:Gloves"
+  | "melvorD:Skillcapes"
+  | "melvorD:Materials"
+  | "melvorD:GolbinRaid"
+  | "melvorF:Slayer"
+  | "melvorF:Township"
+  | "melvorTotH:SuperiorSkillcapes";
+declare type ShopCostAmount = FixedCost | LinearCost | BankSlotCost | GloveCost;
+declare type GamemodeID =
+  | "melvorD:Unset"
+  | "melvorD:Standard"
+  | "melvorF:Hardcore"
+  | "melvorF:Adventure"
+  | "melvorF:Chaos"
+  | "melvorF:HardcoreAdventureSpeedrun"
+  | "melvorF:InternalSuffering"
+  | "melvorF:HCCOSpeedrun";
 /**
  * Data for constructing a ShopUpgradeChain object
  */
-export type ShopUpgradeChainData = ShopUpgradeChainData1 & {
+declare type ShopUpgradeChainData = ShopUpgradeChainData1 & {
   /**
    * The ID of the highest shop purchase in the chain
    */
@@ -8934,11 +8798,11 @@ export type ShopUpgradeChainData = ShopUpgradeChainData1 & {
   descriptionLang?: LangStringData;
   [k: string]: unknown;
 };
-export type ShopUpgradeChainData1 = IDData;
+declare type ShopUpgradeChainData1 = IDData;
 /**
  * Data for constructing a TutorialStage object
  */
-export type TutorialStageData = TutorialStageData1 & {
+declare type TutorialStageData = TutorialStageData1 & {
   /**
    * The display name of the stage
    */
@@ -8997,8 +8861,8 @@ export type TutorialStageData = TutorialStageData1 & {
   allowCombat: boolean;
   [k: string]: unknown;
 };
-export type TutorialStageData1 = IDData;
-export type AnySkillData =
+declare type TutorialStageData1 = IDData;
+declare type AnySkillData =
   | {
       /**
        * The ID of the skill to provide data with
@@ -9195,35 +9059,35 @@ export type AnySkillData =
       /**
        * The ID of the skill to provide data with
        */
-      skillID: ValidID & string;
+      skillID: string & string;
       data: BaseSkillData;
       [k: string]: unknown;
     };
-export type RareSkillDropChance =
+declare type RareSkillDropChance =
   | FixedSkillDropChance
   | LevelScalingSkillDropChance
   | TotalMasteryScalingSkillDropChance;
 /**
  * A linearly scaling chance that an item should drop that scales with skill level
  */
-export type LevelScalingSkillDropChance = LevelScalingSkillDropChance1 & {
+declare type LevelScalingSkillDropChance = LevelScalingSkillDropChance1 & {
   type: "LevelScaling";
   [k: string]: unknown;
 };
-export type LevelScalingSkillDropChance1 = ScalingChance;
+declare type LevelScalingSkillDropChance1 = ScalingChance;
 /**
  * A linearly scaling chance that an item should drop that scales with total mastery level
  */
-export type TotalMasteryScalingSkillDropChance = TotalMasteryScalingSkillDropChance1 & {
+declare type TotalMasteryScalingSkillDropChance = TotalMasteryScalingSkillDropChance1 & {
   type: "TotalMasteryScaling";
   [k: string]: unknown;
 };
-export type TotalMasteryScalingSkillDropChance1 = ScalingChance;
-export type MilestoneData = CustomSkillMilestoneData | EquipItemMilestoneData;
+declare type TotalMasteryScalingSkillDropChance1 = ScalingChance;
+declare type MilestoneData = CustomSkillMilestoneData | EquipItemMilestoneData;
 /**
  * Defines a fully custom milestone for a skill
  */
-export type CustomSkillMilestoneData = CustomSkillMilestoneData1 & {
+declare type CustomSkillMilestoneData = CustomSkillMilestoneData1 & {
   type: "Custom";
   /**
    * Optional. Used to grab the description from localization
@@ -9231,11 +9095,11 @@ export type CustomSkillMilestoneData = CustomSkillMilestoneData1 & {
   milestoneID?: string;
   [k: string]: unknown;
 };
-export type CustomSkillMilestoneData1 = MilestoneLike;
+declare type CustomSkillMilestoneData1 = MilestoneLike;
 /**
  * Data for the Magic Skill
  */
-export type MagicSkillData = MagicSkillData1 & {
+declare type MagicSkillData = MagicSkillData1 & {
   /**
    * Optional. Defines new Alt Magic spells
    *
@@ -9250,11 +9114,11 @@ export type MagicSkillData = MagicSkillData1 & {
   randomShards?: [DropTableData, ...DropTableData[]];
   [k: string]: unknown;
 };
-export type MagicSkillData1 = MasterySkillData;
+declare type MagicSkillData1 = MasterySkillData;
 /**
  * Basic data shared between all Mastery skills
  */
-export type MasterySkillData = MasterySkillData1 & {
+declare type MasterySkillData = MasterySkillData1 & {
   /**
    * Optional. ID of the mastery token for this skill
    */
@@ -9267,11 +9131,11 @@ export type MasterySkillData = MasterySkillData1 & {
   masteryLevelUnlocks?: [MasteryLevelUnlockData, ...MasteryLevelUnlockData[]];
   [k: string]: unknown;
 };
-export type MasterySkillData1 = BaseSkillData;
+declare type MasterySkillData1 = BaseSkillData;
 /**
  * Data for constructing a AltMagicSpell object
  */
-export type AltMagicSpellData = AltMagicSpellData1 & {
+declare type AltMagicSpellData = AltMagicSpellData1 & {
   /**
    * The displayed description for the spell. Automatically templated.
    */
@@ -9317,11 +9181,11 @@ export type AltMagicSpellData = AltMagicSpellData1 & {
   productionRatio: number;
   [k: string]: unknown;
 };
-export type AltMagicSpellData1 = BaseSpellData1;
+declare type AltMagicSpellData1 = BaseSpellData1;
 /**
  * Data for the Woodcutting Skill
  */
-export type WoodcuttingSkillData = WoodcuttingSkillData1 & {
+declare type WoodcuttingSkillData = WoodcuttingSkillData1 & {
   /**
    * Defines new trees for the skill
    *
@@ -9352,11 +9216,11 @@ export type WoodcuttingSkillData = WoodcuttingSkillData1 & {
   ravenNestItemID?: AnyItemID;
   [k: string]: unknown;
 };
-export type WoodcuttingSkillData1 = MasterySkillData1;
+declare type WoodcuttingSkillData1 = MasterySkillData1;
 /**
  * Data For constructing a WoodcuttingTree object
  */
-export type WoodcuttingTreeData = WoodcuttingTreeData1 & {
+declare type WoodcuttingTreeData = WoodcuttingTreeData1 & {
   /**
    * Display name of the tree
    */
@@ -9379,22 +9243,22 @@ export type WoodcuttingTreeData = WoodcuttingTreeData1 & {
   shopItemPurchased?: ShopPurchaseID;
   [k: string]: unknown;
 };
-export type WoodcuttingTreeData1 = SingleProductRecipeData;
+declare type WoodcuttingTreeData1 = SingleProductRecipeData;
 /**
  * Data for constructing a SingleProductRecipe object
  */
-export type SingleProductRecipeData = SingleProductRecipeData1 & {
+declare type SingleProductRecipeData = SingleProductRecipeData1 & {
   /**
    * The ID of the item that is produced
    */
   productId: AnyItemID;
   [k: string]: unknown;
 };
-export type SingleProductRecipeData1 = BasicSkillRecipeData;
+declare type SingleProductRecipeData1 = BasicSkillRecipeData;
 /**
  * Data for constructing a BasicSkillRecipe object
  */
-export type BasicSkillRecipeData = BasicSkillRecipeData1 & {
+declare type BasicSkillRecipeData = BasicSkillRecipeData1 & {
   /**
    * The base experience rewarded per action
    */
@@ -9405,11 +9269,11 @@ export type BasicSkillRecipeData = BasicSkillRecipeData1 & {
   level: number;
   [k: string]: unknown;
 };
-export type BasicSkillRecipeData1 = IDData;
+declare type BasicSkillRecipeData1 = IDData;
 /**
  * Data for the Fishing Skill
  */
-export type FishingSkillData = FishingSkillData1 & {
+declare type FishingSkillData = FishingSkillData1 & {
   /**
    * Defines new actions for the skill
    *
@@ -9446,11 +9310,11 @@ export type FishingSkillData = FishingSkillData1 & {
   lostChestItem?: AnyItemID;
   [k: string]: unknown;
 };
-export type FishingSkillData1 = MasterySkillData1;
+declare type FishingSkillData1 = MasterySkillData1;
 /**
  * Data For constructing a Fish object
  */
-export type FishData = FishData1 & {
+declare type FishData = FishData1 & {
   /**
    * Base strength skill experience earned on a successful catch
    */
@@ -9465,11 +9329,11 @@ export type FishData = FishData1 & {
   baseMaxInterval: number;
   [k: string]: unknown;
 };
-export type FishData1 = SingleProductRecipeData1;
+declare type FishData1 = SingleProductRecipeData1;
 /**
  * Data for constructing a FishingArea object
  */
-export type FishingAreaData = FishingAreaData1 & {
+declare type FishingAreaData = FishingAreaData1 & {
   /**
    * Display name of the area
    */
@@ -9506,11 +9370,11 @@ export type FishingAreaData = FishingAreaData1 & {
   isSecret?: boolean;
   [k: string]: unknown;
 };
-export type FishingAreaData1 = IDData;
+declare type FishingAreaData1 = IDData;
 /**
  * Data for the Firemaking Skill
  */
-export type FiremakingSkillData = FiremakingSkillData1 & {
+declare type FiremakingSkillData = FiremakingSkillData1 & {
   /**
    * Defines new actions for the skill
    *
@@ -9539,11 +9403,11 @@ export type FiremakingSkillData = FiremakingSkillData1 & {
   charcoalItemID?: AnyItemID;
   [k: string]: unknown;
 };
-export type FiremakingSkillData1 = MasterySkillData1;
+declare type FiremakingSkillData1 = MasterySkillData1;
 /**
  * Data For constructing a FiremakingLog object
  */
-export type FiremakingLogData = FiremakingLogData1 & {
+declare type FiremakingLogData = FiremakingLogData1 & {
   /**
    * The Item ID of the log that should be burnt
    */
@@ -9562,11 +9426,11 @@ export type FiremakingLogData = FiremakingLogData1 & {
   bonfireXPBonus: number;
   [k: string]: unknown;
 };
-export type FiremakingLogData1 = BasicSkillRecipeData1;
+declare type FiremakingLogData1 = BasicSkillRecipeData1;
 /**
  * Data for the Cooking Skill
  */
-export type CookingSkillData = CookingSkillData1 & {
+declare type CookingSkillData = CookingSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -9581,11 +9445,11 @@ export type CookingSkillData = CookingSkillData1 & {
   recipes?: [CookingRecipeData, ...CookingRecipeData1[]];
   [k: string]: unknown;
 };
-export type CookingSkillData1 = MasterySkillData1;
+declare type CookingSkillData1 = MasterySkillData1;
 /**
  * Data for constructing a CookingCategory object
  */
-export type CookingCategoryData = CookingCategoryData1 & {
+declare type CookingCategoryData = CookingCategoryData1 & {
   /**
    * Shop upgrades that improve the cooking for this category. Used to change the display of the category. Should be in order of highest to lowest tier upgrade.
    */
@@ -9596,11 +9460,11 @@ export type CookingCategoryData = CookingCategoryData1 & {
   upgradeRequired: boolean;
   [k: string]: unknown;
 };
-export type CookingCategoryData1 = SkillCategoryData;
+declare type CookingCategoryData1 = SkillCategoryData;
 /**
  * Data for constructing a SkillCategory object
  */
-export type SkillCategoryData = SkillCategoryData1 & {
+declare type SkillCategoryData = SkillCategoryData1 & {
   /**
    * URI for the categories image
    */
@@ -9611,11 +9475,11 @@ export type SkillCategoryData = SkillCategoryData1 & {
   name: string;
   [k: string]: unknown;
 };
-export type SkillCategoryData1 = IDData;
+declare type SkillCategoryData1 = IDData;
 /**
  * Data for constructing a CookingRecipe object
  */
-export type CookingRecipeData = CookingRecipeData1 & {
+declare type CookingRecipeData = CookingRecipeData1 & {
   /**
    * The Item ID of the perfect version of the product
    */
@@ -9636,11 +9500,11 @@ export type CookingRecipeData = CookingRecipeData1 & {
   discoveredItems?: [AnyItemID, ...AnyItemID[]];
   [k: string]: unknown;
 };
-export type CookingRecipeData1 = SingleProductArtisanSkillRecipeData;
+declare type CookingRecipeData1 = SingleProductArtisanSkillRecipeData;
 /**
  * Data for constructing a SingleProductArtisanSkillRecipe object
  */
-export type SingleProductArtisanSkillRecipeData = SingleProductArtisanSkillRecipeData1 & {
+declare type SingleProductArtisanSkillRecipeData = SingleProductArtisanSkillRecipeData1 & {
   /**
    * ID of the item produced by this recipe
    */
@@ -9651,22 +9515,22 @@ export type SingleProductArtisanSkillRecipeData = SingleProductArtisanSkillRecip
   baseQuantity: number;
   [k: string]: unknown;
 };
-export type SingleProductArtisanSkillRecipeData1 = CategorizedArtisanRecipeData;
+declare type SingleProductArtisanSkillRecipeData1 = CategorizedArtisanRecipeData;
 /**
  * Data for constructing a CategorizedArtisanRecipeData object
  */
-export type CategorizedArtisanRecipeData = CategorizedArtisanRecipeData1 & {
+declare type CategorizedArtisanRecipeData = CategorizedArtisanRecipeData1 & {
   /**
    * ID of the category this recipe belongs to
    */
-  categoryID: ValidID;
+  categoryID: string;
   [k: string]: unknown;
 };
-export type CategorizedArtisanRecipeData1 = ArtisanSkillRecipeData;
+declare type CategorizedArtisanRecipeData1 = ArtisanSkillRecipeData;
 /**
  * Data for constructing a ArtisanSkillRecipeData object
  */
-export type ArtisanSkillRecipeData = ArtisanSkillRecipeData1 & {
+declare type ArtisanSkillRecipeData = ArtisanSkillRecipeData1 & {
   /**
    * The base items required to peform the action
    */
@@ -9681,11 +9545,11 @@ export type ArtisanSkillRecipeData = ArtisanSkillRecipeData1 & {
   scCost: number;
   [k: string]: unknown;
 };
-export type ArtisanSkillRecipeData1 = BasicSkillRecipeData1;
+declare type ArtisanSkillRecipeData1 = BasicSkillRecipeData1;
 /**
  * Data for the Mining Skill
  */
-export type MiningSkillData = MiningSkillData1 & {
+declare type MiningSkillData = MiningSkillData1 & {
   /**
    * Defines new actions for the skill
    *
@@ -9702,11 +9566,11 @@ export type MiningSkillData = MiningSkillData1 & {
   runestoneItemID?: AnyItemID;
   [k: string]: unknown;
 };
-export type MiningSkillData1 = MasterySkillData1;
+declare type MiningSkillData1 = MasterySkillData1;
 /**
  * Data For constructing a MiningRock object
  */
-export type MiningRockData = MiningRockData1 & {
+declare type MiningRockData = MiningRockData1 & {
   /**
    * Display name of the rock
    */
@@ -9754,11 +9618,11 @@ export type MiningRockData = MiningRockData1 & {
   gemVeinWeight?: number;
   [k: string]: unknown;
 };
-export type MiningRockData1 = SingleProductRecipeData1;
+declare type MiningRockData1 = SingleProductRecipeData1;
 /**
  * Data for the Smithing Skill
  */
-export type SmithingSkillData = SmithingSkillData1 & {
+declare type SmithingSkillData = SmithingSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -9773,11 +9637,11 @@ export type SmithingSkillData = SmithingSkillData1 & {
   recipes?: [SingleProductArtisanSkillRecipeData1, ...SingleProductArtisanSkillRecipeData1[]];
   [k: string]: unknown;
 };
-export type SmithingSkillData1 = MasterySkillData1;
+declare type SmithingSkillData1 = MasterySkillData1;
 /**
  * Data for the Thieving Skill
  */
-export type ThievingSkillData = ThievingSkillData1 & {
+declare type ThievingSkillData = ThievingSkillData1 & {
   /**
    * Defines new actions for the skill
    *
@@ -9816,11 +9680,11 @@ export type ThievingSkillData = ThievingSkillData1 & {
   };
   [k: string]: unknown;
 };
-export type ThievingSkillData1 = MasterySkillData1;
+declare type ThievingSkillData1 = MasterySkillData1;
 /**
  * Data For constructing a ThievingNPC object
  */
-export type ThievingNPCData = ThievingNPCData1 & {
+declare type ThievingNPCData = ThievingNPCData1 & {
   /**
    * Display name of the NPC
    */
@@ -9851,11 +9715,11 @@ export type ThievingNPCData = ThievingNPCData1 & {
   lootTable: DropTableData[];
   [k: string]: unknown;
 };
-export type ThievingNPCData1 = BasicSkillRecipeData1;
+declare type ThievingNPCData1 = BasicSkillRecipeData1;
 /**
  * Data For constructing a ThievingArea object
  */
-export type ThievingAreaData = ThievingAreaData1 & {
+declare type ThievingAreaData = ThievingAreaData1 & {
   /**
    * The display name of this area
    */
@@ -9872,11 +9736,11 @@ export type ThievingAreaData = ThievingAreaData1 & {
   uniqueDrops: AnyItemQuantity[];
   [k: string]: unknown;
 };
-export type ThievingAreaData1 = IDData;
+declare type ThievingAreaData1 = IDData;
 /**
  * Data for the Farming Skill
  */
-export type FarmingSkillData = FarmingSkillData1 & {
+declare type FarmingSkillData = FarmingSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -9897,11 +9761,11 @@ export type FarmingSkillData = FarmingSkillData1 & {
   plots?: [FarmingPlotData, ...FarmingPlotData1[]];
   [k: string]: unknown;
 };
-export type FarmingSkillData1 = MasterySkillData1;
+declare type FarmingSkillData1 = MasterySkillData1;
 /**
  * Data for constructing a FarmingCategory object
  */
-export type FarmingCategoryData = FarmingCategoryData1 & {
+declare type FarmingCategoryData = FarmingCategoryData1 & {
   /**
    * If actions in this category should have a chance to return seeds on harvest
    */
@@ -9932,11 +9796,11 @@ export type FarmingCategoryData = FarmingCategoryData1 & {
   singularName: string;
   [k: string]: unknown;
 };
-export type FarmingCategoryData1 = SkillCategoryData1;
+declare type FarmingCategoryData1 = SkillCategoryData1;
 /**
  * Data for constructing a FarmingRecipe object
  */
-export type FarmingRecipeData = FarmingRecipeData1 & {
+declare type FarmingRecipeData = FarmingRecipeData1 & {
   /**
    * The base time that it takes for the crop to grow in [ms]
    */
@@ -9963,11 +9827,11 @@ export type FarmingRecipeData = FarmingRecipeData1 & {
   grownNameLang?: LangStringData;
   [k: string]: unknown;
 };
-export type FarmingRecipeData1 = SingleProductRecipeData1;
+declare type FarmingRecipeData1 = SingleProductRecipeData1;
 /**
  * Data for constructing a FarmingPlot object
  */
-export type FarmingPlotData = FarmingPlotData1 & {
+declare type FarmingPlotData = FarmingPlotData1 & {
   /**
    * The ID of the farming category of seeds that can be planted in this plot
    */
@@ -9982,11 +9846,11 @@ export type FarmingPlotData = FarmingPlotData1 & {
   gpCost: number;
   [k: string]: unknown;
 };
-export type FarmingPlotData1 = IDData;
+declare type FarmingPlotData1 = IDData;
 /**
  * Data for the Fletching Skill
  */
-export type FletchingSkillData = FletchingSkillData1 & {
+declare type FletchingSkillData = FletchingSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -10001,11 +9865,11 @@ export type FletchingSkillData = FletchingSkillData1 & {
   recipes?: [FletchingRecipeData, ...FletchingRecipeData1[]];
   [k: string]: unknown;
 };
-export type FletchingSkillData1 = MasterySkillData1;
+declare type FletchingSkillData1 = MasterySkillData1;
 /**
  * Data for constructing a FletchingRecipe object
  */
-export type FletchingRecipeData = FletchingRecipeData1 & {
+declare type FletchingRecipeData = FletchingRecipeData1 & {
   /**
    * Optional. Defines additional costs for the recipe that the player must select one of
    *
@@ -10054,11 +9918,11 @@ export type FletchingRecipeData = FletchingRecipeData1 & {
   ];
   [k: string]: unknown;
 };
-export type FletchingRecipeData1 = SingleProductArtisanSkillRecipeData1;
+declare type FletchingRecipeData1 = SingleProductArtisanSkillRecipeData1;
 /**
  * Data for the Crafting Skill
  */
-export type CraftingSkillData = CraftingSkillData1 & {
+declare type CraftingSkillData = CraftingSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -10073,11 +9937,11 @@ export type CraftingSkillData = CraftingSkillData1 & {
   recipes?: [SingleProductArtisanSkillRecipeData1, ...SingleProductArtisanSkillRecipeData1[]];
   [k: string]: unknown;
 };
-export type CraftingSkillData1 = MasterySkillData1;
+declare type CraftingSkillData1 = MasterySkillData1;
 /**
  * Data for the Runecrafting Skill
  */
-export type RunecraftingSkillData = RunecraftingSkillData1 & {
+declare type RunecraftingSkillData = RunecraftingSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -10108,11 +9972,11 @@ export type RunecraftingSkillData = RunecraftingSkillData1 & {
   crowDevilItem?: AnyItemID;
   [k: string]: unknown;
 };
-export type RunecraftingSkillData1 = MasterySkillData1;
+declare type RunecraftingSkillData1 = MasterySkillData1;
 /**
  * Data for the Herblore Skill
  */
-export type HerbloreSkillData = HerbloreSkillData1 & {
+declare type HerbloreSkillData = HerbloreSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -10131,11 +9995,11 @@ export type HerbloreSkillData = HerbloreSkillData1 & {
   deadlyToxinsItem?: AnyItemID;
   [k: string]: unknown;
 };
-export type HerbloreSkillData1 = MasterySkillData1;
+declare type HerbloreSkillData1 = MasterySkillData1;
 /**
  * Data for constructing a HerbloreRecipe object
  */
-export type HerbloreRecipeData = HerbloreRecipeData1 & {
+declare type HerbloreRecipeData = HerbloreRecipeData1 & {
   /**
    * The IDs of potion items that can be obtained at each tier
    *
@@ -10149,11 +10013,11 @@ export type HerbloreRecipeData = HerbloreRecipeData1 & {
   name: string;
   [k: string]: unknown;
 };
-export type HerbloreRecipeData1 = CategorizedArtisanRecipeData1;
+declare type HerbloreRecipeData1 = CategorizedArtisanRecipeData1;
 /**
  * Data for the Agility Skill
  */
-export type AgilitySkillData = AgilitySkillData1 & {
+declare type AgilitySkillData = AgilitySkillData1 & {
   /**
    * Defines new passive pillars for the skill
    *
@@ -10174,11 +10038,11 @@ export type AgilitySkillData = AgilitySkillData1 & {
   obstacles?: [AgilityObstacleData, ...AgilityObstacleData1[]];
   [k: string]: unknown;
 };
-export type AgilitySkillData1 = MasterySkillData1;
+declare type AgilitySkillData1 = MasterySkillData1;
 /**
  * Data for constructing a BaseAgilityObject object
  */
-export type BaseAgilityObjectData = BaseAgilityObjectData1 & {
+declare type BaseAgilityObjectData = BaseAgilityObjectData1 & {
   /**
    * Display name of the obstacle or pillar
    */
@@ -10201,11 +10065,11 @@ export type BaseAgilityObjectData = BaseAgilityObjectData1 & {
   modifiers: PlayerModifierData1;
   [k: string]: unknown;
 };
-export type BaseAgilityObjectData1 = IDData;
+declare type BaseAgilityObjectData1 = IDData;
 /**
  * Data for constructing a AgilityObstacle object
  */
-export type AgilityObstacleData = AgilityObstacleData1 & {
+declare type AgilityObstacleData = AgilityObstacleData1 & {
   /**
    * URI of the obstacles image
    */
@@ -10240,11 +10104,11 @@ export type AgilityObstacleData = AgilityObstacleData1 & {
   itemRewards: AnyItemQuantity[];
   [k: string]: unknown;
 };
-export type AgilityObstacleData1 = BaseAgilityObjectData1;
+declare type AgilityObstacleData1 = BaseAgilityObjectData1;
 /**
  * Data for the Summoning Skill
  */
-export type SummoningSkillData = SummoningSkillData1 & {
+declare type SummoningSkillData = SummoningSkillData1 & {
   /**
    * Defines new categories for the skill
    *
@@ -10265,11 +10129,11 @@ export type SummoningSkillData = SummoningSkillData1 & {
   synergies?: [SummoningSynergyData, ...SummoningSynergyData[]];
   [k: string]: unknown;
 };
-export type SummoningSkillData1 = MasterySkillData1;
+declare type SummoningSkillData1 = MasterySkillData1;
 /**
  * Data for constructing a SummoningRecipe object
  */
-export type SummoningRecipeData = SummoningRecipeData1 & {
+declare type SummoningRecipeData = SummoningRecipeData1 & {
   /**
    * URI of the Summoning marks media shown on the Marks tab
    */
@@ -10288,11 +10152,11 @@ export type SummoningRecipeData = SummoningRecipeData1 & {
   skillIDs: SkillID[];
   [k: string]: unknown;
 };
-export type SummoningRecipeData1 = SingleProductArtisanSkillRecipeData1;
+declare type SummoningRecipeData1 = SingleProductArtisanSkillRecipeData1;
 /**
  * Data for the Summoning Skill
  */
-export type AstrologySkillData = AstrologySkillData1 & {
+declare type AstrologySkillData = AstrologySkillData1 & {
   /**
    * Defines new constellations for the skill
    *
@@ -10309,11 +10173,11 @@ export type AstrologySkillData = AstrologySkillData1 & {
   goldenStardustItemID?: AnyItemID;
   [k: string]: unknown;
 };
-export type AstrologySkillData1 = MasterySkillData1;
+declare type AstrologySkillData1 = MasterySkillData1;
 /**
  * Data for constructing a AstrologyRecipe object
  */
-export type AstrologyRecipeData = AstrologyRecipeData1 & {
+declare type AstrologyRecipeData = AstrologyRecipeData1 & {
   /**
    * The display name of the constellation
    */
@@ -10358,8 +10222,8 @@ export type AstrologyRecipeData = AstrologyRecipeData1 & {
   masteryXPModifier?: SkillModifierKeys;
   [k: string]: unknown;
 };
-export type AstrologyRecipeData1 = BasicSkillRecipeData1;
-export type SkillModifierKeys =
+declare type AstrologyRecipeData1 = BasicSkillRecipeData1;
+declare type SkillModifierKeys =
   | "increasedHiddenSkillLevel"
   | "decreasedHiddenSkillLevel"
   | "decreasedSkillInterval"
@@ -10392,7 +10256,7 @@ export type SkillModifierKeys =
 /**
  * Data for the Township Skill
  */
-export type TownshipSkillData = TownshipSkillData1 & {
+declare type TownshipSkillData = TownshipSkillData1 & {
   /**
    * Defines new resources for the skill
    *
@@ -10449,11 +10313,11 @@ export type TownshipSkillData = TownshipSkillData1 & {
   tasks?: [TownshipTaskData, ...TownshipTaskData1[]];
   [k: string]: unknown;
 };
-export type TownshipSkillData1 = BaseSkillData;
+declare type TownshipSkillData1 = BaseSkillData;
 /**
  * Data for constructing a TownshipResource object
  */
-export type TownshipResourceData = TownshipResourceData1 & {
+declare type TownshipResourceData = TownshipResourceData1 & {
   /**
    * Display name of the resource
    */
@@ -10512,42 +10376,36 @@ export type TownshipResourceData = TownshipResourceData1 & {
   };
   [k: string]: unknown;
 };
-export type TownshipResourceData1 = IDData;
-export type TownshipResourceID =
-  | ValidID
-  | (
-      | "melvorF:GP"
-      | "melvorF:Food"
-      | "melvorF:Wood"
-      | "melvorF:Stone"
-      | "melvorF:Ore"
-      | "melvorF:Coal"
-      | "melvorF:Bar"
-      | "melvorF:Herbs"
-      | "melvorF:Rune_Essence"
-      | "melvorF:Leather"
-      | "melvorF:Potions"
-      | "melvorF:Planks"
-      | "melvorF:Clothing"
-    );
-export type TownshipBiomeID =
-  | ValidID
-  | (
-      | "melvorF:Grasslands"
-      | "melvorF:Forest"
-      | "melvorF:Desert"
-      | "melvorF:Water"
-      | "melvorF:Swamp"
-      | "melvorF:Arid_Plains"
-      | "melvorF:Mountains"
-      | "melvorF:Valley"
-      | "melvorF:Jungle"
-      | "melvorF:Snowlands"
-    );
+declare type TownshipResourceData1 = IDData;
+declare type TownshipResourceID =
+  | "melvorF:GP"
+  | "melvorF:Food"
+  | "melvorF:Wood"
+  | "melvorF:Stone"
+  | "melvorF:Ore"
+  | "melvorF:Coal"
+  | "melvorF:Bar"
+  | "melvorF:Herbs"
+  | "melvorF:Rune_Essence"
+  | "melvorF:Leather"
+  | "melvorF:Potions"
+  | "melvorF:Planks"
+  | "melvorF:Clothing";
+declare type TownshipBiomeID =
+  | "melvorF:Grasslands"
+  | "melvorF:Forest"
+  | "melvorF:Desert"
+  | "melvorF:Water"
+  | "melvorF:Swamp"
+  | "melvorF:Arid_Plains"
+  | "melvorF:Mountains"
+  | "melvorF:Valley"
+  | "melvorF:Jungle"
+  | "melvorF:Snowlands";
 /**
  * Data for constructing a TownshipJob object
  */
-export type TownshipJobData = TownshipJobData1 & {
+declare type TownshipJobData = TownshipJobData1 & {
   /**
    * The display name of the job
    */
@@ -10558,11 +10416,11 @@ export type TownshipJobData = TownshipJobData1 & {
   produces?: TownshipResourceID;
   [k: string]: unknown;
 };
-export type TownshipJobData1 = IDData;
+declare type TownshipJobData1 = IDData;
 /**
  * Data for constructing a TownshipBiome object
  */
-export type TownshipBiomeData = TownshipBiomeData1 & {
+declare type TownshipBiomeData = TownshipBiomeData1 & {
   /**
    * The display name of the biome
    */
@@ -10599,11 +10457,11 @@ export type TownshipBiomeData = TownshipBiomeData1 & {
   };
   [k: string]: unknown;
 };
-export type TownshipBiomeData1 = IDData;
+declare type TownshipBiomeData1 = IDData;
 /**
  * Data for constructing a TownshipBuilding object
  */
-export type TownshipBuildingData = TownshipBuildingData1 & {
+declare type TownshipBuildingData = TownshipBuildingData1 & {
   /**
    * The display name of the building
    */
@@ -10659,28 +10517,25 @@ export type TownshipBuildingData = TownshipBuildingData1 & {
   modifiers?: PlayerModifierData1;
   [k: string]: unknown;
 };
-export type TownshipBuildingData1 = IDData;
-export type TownshipJobID =
-  | ValidID
-  | (
-      | "melvorD:Unemployed"
-      | "melvorF:Blacksmith"
-      | "melvorF:Fisherman"
-      | "melvorF:Woodcutter"
-      | "melvorF:Stone_Miner"
-      | "melvorF:Ore_Miner"
-      | "melvorF:Coal_Miner"
-      | "melvorF:Gatherer"
-      | "melvorF:Rune_Essence_Miner"
-      | "melvorF:Crafter"
-      | "melvorF:Apothecarist"
-      | "melvorF:Plank_Maker"
-      | "melvorF:Tailor"
-    );
+declare type TownshipBuildingData1 = IDData;
+declare type TownshipJobID =
+  | "melvorD:Unemployed"
+  | "melvorF:Blacksmith"
+  | "melvorF:Fisherman"
+  | "melvorF:Woodcutter"
+  | "melvorF:Stone_Miner"
+  | "melvorF:Ore_Miner"
+  | "melvorF:Coal_Miner"
+  | "melvorF:Gatherer"
+  | "melvorF:Rune_Essence_Miner"
+  | "melvorF:Crafter"
+  | "melvorF:Apothecarist"
+  | "melvorF:Plank_Maker"
+  | "melvorF:Tailor";
 /**
  * Data for constructing a TownshipWorship object
  */
-export type TownshipWorshipData = TownshipWorshipData1 & {
+declare type TownshipWorshipData = TownshipWorshipData1 & {
   /**
    * Display name of the worship
    */
@@ -10725,11 +10580,11 @@ export type TownshipWorshipData = TownshipWorshipData1 & {
   statueMedia: string;
   [k: string]: unknown;
 };
-export type TownshipWorshipData1 = IDData;
+declare type TownshipWorshipData1 = IDData;
 /**
  * Data for constructing a TownshipMap object
  */
-export type TownshipMapData = TownshipMapData1 & {
+declare type TownshipMapData = TownshipMapData1 & {
   /**
    * The display name of the map
    */
@@ -10765,11 +10620,11 @@ export type TownshipMapData = TownshipMapData1 & {
   ];
   [k: string]: unknown;
 };
-export type TownshipMapData1 = IDData;
+declare type TownshipMapData1 = IDData;
 /**
  * Data for constructing a TownshipTask object
  */
-export type TownshipTaskData = TownshipTaskData1 & {
+declare type TownshipTaskData = TownshipTaskData1 & {
   /**
    * The display name of the task
    */
@@ -10790,11 +10645,11 @@ export type TownshipTaskData = TownshipTaskData1 & {
   requirements: AnyRequirementData[];
   [k: string]: unknown;
 };
-export type TownshipTaskData1 = IDData;
+declare type TownshipTaskData1 = IDData;
 /**
  * Data for constructing a Page object
  */
-export type PageData = PageData1 & {
+declare type PageData = PageData1 & {
   /**
    * Optional. Specifies a custom name for the page to be used instead of the first skill name
    */
@@ -10845,11 +10700,11 @@ export type PageData = PageData1 & {
   skillSidebarCategoryID?: string;
   [k: string]: unknown;
 };
-export type PageData1 = IDData;
+declare type PageData1 = IDData;
 /**
  * Data for constructing a LoreBook object
  */
-export type LoreBookData = LoreBookData1 & {
+declare type LoreBookData = LoreBookData1 & {
   /**
    * The displayed title of the book
    */
@@ -10864,12 +10719,12 @@ export type LoreBookData = LoreBookData1 & {
   unlockRequirements: AnyRequirementData[];
   [k: string]: unknown;
 };
-export type LoreBookData1 = IDData;
+declare type LoreBookData1 = IDData;
 
 /**
  * A game data package for Melvor Idle
  */
-export interface MelvorGameDataPackage {
+declare interface MelvorGameDataPackage {
   /**
    * Unique namespace for the game data. For Modded Data Packages, this is defined by the manifest.json and has no effect.
    */
@@ -10881,7 +10736,7 @@ export interface MelvorGameDataPackage {
 /**
  * Contains the data used to construct game objects
  */
-export interface GameData {
+declare interface GameData {
   /**
    * An array of Gamemodes defined by this data package
    *
@@ -11120,14 +10975,14 @@ export interface GameData {
 /**
  * Data for constructing a NamespacedObject object
  */
-export interface IDData {
+declare interface IDData {
   /**
    * The local ID of the object
    */
   id: string;
   [k: string]: unknown;
 }
-export interface AnyItemQuantity {
+declare interface AnyItemQuantity {
   /**
    * The ID of any Item
    */
@@ -11138,7 +10993,7 @@ export interface AnyItemQuantity {
   quantity: number;
   [k: string]: unknown;
 }
-export interface CombatModifierBase {
+declare interface CombatModifierBase {
   /**
    * +${value}% Accuracy Rating
    */
@@ -12233,7 +12088,7 @@ export interface CombatModifierBase {
 /**
  * Defines a SlowEffect object. Impacted by modifiers and conditions that specify Slow.
  */
-export interface SlowEffectData {
+declare interface SlowEffectData {
   effectType: "Slow";
   /**
    * Percentage value that the effect should increase attack interval by
@@ -12248,7 +12103,7 @@ export interface SlowEffectData {
 /**
  * Defines a Burn DOT Effect, with the standard damage and duration
  */
-export interface BurnEffectData {
+declare interface BurnEffectData {
   effectType: "Burn";
   chance: EffectChance;
   [k: string]: unknown;
@@ -12256,7 +12111,7 @@ export interface BurnEffectData {
 /**
  * Defines a Poison DOT Effect, with the standard damage and duration
  */
-export interface PoisonEffectData {
+declare interface PoisonEffectData {
   effectType: "Poison";
   chance: EffectChance;
   [k: string]: unknown;
@@ -12264,11 +12119,11 @@ export interface PoisonEffectData {
 /**
  * Defines the standard Frostburn effect. Impacted by modifiers and conditions that specify Frostburn
  */
-export interface FrostBurnEffectData {
+declare interface FrostBurnEffectData {
   effectType: "Frostburn";
   [k: string]: unknown;
 }
-export interface AttackStackingEffectData {
+declare interface AttackStackingEffectData {
   effectType: "Stacking";
   /**
    * The ID of the StackingEffect object this effect represents.
@@ -12279,14 +12134,14 @@ export interface AttackStackingEffectData {
 /**
  * Defines the standard Affliction effect. Impacted by modifiers and conditions that specify Affliction
  */
-export interface AfflictionEffectData {
+declare interface AfflictionEffectData {
   effectType: "Affliction";
   [k: string]: unknown;
 }
 /**
  * Defines a custom modifier effect.
  */
-export interface ModifierEffectData {
+declare interface ModifierEffectData {
   type: "Modifier";
   /**
    * Modifiers that are applied to the target character. Values are multiplied by the number of stacks active
@@ -12321,7 +12176,7 @@ export interface ModifierEffectData {
 /**
  * Defines a custom sleep effect.
  */
-export interface SleepEffect {
+declare interface SleepEffect {
   type: "Sleep";
   /**
    * The number of turns the target should Sleep for
@@ -12337,7 +12192,7 @@ export interface SleepEffect {
 /**
  * Defines a custom stun effect.
  */
-export interface StunEffect {
+declare interface StunEffect {
   type: "Stun";
   /**
    * The number of turns the target should be Stunned for
@@ -12353,7 +12208,7 @@ export interface StunEffect {
 /**
  * Defines a custom DOT effect. DOT effects apply damage over time, or healing over time.
  */
-export interface DOTEffect {
+declare interface DOTEffect {
   type: "DOT";
   /**
    * The type of DOT that should be applied.
@@ -12376,7 +12231,7 @@ export interface DOTEffect {
   chance: EffectChance;
   [k: string]: unknown;
 }
-export interface BaseDamage {
+declare interface BaseDamage {
   /**
    * The character to use to determine the damage amount
    */
@@ -12398,7 +12253,7 @@ export interface BaseDamage {
 /**
  * Defines a custom reflexive effect. Reflexive effects increase in stack each time the target character is hit.
  */
-export interface ReflexiveEffectData {
+declare interface ReflexiveEffectData {
   type: "Reflexive";
   /**
    * Modifiers that are applied to the character that has this effect. Multiplied by the number of stacks the effect has.
@@ -12425,7 +12280,7 @@ export interface ReflexiveEffectData {
 /**
  * Defines a custom compound effect. A meta-effect, randomly applys one of the subsequent effects in the effect array.
  */
-export interface CompoundEffect {
+declare interface CompoundEffect {
   type: "Compound";
   chance: EffectChance;
   /**
@@ -12437,7 +12292,7 @@ export interface CompoundEffect {
 /**
  * Defines a custom combo effect. Combo effects gain stacks each time the attacker succesfully hits thier target. All stacks are removed on a missed attack.
  */
-export interface ComboEffect {
+declare interface ComboEffect {
   type: "Combo";
   /**
    * The maximum number of stacks the effect can have
@@ -12453,7 +12308,7 @@ export interface ComboEffect {
   media: string;
   [k: string]: unknown;
 }
-export interface CurseEffectData {
+declare interface CurseEffectData {
   effectType: "Curse";
   /**
    * The ID of the Curse the effect should apply
@@ -12472,12 +12327,12 @@ export interface CurseEffectData {
 /**
  * Defines a Deadly Poison DOT Effect, with the standard damage and duration
  */
-export interface DeadlyPoisonEffectData {
+declare interface DeadlyPoisonEffectData {
   effectType: "DeadlyPoison";
   chance: EffectChance;
   [k: string]: unknown;
 }
-export interface SkillLevelRequirementData {
+declare interface SkillLevelRequirementData {
   type: "SkillLevel";
   /**
    * The ID of the Skill that must have a level greater than or equal to level
@@ -12489,7 +12344,7 @@ export interface SkillLevelRequirementData {
   level: number;
   [k: string]: unknown;
 }
-export interface AllSkillLevelRequirementData {
+declare interface AllSkillLevelRequirementData {
   type: "AllSkillLevels";
   /**
    * The minimum level that all Skills must have
@@ -12503,7 +12358,7 @@ export interface AllSkillLevelRequirementData {
   exceptions?: [SkillID, ...SkillID[]];
   [k: string]: unknown;
 }
-export interface DungeonRequirementData {
+declare interface DungeonRequirementData {
   type: "DungeonCompletion";
   /**
    * The ID of the Dungeon that must be completed
@@ -12515,7 +12370,7 @@ export interface DungeonRequirementData {
   count: number;
   [k: string]: unknown;
 }
-export interface CompletionRequirementData {
+declare interface CompletionRequirementData {
   type: "Completion";
   /**
    * The percent total completion the player must have
@@ -12527,7 +12382,7 @@ export interface CompletionRequirementData {
   namespace: Namespace;
   [k: string]: unknown;
 }
-export interface ShopPurchaseRequirementData {
+declare interface ShopPurchaseRequirementData {
   type: "ShopPurchase";
   /**
    * The ID of the shop purchase that must be bought
@@ -12539,7 +12394,7 @@ export interface ShopPurchaseRequirementData {
   count: number;
   [k: string]: unknown;
 }
-export interface SlayerItemRequirementData {
+declare interface SlayerItemRequirementData {
   type: "SlayerItem";
   /**
    * The ID of the EquipmentItem that must be equipped
@@ -12547,7 +12402,7 @@ export interface SlayerItemRequirementData {
   itemID: EquipmentItemID;
   [k: string]: unknown;
 }
-export interface SlayerTaskRequirement {
+declare interface SlayerTaskRequirement {
   type: "SlayerTask";
   /**
    * The minimum tier of slayer task that must be completed
@@ -12559,7 +12414,7 @@ export interface SlayerTaskRequirement {
   count: number;
   [k: string]: unknown;
 }
-export interface ItemFoundRequirementData {
+declare interface ItemFoundRequirementData {
   type: "ItemFound";
   /**
    * The ID of the item that must be found at least once
@@ -12567,7 +12422,7 @@ export interface ItemFoundRequirementData {
   itemID: AnyItemID;
   [k: string]: unknown;
 }
-export interface MonsterKilledRequirementData {
+declare interface MonsterKilledRequirementData {
   type: "MonsterKilled";
   /**
    * The ID of the monster that must be killed
@@ -12579,7 +12434,7 @@ export interface MonsterKilledRequirementData {
   count: number;
   [k: string]: unknown;
 }
-export interface TownshipTaskCompletionRequirement {
+declare interface TownshipTaskCompletionRequirement {
   type: "TownshipTask";
   /**
    * The number of Township tasks that must be completed
@@ -12587,7 +12442,7 @@ export interface TownshipTaskCompletionRequirement {
   count: number;
   [k: string]: unknown;
 }
-export interface TownshipBuildingRequirementData {
+declare interface TownshipBuildingRequirementData {
   type: "TownshipBuilding";
   /**
    * The ID of the building that must be actively built
@@ -12599,7 +12454,7 @@ export interface TownshipBuildingRequirementData {
   count: number;
   [k: string]: unknown;
 }
-export interface EquipStatPair {
+declare interface EquipStatPair {
   /**
    * The equipment stat that is provided
    */
@@ -12610,7 +12465,7 @@ export interface EquipStatPair {
   value: number;
   [k: string]: unknown;
 }
-export interface ConditionalModifierData {
+declare interface ConditionalModifierData {
   /**
    * The condition that must be matched for the modifiers provided to be active
    */
@@ -12625,7 +12480,7 @@ export interface ConditionalModifierData {
   enemyModifiers?: CombatModifierData;
   [k: string]: unknown;
 }
-export interface ValueCondition {
+declare interface ValueCondition {
   /**
    * The value to compare with
    */
@@ -12636,7 +12491,7 @@ export interface ValueCondition {
   operator: Comparison;
   [k: string]: unknown;
 }
-export interface BooleanCondition {
+declare interface BooleanCondition {
   /**
    * If the condition should be inverted. e.g. !condition
    */
@@ -12646,7 +12501,7 @@ export interface BooleanCondition {
 /**
  * Requires that all of the conditions be met
  */
-export interface EveryConditionData {
+declare interface EveryConditionData {
   type: "Every";
   /**
    * Array of conditions that must all be met
@@ -12659,7 +12514,7 @@ export interface EveryConditionData {
 /**
  * Requires that any of the conditions are met
  */
-export interface SomeConditionData {
+declare interface SomeConditionData {
   type: "Some";
   /**
    * Array of conditions that at least one must be met
@@ -12672,7 +12527,7 @@ export interface SomeConditionData {
 /**
  * Compares the Player's base equipment stat with the Enemies
  */
-export interface EquipStatCompareCondition {
+declare interface EquipStatCompareCondition {
   type: "EquipStatCompare";
   /**
    * The equipment stat to compare
@@ -12684,7 +12539,7 @@ export interface EquipStatCompareCondition {
   operator: Comparison;
   [k: string]: unknown;
 }
-export interface SkillActionEventMatcherOptions {
+declare interface SkillActionEventMatcherOptions {
   /**
    * Optional. If present, the skill having a potion active must match
    */
@@ -12704,7 +12559,7 @@ export interface SkillActionEventMatcherOptions {
 /**
  * Matches when a Firemaking bonfire is lit
  */
-export interface BonfireLitEventMatcherOptions {
+declare interface BonfireLitEventMatcherOptions {
   type: "BonfireLit";
   /**
    * Optional. If present, the bonfire lit must have an ID that matches one element of the array
@@ -12717,7 +12572,7 @@ export interface BonfireLitEventMatcherOptions {
 /**
  * Matches when a Farming Plant action occurs
  */
-export interface FarmingPlantActionEventMatcherOptions {
+declare interface FarmingPlantActionEventMatcherOptions {
   type: "FarmingPlantAction";
   /**
    * Optional. If present, the action must have an ID that matches one element of the array
@@ -12736,7 +12591,7 @@ export interface FarmingPlantActionEventMatcherOptions {
 /**
  * Matches when a Monster drops an item in combat
  */
-export interface MonsterDropEventMatcherOptions {
+declare interface MonsterDropEventMatcherOptions {
   type: "MonsterDrop";
   /**
    * Optional. If present, the original item dropped being a herb seed must match
@@ -12747,7 +12602,7 @@ export interface MonsterDropEventMatcherOptions {
 /**
  * Matches when a Player Attack occurs
  */
-export interface PlayerAttackEventMatcherOptions {
+declare interface PlayerAttackEventMatcherOptions {
   type: "PlayerAttack";
   /**
    * Optional. If present, the attack type of the player must match one of the array elements
@@ -12760,7 +12615,7 @@ export interface PlayerAttackEventMatcherOptions {
 /**
  * Matches when a Enemy Attack occurs
  */
-export interface EnemyAttackEventMatcherOptions {
+declare interface EnemyAttackEventMatcherOptions {
   type: "EnemyAttack";
   /**
    * Optional. If present, the attack type of the enemy must match one of the array elements
@@ -12773,56 +12628,56 @@ export interface EnemyAttackEventMatcherOptions {
 /**
  * Matches when the player eats a food item
  */
-export interface FoodEatenEventMatcherOptions {
+declare interface FoodEatenEventMatcherOptions {
   type: "FoodEaten";
   [k: string]: unknown;
 }
 /**
  * Matches when the player uses prayer points
  */
-export interface PrayerPointConsumptionEventMatcherOptions {
+declare interface PrayerPointConsumptionEventMatcherOptions {
   type: "PrayerPointConsumption";
   [k: string]: unknown;
 }
 /**
  * Matches when the player regenerated hitpoints
  */
-export interface PlayerHitpointsRegenerationEventMatcherOptions {
+declare interface PlayerHitpointsRegenerationEventMatcherOptions {
   type: "PlayerHitpointRegeneration";
   [k: string]: unknown;
 }
 /**
  * Matches when the player's summons make an attack
  */
-export interface PlayerSummonAttackEventMatcherOptions {
+declare interface PlayerSummonAttackEventMatcherOptions {
   type: "PlayerSummonAttack";
   [k: string]: unknown;
 }
 /**
  * Matches when the player uses runes to cast a spell
  */
-export interface RuneConsumptionEventMatcherOptions {
+declare interface RuneConsumptionEventMatcherOptions {
   type: "RuneConsumption";
   [k: string]: unknown;
 }
 /**
  * Matches when the player uses a potion item
  */
-export interface PotionUsedEventMatcherOptions {
+declare interface PotionUsedEventMatcherOptions {
   type: "PotionUsed";
   [k: string]: unknown;
 }
 /**
  * Matches when the player uses a potion charge
  */
-export interface PotionChargeUsedEventMatcherOptions {
+declare interface PotionChargeUsedEventMatcherOptions {
   type: "PotionChargeUsed";
   [k: string]: unknown;
 }
 /**
  * Matches when the player kills a monster
  */
-export interface MonsterKilledEventMatcherOptions {
+declare interface MonsterKilledEventMatcherOptions {
   type: "MonsterKilled";
   /**
    * Optional. If present, the ID of the monster killed must match a member of the array
@@ -12839,7 +12694,7 @@ export interface MonsterKilledEventMatcherOptions {
 /**
  * Matches when the player equips an item
  */
-export interface ItemEquippedEventMatcherOptions {
+declare interface ItemEquippedEventMatcherOptions {
   type: "ItemEquipped";
   /**
    * Optional. If present, the ID of the item equipped must match a member of the array
@@ -12852,7 +12707,7 @@ export interface ItemEquippedEventMatcherOptions {
 /**
  * Matches when the player equips a food item
  */
-export interface FoodEquippedEventMatcherOptions {
+declare interface FoodEquippedEventMatcherOptions {
   type: "FoodEquipped";
   /**
    * Optional. If present, the ID of the food item equipped must match a member of the array
@@ -12865,7 +12720,7 @@ export interface FoodEquippedEventMatcherOptions {
 /**
  * Matches when the player purchases an item from the shop
  */
-export interface ShopPurchaseMadeEventMatcherOptions {
+declare interface ShopPurchaseMadeEventMatcherOptions {
   type: "ShopPurchaseMade";
   /**
    * Optional. If present, the ID of the ShopPurchase must match a member of the array
@@ -12878,7 +12733,7 @@ export interface ShopPurchaseMadeEventMatcherOptions {
 /**
  * Matches when the player uses a Summoning tablet
  */
-export interface SummonTabletUsedEventMatcherOptions {
+declare interface SummonTabletUsedEventMatcherOptions {
   type: "SummonTabletUsed";
   /**
    * Optional. If present, the ID of the Summoning tablet used must match a member of the array
@@ -12888,7 +12743,7 @@ export interface SummonTabletUsedEventMatcherOptions {
   tabletIDs?: [EquipmentItemID, ...EquipmentItemID[]];
   [k: string]: unknown;
 }
-export interface LangStringData {
+declare interface LangStringData {
   /**
    * The category of the translation to get
    */
@@ -12899,7 +12754,7 @@ export interface LangStringData {
   id?: string;
   [k: string]: unknown;
 }
-export interface DropTableData {
+declare interface DropTableData {
   /**
    * The ID of the item that can drop
    */
@@ -12921,7 +12776,7 @@ export interface DropTableData {
 /**
  * Convenience data type for defining damage based on normal attack damage
  */
-export interface NormalDamageData {
+declare interface NormalDamageData {
   damageType: "Normal";
   /**
    * Percent of normal damage to scale by
@@ -12936,7 +12791,7 @@ export interface NormalDamageData {
 /**
  * Inserts objects at the start of the order
  */
-export interface InsertStart {
+declare interface InsertStart {
   insertAt: "Start";
   ids: ObjectsToInsert;
   [k: string]: unknown;
@@ -12944,7 +12799,7 @@ export interface InsertStart {
 /**
  * Inserts objects at the end of the order
  */
-export interface InsertEnd {
+declare interface InsertEnd {
   insertAt: "End";
   ids: ObjectsToInsert;
   [k: string]: unknown;
@@ -12952,28 +12807,28 @@ export interface InsertEnd {
 /**
  * Inserts objects before the specified object
  */
-export interface InsertBefore {
+declare interface InsertBefore {
   insertAt: "Before";
   /**
    * The ID of the object to insert items before
    */
-  beforeID: ValidID;
+  beforeID: string;
   ids: ObjectsToInsert;
   [k: string]: unknown;
 }
 /**
  * Inserts objects after the specified object
  */
-export interface InsertAfter {
+declare interface InsertAfter {
   insertAt: "After";
   /**
    * The ID of the object to insert items after
    */
-  afterID: ValidID;
+  afterID: string;
   ids: ObjectsToInsert;
   [k: string]: unknown;
 }
-export interface PlayerAreaEffect {
+declare interface PlayerAreaEffect {
   target: "Player";
   /**
    * The non-skill modifier key that should be applied to the player
@@ -12985,7 +12840,7 @@ export interface PlayerAreaEffect {
   magnitude: number;
   [k: string]: unknown;
 }
-export interface EnemyAreaEffect {
+declare interface EnemyAreaEffect {
   target: "Enemy";
   /**
    * The combat modifier key that should be applied to the enemy
@@ -12997,7 +12852,7 @@ export interface EnemyAreaEffect {
   magnitude: number;
   [k: string]: unknown;
 }
-export interface PetChanceData {
+declare interface PetChanceData {
   /**
    * The ID of the pet to roll for
    */
@@ -13011,7 +12866,7 @@ export interface PetChanceData {
 /**
  * A fixed cost per purchase in the shop
  */
-export interface FixedCost {
+declare interface FixedCost {
   type: "Fixed";
   /**
    * The cost per purchase. Can be set to 0 to indicate no cost.
@@ -13022,7 +12877,7 @@ export interface FixedCost {
 /**
  * A linearly scaling cost per purchase in the shop
  */
-export interface LinearCost {
+declare interface LinearCost {
   type: "Linear";
   /**
    * The cost of the first purchase
@@ -13037,14 +12892,14 @@ export interface LinearCost {
 /**
  * A cost that scales according the bank slot cost formula per purchase in the shop
  */
-export interface BankSlotCost {
+declare interface BankSlotCost {
   type: "BankSlot";
   [k: string]: unknown;
 }
 /**
  * A fixed cost that can be reduced if the player has read the merchant's permit
  */
-export interface GloveCost {
+declare interface GloveCost {
   type: "Glove";
   /**
    * The cost per purchase.
@@ -13055,7 +12910,7 @@ export interface GloveCost {
 /**
  * Data for constructing an ItemUpgrade object
  */
-export interface ItemUpgradeData {
+declare interface ItemUpgradeData {
   /**
    * The items required to upgrade the item. Must contain the rootItemIDs
    *
@@ -13089,7 +12944,7 @@ export interface ItemUpgradeData {
 /**
  * Data for constructing an ItemSynergy object
  */
-export interface ItemSynergyData {
+declare interface ItemSynergyData {
   /**
    * IDs of Equipment Items that must be worn together for the synergy to work. Also accepts ThrowingWeapon to specify any Javelin or Throwing Knife, and Melee2HWeapon to specify any 2-Handed Melee weapon
    *
@@ -13266,7 +13121,7 @@ export interface ItemSynergyData {
 /**
  * Data for the Golbin Raid minigame
  */
-export interface GolbinRaidData {
+declare interface GolbinRaidData {
   /**
    * Items that should not show up in Golbin Raid
    */
@@ -13326,7 +13181,7 @@ export interface GolbinRaidData {
 /**
  * Data for constructing an SteamAchievement object
  */
-export interface SteamAchievementData {
+declare interface SteamAchievementData {
   /**
    * The ID of the achievement on steam
    */
@@ -13344,7 +13199,7 @@ export interface SteamAchievementData {
 /**
  * Data for constructing a TutorialTask object
  */
-export interface TutorialTaskData {
+declare interface TutorialTaskData {
   /**
    * A description of what needs to be done to finish the task
    */
@@ -13370,7 +13225,7 @@ export interface TutorialTaskData {
 /**
  * Basic data shared between all skills
  */
-export interface BaseSkillData {
+declare interface BaseSkillData {
   /**
    * The IDs of pets that are possible to be obtained when completing a skill action
    *
@@ -13395,7 +13250,7 @@ export interface BaseSkillData {
   customMilestones?: [MilestoneData, ...MilestoneData[]];
   [k: string]: unknown;
 }
-export interface RareSkillDropData {
+declare interface RareSkillDropData {
   /**
    * The ID of the item to drop
    */
@@ -13421,7 +13276,7 @@ export interface RareSkillDropData {
 /**
  * A Fixed chance that the item should drop
  */
-export interface FixedSkillDropChance {
+declare interface FixedSkillDropChance {
   type: "Fixed";
   /**
    * The percent chance that the item should drop
@@ -13429,7 +13284,7 @@ export interface FixedSkillDropChance {
   chance: number;
   [k: string]: unknown;
 }
-export interface ScalingChance {
+declare interface ScalingChance {
   /**
    * The base percent chance that the item should drop
    */
@@ -13444,7 +13299,7 @@ export interface ScalingChance {
   maxChance: number;
   [k: string]: unknown;
 }
-export interface MinibarData {
+declare interface MinibarData {
   /**
    * The IDs of equipment items that should be added to the minibar item selection when they are found for the first time
    */
@@ -13459,7 +13314,7 @@ export interface MinibarData {
   pets: PetID[];
   [k: string]: unknown;
 }
-export interface MilestoneLike {
+declare interface MilestoneLike {
   /**
    * The skill level the milestone is met at
    */
@@ -13477,7 +13332,7 @@ export interface MilestoneLike {
 /**
  * Defines a milestone for being able to equip an item
  */
-export interface EquipItemMilestoneData {
+declare interface EquipItemMilestoneData {
   type: "EquipItem";
   /**
    * The ID of the equipment item to show as a milestone
@@ -13488,7 +13343,7 @@ export interface EquipItemMilestoneData {
 /**
  * Data for constructing a MasteryLevelUnlock object
  */
-export interface MasteryLevelUnlockData {
+declare interface MasteryLevelUnlockData {
   /**
    * Optional. Determines the localization ID for the unlock
    */
@@ -13506,7 +13361,7 @@ export interface MasteryLevelUnlockData {
 /**
  * Data for constructing a GeneralThievingRare object
  */
-export interface GeneralThievingRareData {
+declare interface GeneralThievingRareData {
   /**
    * The ID of the item that should drop
    */
@@ -13526,7 +13381,7 @@ export interface GeneralThievingRareData {
 /**
  * The data required to construct a SummoningSynergy object
  */
-export interface SummoningSynergyData {
+declare interface SummoningSynergyData {
   /**
    * The IDs of the two summoning actions that are required for the synergy
    *
@@ -13563,7 +13418,7 @@ export interface SummoningSynergyData {
 /**
  * Data for constructing a AstrologyModifier object
  */
-export interface AstrologyModifierData {
+declare interface AstrologyModifierData {
   /**
    * The modifier keys and skills that are provided by this constellation modifier
    *
@@ -13627,7 +13482,7 @@ export interface AstrologyModifierData {
   costs: [number, ...number[]];
   [k: string]: unknown;
 }
-export interface TownshipResourceQuantity {
+declare interface TownshipResourceQuantity {
   /**
    * The ID of the resource
    */
@@ -13638,7 +13493,7 @@ export interface TownshipResourceQuantity {
   quantity: number;
   [k: string]: unknown;
 }
-export interface TownshipStatPenaltyData {
+declare interface TownshipStatPenaltyData {
   /**
    * The township stat that should be penalized
    */
@@ -13661,7 +13516,7 @@ export interface TownshipStatPenaltyData {
   scaleWithMaxAgeWorkers?: boolean;
   [k: string]: unknown;
 }
-export interface TownshipBuildingPenaltyData {
+declare interface TownshipBuildingPenaltyData {
   /**
    * The building attribute to penalize
    */
@@ -13676,7 +13531,7 @@ export interface TownshipBuildingPenaltyData {
   biome: TownshipBiomeID;
   [k: string]: unknown;
 }
-export interface TownshipHealthBonus {
+declare interface TownshipHealthBonus {
   /**
    * The percent bonus provided when the resource is owned and increasing
    */
@@ -13695,7 +13550,7 @@ export interface TownshipHealthBonus {
   negativeDecreasing: number;
   [k: string]: unknown;
 }
-export interface TownshipBuildingProvidesData {
+declare interface TownshipBuildingProvidesData {
   /**
    * Increased population cap provided by the building
    */
@@ -13743,7 +13598,7 @@ export interface TownshipBuildingProvidesData {
 /**
  * The requirements for completing the task
  */
-export interface TownshipTaskGoalsData {
+declare interface TownshipTaskGoalsData {
   /**
    * Items that must be handed in to complete the task
    */
@@ -13795,7 +13650,7 @@ export interface TownshipTaskGoalsData {
 /**
  * The rewards given for completing the taks
  */
-export interface TownshipTaskRewardsData {
+declare interface TownshipTaskRewardsData {
   /**
    * GP awarded upon completion of the task
    */
@@ -13828,7 +13683,7 @@ export interface TownshipTaskRewardsData {
   townshipResources: TownshipResourceQuantity[];
   [k: string]: unknown;
 }
-export interface PageSideBarItemOptions {
+declare interface PageSideBarItemOptions {
   /**
    * The ID of the sidebar category to add the item to
    */
@@ -13845,7 +13700,7 @@ export interface PageSideBarItemOptions {
   after?: string;
   [k: string]: unknown;
 }
-export interface PageSideBarSubItemOptions {
+declare interface PageSideBarSubItemOptions {
   /**
    * The ID of the sidebar category which contains the item to add the subItem to
    */
@@ -13867,6 +13722,6 @@ export interface PageSideBarSubItemOptions {
 /**
  * Contains the data used to modify existing game objects
  */
-export interface GameDataModifications {
+declare interface GameDataModifications {
   [k: string]: unknown;
 }
