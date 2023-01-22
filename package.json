@@ -1,13 +1,13 @@
 {
   "name": "melvor-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forked version of Official Type Definitions for Melvor Idle",
   "license": "GPL-3.0",
   "author": {
     "name": "ChanceToZoinks"
   },
   "files": [
-    "./types"
+    "./types/**/*"
   ],
   "private": true,
   "devDependencies": {
@@ -18,10 +18,12 @@
     "@types/pako": "^1.0.1",
     "@types/sortablejs": "^1.10.6",
     "@types/toastify-js": "^1.9.1",
+    "commander": "^10.0.0",
     "dexie": "^3.2.2",
     "fflate": "^0.7.3",
     "fuse.js": "^3.4.6",
     "intl-list-format": "^1.0.3",
+    "json-schema-to-typescript": "^11.0.3",
     "mitt": "^3.0.0",
     "petite-vue": "^0.4.1",
     "simplebar": "^5.3.6",

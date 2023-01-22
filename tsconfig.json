@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-		"lib": ["ES2020", "dom"],
+    "lib": [
+      "ES2020",
+      "dom"
+    ],
     "allowUmdGlobalAccess": true,
     "strict": true,
     "moduleResolution": "node",
-		"module": "ES2020",
+    "module": "ES2020",
     "skipLibCheck": true
   },
-  "include": ["./src/libraryTypes/*","./src/gameTypes/*"],
+  "include": [
+    "types/**/*"
+  ],
   "typeAcquisition": {
     "enable": true
   },
